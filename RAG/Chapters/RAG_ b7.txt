@@ -1,0 +1,281 @@
+﻿Funções neuromusculoesqueléticas e relacionadas ao movimento, capítulo b7 da CIF. Este capítulo é sobre as funções de movimento e mobilidade, incluindo funções de articulações, ossos, reflexos e músculos.
+
+b710: Funções relacionadas à mobilidade das articulações
+Descrição: Funções relacionadas à amplitude e facilidade de movimento de uma articulação.
+Inclui: funções relacionadas à mobilidade de uma ou várias articulações, vertebral, ombro, cotovelo, cintura, quadril, joelho, tornozelo, pequenas articulações das mãos e dos pés; mobilidade generalizada das articulações; deficiências como hipermobilidade das articulações, rigidez articular, ombro “congelado”, artrite.
+
+b7100: Mobilidade de uma única articulação
+Descrição: Funções relacionadas à amplitude e facilidade do movimento de uma articulação.
+
+b7101: Mobilidade de várias articulações
+Descrição: Funções relacionadas à amplitude e facilidade de movimento de mais de uma articulação.
+
+b7102: Mobilidade generalizada das articulações
+Descrição: Funções relacionadas à amplitude e facilidade de movimento das articulações em todo o corpo.
+
+b7108: Funções relacionadas à mobilidade das articulações, outras especificadas
+Descrição: Funções relacionadas à mobilidade das articulações não detalhadas em outras subcategorias específicas.
+
+b7109: Funções relacionadas à mobilidade das articulações, não especificadas
+Descrição: Funções relacionadas à mobilidade das articulações não especificadas em outras subcategorias.
+
+b715: Funções relacionadas à estabilidade das articulações
+Descrição: Funções de manutenção da integridade estrutural das articulações.
+Inclui: funções da estabilidade de uma única articulação, várias articulações e articulações em geral; deficiências como articulação de ombro instável, luxação de uma articulação, luxação do ombro e quadril.
+
+b7150: Estabilidade de uma única articulação
+Descrição: Funções de manutenção da integridade estrutural de uma articulação.
+
+b7151: Estabilidade de várias articulações
+Descrição: Funções de manutenção da integridade estrutural de mais de uma articulação.
+
+b7152: Estabilidade generalizada das articulações
+Descrição: Funções de manutenção da integridade estrutural das articulações em todo o corpo.
+
+b7158: Funções relacionadas à estabilidade das articulações, outras especificadas
+Descrição: Funções relacionadas à estabilidade das articulações não detalhadas em outras subcategorias específicas.
+
+b7159: Funções relacionadas à estabilidade das articulações, não especificadas
+Descrição: Funções relacionadas à estabilidade das articulações não especificadas em outras subcategorias.
+
+b720: Funções da mobilidade óssea
+Descrição: Funções relacionadas à amplitude e facilidade de movimento da escápula, da pelve, dos ossos do carpo e do tarso.
+Inclui: deficiências como escápula congelada e pelve congelada.
+
+b7200: Mobilidade da escápula
+Descrição: Funções relacionadas à amplitude e facilidade de movimento da escápula.
+Inclui: deficiências como protração, retração, laterorrotação e rotação medial da escápula.
+
+b7201: Mobilidade da pelve
+Descrição: Funções relacionadas à amplitude e facilidade de movimento da pelve.
+Inclui: rotação da pelve.
+
+b7202: Mobilidade dos ossos do carpo
+Descrição: Funções relacionadas à amplitude e facilidade de movimento dos ossos do carpo.
+
+b7203: Mobilidade dos ossos társicos
+Descrição: Funções relacionadas à amplitude e facilidade de movimento dos ossos do tarso.
+
+b7208: Funções da mobilidade óssea, outras especificadas
+Descrição: Funções da mobilidade óssea não detalhadas em outras subcategorias específicas.
+
+b7209: Funções da mobilidade óssea, não especificadas
+Descrição: Funções da mobilidade óssea não especificadas em outras subcategorias.
+
+b729: Funções das articulações e dos ossos, outras especificadas e não especificadas
+Descrição: Funções das articulações e dos ossos não detalhadas em outras subcategorias específicas ou não especificadas.
+
+b730: Funções relacionadas à força muscular
+Descrição: Funções relacionadas à força gerada pela contração de um músculo ou grupos de músculos.
+Inclui: funções associadas com a força de músculos específicos e grupos de músculos, músculos de um membro, de um lado do corpo, da parte inferior do corpo, de todos os membros, do peito e do corpo como um todo; deficiências como fraqueza dos pequenos músculos dos pés e das mãos, paresia muscular, paralisia muscular, monoplegia, hemiplegia, paraplegia, tetraplegia e mutismo acinético.
+
+b7300: Força de músculos isolados e de grupos de músculos
+Descrição: Funções relacionadas à força gerada pela contração de músculos específicos e isolados e grupos de músculos.
+Inclui: deficiências como fraqueza dos pequenos músculos dos pés ou das mãos.
+
+b7301: Força dos músculos de um membro
+Descrição: Funções relacionadas à força gerada pela contração dos músculos e grupo de músculos de um braço ou perna.
+Inclui: deficiências como monoparesia e monoplegia.
+
+b7302: Força dos músculos de um lado do corpo
+Descrição: Funções relacionadas à força gerada pela contração dos músculos e grupos de músculos no lado esquerdo ou direito do corpo.
+Inclui: deficiências como hemiparesia e hemiplegia.
+
+b7303: Força dos músculos da metade inferior do corpo
+Descrição: Funções relacionadas à força gerada pela contração dos músculos e grupos de músculos da metade inferior do corpo.
+Inclui: deficiências como paraparesia e paraplegia.
+
+b7304: Força dos músculos de todos os membros
+Descrição: Funções relacionadas à força gerada pela contração dos músculos e grupos de músculos de todos os quatro membros.
+Inclui: deficiências como tetraparesia e tetraplegia.
+
+b7305: Força dos músculos do tronco
+Descrição: Funções relacionadas à força gerada pela contração dos músculos e grupos de músculos do tronco.
+
+b7306: Força de todos os músculos do corpo
+Descrição: Funções relacionadas à força gerada pela contração de todos os músculos e grupos de músculos do corpo.
+Inclui: deficiências como mutismo acinético.
+
+b7308: Funções relacionadas à força muscular, outras especificadas
+Descrição: Funções relacionadas à força muscular não detalhadas em outras subcategorias específicas.
+
+b7309: Funções relacionadas à força muscular, não especificadas
+Descrição: Funções relacionadas à força muscular não especificadas em outras subcategorias.
+
+b735: Funções relacionadas ao tônus muscular
+Descrição: Funções relacionadas à tensão presente nos músculos em repouso e à resistência oferecida quando se tenta mover os músculos passivamente.
+Inclui: funções associadas à tensão de músculos isolados e grupos de músculos, músculos de um membro, de um lado do corpo e da metade inferior do corpo, músculos de todos os membros, músculos do tronco, e todos os músculos do corpo; deficiências como hipotonia, hipertonia, espasticidade muscular, miotonia e paramiotonia.
+
+b7350: Tônus de músculos isolados e grupos de músculos
+Descrição: Funções relacionadas à tensão presente nos músculos isolados e grupos de músculos em repouso e à resistência oferecida quando se tenta mover esses músculos passivamente.
+Inclui: deficiências como distonias focais, e.g. torcicolo.
+
+b7351: Tônus dos músculos de um membro
+Descrição: Funções relacionadas à tensão presente nos músculos e grupos de músculos em descanso de um braço ou de uma perna e à resistência oferecida quando se tenta mover esses músculos passivamente.
+Inclui: deficiências como monoparesia e monoplegia.
+
+b7352: Tônus dos músculos de um lado do corpo
+Descrição: Funções relacionadas à tensão presente nos músculos e grupos de músculos em repouso, do lado direito ou esquerdo do corpo, e à resistência oferecida quando se tenta mover esses músculos passivamente.
+Inclui: deficiências como hemiparesia e hemiplegia.
+
+b7353: Tônus dos músculos da metade inferior do corpo
+Descrição: Funções relacionadas à tensão presente nos músculos e grupos de músculos em repouso, da metade inferior do corpo, e à resistência oferecida quando se tenta mover esses músculos passivamente.
+Inclui: deficiências como paraparesia e paraplegia.
+
+b7354: Tônus dos músculos de todos os membros
+Descrição: Funções relacionadas à tensão presente nos músculos e grupos de músculos em repouso, de todos os quatro membros, e à resistência oferecida quando se tenta mover esses músculos passivamente.
+Inclui: deficiências como tetraparesia e tetraplegia.
+
+b7355: Tônus dos músculos do tronco
+Descrição: Funções relacionadas à tensão presente nos músculos e grupos de músculos em repouso do tronco e à resistência oferecida quando se tenta mover esses músculos passivamente.
+
+b7356: Tônus de todos os músculos do corpo
+Descrição: Funções relacionadas à tensão presente nos músculos e grupos de músculos em repouso de todo o corpo e à resistência oferecida quando se tenta mover esses músculos passivamente.
+Inclui: deficiências como distonias generalizadas, Mal de Parkinson, ou paresia e paralisia geral.
+
+b7358: Funções relacionadas ao tônus muscular, outras especificadas
+Descrição: Funções relacionadas ao tônus muscular não detalhadas em outras subcategorias específicas.
+
+b7359: Funções relacionadas ao tônus muscular, não especificadas
+Descrição: Funções relacionadas ao tônus muscular não especificadas em outras subcategorias.
+
+b740: Funções de resistência muscular
+Descrição: Funções relacionadas à sustentação da contração do músculo pelo período de tempo necessário.
+Inclui: funções associadas à sustentação da contração de músculos isolados, de grupos de músculos e todos os músculos do corpo; deficiências como miastenia grave.
+
+b7400: Resistência de músculos isolados
+Descrição: Funções relacionadas à sustentação da contração muscular de músculos isolados pelo período de tempo necessário.
+
+b7401: Resistência de grupos de músculos
+Descrição: Funções relacionadas à sustentação da contração muscular de grupos isolados de músculos pelo período de tempo necessário.
+Inclui: deficiências associadas com monoparesia, monoplegia, hemiparesia, hemiplegia, paraparesia e paraplegia.
+
+b7402: Resistência de todos os músculos do corpo
+Descrição: Funções relacionadas à sustentação da contração muscular de todos os músculos do corpo pelo período de tempo necessário.
+Inclui: deficiências associadas com tetraparesia, tetraplegia, paresia e paralisia geral.
+
+b7408: Funções de resistência muscular, outras especificadas
+Descrição: Funções de resistência muscular não detalhadas em outras subcategorias específicas.
+
+b7409: Funções de resistência muscular, não especificadas
+Descrição: Funções de resistência muscular não especificadas em outras subcategorias.
+
+b749: Funções musculares, outras especificadas e não especificadas
+Descrição: Funções musculares não detalhadas em outras subcategorias específicas ou não especificadas.
+
+b750: Funções relacionadas ao reflexo motor
+Descrição: Funções de contração involuntária dos músculos induzida automaticamente por estímulos específicos.
+Inclui: funções relacionadas ao reflexo motor de extensão, reflexo automático de articulação local, reflexos gerados por estímulos nocivos e outros estímulos exteroceptivos; reflexo de retirada, reflexo bicipital, reflexo radial, reflexo do quadríceps, reflexo patelar, reflexo do tornozelo, aparecimento e persistência de reflexos.
+
+b7500: Reflexo de extensão motora
+Descrição: Funções de contrações involuntárias dos músculos automaticamente induzidas pelo estiramento.
+
+b7501: Reflexos gerados por estímulos nocivos
+Descrição: Funções de contrações involuntárias dos músculos automaticamente induzidas por estímulos dolorosos ou outros nocivos.
+Inclui: reflexo de retirada.
+
+b7502: Reflexos gerados por outros estímulos exteroceptivos
+Descrição: Funções de contrações involuntárias dos músculos automaticamente induzidas por estímulos externos que não estímulos nocivos.
+Inclui: reflexo de busca, agarrar, chupar ou outro reflexo primitivo.
+
+b7508: Funções relacionadas ao reflexo motor, outras especificadas
+Descrição: Funções relacionadas ao reflexo motor não detalhadas em outras subcategorias específicas.
+
+b7509: Funções relacionadas ao reflexo motor, não especificadas
+Descrição: Funções relacionadas ao reflexo motor não especificadas em outras subcategorias.
+
+b755: Funções relacionadas aos reflexos de movimentos involuntários
+Descrição: Funções de contrações involuntárias de grandes músculos ou de todo o corpo induzidas pela posição do corpo, equilíbrio e estímulos ameaçadores.
+Inclui: funções de reações posturais, reação de endireitar o corpo, reações de adaptação do corpo, reações de equilíbrio, reações de apoio, reações de defesa.
+
+b760: Funções relacionadas ao controle dos movimentos voluntários
+Descrição: Funções associadas ao controle sobre os movimentos voluntários e à coordenação deles.
+Inclui: funções de controle de movimentos voluntários simples e de movimentos voluntários complexos, coordenação de movimentos voluntários, funções de apoio de braço ou perna, coordenação motora direita-esquerda, coordenação olho-mão, coordenação olho-pé; deficiências como problemas de controle e coordenação, e.g., disdiadococinesia.
+
+b7600: Controle de movimentos voluntários simples
+Descrição: Funções associadas ao controle e à coordenação dos movimentos voluntários simples ou isolados.
+
+b7601: Controle dos movimentos voluntários complexos
+Descrição: Funções associadas ao controle e à coordenação dos movimentos voluntários complexos.
+
+b7602: Coordenação dos movimentos voluntários
+Descrição: Funções associadas à coordenação dos movimentos voluntários simples e complexos, realizando movimentos em uma sequência ordenada.
+Inclui: coordenação direita-esquerda, coordenação de movimentos dirigidos visualmente, como coordenação olho-mão e coordenação olho-pé; deficiências como disdiadococinesia.
+
+b7603: Funções de apoio do braço ou perna
+Descrição: Funções associadas ao controle e coordenação dos movimentos voluntários quando se colocam pesos sobre os braços (cotovelos ou mãos) ou sobre as pernas (joelhos ou pés).
+
+b7608: Funções relacionadas ao controle dos movimentos voluntários, outras especificadas
+Descrição: Funções relacionadas ao controle dos movimentos voluntários não detalhadas em outras subcategorias específicas.
+
+b7609: Funções relacionadas ao controle dos movimentos voluntários, não especificadas
+Descrição: Funções relacionadas ao controle dos movimentos voluntários não especificadas em outras subcategorias.
+
+b761: Movimentos espontâneos
+Descrição: Funções associadas à frequência, fluência e complexidade dos movimentos totais e individuais das partes do corpo, como movimentos espontâneos do bebê e padrões de movimento.
+Inclui: nota: este código deve ser aplicado apenas a bebês com menos de 6: meses de idade.
+
+b7610: Movimentos gerais
+Descrição: Repertório e qualidade de movimentos espontâneos normalmente presentes nos primeiros meses de vida, como movimentos de contorção e movimentos inquietos dos membros.
+
+b7611: Movimentos espontâneos específicos
+Descrição: Repertório e qualidade de outros movimentos espontâneos normalmente presentes no primeiro mês de vida, como movimentos de braços e pernas em direção à linha média do corpo, movimento dos dedos e chutes.
+
+b7618: Movimentos espontâneos, outros especificados
+Descrição: Movimentos espontâneos não detalhados em outras subcategorias específicas.
+
+b7619: Movimentos espontâneos, não especificados
+Descrição: Movimentos espontâneos não especificados em outras subcategorias.
+
+b765: Funções relacionadas aos movimentos involuntários
+Descrição: Funções de contrações involuntárias, não ou semi-intencionais de um músculo ou grupo de músculos.
+Inclui: contrações involuntárias dos músculos; deficiências como tremores, tiques, maneirismos, estereótipos, perseveração motora, coreia, atetose, tiques vocais, movimentos distônicos e discinesia.
+
+b7650: Contração involuntária dos músculos
+Descrição: Funções de contração involuntária, não ou semi-intencional de um músculo ou grupo de músculos, como aqueles envolvidos em parte de uma disfunção psicológica.
+Inclui: deficiências como movimentos coreicos e atetósicos; desordens de movimento relacionado ao sono.
+
+b7651: Tremor
+Descrição: Funções de alternância de contração e relaxamento de um grupo de músculos em torno de uma articulação, resultando em agitação.
+
+b7652: Tiques e maneirismos
+Descrição: Funções de contrações repetitivas, quase intencionais e involuntárias de um grupo de músculos.
+Inclui: deficiências como tiques vocais, coprolalia e bruxismo.
+
+b7653: Estereótipos e perseverança motora
+Descrição: Funções de movimentos espontâneos, não intencionais como balançar repetitivamente para a frente e para trás e inclinar ou sacudir a cabeça.
+
+b7658: Funções relacionadas aos movimentos involuntários, outras especificadas
+Descrição: Funções relacionadas aos movimentos involuntários não detalhadas em outras subcategorias específicas.
+
+b7659: Funções relacionadas aos movimentos involuntários, não especificadas
+Descrição: Funções relacionadas aos movimentos involuntários não especificadas em outras subcategorias.
+
+b770: Funções relacionadas ao padrão da marcha
+Descrição: Funções relacionadas aos padrões de movimento como andar, correr ou outros movimentos do corpo inteiro.
+Inclui: padrões para andar e correr; deficiências como marcha espástica, marcha hemiplégica, marcha paraplégica, marcha assimétrica, claudicação e padrão de marcha rígida.
+
+b780: Sensações relacionadas aos músculos e funções de movimento
+Descrição: Sensações associadas aos músculos ou grupos de músculos do corpo e seu movimento.
+Inclui: sensações de rigidez e tensão dos músculos, espasmo ou contratura muscular e peso dos músculos.
+
+b7800: Sensação de rigidez muscular
+Descrição: Sensação de tensão ou rigidez muscular.
+
+b7801: Sensação de espasmo muscular
+Descrição: Sensação de contração involuntária de um músculo ou grupo de músculos.
+
+b7808: Sensações relacionadas aos músculos e funções de movimento, outras especificadas
+Descrição: Sensações relacionadas aos músculos e funções de movimento não detalhadas em outras subcategorias específicas.
+
+b7809: Sensações relacionadas aos músculos e funções de movimento, não especificadas
+Descrição: Sensações relacionadas aos músculos e funções de movimento não especificadas em outras subcategorias.
+
+b789: Funções do movimento, outras especificadas e não especificadas
+Descrição: Funções do movimento não detalhadas em outras subcategorias específicas ou não especificadas.
+
+b798: Funções neuromusculoesqueléticas e relacionadas aos movimentos, outras especificadas
+Descrição: Funções neuromusculoesqueléticas e relacionadas aos movimentos não detalhadas em outras subcategorias específicas.
+
+b799: Funções neuromusculoesqueléticas e relacionadas aos movimentos, não especificadas
+Descrição: Funções neuromusculoesqueléticas e relacionadas aos movimentos não especificadas em outras subcategorias.

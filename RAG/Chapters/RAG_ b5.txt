@@ -1,0 +1,237 @@
+﻿Funções dos sistemas digestivo, metabólico e endócrino, capítulo b5 da CIF. Este capítulo trata das funções de ingestão, digestão e eliminação, bem como das funções envolvidas no metabolismo e nas glândulas endócrinas.
+
+b510: Funções de ingestão
+Descrição: Funções relacionadas à ingestão e manipulação de sólidos ou líquidos no corpo através da boca.
+Inclui: funções de sugar, mastigar e morder, manipular alimento na boca, salivar, engolir, arrotar, regurgitar, cuspir e vomitar; deficiências como disfagia, aspiração de alimento, aerofagia, salivação excessiva, babar e salivação insuficiente.
+
+b5100: Sugar
+Descrição: Funções relacionadas com o ato de levar para dentro da boca, por meio de força de sucção produzida por movimentos das bochechas, dos lábios e da língua.
+
+b5101: Morder
+Descrição: Funções de cortar ou triturar alimentos com os dentes da frente.
+
+b5102: Mastigar
+Descrição: Funções de triturar, moer e mastigar alimentos com os dentes de trás (e.g., molares).
+
+b5103: Manipulação dos alimentos na boca
+Descrição: Funções de mover a comida na boca com os dentes e a língua.
+
+b5104: Salivação
+Descrição: Função da produção de saliva na boca.
+
+b5105: Deglutição
+Descrição: Funções relacionadas à passagem de substâncias, como alimentos, líquidos e saliva, através da cavidade oral, da faringe e do esófago para o estômago em velocidade e quantidade adequadas.
+Inclui: disfagia oral, faríngea ou esofágica; comprometimento na passagem de substâncias pelo esófago.
+
+b51050: Deglutição oral
+Descrição: Função relacionada à passagem de substâncias através da cavidade oral em quantidade e velocidade apropriadas.
+Inclui: babar.
+
+b51051: Deglutição faríngea
+Descrição: Função relacionada à passagem de substâncias através da faringe em quantidade e velocidade apropriadas.
+
+b51052: Deglutição esofágica
+Descrição: Função relacionada à passagem de substâncias através do esófago em quantidade e velocidade apropriadas.
+
+b51058: Deglutição, outra especificada
+Descrição: Funções de deglutição não detalhadas em outras subcategorias específicas.
+
+b51059: Deglutição, não especificada
+Descrição: Funções de deglutição não especificadas em outras subcategorias.
+
+b5106: Funções de expelir o conteúdo do estômago, esófago e faringe
+Descrição: Funções relacionadas ao movimento de substâncias como alimentos, líquidos, medicamentos, objetos intencionalmente ou involuntariamente engolidos, na direção inversa à ingestão, como na regurgitação e vômito.
+
+b51060: Vômito
+Descrição: Funções relacionadas ao ato de vomitar.
+
+b51061: Regurgitação
+Descrição: Funções relacionadas ao ato de regurgitar.
+
+b5108: Funções da ingestão, outras especificadas
+Descrição: Funções da ingestão não detalhadas em outras subcategorias específicas.
+
+b5109: Funções da ingestão, não especificadas
+Descrição: Funções da ingestão não especificadas em outras subcategorias.
+
+b515: Funções digestivas
+Descrição: Funções de transporte de alimento através do trato gastrointestinal, decomposição do alimento e absorção de nutrientes.
+Inclui: funções de transporte do alimento através do estômago, peristaltismo; decomposição do alimento, produção de enzimas e suas ações no estômago e intestinos; absorção de nutrientes e tolerância aos alimentos; deficiências como hiperacidez do estômago, má absorção, intolerância aos alimentos, hipermotilidade dos intestinos, paralisia intestinal, obstrução intestinal e diminuição da produção de bile.
+
+b5150: Transporte de alimentos através do estômago e dos intestines
+Descrição: Peristaltismo e funções relacionadas que movem os alimentos mecanicamente através do estômago e dos intestinos.
+
+b5151: Degradação dos alimentos
+Descrição: Funções relacionadas à redução mecânica dos alimentos em partículas menores no trato gastrointestinal.
+
+b5152: Absorção de nutrientes
+Descrição: Funções relacionadas à passagem dos nutrientes de alimentos e bebidas para o fluxo sanguíneo do intestino.
+
+b5153: Tolerância aos alimentos
+Descrição: Funções relacionadas à aceitação de alimentos e de bebidas adequados para a digestão e à rejeição do que não é adequado.
+Inclui: deficiências como hipersensibilidades, intolerância a glúten.
+
+b5158: Funções digestivas, outras especificadas
+Descrição: Funções digestivas não detalhadas em outras subcategorias específicas.
+
+b5159: Funções digestivas, não especificadas
+Descrição: Funções digestivas não especificadas em outras subcategorias.
+
+b520: Funções de assimilação
+Descrição: Funções por meio das quais os nutrientes são convertidos em componentes do corpo.
+Inclui: funções de armazenamento de nutrientes no corpo.
+
+b525: Funções de defecação
+Descrição: Funções de eliminação de resíduos e alimentos não digeridos, como fezes, e funções relacionadas.
+Inclui: funções de eliminação, consistência fecal, frequência de defecação; continência fecal, flatulência; deficiências como constipação, diarreia, fezes líquidas e incompetência ou incontinência do esfíncter anal.
+
+b5250: Eliminação de fezes
+Descrição: Funções da eliminação de resíduos do reto, incluindo as funções de contração dos músculos abdominais no ato de eliminação de fezes.
+
+b5251: Consistência fecal
+Descrição: Consistência das fezes, que podem ser duras, firmes, moles ou líquidas.
+
+b5252: Frequência de defecação
+Descrição: Funções envolvidas na frequência de defecação.
+
+b5253: Continência fecal
+Descrição: Funções envolvidas no controle voluntário sobre a função de eliminação.
+
+b5254: Flatulência
+Descrição: Funções envolvidas na expulsão de quantidades excessivas do ar ou gases dos intestinos.
+
+b5258: Funções de defecação, outras especificadas
+Descrição: Funções de defecação não detalhadas em outras subcategorias específicas.
+
+b5259: Funções de defecação, não especificadas
+Descrição: Funções de defecação não especificadas em outras subcategorias.
+
+b530: Funções de manutenção do peso
+Descrição: Funções de manutenção de peso apropriado do corpo, incluindo ganho de peso durante o período de desenvolvimento.
+Inclui: funções de manutenção do índice de Massa Corporal (IMC) aceitável; deficiências como baixo peso, caquexia, debilidade, excesso de peso, emaciação e obesidade primária e secundária.
+
+b535: Sensações associadas ao sistema digestório
+Descrição: Sensações decorrentes da ingestão de alimentos, de líquidos e funções digestivas relacionadas.
+Inclui: sensação de náusea, sensação de empachamento e sensação de cólica abdominal; sensação de estômago cheio, sensação de bolo na garganta, espasmo estomacal, gás no estômago e acidez e queimação gástricas.
+
+b5350: Sensação de náusea
+Descrição: Sensação relacionada à necessidade de vomitar.
+
+b5351: Sensação de inchaço
+Descrição: Sensação de distensão do estômago ou abdome.
+
+b5352: Sensação de cólica abdominal
+Descrição: Sensação de contração espasmódica ou dolorosa dos músculos lisos do trato gastrointestinal.
+
+b5358: Sensações associadas ao sistema digestório, outras especificadas
+Descrição: Sensações associadas ao sistema digestório não detalhadas em outras subcategorias específicas.
+
+b5359: Sensações associadas ao sistema digestório, não especificadas
+Descrição: Sensações associadas ao sistema digestório não especificadas em outras subcategorias.
+
+b539: Funções relacionadas ao sistema digestório, outras especificadas e não especificadas
+Descrição: Funções relacionadas ao sistema digestório não detalhadas em outras subcategorias específicas ou não especificadas.
+
+b540: Funções metabólicas gerais
+Descrição: Funções de regulação dos componentes essenciais do corpo como carboidratos, proteínas e gorduras, a conversão de um em outro e sua transformação em energia.
+Inclui: função do metabolismo, taxa de metabolismo basal, metabolismo dos carboidratos, proteínas e gorduras, catabolismo, anabolismo, produção de energia no corpo; aumento ou diminuição da taxa metabólica.
+
+b5400: Taxa de metabolismo basal
+Descrição: Funções envolvidas no consumo de oxigênio no corpo em condições específicas de repouso e temperatura.
+Inclui: aumento ou diminuição da taxa de metabolismo basal; deficiências como hipertireoidismo e hipotireoidismo.
+
+b5401: Metabolismo dos carboidratos
+Descrição: Funções envolvidas no processo por meio do qual os carboidratos ingeridos são armazenados e decompostos em glicose e, posteriormente, em dióxido de carbono e água.
+
+b5402: Metabolismo das proteínas
+Descrição: Funções envolvidas no processo por meio do qual as proteínas ingeridas são convertidas em aminoácidos e posteriormente decompostas no organismo.
+
+b5403: Metabolismo das gorduras
+Descrição: Funções envolvidas no processo por meio do qual a gordura ingerida é armazenada e decomposta no corpo.
+
+b5408: Funções metabólicas gerais, outras especificadas
+Descrição: Funções metabólicas gerais não detalhadas em outras subcategorias específicas.
+
+b5409: Funções metabólicas gerais, não especificadas
+Descrição: Funções metabólicas gerais não especificadas em outras subcategorias.
+
+b545: Funções de equilíbrio hídrico, mineral e eletrolítico
+Descrição: Funções de regulação da água, minerais e eletrólitos no corpo.
+Inclui: funções de equilíbrio hídrico, equilíbrio de minerais como cálcio, zinco e ferro, e equilíbrio de eletrólitos como sódio e potássio; deficiências como retenção de água, desidratação, hipercalcemia, hipocalcemia, deficiência de ferro, hipernatremia, hiponatremia, hiperpotassemia e hipopotassemia.
+
+b5450: Equilíbrio hídrico
+Descrição: Funções envolvidas no nível ou quantidade de água no corpo.
+Inclui: deficiências como desidratação e reidratação.
+
+b54500: Retenção de água
+Descrição: Funções envolvidas na retenção da água no corpo.
+
+b54501: Manutenção do equilíbrio hídrico
+Descrição: Funções envolvidas na manutenção da quantidade ideal de água no corpo.
+
+b54508: Funções de equilíbrio hídrico, outras especificadas
+Descrição: Funções de equilíbrio hídrico não detalhadas em outras subcategorias específicas.
+
+b54509: Funções de equilíbrio hídrico, não especificadas
+Descrição: Funções de equilíbrio hídrico não especificadas em outras subcategorias.
+
+b5451: Equilíbrio mineral
+Descrição: Funções envolvidas na manutenção de um equilíbrio entre ingestão, armazenamento, utilização e excreção dos minerais no corpo.
+
+b5452: Equilíbrio eletrolítico
+Descrição: Funções envolvidas na manutenção de um equilíbrio entre ingestão, armazenamento, utilização e excreção dos eletrólitos no corpo.
+
+b5458: Funções de equilíbrio hídrico, mineral e eletrolítico, outras especificadas
+Descrição: Funções de equilíbrio hídrico, mineral e eletrolítico não detalhadas em outras subcategorias específicas.
+
+b5459: Funções de equilíbrio hídrico, mineral e eletrolítico, não especificadas
+Descrição: Funções de equilíbrio hídrico, mineral e eletrolítico não especificadas em outras subcategorias.
+
+b550: Funções termorreguladoras
+Descrição: Funções da regulação da temperatura do corpo.
+Inclui: funções de manutenção da temperatura do corpo; deficiências como hipotermia, hipertermia.
+
+b5500: Temperatura do corpo
+Descrição: Funções envolvidas na regulação da temperatura central do corpo.
+Inclui: deficiências como hipertermia ou hipotermia.
+
+b5501: Manutenção da temperatura do corpo
+Descrição: Funções envolvidas na manutenção da temperatura ideal do corpo com a mudança da temperatura ambiental.
+Inclui: tolerância ao calor ou frio.
+
+b5508: Funções termorreguladoras, outras especificadas
+Descrição: Funções termorreguladoras não detalhadas em outras subcategorias específicas.
+
+b5509: Funções termorreguladoras, não especificadas
+Descrição: Funções termorreguladoras não especificadas em outras subcategorias.
+
+b555: Funções das glândulas endócrinas
+Descrição: Funções de produção e regulação dos níveis hormonais no corpo, incluindo mudanças cíclicas.
+Inclui: funções de equilíbrio hormonal; hipopituitarismo, hiperpituitarismo, hipertireoidismo, hipotireoidismo, hiperadrenalismo, hipoadrenalismo, hiperparatireoidismo, hipoparatireoidismo, hipergonadismo, hipogonadismo.
+
+b5550: Funções puberais
+Descrição: Funções associadas com o início da puberdade e manifestações das características sexuais primárias e secundárias.
+
+b55500: Desenvolvimento de pelos no corpo e na região pubiana
+Descrição: Funções associadas com o desenvolvimento dos pelos no corpo e na região pubiana.
+
+b55501: Desenvolvimento da mama e da aréola da mama
+Descrição: Funções associadas com o desenvolvimento da mama e da aréola da mama.
+
+b55502: Desenvolvimento do pênis, dos testículos e do escroto
+Descrição: Funções associadas com o desenvolvimento do pênis, dos testículos e do escroto.
+
+b55508: Função puberal, outra especificada
+Descrição: Funções puberais não detalhadas em outras subcategorias específicas.
+
+b55509: Função puberal, não especificada
+Descrição: Funções puberais não especificadas em outras subcategorias.
+
+b559: Funções relacionadas aos sistemas metabólico e endócrino, outras especificadas e não especificadas
+Descrição: Funções relacionadas aos sistemas metabólico e endócrino não detalhadas em outras subcategorias específicas ou não especificadas.
+
+b598: Funções dos sistemas digestório, metabólico e endócrino, outras especificadas
+Descrição: Funções dos sistemas digestório, metabólico e endócrino não detalhadas em outras subcategorias específicas.
+
+b599: Funções dos sistemas digestório, metabólico e endócrino, não especificadas
+Descrição: Funções dos sistemas digestório, metabólico e endócrino não especificadas em outras subcategorias.

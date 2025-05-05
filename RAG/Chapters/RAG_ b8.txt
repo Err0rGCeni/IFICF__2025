@@ -1,0 +1,37 @@
+﻿Funções da pele e estruturas relacionadas, capítulo b8 da CIF. Este capítulo é sobre as funções da pele, unhas e cabelos.
+
+b810: Funções protetoras da pele
+Descrição: Funções da pele relacionadas à proteção do corpo contra ameaças físicas, químicas e biológicas.
+Inclui: funções de proteção contra o Sol e outras radiações, fotossensibilidade, pigmentação, qualidade da pele; funções de isolamento da pele, formação calosa, endurecimento; deficiências como pele seca, úlceras, escaras e diminuição da espessura da pele.
+
+b820: Funções reparadoras da pele
+Descrição: Funções da pele para a reparação de soluções de continuidade, ferimentos e de outros danos à pele.
+Inclui: funções da formação de crostas, cicatrização; contusão e formação de queloides.
+
+b830: Outras funções da pele
+Descrição: Funções da pele que não as de proteção e reparação, como resfriamento e sudorese.
+Inclui: funções de transpiração, funções glandulares da pele e odor corporal.
+
+b840: Sensação relacionada à pele
+Descrição: Sensações relacionadas à pele como coceira, ardor, sensação de queimação ou de formigamento.
+Inclui: deficiências como sensação de alfinetes e agulhas na pele e sensação de formigamento.
+
+b849: Funções da pele, outras especificadas e não especificadas
+Descrição: Funções da pele não detalhadas em outras subcategorias específicas ou não especificadas.
+
+b850: Funções dos pelos
+Descrição: Funções dos pelos como proteção, coloração e aparência.
+Inclui: funções de crescimento dos pelos, pigmentação e localização dos pelos; deficiências como perda de pelos, cabelo ou alopecia.
+
+b860: Funções das unhas
+Descrição: Funções das unhas como de proteção, aparência e possibilidade de arranhar.
+Inclui: crescimento e pigmentação das unhas, qualidade das unhas.
+
+b869: Funções dos pelos e das unhas, outras especificadas e não especificadas
+Descrição: Funções dos pelos e das unhas não detalhadas em outras subcategorias específicas ou não especificadas.
+
+b898: Funções da pele e estruturas relacionadas, outras especificadas
+Descrição: Funções da pele e estruturas relacionadas não detalhadas em outras subcategorias específicas.
+
+b899: Funções da pele e estruturas relacionadas, não especificadas
+Descrição: Funções da pele e estruturas relacionadas não especificadas em outras subcategorias.

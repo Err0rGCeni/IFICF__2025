@@ -1,0 +1,152 @@
+﻿Funções geniturinárias e reprodutivas, capítulo b6 da CIF. Este capítulo é sobre as funções da micção e as funções reprodutivas, incluindo as funções sexuais e procriativas.
+
+b610: Funções relacionadas à excreção urinária
+Descrição: Funções de filtragem e coleta de urina.
+Inclui: funções de filtragem de urina, coleta de urina; deficiências como insuficiência renal, anúria, oligúria, hidronefrose, bexiga urinária hipotônica e obstrução do ureter.
+
+b6100: Filtragem da urina
+Descrição: Funções de filtragem da urina pelos rins.
+
+b6101: Coleta da urina
+Descrição: Funções de coleta e armazenamento da urina pelos ureteres e bexiga.
+
+b6108: Funções relacionadas à excreção urinária, outras especificadas
+Descrição: Funções relacionadas à excreção urinária não detalhadas em outras subcategorias específicas.
+
+b6109: Funções relacionadas à excreção urinária, não especificadas
+Descrição: Funções relacionadas à excreção urinária não especificadas em outras subcategorias.
+
+b620: Funções urinárias
+Descrição: Funções de eliminação da urina da bexiga urinária.
+Inclui: funções urinárias, frequência de micção, continência urinária; deficiências como em situação de estresse ou tensão, urgência, reflexo, fluxo excessivo, incontinência contínua, golejamento, bexiga automática, poliúria, retenção urinária e urgência urinária.
+
+b6200: Micção
+Descrição: Funções de esvaziamento da bexiga urinária.
+Inclui: deficiências como retenção de urina.
+
+b6201: Frequência de micção
+Descrição: Funções relativas ao número de vezes em que ocorre a micção.
+
+b6202: Continência urinária
+Descrição: Funções de controle sobre a micção.
+Inclui: deficiências como incontinência de estresse, de urgência, incontinência reflexa, contínua e mista.
+
+b6208: Funções urinárias, outras especificadas
+Descrição: Funções urinárias não detalhadas em outras subcategorias específicas.
+
+b6209: Funções urinárias, não especificadas
+Descrição: Funções urinárias não especificadas em outras subcategorias.
+
+b630: Sensações associadas às funções urinárias
+Descrição: Sensações como ardência durante a micção e funções urinárias relacionadas.
+Inclui: sensação de esvaziamento incompleto da urina, sensação de bexiga cheia.
+
+b639: Funções urinárias, outras especificadas e não especificadas
+Descrição: Funções urinárias não detalhadas em outras subcategorias específicas ou não especificadas.
+
+b640: Funções sexuais
+Descrição: Funções mentais e físicas relacionadas ao ato sexual, incluindo as fases de excitação, preparatória, orgásmica e de resolução.
+Inclui: funções das fases sexuais de excitação, preparação, orgásmica e de resolução; funções relacionadas ao interesse sexual, desempenho, ereção peniana, ereção clitoriana, lubrificação vaginal, ejaculação, orgasmo; deficiências como impotência, frigidez, vaginismo, ejaculação precoce, priapismo e ejaculação retardada.
+
+b6400: Funções da fase de excitação sexual
+Descrição: Funções da excitação e do interesse sexual.
+
+b6401: Funções da fase sexual preparatória
+Descrição: Funções relacionadas ao início da relação sexual.
+
+b6402: Funções da fase orgásmica
+Descrição: Funções relacionadas com atingir o orgasmo.
+
+b6403: Funções da fase de resolução sexual
+Descrição: Funções de satisfação e relaxamento após o orgasmo.
+Inclui: deficiências como falta de satisfação com orgasmo.
+
+b6408: Funções sexuais, outras especificadas
+Descrição: Funções sexuais não detalhadas em outras subcategorias específicas.
+
+b6409: Funções sexuais, não especificadas
+Descrição: Funções sexuais não especificadas em outras subcategorias.
+
+b650: Funções da menstruação
+Descrição: Funções associadas ao ciclo menstrual, incluindo regularidade da menstruação e secreção de fluidos menstruais.
+Inclui: funções da regularidade e do intervalo entre as menstruações, volume do sangramento menstrual, menarca, menopausa; deficiências como tensão pré-menstrual, amenorreia primária e secundária, menorragia, polimenorragia e menstruação retrógrada.
+
+b6500: Regularidade do ciclo menstrual
+Descrição: Funções envolvidas na regularidade do ciclo menstrual.
+Inclui: menstruação muito frequente ou pouco frequente.
+
+b6501: Intervalo entre menstruações
+Descrição: Funções que regulam o período de tempo entre dois ciclos menstruais.
+
+b6502: Volume do sangramento menstrual
+Descrição: Funções que determinam a quantidade do fluxo menstrual.
+Inclui: pouco fluxo menstrual (hipomenorreia); grande fluxo menstrual (menorragia, hipermenorreia).
+
+b6503: Início da menstruação
+Descrição: Funções relacionadas ao início da primeira menstruação (menarca).
+
+b6504: Interrupção da menstruação
+Descrição: Funções relacionadas à interrupção temporária ou permanente da menstruação.
+Inclui: amenorreia, menopausa, menopausa precoce.
+
+b6508: Funções da menstruação, outras especificadas
+Descrição: Funções da menstruação não detalhadas em outras subcategorias específicas.
+
+b6509: Funções da menstruação, não especificadas
+Descrição: Funções da menstruação não especificadas em outras subcategorias.
+
+b660: Funções de procriação
+Descrição: Funções associadas à fertilidade, à gravidez, ao parto e à lactação.
+Inclui: funções de fertilidade masculina e feminina, gravidez, parto e lactação; deficiências como azoospermia, oligozoospermia, agalactia, galactorreia, alactasia, subfertilidade, esterilidade, abortos espontâneos, gravidez ectópica, gestação que não chega ao término, aborto, feto pequeno, hidrâmnios, parto prematuro, parto tardio.
+
+b6600: Funções relacionadas à fertilidade
+Descrição: Funções relacionadas à capacidade de produzir gametas para procriação.
+Inclui: deficiências como subfertilidade e esterilidade.
+
+b6601: Funções relacionadas à gravidez
+Descrição: Funções relacionadas a engravidar e a manter a gestação.
+
+b6602: Funções relacionadas ao parto
+Descrição: Funções envolvidas durante o parto.
+
+b6603: Lactação
+Descrição: Funções envolvidas na produção e secreção do leite.
+
+b6608: Funções de procriação, outras especificadas
+Descrição: Funções de procriação não detalhadas em outras subcategorias específicas.
+
+b6609: Funções de procriação, não especificadas
+Descrição: Funções de procriação não especificadas em outras subcategorias.
+
+b670: Sensações associadas às funções genitais e reprodutivas
+Descrição: Sensações associadas à relação sexual, à menstruação e às funções genitais ou reprodutivas relacionadas.
+Inclui: sensações de dispareunia, dismenorreia, sensações de calor durante a menopausa, suores noturnos durante a menopausa, sensações associadas com o autoestímulo dos genitais.
+
+b6700: Sensações associadas à relação sexual
+Descrição: Sensações relacionadas à excitação, à preparação, ao intercurso, ao orgasmo e à resolução sexual.
+
+b6701: Sensações associadas ao ciclo menstrual
+Descrição: Sensações relacionadas com a menstruação, incluindo fases pré e pós-menstruais.
+
+b6702: Sensações associadas à menopausa
+Descrição: Sensações relacionadas à cessação do ciclo menstrual.
+Inclui: ondas de calor e suores noturnos durante a menopausa.
+
+b6703: Sensações associadas às funções genitais
+Descrição: Sensações associadas à excitação dos órgãos genitais.
+Inclui: sensações associadas com a autoestimulação dos genitais.
+
+b6708: Sensações associadas às funções genitais e reprodutivas, outras especificadas
+Descrição: Sensações associadas às funções genitais e reprodutivas não detalhadas em outras subcategorias específicas.
+
+b6709: Sensações associadas às funções genitais e reprodutivas, não especificadas
+Descrição: Sensações associadas às funções genitais e reprodutivas não especificadas em outras subcategorias.
+
+b679: Funções genitais e reprodutivas, outras especificadas e não especificadas
+Descrição: Funções genitais e reprodutivas não detalhadas em outras subcategorias específicas ou não especificadas.
+
+b698: Funções geniturinárias e reprodutivas, outras especificadas
+Descrição: Funções geniturinárias e reprodutivas não detalhadas em outras subcategorias específicas.
+
+b699: Funções geniturinárias e reprodutivas, não especificadas
+Descrição: Funções geniturinárias e reprodutivas não especificadas em outras subcategorias.
