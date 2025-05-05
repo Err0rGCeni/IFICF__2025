@@ -1,0 +1,133 @@
+Ambiente natural e mudanças ambientais feitas pelo homem, capítulo e2 da CIF. Este capítulo é sobre elementos animados e inanimados do ambiente natural ou físico, e componentes desse ambiente que foram modificados pelas pessoas, bem como características das populações humanas dentro desse ambiente.
+
+e210 Geografia física
+Características dos tipos de terrenos e da hidrografia.
+Inclui: características geográficas incluídas na orografia ( relevo, qualidade e expansão do solo e tipos de solo, incluindo altitude) e hidrografia (extensões de água como lagos, rios e mares) .
+
+e2100 Formas de terreno
+Características das formas dos terrenos como montanhas, colinas, vales e planícies.
+
+e2101 Corpos de água
+Características de extensões de água, como lagos, represas, rios e riachos.
+
+e2108 Geografia física, outra especificada
+
+e2109 Geografia física, não especificada
+
+e215 População
+Grupos de pessoas que vivem em um determinado ambiente e compartilham o mesmo padrão de adaptação ambiental.
+Inclui: mudança demográfica; densidade populacional
+
+e2150 Mudança demográfica
+Mudanças que ocorrem nos grupos de pessoas, como a composição e variação do número total de indivíduos em uma área decorrente de nascimentos, falecimentos, envelhecimento da população e migração.
+
+e2151 Densidade populacional
+Número de pessoas por unidade de superfície, incluindo características como densidade alia e baixa.
+
+e2158 População, outra especificada
+
+e2159 População, não especificada
+
+e220 Flora e fauna Plantas e animais.
+
+e2200 Plantas
+Qualquer um dos vários organismos que fazem fotossíntese, eucarióticos, multi celulares do reino vegetal, que produzem caracteristicamente embriões, contêm cloroplastos, têm paredes das células de celulose e não têm poder de locomoção, como árvores, flores, arbustos e videiras.
+
+e2201 Animais
+Organismos multicelulares do reino animal, que diferem das plantas por certas características típicas como a capacidade de locomoção, metabolismo não fotossintético, reação acentuada a estímulos, crescimento limitado e estrutura corporal fixa, como animais selvagens ou de fazenda, répteis, pássaros, peixes e mamíferos.
+
+e2208 Fauna e flora, outra especificada
+
+e2209 Fauna e flora, não especificada
+
+e225 Clima
+Características e eventos meteorológicos, como o tempo.
+Inclui: temperatura, umidade, pressão atmosférica, precipitação, vento e variações sazonais
+
+e2250 Temperatura
+Grau de calor ou frio, como temperatura alta e baixa, temperatura normal ou extrema.
+
+e2251 Umidade
+Nível de umidade no ar, como umidade alta ou baixa.
+
+e2252 Pressão atmosférica
+Pressão do ar circundante, como pressão relacionada à altitude acima do nível do mar ou condições meteorológicas.
+
+e2253 Precipitação
+Água caída das nuvens, como chuva, orvalho, neve, pedrisco e granizo.
+
+e2254 Vento
+Movimentação natural do ar, mais ou menos rápida, como brisa, vendaval ou rajada.
+
+e2255 Variação sazonal
+Mudanças naturais, regulares e previsíveis de uma estação para outra, como verão, outono, inverno e primavera.
+
+e2258 Clima, outro especificado
+
+e2259 Clima, não especificado
+
+e230 Desastres naturais
+Mudanças geográficas e atmosféricas que causam grande alteração no ambiente físico do indivíduo e que ocorrem regularmente ou irregularmente, como terremotos ou condições climáticas graves ou violentas, e.g.. tornados, furacões, tufões, inundações, incêndios em florestas e tempestades de neve.
+
+e235 Desastres causados pelo homem
+Alterações ou distúrbios nos ambientes naturais causados pelo homem, que podem resultarem grave alteração do cotidiano das pessoas, incluindo eventos ou condições associadas a conflitos ou guerras. como o deslocamento de pessoas, destruição da infraestrutura, casas c terras, desastres ambientais e poluição do solo, da água ou do ar (e.g„resíduos tóxicos).
+
+e240 Luz
+Radiação eletromagnética por meio da qual as coisas se tomam visíveis por luz solar ou iluminação artificial (e.g., velas, lamparinas a óleo ou parafina, fogo e energia elétrica) e que pode fornecer informações úteis sobre o mundo ou provocar distrações. Inclui: intensidade da luz: qualidade da luz; contraste de cores
+
+e2400 Intensidade da luz
+Nível ou quantidade de energia emitida por uma fonte de luz natural (e.g., Sol) ou por unia fonte de luz artificial
+
+e2401 Qualidade da luz
+A natureza da luz ambiental e os contrastes de cor criados nos ambientes visuais e que podem fornecer informações úteis sobre o mundo ao redor (e.g., informações visuais sobre a presença de escadas ou de uma porta) ou provocar distrações( excesso de imagens visuais),
+
+e2408 Luz, outra especificada
+
+e2409 Luz, não especificada
+
+e245 Mudanças relacionadas ao tempo
+Mudança temporal natural, regular ou previsível inclui: ciclos dia/noite e ciclos lunares
+
+e2450 Ciclos do dia/noite
+Mudanças naturais, regulares e previsíveis do dia para a noite e de novo para o dia, como dia, noite, amanhecer e anoitecer.
+
+e2451 Ciclos lunares
+Mudanças naturais, regulares e previsíveis da posição da Lua em relação à Terra.
+
+e2458 Mudanças relacionadas ao tempo, outras especificadas
+
+e2459 Mudanças relacionadas ao tempo, não especificadas
+
+e250 Som
+Um fenômeno que é ou que pode ser ouvido, como batida, toque, pancada, canto, assobio, grito ou zumbido. em qualquer volume, timbre ou tom, e que pode fornecer informações úteis sobre o mundo.
+Inclui: intensidade do som; qualidade do som
+
+e2500 Intensidade do som
+Nível ou volume do fenômeno auditivo determinado pela quantidade de energia gerada, em que níveis altos de energia são percebidos como sons altos e níveis baixos de energia, como sons baixos.
+
+e2501 Qualidade do som
+Natureza de um som, como determinado pelo comprimento e padrão da onda sonora e percebido como o timbre e o tom, como aspereza ou melodiosidade, e que pode fornecer informações úteis sobre o mundo som de um cachorro latindo versus um gato miando) ou provocar distrações (e ruído de fundo).
+
+e2508 Som, outros especificados
+
+e2509 Som, não especificados
+
+e255 Vibração
+Movimento regular ou irregular, para frente e para trás, de um objeto ou um indivíduo causado por uma perturbação física, tanto dentro como fora, como sacudir, tremer: movimentos rápidos e irregulares de coisas, prédios ou pessoas, causados por manuseio ou trabalho com ferramentas ou equipamentos pequenos ou grandes.
+
+e260 Qualidade do ar
+Características da atmosfera (fora dos edifícios) ou espaços internos de ar (dentro de edifícios) que podem fornecer informações úteis ou confusas sobre o mundo. Inclui: qualidade do ar interno e externo
+
+e2600 Qualidade do ar interno
+Natureza do ar dentro de edifícios ou áreas internas, determinada por odores, fumaça, umidade. ar-condicionado (qualidade do ar controlada) ou qualidade do ar não controlada, que pode fornecer informações úteis sobre o mundo ao redor (e.g, cheiro de vazamento de gás) ou confusas (e.g. cheiro forte de perfume),
+
+e2601 Qualidade do ar externo
+Natureza do ar fora dos edifícios ou áreas internas, determinada por odor, fumaça, umidade, níveis de ozônio e outras características da atmosfera, que pode fornecer informações úteis sobre o mundo ao redor (e.g., cheiro de chuva) ou confusas (e.g.,cheiros tóxicos).
+
+e2608 Qualidade do ar, outros especificados
+
+e2609 Qualidade do ar, não especificados
+
+e298 Ambiente natural e mudanças ambientais feitas pelo homem, outro especificado
+
+e299 Ambiente natural e mudanças ambientais feitas pelo homem, não especificado

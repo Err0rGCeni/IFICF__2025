@@ -36,6 +36,7 @@ def inicializar_rag():
     for index, doc in enumerate(documentos):
         if index % 250 == 0:
             print(f"{index} Embeddings...")
+        # nomic-embed-text é um modelo para parágrafos mais longos
         response = ollama.embed(model="nomic-embed-text", input=doc)
         embeddings.append(response['embeddings'][0])  # Acessa o embedding gerado
     print(f"Trabalhando em {len(embeddings)} embeddings...")
@@ -66,16 +67,20 @@ def gerar_resposta(frase_entrada, documentos, index):
     
     # Prompt com instruções detalhadas sobre CIF
     prompt = f"""
-        A Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF) organiza códigos para descrever funcionalidades, incapacidades e fatores contextuais. Sua tarefa é analisar a frase fornecida, identificar o conceito significativo e associar o(s) código(s) CIF mais adequado(s), utilizando o contexto no RAG para embasar sua decisão. Quando aplicável, forneça até duas classificações para o mesmo conceito, refletindo diferentes perspectivas (ex.: funcional e ambiental).
+        Sua tarefa é analisar a frase fornecida, identificar o conceito significativo e associar o(s) código(s) CIF mais adequado(s), utilizando o contexto no RAG para embasar sua decisão. Quando aplicável, forneça até duas classificações para o mesmo conceito, refletindo diferentes perspectivas.
 
-        **Instruções para Codificação CIF**:
+        **Instruções para Codificação da Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF)**:
         - Códigos CIF são formados por: **componente** (uma letra) + **capítulo** (um número) + **níveis** (números adicionais, se aplicável). Exemplo: b280 (Funções Corporais, capítulo b2, nível 280 - Sensação de dor).
         - **Componentes**:
         - **b** (Funções Corporais): Refere-se a funções fisiológicas ou psicológicas (ex.: audição, dor, movimento).
+        - Capítulos de **b**: Funções Mentais - b1; Funções Sensoriais e Dor - b2; Funções da Voz e Fala - b3; Funções dos sistemas cardiovascular, hematológico, imunológico e respiratório - b4; Funções dos sistemas digestivo, metabólico e endócrino - b5; Funções geniturinárias e reprodutivas - b6; Funções neuromusculoesqueléticas e relacionadas ao movimento - b7; Funções da pele e estruturas relacionadas - b8.
         - **s** (Estruturas Corporais): Refere-se a partes anatômicas (ex.: ouvido, braço).
+        - Capítulos de **s**: Estruturas do sistema nervoso - s1; Olho, ouvido e estruturas relacionadas - s2; Estruturas relacionadas com a voz e a fala - s3; Estruturas do aparelho cardiovascular, do sistema imunológico e do aparelho respiratório - s4; Estruturas relacionadas com o aparelho digestivo e com os sistemas metabólico e endócrino - s5; Estruturas relacionadas com os aparelhos geniturinário e reprodutivo - s6; Estruturas relacionadas com o movimento - s7; Pele e estruturas relacionadas - s8.
         - **d** (Atividades e Participação): Refere-se a tarefas ou papéis sociais (ex.: caminhar, comunicar-se).
+        - Capítulos de **d**: Aprendizagem e aplicação do conhecimento - d1; Tarefas e exigências gerais - d2; Comunicação - d3; Mobilidade - d4; Autocuidados - d5; Vida doméstica - d6; Interações e relacionamentos interpessoais - d7; Áreas principais da vida - d8; Vida comunitária, social e cívica - d9.
         - **e** (Fatores Ambientais): Refere-se a contextos externos (ex.: acessibilidade, suporte social).
-        - **Detalhes de Capítulos e Níveis**: Consulte o RAG para informações sobre capítulos (ex.: b2 - Funções sensoriais e dor) e categorias de 1º e 2º nível (ex.: b230 - Funções auditivas, b280 - Sensação de dor).
+        - Capítulos de **e**: Produtos e tecnologia - e1; Ambiente natural e mudanças ambientais feitas pelo homem - e2; Apoio e relacionamentos - e3; Atitudes - e4; Serviços, sistemas e políticas - e5.
+        - **Detalhes de Capítulos e Níveis**: Consulte o RAG para informações sobre capítulos.
         - **Itens a Ignorar**: Não analise conceitos genéricos ou não relacionados à CIF, como nome, idade, gostos pessoais, ou outros dados irrelevantes para funcionalidade e incapacidade.
 
         **Tarefa**:
@@ -83,11 +88,7 @@ def gerar_resposta(frase_entrada, documentos, index):
         2. Determine se o conceito pertence ao universo da CIF, verificando se ele descreve aspectos de funcionalidade, incapacidade ou fatores contextuais.
         3. Se pertencer à CIF:
         - Identifique o **componente** principal (b, s, d, ou e) que melhor reflete o conceito:
-            - Use **b** para funções (ex.: dificuldade de ouvir → função auditiva).
-            - Use **s** para estruturas anatômicas (ex.: deformidade no ouvido → estrutura do ouvido).
-            - Use **d** para atividades ou participação (ex.: dificuldade para se comunicar → comunicação).
-            - Use **e** para fatores externos (ex.: barulho ambiente → ambiente sonoro).
-        - Consulte o RAG para vincular o conceito a uma **categoria de primeiro nível** (ex.: b230) e, somente se a frase fornecer detalhes específicos, a uma **categoria de segundo nível** (ex.: b2300 - Sensibilidade auditiva).
+        - Consulte o RAG para vincular o conceito a uma **categoria de primeiro nível** e, somente se a frase fornecer detalhes específicos, a uma **categoria de segundo nível**.
         - **Múltiplas Perspectivas**: Avalie se o conceito pode ser classificado sob uma segunda perspectiva (ex.: um problema funcional **b** e uma limitação de atividade **d**). Se sim, forneça uma segunda classificação.
         4. Se o conceito não se encaixar em uma categoria específica da CIF:
         - Classifique como **'Não coberto' (NC)** (ex.: qualidade de vida → nc-qol) ou **'Não definido' (ND)** (ex.: saúde geral → nd-gh), utilizando o RAG.
@@ -101,12 +102,9 @@ def gerar_resposta(frase_entrada, documentos, index):
         {frase_entrada}
 
         **Formato da Resposta**:  
-        - **Conceito**: [Descrição clara do conceito significativo]  
-        - **Classificação 1**:  
-        - **Código CIF**: [Código CIF principal, ex.: b230]  
-        - **Justificativa**: [Explicação baseada no RAG]  
-        - **Classificação 2** (se aplicável):  
-        - **Código CIF**: [Código CIF secundário, ex.: d310]  
+        - **Conceito**: [Descrição clara do conceito significativo]
+        - **Classificação**:
+        - **Código CIF**: [Código CIF + nomeclatura]
         - **Justificativa**: [Explicação baseada no RAG]
     """
     # modeel = gemma3:4b ou gemma3:1b etc.
