@@ -19,8 +19,7 @@ def inicializar_rag():
     documentos = []
     # Carrega e processa cada arquivo
     for caminho in caminhos_arquivos:
-        if os.path.exists(caminho):
-            print(f"Trabalhando em ${caminho} ...")
+        if os.path.exists(caminho):            
             with open(caminho, 'r', encoding='utf-8') as f:
                 # Divide em parágrafos (ou outro critério, se necessário)
                 conteudo = f.read().split('\n\n')
@@ -31,6 +30,7 @@ def inicializar_rag():
     if not documentos:
         raise ValueError("Nenhum documento foi carregado. Verifique os caminhos dos arquivos.")
     
+    print(f"Trabalhando em {len(documentos)} documentos ...")
     # Gera embeddings usando o Ollama
     embeddings = []
     for index, doc in enumerate(documentos):
@@ -48,7 +48,7 @@ def inicializar_rag():
     return documentos, index
 
 # Função para buscar contexto relevante
-def buscar_contexto(pergunta, documentos, index, k=3):
+def buscar_contexto(pergunta, documentos, index, k=5):
     """Busca os k documentos mais relevantes para a pergunta."""
     # Gera embedding para a pergunta usando o Ollama
     response = ollama.embed(model="nomic-embed-text", input=pergunta)
@@ -92,9 +92,9 @@ def gerar_resposta(frase_entrada, documentos, index):
         4. Se o conceito não se encaixar em uma categoria específica da CIF:
         - Classifique como **'Não coberto' (NC)** (ex.: qualidade de vida → nc-qol) ou **'Não definido' (ND)** (ex.: saúde geral → nd-gh), utilizando o RAG.
         5. Forneça uma justificativa clara para cada código, com base no RAG.
-        6. **Verificação Final**: Antes de finalizar, confirme se o código escolhido corresponde diretamente ao conceito significativo, comparando com as definições do RAG. Evite atribuir códigos detalhados (ex.: b2300) sem detalhes específicos na frase.
+        6. **Verificação Final**: Antes de finalizar, confirme se o código escolhido corresponde diretamente ao conceito significativo, comparando com as definições do RAG.
 
-        **Contexto**:  
+        **RAG**:
         {contexto_str}
 
         **Frase**:  
@@ -109,8 +109,8 @@ def gerar_resposta(frase_entrada, documentos, index):
         - **Código CIF**: [Código CIF secundário, ex.: d310]  
         - **Justificativa**: [Explicação baseada no RAG]
     """
-    
-    resposta = ollama.generate(model='gemma3:4b', prompt=prompt)
+    # modeel = gemma3:4b ou gemma3:1b etc.
+    resposta = ollama.generate(model='gemma3:1b', prompt=prompt)
     return resposta['response']
 
 # Função principal para a interface Gradio
@@ -133,5 +133,6 @@ interface = gr.Interface(
 )
 
 # Iniciar a interface
-print("Gerar Interface...")
+print("Gerando Interface...")
+#interface.launch(share=True) Quando modelo estiver no ar
 interface.launch()

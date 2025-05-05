@@ -4,7 +4,14 @@ Este projeto utiliza **FAISS**, **Ollama**, **Gradio** e **NumPy** para criar --
 
 ## Requisitos
 
-Certifique-se de ter o Python 3.8 ou superior instalado em sua máquina, e Ollama (`ollama pull nomic-embed-text gemma3:4b`).
+- Certifique-se de ter o Python 3.8 ou superior instalado em sua máquina, e Ollama (`ollama pull nomic-embed-text gemma3:1b`).
+
+![print](./docs/AboutSystem.png)
+
+- Para Gemma3:4, ter hardware próximo a:
+  - 3,4GB de GPU disponível [(Gemma3)](https://ai.google.dev/gemma/docs/core?hl=pt-br);
+  - 4GB de RAM disponível [(Ollama)](https://github.com/ollama/ollama);
+
 
 ## Dependências
 - **FAISS**: Para indexação e busca vetorial.
@@ -38,3 +45,4 @@ Certifique-se de ter o Python 3.8 ou superior instalado em sua máquina, e Ollam
 - `CAG/`: Versão OCR em único arquivo;
 - `RAG/`: Versão OCR segmentada;
 - `etc/`: Arquivos para testes e/ou outras futuras funcionalidades;
+- `docs/`: Arquivos para documentação (print, etc.);
