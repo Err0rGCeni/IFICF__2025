@@ -42,7 +42,8 @@ Este projeto utiliza **FAISS**, **Ollama**, **Gradio** e **NumPy** para criar --
 
 ## Estruturação
 
-- `CAG/`: Versão OCR em único arquivo;
-- `RAG/`: Versão OCR segmentada;
+- `CAG/`: Versão OCR em único arquivo, base de dados;
+- `RAG/`: Versão OCR segmentada, base de dados;
 - `etc/`: Arquivos para testes e/ou outras futuras funcionalidades;
+  - `test_context...py`: Scripts para testar o embedding/retriever RAG;
 - `docs/`: Arquivos para documentação (print, etc.);

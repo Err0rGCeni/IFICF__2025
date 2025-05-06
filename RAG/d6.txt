@@ -1,0 +1,154 @@
+Vida doméstica, capítulo d6 da CIF. Este capítulo trata da realização de ações e tarefas domésticas e cotidianas. As áreas da vida doméstica incluem cuidar dos pertences e do espaço, adquirir alimentos, roupas e outras necessidades, limpar e consertar a casa, cuidar de objetos pessoais e outros objetos domésticos e ajudar outras pessoas.
+
+d610 Aquisição de uni lugar para morar
+Comprar, alugar, mobiliar e arrumar um cômodo, uma casa, um apartamento ou outra habitação.
+Inclui: comprar ou alugar um lugar para morar e mobiliar um lugar para morar
+
+d6100 Comprar um lugar para morar
+Adquirir a propriedade de uma casa, de um apartamento ou de outra habitação.
+
+d6101 Alugar um lugar para morar
+Adquirir o uso de uma casa, de um apartamento ou de outra habitação pertencente a outro em troca de pagamento.
+
+d6102 Mobiliar um lugar para morar
+Equipar e organizar a habitação com móveis, acessórios e outras peças, e decorar os ambientes, organizai seu próprio espaço ou ambiente.
+
+d6108 Aquisição de um lugar para morar, outra especificada
+
+d6109 Aquisição de um lugar para morar, não especificada
+
+d620 Aquisição de bens e serviços
+Selecionar, comprar e transportar todos os bens e serviços necessários para a vida diária, como selecionar, comprar, transportar e armazenar alimentos, bebidas, roupas, materiais de limpeza, combustível, artigos para a casa, utensílios, panelas, brinquedos e material recreacional, aparelhos domésticos e ferramentas; adquirir serviços públicos e outros serviços domésticos; e coletar e entregar correspondências ou pacotes.
+Inclui: comprar e armazenar as necessidades diárias
+
+d6200 Comprar
+Obter, em troca de dinheiro, bens e serviços necessários para a vida diária (incluindo instruir e supervisionai' as compras feitas
+por um intermediário), como selecionar alimento, bebida, materiais de limpeza, artigos domésticos, brinquedos e material
+recreacional ou roupas em uma loja ou mercado; comparar a qualidade e o preço dos itens necessários, negociar e pagar pelos
+bens e serviços escolhidos e transportar mercadorias,
+
+d6201 Obtenção das necessidades diárias
+Obter em troca de dinheiro, bens e serviços necessários para a
+vida diária (incluindo instruir e supervisionar um intermediário para obter as necessidades diárias), como colher vegetais e frutas, obter água e combustível, e coletar e entregar correspondências ou pacotes.
+
+d6208 Aquisição de bens e serviços, outros especificados
+
+d6209 Aquisição de bens e serviços, não especificados
+
+d629 Aquisição do necessário para viver, outro especificado e não especificado
+
+d630 Preparação de refeições
+Planejar, organizar, cozinhar e servir pratos simples e complexos para si próprio e para outros, como elaborar um cardápio, selecionar alimentos comestíveis e bebidas,
+reunir os ingredientes para preparar os pratos, cozinhar com calor e preparar pratos e bebidas frias, e servir a comida.
+Inclui: preparar refeições simples e complexas
+
+d6300 Preparar refeições simples
+Organizar, cozinhar e servir pratos com um pequeno número de ingredientes que requerem métodos fáceis para ser preparados e servidos, como fazer um aperitivo ou um lanche e transformar ingredientes, cortando-os e mexendo-os, ferver e aquecer o alimento como arroz ou batatas.
+
+d6301 Preparar refeições complexas
+Planejar, organizar, cozinhar e servir pratos com um grande número de ingredientes que requerem métodos complexos para serem
+preparados e servidos, como planejar uma refeição com vários pratos c transformar ingredientes por meio de ações combinadas, como descascar, fatiar, misturar, amassar, mexer, apresentar e servir o alimento de maneira apropriada à ocasião e à cultura.
+
+d6308 Preparação de refeições, outra especificada
+
+d6309 Preparação de refeições, não especificada
+
+d640 Realização das tarefas domésticas
+Administrar a casa: limpar a casa, lavar roupa, utilizar utensílios domésticos, armazenar alimentos e remover o lixo, como varrer, passar pano, lavar mesas, paredes e outras superfícies; coletar e remover o lixo doméstico; amimar quartos, anuários e gavetas; coletar, lavar, secar, dobrar e passar roupas; limpar sapatos; utilizar espanador, vassoura e aspirador de pó; utilizar máquina de lavar, secadora e ferro de passar.
+Inclui: lavar e secar roupas; limpar a cozinha e os utensílios; limpar a casa; utilizar aparelhos domésticos, armazenar as necessidades diárias
+e remover o lixo
+
+d6400 Lavar e secar roupas
+Lavar roupas à mão e pendurá-las para secar ao ar livre.
+
+d6401 Limpar a cozinha e os utensílios
+Limpar após cozinhar, como lavar pratos, panelas, caçarolas e utensílios, e limpar mesas e pisos em volta da área da cozinha e do local das refeições.
+
+d6402 Limpar a habitação
+Limpar os ambientes da casa, como arrumar e tirar o pó, varrer, esfregar, passar pano no chão, lavar janelas e paredes, limpar banheiros e vasos sanitários e limpar móveis.
+
+d6403 Utilizar aparelhos domésticos
+Utilizar todos os tipos de aparelhos domésticos, como máquina de lavar, secadora, ferro de passar, aspirador de pó e máquina de lavar louça.
+
+d6404 Armazenar as necessidades diárias
+Armazenar alimentos, bebidas, roupas e outros artigos domésticos necessários para a vida
+diária; preparar alimentos para conservação enlatando-os, salgando-os ou refrigerando-os. manter os alimentos frescos e fora do alcance de animais.
+
+d6405 Remover o lixo
+Eliminar o lixo doméstico: coletar o lixo da casa, preparar o lixo para remoção, utilizar dispositivos de remoção de lixo; queimar o lixo.
+
+d6408 Realização das tarefas domésticas, outra especificada
+
+d6409 Realização das tarefas domésticas, não especificada
+
+d649 Tarefas domésticas, outras especificadas e não especificadas
+
+d650 Cuidar dos objetos da casa
+Manter e consertar a casa e outros objetos pessoais, incluindo a casa e seu conteúdo, roupas, brinquedos e material recreacional. veículos e dispositivos auxiliares: cuidar de plantas e animais; pintar ou colocar papel de parede nos quartos, consertar
+móveis, encanamento, garantir o funcionamento adequado de veículos, aguar as plantas, tratai e alimentar animais de estimação ou domésticos e cuidar das entradas, calçadas e entrada da garagem.
+Inclui:fazer ou consertar roupas:; manter a habitação, móveis e aparelhos domésticos; manter veículos: manter dispositivos de auxílio; cuidar das plantas (internas e externas), animais. entradas, calçadas e entradas de garagem
+
+d6500 Fazer e consertar roupas
+Fazer e consertar roupas, corno costurar, produzir ou remendar
+roupas: costurar botões e fechos; passar roupas, consertar e engraxar sapatos.
+
+d6501 Manter a habitação e os móveis
+Consertar e cuidar da casa, seu exterior, interior e conteúdo, como pintar, consertar artigos e móveis, e utilizar as ferramentas necessárias para trabalho de conserto.
+
+d6502 Manutenção dos aparelhos domésticos
+Consertar e cuidar de todos os aparelhos domésticos para cozinhar, limpar e consertar, como
+lubrificar e consertar ferramentas e manter a máquina de lavar.
+
+d6503 Manutenção de veículos
+Consertar c cuidar de veículos motorizados e não motorizados de uso pessoal, incluindo bicicletas, carrinhos de mão, automóveis e barcos,
+
+d6504 Manutenção dos dispositivos de auxílio
+Consertar e cuidar dos dispositivos de auxílio, como próteses, ortoses e ferramentas de auxílio especializadas para a manutenção
+doméstica e o cuidado pessoal ; manter e consertar equipamentos auxiliares como bengalas, andadores, cadeira de rodas e ciclomotores;
+e manter equipamentos de auxílio para comunicação e recreação.
+
+d6505 Cuidar de plantas internas e externas
+Cuidar das plantas dentro e fora da casa, como plantar, aguar e fertilizar as plantas; fazer jardinagem e cultivar alimentos para consumo pessoal.
+
+d6506 Cuidar de animais
+Cuidar de animais domésticos e de estimação, como alimentar, limpar, tratar e exercitar animais de estimação; cuidar da saúde do animal; planejar o cuidado do anima] na ausência da pessoa.
+
+d6507 Cuidar das calçadas e entradas de garagem
+Cuidar dos caminhos domésticos como calçadas e entradas de garagem (cobertas ou descobertas) como, por exemplo, remover a neve, as folhas, os pedregulhos ou a areia das entradas, assim como espalhar areia ou outro material.
+
+d6508 Cuidado dos objetos domésticos, outro especificado
+
+d6509 Cuidado dos objetos domésticos, não especificado
+
+d660 Ajudar os outros
+Auxiliar os membros da casa e outros em seu aprendizado, comunicação, cuidado pessoal, movimento, dentro ou fora da casa; preocupar-se com o bem-estar dos membros da casa e outros.
+Inclui: ajudar os outros no cuidado pessoal. movimento, comunicação, relações interpessoais, nutrição e manutenção da saúde
+
+d6600 Ajudar os outros no cuidado pessoal
+Ajudar os membros da casa a realizar os cuidados pessoais, incluindo ajudá-los a comer, tomar banho e se vestir; tomar conta
+de crianças ou membros da casa que estão doentes ou que têm dificuldades com o cuidado pessoal básico; ajudai os outros nas atividades relacionadas à excreção.
+
+d6601 Ajudar os outros a se mover
+Ajudar os membros da casa e outros a se mover dentro e fora de casa, como na vizinhança ou cidade, para e do colégio, local de trabalho ou outro destino.
+
+d6602 Ajudar os outros a se comunicar
+Ajudar os membros da casa e outros a se comunicar, como ajudá- -los a falar, escrever ou ler.
+
+d6603 Ajudar os outros nas relações interpessoais
+Ajudar os membros da casa e outros em suas interações interpessoais. como ajudá los a iniciar, manter ou terminar relacionamentos.
+
+d6604 Ajudar os outros na nutrição
+Ajudar os membros da casa e outros com sua nutrição, como ajudá-los a preparar e a comer as refeições.
+
+d6605 Ajudar os outros a manter a saúde
+Ajudar os membros da casa e outros com cuidados de saúde informais e formais, como garantir que uma criança vá ao médico regularmente ou que um parente idoso tome o remédio necessário.
+
+d6608 Ajudar os outros, outra especificada
+
+d6609 Ajudar os outros, não especificada
+
+d669 Cuidar dos objetos domésticos e ajudar os outros, outros especificados e não especificados
+
+d698 Vida doméstica, outra especificada
+
+d699 Vida doméstica, não especificada

@@ -1,0 +1,67 @@
+Estruturas relacionadas com os aparelhos geniturinário e reprodutivo, capítulo s6 da CIF. Este capítulo é sobre estruturas relacionadas com os aparelhos geniturinário e reprodutivo.
+
+s610 Estrutura do sistema urinário
+
+s6100 Rim
+
+s6101 Ureteres
+
+s6102 Bexiga urinária
+
+s6103 Uretra
+
+s6108 Estrutura do sistema urinário, outra especificada
+
+s6109 Estrutura do sistema urinário, não especificada
+
+s620 Estrutura do assoalho pélvico
+
+s630 Estrutura do sistema genital
+
+s6300 Ovários
+
+s6301 Estrutura do útero
+
+s63010 Corpo do útero
+
+s63011 Colo do útero
+
+s63012 Tuba uterina
+
+s63018 Estrutura do útero, outra especificada
+
+s63019 Estrutura do útero, não especificada
+
+s6302 Mama e aréola da mama
+
+s6303 Estrutura da vagina e genitais externos
+
+s63030 Clitóris
+
+s63031 Lábios maiores
+
+s63032 Lábios menores
+
+s63033 Canal vaginal
+
+s6304 Testículos e escroto
+
+s6305 Estrutura do pênis
+
+s63050 Glande do pênis
+
+s63051 Corpo esponjoso do pênis
+
+s63058 Estrutura do pênis, outra especificada
+
+s63059 Estrutura do pênis, não especificada
+
+s6306 Próstata
+
+s6308 Estruturas do sistema genital, outras especificadas
+
+s6309 Estruturas do sistema genital, não especificadas
+
+s698 Estruturas relacionadas aos sistemas urinário e genital, outras especificadas
+
+s699 Estruturas relacionadas aos sistemas urinário e genital, não especificadas

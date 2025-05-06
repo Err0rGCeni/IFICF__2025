@@ -1,0 +1,62 @@
+Pele e estruturas relacionadas, capítulo s8 da CIF. Este capítulo é sobre pele e estruturas relacionadas.
+
+s810 Estruturas das áreas da pele
+
+s8100 Pele da região da cabeça e do pescoço
+
+s8101 Pele da região do ombro
+
+s8102 Pele da extremidade superior
+
+s8103 Pele da região pélvica
+
+s8104 Pele da extremidade inferior
+
+s8105 Pele do tronco e das costas
+
+s8108 Estrutura das áreas da pele, outra especificada
+
+s8109 Estrutura das áreas da pele, não especificada
+
+s820 Estrutura das glândulas da pele
+
+s8200 Glândulas sudoríferas
+
+s8201 Glândulas sebáceas
+
+s8208 Estrutura das glândulas da pele, outra especificada
+
+s8209 Estrutura das glândulas da pele, não especificada
+
+s830 Estrutura das unhas
+
+s8300 Unhas dos dedos das mãos
+
+s8301 Unhas dos dedos dos pés
+
+s8308 Estrutura das unhas, outra especificada
+
+s8309 Estrutura das unhas, não especificada
+
+s840 Estrutura dos pelos Inclui: penugem e cabelos
+
+s8400 Cabelos
+Inclui: cabelos (pelos) na orelha
+
+s8401 Pelos faciais
+Inclui: barba, pelos nas narinas, cílios e sobrancelhas
+
+s8402 Pelos das axilas
+
+s8403 Pelos pubianos
+
+s8404 Pelos do corpo
+Inclui: pelos do tronco, peito e costas
+
+s8408 Estrutura dos pelos, outra especificada
+
+s8409 Estrutura dos pelos, não especificada
+
+s898 Pele e estruturas relacionadas, outras especificadas
+
+s899 Pele e estruturas relacionadas, não especificadas

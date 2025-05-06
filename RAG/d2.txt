@@ -1,0 +1,88 @@
+Tarefas e exigências gerais, capítulo d2 da CIF. Este capítulo trata de aspectos gerais da realização de tarefas únicas ou múltiplas, organização de rotinas e gerenciamento de estresse. Esses itens podem ser usados em conjunto com tarefas ou ações mais específicas para identificar as características subjacentes da execução de tarefas em diferentes circunstâncias.
+
+d210 Realizar uma única tarefa
+Realizar ações simples ou complexas e coordenadas relacionadas aos componentes mentais e físicos de uma única tarefa, como iniciar uma tarefa, organizar o tempo, o espaço e os materiais para uma tarefa, regular o desempenho da tarefa e executar, concluir e manter a tarefa.
+Inclui: realizar uma tarefa simples ou complexa; realizar uma tarefa única deforma independente ou em um grupo
+
+d2100 Realizar uma tarefa simples
+Preparar, iniciar e organizar o tempo e o espaço necessários para uma única tarefa; executar uma tarefa simples cora um único componente principal, como ler um livro, escrever uma carta ou fazer a cama.
+
+d2101 Realizar uma tarefa complexa
+Preparar, iniciar e organizar o tempo e o espaço para uma única tarefa complexa; executar uma tarefa complexa com mais de um
+componente, que pode ser realizada em sequência ou simultaneamente, como arrumar os
+móveis na própria casa ou concluir uma tarefa escolar.
+
+d2102 Realizar uma tarefa única, de fornia independente
+Preparar, iniciar e organizar o tempo e o espaço para uma tarefa simples ou complexa, gerenciando c executando a tarefa por si próprio, sem a ajuda de outros.
+
+d2103 Realizar uma tarefa única em um grupo
+Preparar, iniciar e organizar o tempo e o espaço para unia única
+tarefa, simples ou complexa; gerenciar e executar a tarefa com as pessoas envolvidas em algumas ou em todas as etapas da tarefa.
+
+d2108 Realizar uma única tarefa, outra especificada
+
+d2109 Realizar uma única tarefa, não especificada
+
+d220 Realizar tarefas múltiplas
+Realizar ações simples ou complexas e coordenadas como componentes de tarefas múltiplas, integradas e complexas em sequência ou simultaneamente. Inclui: realizar tarefas múltiplas: concluir tarefas múltiplas; realizar tarefas múltiplas deforma independente e em um grupo
+
+d2200 Realizar tarefas múltiplas
+Preparar, iniciar e organizar o tempo e o espaço necessários para várias tarefas, gerenciar e executar várias tarefas, simultânea ou sequencialmente.
+
+d2201 Concluir tarefas múltiplas
+Concluir várias tarefas, simultânea ou sequencialmente.
+
+d2202 Realizar tarefas múltiplas, de forma independente
+Preparar, iniciar e organizar o tempo e espaço para múltiplas
+tarefas, gerenciar e executar várias tarefas simultânea ou sequencialmente, por si próprio, sem a ajuda de outros.
+
+d2203 Realizar tarefas múltiplas em um grupo
+Preparar, iniciar e organizar o tempo e espaço para múltiplas
+tarefas, gerenciar e executar várias tarefas em conjunto ou sequencialmente com outros
+envolvidos em algumas ou em todas as etapas das tarefas múltiplas.
+
+d2208 Realizar tarefas múltiplas, outras especificadas
+
+d2209 Realizar tarefas múltiplas, não especificadas
+
+d230 Realizar a rotina diária
+Realizar e coordenar ações simples ou complexas para planejar, gerenciar e concluir as exigências dos procedimentos ou dos deveres do dia a dia, como administrar o tempo e fazer planos para diversas atividades ao longo do dia.
+Inclui: gerenciar e concluir a rotina diária; gerenciar o nível de atividade pessoal
+
+d2301 Gerenciar a rotina diária
+Realizar e coordenar ações simples ou complexas para completar os requisitos dos procedimentos ou tarefas usuais do dia a dia, como se vestir, tomar o café da manhã, sair para ir à escola ou ao trabalho e retomar à casa no fim do dia.
+
+d2302 Concluir a rotina diária
+Realizar e coordenar ações simples ou complexas para concluir as exigências dos procedimentos ou deveres usuais do dia a dia, como se vestir, tomar o café da manhã, sair para a escola ou trabalho e retomar para casa no fim do dia,
+
+d2303 Gerenciar o nível de atividade pessoal
+Realizar ações e condutas para obter a energia e o tempo necessários para os procedimentos ou deveres do dia a dia.
+
+d2304 Adaptar-se às mudanças na rotina diária
+Interromper e alterar tarefas e ações em resposta a novos requisitos ou fazer a transição de um padrão usual de atividades para um novo conjunto de atividades como um meio de realizar tarefas diárias,
+
+d2308 Realizar a rotina diária, outra especificada
+
+d2309 Realizar a rotina diária, não especificada
+
+d240 Lidar com o estresse e outras demandas psicológicas
+Realizar e coordenar ações simples ou complexas para gerenciar e controlar as demandas psicológicas necessárias à execução de tarefas que
+exigem responsabilidades significativas e que envolvem estresse, distração ou crise, como dirigir um veículo no trânsito pesado ou tomar conta de muitas crianças. Inclui: lidar com responsabilidades: lidar com estresse e crise
+
+d2400 Lidar com responsabilidades
+Realizar e coordenar ações simples ou complexas para gerenciar
+os deveres de desempenho de tarefas e para avaliar as necessidades desses deveres.
+
+d2401 Lidar com estresse
+Realizar e coordenar ações simples ou complexas para enfrentar pressão, emergências ou estresse associados ao desempenho da tarefa.
+
+d2402 Lidar com crise
+Realizar e coordenar ações simples ou complexas para enfrentar os momentos decisivos de uma situação ou momentos de perigo ou dificuldade extrema.
+
+d2408 Lidar com estresse e outras demandas psicológicas, outra especificada
+
+d2409 Lidar com estresse e outras demandas psicológicas, não especificada
+
+d298 Tarefas e demandas gerais, outras especificadas
+
+d299 Tarefas e demandas gerais, não especificadas

@@ -1,0 +1,200 @@
+Produtos e tecnologia, capítulo e1 da CIF. Este capítulo trata dos produtos ou sistemas de produtos, equipamentos e tecnologia naturais ou artificiais no ambiente imediato de um indivíduo que são coletados, criados, produzidos ou fabricados. A ISO 9999:2016: estabelece uma classificação e terminologia de produtos assistivos, especialmente produzidos ou geralmente disponíveis, para pessoas com deficiência. Para efeitos desta classificação dos fatores ambientais, no entanto, os produtos e tecnologias de apoio são definidos de forma mais restrita como qualquer produto, instrumento, equipamento ou tecnologia adaptada ou especialmente concebida para melhorar o funcionamento de uma pessoa com um problema de saúde.
+
+e110 Produtos ou substâncias para consumo pessoal
+Substância natural ou feita pelo homem, colhida, processada ou manufaturada para ser ingerida.
+Inclui: alimentos, medicamentos, água potável
+
+e1608 Produtos e tecnologia relacionados ao uso e à exploração do solo, outros especificados
+
+e1609 Produtos e tecnologia relacionados ao uso e à exploração do solo, não especificados
+
+e165 Bens
+Produtos ou objetos de intercâmbio econômico como dinheiro, mercadorias, propriedade e outras coisas valiosas que um indivíduo tem ou que tem direito a usar. Inclui: produtos e bens materiais e não materiais, patrimônio financeiro
+
+e1650 Bens financeiros
+Produtos, como dinheiro ou outros instrumentos financeiros, que servem como meio de troca de mão de obra, bens de capital e serviços.
+
+e1651 Bens materiais
+Produtos ou objetos, como uma casa ou propriedade de terra, roupas, alimentos e mercadorias técnicas, que servem como meio de troca de mão de obra, bens de capital e serviços.
+
+e1652 Bens não materiais
+Produtos, como propriedade intelectual, conhecimento e habilidades que servem como meio de troca de mão de obra, bens de capital e serviços.
+
+e1658 Bens, outros especificados
+
+e1659 Bens, não especificados
+
+e198 Produtos e tecnologia, outros especificados
+
+e199 Produtos e tecnologia, não especificados
+
+e1100 Alimentos
+Substância natural ou produzida pelo homem, colhida, processada ou manufaturada para ser consumida como alimento cru,
+processado e preparado, e líquidos de diferentes consistências (incluindo leite materno), ervas e minerais (vitaminas e outros suplementos).
+
+e1101 Medicamentos
+Substância natural ou feita pelo homem, colhida, processada ou manufaturada para propósitos medicinais, como medicação alopática e natural.
+
+e1102 Água potável
+Água adequada e segura para o consumo pessoal
+
+e1108 Produtos ou substâncias para consumo pessoal, outros especificados 
+
+e1109 Produtos ou substâncias para consumo pessoal, não especificados
+
+e115 Produtos e tecnologia para uso pessoal na vida diária
+Equipamentos, produtos e tecnologia utilizados pelas pessoas nas atividades diárias, incluindo
+aqueles adaptados ou especialmente projetados, situados na, sobre ou perto da pessoa que os utiliza.
+Inclui: produtos e tecnologia gerais e de assistência para uso pessoal
+
+e1150 Produtos e tecnologia gerais para uso pessoal na vida diária Equipamentos, produtos e tecnologia utilizados pelas pessoas nas atividades diárias
+como roupas, tecidos, móveis, aparelhos, produtos de limpeza e ferramentas, não adaptados nem especialmente projetados,
+
+e1151 Produtos e tecnologia de assistência para uso pessoal na vida diária Equipamentos, produtos e tecnologia adaptados ou especial - mente projetados para auxiliar as pessoas na vida diária, como dispositivos proféticos e ortopédicos» próteses neurais dispositivos de estimulação funcional que controlam os intestinos, bexiga, respiração e frequência cardíaca) e unidades de controle ambiental que visam facilitar o controle dos indivíduos sobre seus espaços internos (escâneres, sistemas de controle remoto, sistemas controlados por voz, temporizadores),
+
+e1158 Produtos e tecnologia para uso pessoal na vida diária, outros especificados
+
+e1159 Produtos e tecnologia para uso pessoal na vida diária, não especificados
+
+e120 Produtos e tecnologia para mobilidade e transporte pessoal em ambientes internos e externos
+Equipamentos, produtos e tecnologia utilizados pelas pessoas nas atividades de deslocamento dentro e fora de edifícios, incluindo aqueles
+adaptados ou especialmente projetados, situados em, sobre ou perto da pessoa que os utiliza.
+Inclui: produtos e tecnologia gerais e de assistência para mobilidade e transporte pessoal em ambientes internos e externos
+
+e1200 Produtos e tecnologia gerais para mobilidade e transporte pessoal em ambientes internos e externos
+Equipamentos, produtos e tecnologia utilizados pelas pessoas nas atividades de deslocamento dentro e fora de edifícios, como veículos motorizados e não motorizados utilizados para o transporte de pessoas em terra, na água ou no ar (e.g.,ônibus, carros, vans,furgões, outros veículos a motor e meios de transporte com tração animal), não adaptados nem especialmente projetados
+
+e1201 Produtos e tecnologia de assistência para mobilidade e transporte pessoal em ambientes internos ou externos
+Equipamentos, produtos e tecnologia adaptados ou especialmente projetados para ajudar as pessoas a se deslocar dentro e fora dos edifícios, como dispositivos para mobilidade pessoal, carros e
+vans especiais, veículos adaptados, cadeiras de rodas, ciclomotores e dispositivos de transferência.
+
+e1208 Produtos e tecnologia para mobilidade e transporte pessoal em ambientes internos e externos, outros especificados
+
+e1209 Produtos e tecnologia para mobilidade e transporte pessoal em ambientes internos e externos, não especificados
+
+e125 Produtos e tecnologia para comunicação
+Equipamentos, produtos e tecnologia utilizados pelas pessoas nas atividades de transmissão e recepção de informações, incluindo aqueles
+adaptados ou especialmente projetados, situados em, sobre ou perto da pessoa que os utiliza.
+Inclui: produtos e tecnologia gerais e de assistência para comunicação
+
+e1250 Produtos e tecnologia gerais para comunicação
+Equipamentos, produtos e tecnologia utilizados pelas pessoas em atividades de transmissão e recepção de informações, como dispositivos ópticos e auditivos, gravadores e receptores de áudio, televisão e equipamento de vídeo, telefones, sistemas de transmissão de som e dispositivos de comunicação face a face, não adaptados nem especialmente projetados.
+
+e1251 Produtos e tecnologia de assistência para comunicação
+Equipamentos, produtos e tecnologia adaptados ou especialmente projetados para ajudar as pessoas a transmitir e a receber informações, como dispositivos especiais de visão, dispositivos eletro-ópticos, dispositivos de escrita especializados, dispositivos de desenho ou escrita à mão, sistemas de sinalização e hardware e software especiais de computadores, implantes cocleares, aparelhos de surdez, treinadores auditivos de FM, próteses de voz; quadros de comunicação, óculos e lentes de contato.
+
+e1258 Produtos e tecnologia para comunicação, outros especificados 
+
+e1259 Produtos e tecnologia para comunicação, não especificados
+
+e130 Produtos e tecnologia para educação
+Equipamentos, produtos, processos, métodos e tecnologia utilizados paia a aquisição de conhecimento, especialização ou habilidade, incluindo aqueles adaptados ou especialmente projetados.
+Inclui: produtos e tecnologia gerais e de assistência paru educação
+
+e1300 Produtos e tecnologia gerais para educação
+Equipamentos, produtos, processos, métodos e tecnologia utilizados para aquisição de conhecimento, experiência ou habilidade
+em qualquer nível, como livros, manuais, brinquedos educativos,
+hardware ou software de computador, não adaptados nem especialmente projetados.
+
+e1301 Produtos e tecnologia de assistência para educação
+Equipamentos, produtos, processos, métodos e tecnologia adaptados e especialmente projetados, utilizados para a aquisição de
+conhecimento, experiência ou habilidade, como uma tecnologia especializada de computação.
+
+e1308 Produtos e tecnologia para educação, outros especificados 
+
+e1309 Produtos e tecnologia para educação, não especificados
+
+e135 Produtos e tecnologia para o trabalho
+Equipamentos, produtos e tecnologia utilizados no trabalho para facilitar as atividades profissionais.
+Inclui: produtos e tecnologia gerais e de assistência para o trabalho
+
+e1350 Produtos e tecnologia gerais para o trabalho
+Equipamentos, produtos e tecnologia utilizados no trabalho para facilitar as atividades profissionais, como ferramentas, máquinas e equipamentos de escritório, não adaptados nem especialmente projetados.
+
+e1351 Produtos e tecnologia de assistência para o trabalho
+Equipamentos, produtos e tecnologia adaptados ou especialmente projetados utilizados no trabalho para facilitar as atividades
+profissionais, como mesas ajustáveis, escrivaninhas e arquivos; abertura e fechamento de portas de escritório com controle remoto; hardware e software de computador, acessórios e unidades de controle ambiental que visam facilitar a condução do indivíduo,
+das tarefas relacionadas ao trabalho e o controle do ambiente de trabalho (e.g., escâneres, sistemas de controle remoto, sistemas controlados por voz e temporizadores).
+
+e1358 Produtos e tecnologia para o trabalho, outros especificados 
+
+e1359 Produtos e tecnologia para o trabalho, não especificados
+
+e140 Produtos e tecnologia para atividades culturais, recreativas e esportivas Equipamentos, produtos e tecnologia utilizados para a condução e o aprimoramento de atividades culturais, recreativas e esportivas, incluindo aqueles adaptados ou especialmente projetados.
+Inclui: produtos e tecnologia gerais e. de assistência para cultura, recreação e esporte
+
+e1400 Produtos e tecnologia gerais para atividades culturais, recreativas e esportivas
+Equipamentos, produtos e tecnologia utilizados para condução e aprimoramento das atividades culturais, recreativas e esportivas,
+como brinquedos, esquis, bolas de tênis e instrumentos musicais, não adaptados nem especialmente projetados.
+
+e1401 Produtos e tecnologia de assistência para atividades culturais, recreativas e esportivas
+Equipamentos, produtos e tecnologia adaptados ou especialmente
+projetados para condução e aprimoramento das atividades culturais. recreativas e esportivas, como dispositivos de mobilidade
+modificados para práticas esportivas, adaptações realizadas para tocar música ou para realizar atividades artísticas.
+
+e1408 Produtos e tecnologia para atividades culturais, recreativas e esportivas, outros especificados
+
+e1409 Produtos e tecnologia para atividades culturais, recreativas e esportivas, não especificados
+
+e145 Produtos e tecnologia para a prática religiosa e vida espiritual  Produtos e tecnologia, únicos ou produzidos em série, que têm ou a que se dá uni significado simbólico no contexto da prática religiosa ou espiritual, incluindo aqueles adaptados ou especialmente projetados.
+Inclui: produtos e tecnologia gerais e de assistência para a prática religiosa e espiritual
+
+e1450 Produtos c tecnologia gerais para a prática religiosa e vida espiritual Produtos ou tecnologia, únicos ou produzidos em série, que têm ou a que se dá um significado simbólico no contexto da prática religiosa ou espiritual, como casas espirituais, mastros, toucas,
+máscaras, crucifixos, objetos utilizados em cultos e tapeies de oração, não adaptados nem especialmente projetados,
+
+e1451 Produtos e tecnologia de assistência para a prática religiosa e vida espiritual
+Produtos e tecnologia adaptados ou especialmente projetados que têm ou a que se dá um significado simbólico no contexto da prática religiosa ou espiritual, como livros religiosos em brade, cartas de birô em braile e proteção especial para as rodas das cadeiras de rodas ao entrar em templos,
+
+e1458 Produtos e tecnologia para a pratica religiosa e rida espiritual, outros especificados
+
+e1459 Produtos e tecnologia para a prática religiosa e vida espiritual não especificados
+
+e150 Produtos e tecnologia usados em projeto, arquitetura e construção de edifícios para uso público
+Produtos e tecnologia que constituem os espaços interno e externo do ambiente planejado, projetado e construído pelo homem para uso público, incluindo aqueles adaptados ou especialmente projetados.
+Inclui: produtos e tecnologia usadas em projeto, arquitetura e construção de entradas e saídas, instalações e indicações de direção
+
+e1500 Produtos e tecnologia usados em projeto, arquitetura e construção para a entrada e saída de edifícios de uso público
+Produtos e tecnologia arquitetônica de entrada e saída do ambiente planejado, projetado e construído pelo homem para uso público, como projeto, arquitetura e construção de entradas e saídas de prédios de uso público, incluindo locais de trabalho, edifícios públicos, rampas portáteis ou fixas, portas elétricas, maçanetas e soleiras niveladas.
+
+e1501 Produtos e tecnologia usados em projeto, arquitetura e construção para o acesso às instalações internas dos edifícios para uso público Produtos e tecnologia arquitetônica para projeto e construção das instalações internas para uso público, como banheiros, telefones, circuito fechado de áudio, elevadores, escadas rolantes, termos tatos (para regulação da temperatura) e assentos distribuídos e acessíveis em auditórios ou estádios.
+
+e1502 Produtos e tecnologia usados em projeto, arquitetura e construção para a indicação de direção, orientação de percurso e designação de locais em edifícios de uso público
+Produtos e tecnologia arquitetônica, externos e internos, para projeto e construção para uso público voltados a ajudar as pessoas a encontrar o caminho dentro e imediatamente fora do prédio e a localizar os lugares para os quais desejam ir, como placas em braile ou escritas, tamanho dos corredores, superfícies dos pisos, balcões acessíveis e outras formas de indicações.
+
+e1503 Produtos e tecnologia usados em projeto, arquitetura e construção para a segurança física de pessoas em edifícios de uso público
+Produtos e tecnologia arquitetônica externos e internos, para uso público, voltados a garantir a segurança como corrimão e sinais de emergência.
+
+e1508 Produtos e tecnologia usados em projeto, arquitetura e construção de edifícios para uso público, outros especificados
+
+e1509 Produtos e tecnologia usados em projeto, arquitetura e construção de edifícios para uso público, não especificados
+
+e155 Produtos e tecnologia usados em projeto, arquitetura e construção de edifícios de uso privado
+Produtos e tecnologia que constituem os espaços interno e externo do ambiente planejado, projetado e construído pelo homem para uso privado (por exemplo: residência, habitação), incluindo aqueles adaptados ou especialmente projetados.
+Inclui: produtos e tecnologia usados em projeto, arquitetura e construção de entradas e saídas, instalações e indicadores de direção
+
+e1550 Produtos e tecnologia usados em projeto, arquitetura e construção de entrada e saída de edifícios de uso privado
+Produtos e tecnologia arquitetônica de entrada e saída do ambiente planejado, projetado e construído pelo homem para uso privado, como entradas e saídas de casas privadas, rampas portáteis e fixas, porras elétricas, maçanetas e soleiras niveladas.
+
+e1551 Produtos e tecnologia usados em projeto, arquitetura e construção para o acesso às instalações em edifícios de uso privado
+Produtos e tecnologia arquitetônica para projeto e construção de áreas internas para uso privado, como banheiros, telefones, circuito fechado de rádio, armários de cozinha, controles de aparelhos eletroeletrônicos em residências particulares.
+
+e1552 Produtos e tecnologia usados em projeto, arquitetura e construção para a indicação de direção, indicação de percurso e designação de localizações em edifícios de uso privado
+Produtos e tecnologia arquitetônica, interna e externa, para projeto e construção de indicadores de percurso, para uso privado, para ajudar as pessoas a encontrar o caminho dentro e imediatamente fora do edifício e localizar os lugares para os quais querem ir, como placas em braile ou escritas, tamanho dos corredores e superfícies dos pisos.
+
+e1553 Produtos e tecnologia usados em projeto, arquitetura e construção para a segurança física das pessoas em edifícios de uso privado
+Produtos e tecnologia arquitetônica, interna e externa para uso privado (por exemplo, em casas e residências) para garantir a segurança, como corrimão e sinais de emergência, e para garantir o armazenamento seguro de objetos de risco (como armas) e de materiais (como solventes ou inseticidas).
+
+e1558 Produtos e tecnologia usados em projeto, arquitetura e construção de edifícios para uso privado, outros especificados
+
+e1559 Produtos e tecnologia usados em projeto, arquitetura e construção de edifícios para uso privado, não especificados
+
+e160 Produtos e tecnologia relacionados ao uso e à exploração do solo Produtos e tecnologia relacionados ao uso do solo que afetam o ambiente externo do indivíduo per meio da implementação de políticas de uso do solo, projeto, planejamento e desenvolvimento de espaços, incluindo aqueles adaptados ou especialmente projetados. Inclui: produtos e tecnologia de áreas que foram organizadas por políticas de utilização do solo, como zonas rurais, residenciais, urbanas,parques, áreas de proteção e reservas naturais
+
+e1600 Produtos e tecnologia do desenvolvimento da zona rural
+Produtos e tecnologia utilizados em áreas rurais que afetam o ambiente externo do indivíduo por meio da implementação de políticas de uso da terra rural, projeto, planejamento e desenvolvimento do espaço, como terra de fazenda, trilhas e colocação de placas indicativas de direção.
+
+e1601 Produtos e tecnologia do desenvolvimento de áreas suburbanas Produtos e tecnologia utilizados em áreas suburbanas que afetam o ambiente externo do indivíduo por meio da implementação de políticas de uso do solo urbano, projeto, planejamento e desenvolvimento de espaço, como meio-fio, caminhos, placas de sinalização e iluminação das mas.
+
+e1602 Produtos e tecnologia do desenvolvimento da zona urbana Produtos e tecnologia em áreas urbanas que afetam o ambiente externo do indivíduo por meio da implementação de políticas de uso do solo urbano, projeto, planejamento e desenvolvimento de espaço, como meio- fio, rampas, placas de sinalização e iluminação das ruas.
+
+e1603 Produtos e tecnologia de parques, áreas de proteção e reservas naturais Produtos e tecnologia em áreas que compõem parques, áreas de proteção e reservas naturais que afetam o ambiente externo do indivíduo por meio da implementação de políticas de uso do solo e projeto, planejamento e desenvolvimento de espaço. como sinalização de parques e trilhas em matas.

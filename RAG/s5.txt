@@ -1,0 +1,41 @@
+Estruturas relacionadas com o aparelho digestivo e com os sistemas metabólico e endócrino, capítulo s5 da CIF. Este capítulo é sobre estruturas relacionadas com o aparelho digestivo e com os sistemas metabólico e endócrino.
+
+s510 Estrutura das glândulas salivares
+
+s520 Estrutura do esófago
+
+s530 Estrutura do estômago
+
+s540 Estrutura do intestino
+
+s5400 Intestino delgado
+
+s5401 Intestino grosso
+
+s5408 Estrutura do intestino, outra especificada
+
+s5409 Estrutura do intestino, não especificada
+
+s550 Estrutura do pâncreas
+
+s560 Estrutura do fígado
+
+s570 Estrutura da vesícula e dos duetos bibliares
+
+s580 Estrutura das glândulas endócrinas
+
+s5800 Hipófise
+
+s5801 Glândula tireoide
+
+s5802 Glândulas paratireoides
+
+s5803 Glândula suprarrenal
+
+s5808 Estrutura das glândulas endócrinas, outra especificada
+
+s5809 Estrutura das glândulas endócrinas, não especificada
+
+s598 Estruturas relacionadas aos sistemas digestório, metabólico e endócrino, outras especificadas
+
+s599 Estruturas relacionadas aos sistemas digestório, metabólico e endócrino, não especificadas

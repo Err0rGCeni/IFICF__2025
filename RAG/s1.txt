@@ -1,0 +1,73 @@
+Estruturas do sistema nervoso, capítulo s1 da CIF. Este capítulo é sobre as estruturas do sistema nervoso.
+
+s110 Estrutura do cérebro
+
+s1100 Estrutura dos lobos corticais
+
+s11000 Lobo frontal
+
+s11001 Lobo temporal
+
+s11002 Lobo parietal
+
+s11003 Lobo occipital
+
+s11008 Estrutura dos lobos corticais, outra especificada
+
+s11009 Estrutura dos lobos corticais, não especificada
+
+s1101 Estrutura do mesencéfalo
+
+s1102 Estrutura do diencéfalo
+
+s1103 Gânglios da base e estruturas relacionadas
+
+s1104 Estrutura do cerebelo
+
+s1105 Estrutura do tronco cerebral
+
+s11050 Bulbo
+
+s11051 Ponte
+
+s11058 Estrutura do tronco cerebral, outra especificada
+
+s11059 Estrutura do tronco cerebral, não especificada
+
+s1106 Estrutura dos nervos cranianos
+
+s1108 Estrutura do cérebro, outra especificada
+
+s1109 Estrutura do cérebro, não especificada
+
+s120 Medula espinal e estruturas relacionadas
+
+s1200 Estrutura da medula espinal
+
+s12000 Medula espinal cervical
+
+s12001 Medula espinal torácica
+
+s12002 Medula espinal lombossacral
+
+s12003 Cauda equina
+
+s12008 Estrutura da medula espinal, outra especificada
+
+S12009 Estrutura da medula espinal, não especificada
+
+s1201 Nervos espinais
+
+s1208 Medula espinal e estruturas relacionadas, outras especificadas 
+
+s1209 Medula espinal e estruturas relacionadas, não especificadas
+
+s130 Estrutura das meninges
+
+s140 Estrutura da parte simpática do sistema nervoso
+
+s150 Estrutura da parte parassimpática do sistema nervoso
+
+s198 Estrutura do sistema nervoso, outra especificada 
+
+s199 Estrutura do sistema nervoso, não especificada
