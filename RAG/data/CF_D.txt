@@ -1,0 +1,967 @@
+Capítulo d1 - Aprendizagem e aplicação do conhecimento
+Este capítulo é sobre aprender, aplicar o conhecimento aprendido, pensar, resolver problemas e tomar decisões.
+
+Código: d110 - Observar
+Utilizar intencionalmente o sentido da visão para experimentar estímulos visuais, como acompanhar ou seguir visualmente um objeto, assistir a um evento esportivo ou observar pessoas ou crianças brincando.
+
+Código: d115 - Ouvir
+Utilizar intencionalmente o sentido da audição para experimentai estímulos auditivos, como ouvir rádio, vozes humanas, música, uma aula ou o relato de uma história.
+
+Código: d120 - Outras percepções sensoriais intencionais
+Utilizar intencional mente os outros sentidos básicos do corpo para experimentar estímulos, como tocar ou sentir texturas, saborear doces ou sentir o cheiro das flores.
+Subcódigo: d1200 - Colocando na boca
+Explorar objetos usando a boca ou os lábios.
+Subcódigo: d1201 - Tocando
+Explorar objetos usando mãos, dedos ou outros membros nu partes do corpo.
+Subcódigo: d1202 - Cheirando
+Sentir os objetos aproximando-os do nariz ou colocando o nariz próximo aos objetos.
+Subcódigo: d1203 - Paladar
+Explorar o gosto dos alimentos ou líquidos mordendo-os, mastigando-os ou chupando-os.
+
+Código: d129 - Experiências sensoriais intencionais, outras especificadas e não especificadas
+
+Código: d130 - Imitar
+Imitar ou espelhar como componente básico do aprendizado, como copiar uma expressão facial, um gesto, um som ou as letras de um alfabeto.
+
+Código: d131 - Aprender por meio de ações com objetos
+Aprender por meio de ação com um simples objeto; aprender por meio de ações em um único objeto, dois ou mais objetos, fingir jogar, ou desenvolver brincadeiras simbólicas, como bater em um objeto, amarrar blocos e brincar com bonecas ou carros.
+Subcódigo: d1310 - Aprender por meio de uma ação simples com um único objeto Ações simples com um único objeto ou brinquedo, manipulando, batendo, movendo, soltando etc.
+Subcódigo: d1311 - Aprender por meio de ação relacionando objetos
+Ações simples relacionando dois ou mais objetos, brinquedos ou outros materiais, sem considerar as especificidades dos objetos, brinquedos ou materiais.
+Subcódigo: d1312 - Aprender por meio de ações relacionando objetos no que diz respeito a características específicas
+Ações relacionando dois ou mais objetos, brinquedos ou materiais no que diz respeito a suas características específicas, por exemplo, tampa na caixa, xícara no pires.
+Subcódigo: d1313 - Aprender por meio de relacionamento simbólico com objetos Aprender pelo relacionamento com objetos, brinquedos ou materiais de forma simbólica,
+como alimentar ou vestir uma boneca ou usar um ambiente simulado.
+Subcódigo: d1318 - Aprender por meio de ações com objetos, outras especificados
+Subcódigo: d1319 - Aprender por meio de ações com objetos, não especificado
+
+Código: d132 - Desenvolver a capacidade de representar pessoas, objetos,
+acontecimentos, Sentimentos por meio de palavras, símbolos, frases e sentenças.
+Inclui: reaquisição de linguagem.
+Subcódigo: d1320 - Aquisição de palavras simples ou símbolos com significado  Aprender palavras ou símbolos com significado como um gráfico ou sinais manuais ou símbolos
+Subcódigo: d1321 - Combinar palavras para formar frases
+Aprender a combinar palavras formando frases.
+Subcódigo: d1322 - Aquisição de sintaxe
+Aprender a produzir sentenças construídas de forma apropriada ou um conjunto de sentenças.
+Subcódigo: d1328 - Aquisição de linguagem, outra especificada
+Subcódigo: d1329 - Aquisição de linguagem, não especificada
+
+Código: d133 - Aquisição de linguagem adicional
+Desenvolver capacidade para representar pessoas, objetos, acontecimentos e sentimentos por meio de palavras, símbolos, frases e sentenças, em uma linguagem adicionai como uma língua estrangeira ou por meio de sinais.
+
+Código: d135 - Ensaiar
+Repetir uma sequência de eventos ou símbolos como componente básico do aprendizado, como contar de dez em dez ou praticar a recitação de uma rima com gestos ou acordes em um instrumento musical.
+
+Código: d137 - Aquisição de conceitos
+Desenvolver a capacidade de entender e usar conceitos básicos e complexos relacionados às características de coisas, pessoas ou acontecimentos.
+Subcódigo: d1370 - Aquisição de conceitos básicos
+Aprender a usar os conceitos de tamanho, forma, quantidade, concordância ou oposição.
+Subcódigo: d1371 - Aquisição de conceitos complexos
+Aprender a usar os conceitos de classificação, agrupamento, reversibilidade, seriação.
+Subcódigo: d1378 - Aquisição de conceitos, outros especificados
+Subcódigo: d1379 - Aquisição de conceitos, não especificados
+
+Código: d138 - Aquisição de informação
+Obter fatos sobre pessoas, coisas e acontecimentos, como perguntar por quê, o quê, onde e como, perguntar por nomes.
+
+Código: d140 - Aprender a ler
+Desenvolver a capacidade de ler material impresso (incluindo braile e outros símbolos) com fluência e precisão, como reconhecer caracteres e letras do alfabeto, vocalizar palavras escritas com a pronúncia correta e compreender palavras escritas e frases.
+Subcódigo: d1400 - Adquirir habilidade para reconhecer símbolos, incluindo números, ícones, caracteres, letras do alfabeto e palavras
+Aprender ações básicas da decifração de símbolos, como números e ícones, caracteres, letras do alfabeto e palavras.
+Subcódigo: d1401 - Adquirir habilidades para vocalizar palavras escritas
+Aprender ações básicas para vocalizar caracteres, leiras do alfabeto, símbolos e palavras com pronúncia correta.
+Subcódigo: d1402 - Adquirir habilidades para compreender palavras e frases escritas Aprender ações básicas para entender o significado de palavras e textos escritos.
+Subcódigo: d1408 - Aprender a ler, outro especificado
+Subcódigo: d1409 - Aprender a ler, não especificado
+
+Código: d145 - Aprender a escrever
+Desenvolver a capacidade de produzir símbolos que representam sons, palavras ou frases de forma que tenham um significado (incluindo a escrita braile e outros símbolos), como escrever de maneira eficiente e utilizar a gramática correta.
+Subcódigo: d1450 - Adquirir habilidades para usar instrumentos de escrita
+Aprender ações básicas para escrever símbolos ou Letras do alfabeto, como segurar um lápis. giz ou pincel, escrever um caractere ou um símbolo em um pedaço de papel, usando uma máquina de escrever em braile, um teclado ou um dispositivo periférico (mouse).
+Subcódigo: d1451 - Adquirir habilidades para escrever símbolos, caracteres e letras do alfabeto
+Aprender ações básicas para traduzir um som (morfema) em um símbolo ou caractere (grafema).
+Subcódigo: d1452 - Adquirir habilidades para escrever palavras e frases
+Aprender ações básicas para transcrever palavras faladas ou ideias em palavras escritas ou frases.
+Subcódigo: d1458 - Aprender a escrever, outra especificado
+Subcódigo: d1459 - Aprender a escrever, não especificado
+
+Código: d150 - Aprender a calcular
+Desenvolver a capacidade de manipular números e realizar operações matemáticas simples e complexas, como utilizar sinais matemáticos para somar e subtrair e usar a operação matemática apropriada para o problema.
+Subcódigo: d1500 - Aquisição de habilidades básicas com números
+Aprender ações elementares de matemática como contar, ordenar e agrupar.
+Subcódigo: d1501 - Aquisição de habilidades para reconhecer numerais, sinais e símbolos aritméticos
+Aprender a reconhecer e a usar números.
+Subcódigo: d1502 - Aquisição da capacidade para usar as operações básicas
+Aprender a usar as operações de adição, subtração, multiplicação e divisão e a reconhecer os símbolos relacionados a cada uma dessas operações.
+Subcódigo: d1508 - Aquisição da capacidade de cálculo, outra especificada
+Subcódigo: d1509 - Aquisição da capacidade de cálculo, não especificada
+
+Código: d155 - Aquisição de habilidades
+Desenvolver capacidades básicas e complexas em usar conjunto integrado de ações ou tarefas de maneira a iniciar e concluir a aquisição de uma habilidade, como manipular ferramentas ou brinquedos, ou disputar jogos.
+Inclui: aquisição de habilidades básicas e complexas.
+Subcódigo: d1550 - Aquisição de habilidades básicas
+Aprender ações elementares e intencionais, como aprender a usar ferramentas simples, por exemplo, um lápis ou talheres.
+Subcódigo: d1551 - Aquisição de habilidades complexas
+Aprender conjuntos integrados de ações para seguir regras, sequenciar e coordenar os próprios movimentos, como aprender a jogar (e.g., futebol ou xadrez) e a utilizar uma ferramenta de construção.
+Subcódigo: d1558 - Aquisição de habilidades, outra especificada
+Subcódigo: d1559 - Aquisição de habilidades, não especificada
+
+Código: d159 - Aprendizado básico, outro especificado e não especificado
+
+Código: d160 - Concentrar a atenção
+Centrar-se intencionalmente em um estímulo específico, desligando-se de ruídos que distraem a atenção.
+Subcódigo: d1600 - Concentrar a atenção na pessoa
+Concentrar a atenção intencionalmente em características de outras pessoas, como o seu rosto, o tato ou a voz.
+Subcódigo: d1601 - Concentrar a atenção no ambiente
+Concentrar a atenção intencional mente em algum elemento do ambiente, como mudanças na qualidade, quantidade ou intensidade dos estímulos físicos ou sociais.
+Subcódigo: d1608 - Concentrar a atenção, outra especificado
+Subcódigo: d1609 - Concentrar a atenção, não especificado
+
+Código: d163 - Pensar
+Formular e manipulai ideias, conceitos e imagens, dirigidos ou não a um objetivo, sozinho ou com outros, como criar ficção, comprovar um teorema, brincar com ideias, debater ideias, meditar, ponderar, especular ou refletir.
+
+Código: d166 - Realizar atividades envolvidas na compreensão e interpretação da linguagem escrita livros, instruções ou jornais em texto ou em braile), com o objetivo de obter conhecimentos gerais ou informações específicas.
+
+Código: d170 - Escrever
+Utilizar ou produzir símbolos ou linguagem para transmitir informações, como produzir um registro escrito de eventos ou ideias, ou redigir uma carta.
+Subcódigo: d1700 - Usar habilidades gerais e estratégias do processo de escrita  Usar palavras que transmitem o significado adequado, empregar a estrutura da frase convencional
+Subcódigo: d1701 - Usar convenções gramaticais na redação de um texto
+Empregar normas de ortografia-padrão e forma adequada etc.
+Subcódigo: d1702 - Usar habilidades gerais e estratégias para escrever um texto Empregar palavras e sentenças que transmitam um significado complexo e ideias abstratas,
+Subcódigo: d1708 - Escrever, outro especificado
+Subcódigo: d1709 - Escrever, não especificado
+
+Código: d172 - Calcular
+Realizar cálculos aplicando princípios matemáticos para resolver problemas descritos em palavras e produzir ou mostrar os resultados, como no cálculo da soma de três números ou encontrar o resultado da divisão de um número por outro.
+Subcódigo: d1720 - Usar capacidade e estratégias para realizar cálculos numéricos simples Realizar operações numéricas simples como contar, agrupar, ordenar e fazer cálculos aritméticos.
+Subcódigo: d1721 - Usar capacidade e estratégias para realizar operações e cálculos numéricos complexos
+Aplicar métodos e procedimentos matemáticos como álgebra, cálculo e geometria para resolver problemas.
+Subcódigo: d1728 - Calcular, outro especificado
+Subcódigo: d1729 - Calcular, não especificado
+
+Código: d175 - Resolver problemas
+Encontrar soluções para problemas ou situações identificando e analisando questões, desenvolvendo opções e soluções, avaliando os potenciais efeitos das soluções e executando uma solução escolhida, como na resolução de uma disputa entre duas pessoas.
+Inclui: resolução de problemas simples e complexos.
+Subcódigo: d1750 - Resolver problemas simples
+Encontrar soluções para um problema simples envolvendo uma única questão, por meio da identificação e análise da questão, do desenvolvimento de soluções, da avaliação dos potenciais efeitos das soluções e da execução da solução escolhida.
+Subcódigo: d1751 - Resolver problemas complexos
+Encontrar soluções para um problema complexo que envolve questões múltiplas e inter-relacionadas, ou vários problemas relacionados, por meio de identificação e análise da questão, desenvolvimento de soluções, avaliação dos potenciais efeitos das soluções e execução da solução escolhida.
+Subcódigo: d1758 - Resolver problemas, outros especificados
+Subcódigo: d1759 - Resolver problemas, não especificados
+
+Código: d177 - Tomar decisões
+Fazer uma escolha entre opções, implementar a escolha e avaliar os efeitos da escolha, como selecionar c adquirir um item específico ou decidir pôr em prática e realizar uma tarefa entre várias tarefas que precisam ser feitas.
+
+Código: d179 - Aplicação de conhecimento, outra especificada
+
+Código: d198 - Aprendizagem e aplicação de conhecimento, outros especificados
+
+Código: d199 - Aprendizagem e aplicação de conhecimento, não especificados
+
+Capítulo d2 - Tarefas e exigências gerais
+Este capítulo trata de aspectos gerais da realização de tarefas únicas ou múltiplas, organização de rotinas e gerenciamento de estresse. Esses itens podem ser usados em conjunto com tarefas ou ações mais específicas para identificar as características subjacentes da execução de tarefas em diferentes circunstâncias.
+
+Código: d210 - Realizar uma única tarefa
+Realizar ações simples ou complexas e coordenadas relacionadas aos componentes mentais e físicos de uma única tarefa, como iniciar uma tarefa, organizar o tempo, o espaço e os materiais para uma tarefa, regular o desempenho da tarefa e executar, concluir e manter a tarefa.
+Inclui: realizar uma tarefa simples ou complexa; realizar uma tarefa única deforma independente ou em um grupo.
+Subcódigo: d2100 - Realizar uma tarefa simples
+Preparar, iniciar e organizar o tempo e o espaço necessários para uma única tarefa; executar uma tarefa simples cora um único componente principal, como ler um livro, escrever uma carta ou fazer a cama.
+Subcódigo: d2101 - Realizar uma tarefa complexa
+Preparar, iniciar e organizar o tempo e o espaço para uma única tarefa complexa; executar uma tarefa complexa com mais de um componente, que pode ser realizada em sequência ou simultaneamente, como arrumar os móveis na própria casa ou concluir uma tarefa escolar.
+Subcódigo: d2102 - Realizar uma tarefa única, de fornia independente
+Preparar, iniciar e organizar o tempo e o espaço para uma tarefa simples ou complexa, gerenciando c executando a tarefa por si próprio, sem a ajuda de outros.
+Subcódigo: d2103 - Realizar uma tarefa única em um grupo
+Preparar, iniciar e organizar o tempo e o espaço para unia única tarefa, simples ou complexa; gerenciar e executar a tarefa com as pessoas envolvidas em algumas ou em todas as etapas da tarefa.
+Subcódigo: d2108 - Realizar uma única tarefa, outra especificada
+Subcódigo: d2109 - Realizar uma única tarefa, não especificada
+
+Código: d220 - Realizar tarefas múltiplas
+Realizar ações simples ou complexas e coordenadas como componentes de tarefas múltiplas, integradas e complexas em sequência ou simultaneamente.
+Inclui: realizar tarefas múltiplas: concluir tarefas múltiplas; realizar tarefas múltiplas deforma independente e em um grupo..
+Subcódigo: d2200 - Realizar tarefas múltiplas
+Preparar, iniciar e organizar o tempo e o espaço necessários para várias tarefas, gerenciar e executar várias tarefas, simultânea ou sequencialmente.
+Subcódigo: d2201 - Concluir tarefas múltiplas
+Concluir várias tarefas, simultânea ou sequencialmente.
+Subcódigo: d2202 - Realizar tarefas múltiplas, de forma independente
+Preparar, iniciar e organizar o tempo e espaço para múltiplas tarefas, gerenciar e executar várias tarefas simultânea ou sequencialmente, por si próprio, sem a ajuda de outros.
+Subcódigo: d2203 - Realizar tarefas múltiplas em um grupo
+Preparar, iniciar e organizar o tempo e espaço para múltiplas tarefas, gerenciar e executar várias tarefas em conjunto ou sequencialmente com outros envolvidos em algumas ou em todas as etapas das tarefas múltiplas.
+Subcódigo: d2208 - Realizar tarefas múltiplas, outras especificadas
+Subcódigo: d2209 - Realizar tarefas múltiplas, não especificadas
+
+Código: d230 - Realizar a rotina diária
+Realizar e coordenar ações simples ou complexas para planejar, gerenciar e concluir as exigências dos procedimentos ou dos deveres do dia a dia, como administrar o tempo e fazer planos para diversas atividades ao longo do dia.
+Inclui: gerenciar e concluir a rotina diária; gerenciar o nível de atividade pessoal.
+Subcódigo: d2301 - Gerenciar a rotina diária
+Realizar e coordenar ações simples ou complexas para completar os requisitos dos procedimentos ou tarefas usuais do dia a dia, como se vestir, tomar o café da manhã, sair para ir à escola ou ao trabalho e retomar à casa no fim do dia.
+Subcódigo: d2302 - Concluir a rotina diária
+Realizar e coordenar ações simples ou complexas para concluir as exigências dos procedimentos ou deveres usuais do dia a dia, como se vestir, tomar o café da manhã, sair para a escola ou trabalho e retomar para casa no fim do dia.
+Subcódigo: d2303 - Gerenciar o nível de atividade pessoal
+Realizar ações e condutas para obter a energia e o tempo necessários para os procedimentos ou deveres do dia a dia.
+Subcódigo: d2304 - Adaptar-se às mudanças na rotina diária
+Interromper e alterar tarefas e ações em resposta a novos requisitos ou fazer a transição de um padrão usual de atividades para um novo conjunto de atividades como um meio de realizar tarefas diárias.
+Subcódigo: d2308 - Realizar a rotina diária, outra especificada
+Subcódigo: d2309 - Realizar a rotina diária, não especificada
+
+Código: d240 - Lidar com o estresse e outras demandas psicológicas
+Realizar e coordenar ações simples ou complexas para gerenciar e controlar as demandas psicológicas necessárias à execução de tarefas que exigem responsabilidades significativas e que envolvem estresse, distração ou crise, como dirigir um veículo no trânsito pesado ou tomar conta de muitas crianças.
+Inclui: lidar com responsabilidades: lidar com estresse e crise.
+Subcódigo: d2400 - Lidar com responsabilidades
+Realizar e coordenar ações simples ou complexas para gerenciar os deveres de desempenho de tarefas e para avaliar as necessidades desses deveres.
+Subcódigo: d2401 - Lidar com estresse
+Realizar e coordenar ações simples ou complexas para enfrentar pressão, emergências ou estresse associados ao desempenho da tarefa.
+Subcódigo: d2402 - Lidar com crise
+Realizar e coordenar ações simples ou complexas para enfrentar os momentos decisivos de uma situação ou momentos de perigo ou dificuldade extrema.
+Subcódigo: d2408 - Lidar com estresse e outras demandas psicológicas, outra especificada
+Subcódigo: d2409 - Lidar com estresse e outras demandas psicológicas, não especificada
+
+Código: d298 - Tarefas e demandas gerais, outras especificadas
+
+Código: d299 - Tarefas e demandas gerais, não especificadas
+
+Capítulo d3 - Comunicação
+Este capítulo trata de características gerais e específicas da comunicação por linguagem, sinais e símbolos, incluindo receber e produzir mensagens, manter conversas e usar dispositivos e técnicas de comunicação.
+
+Código: d310 - Comunicação-recepção de mensagens orais
+Compreender os significados literal e implícito das mensagens em linguagem oral, como distinguir se uma frase tem um significado literal ou é uma expressão idiomática.
+Inclui: comunicação-recepção de mensagens orais simples, mensagens orais complexas.
+Subcódigo: d3101 - Comunicação-recepção de mensagens orais simples
+Compreender o significado literal transmitido por mensagens orais simples.
+Subcódigo: d3102 - Comunicação-recepção de mensagens orais complexas
+Compreender os significados literal e implícito transmitidos por mensagens orais complexas.
+Subcódigo: d3108 - Comunicação-recepção de mensagens orais, outras especificadas
+Subcódigo: d3109 - Comunicação-recepção de mensagens orais, não especificadas
+
+Código: d315 - Comunicação-recepção de mensagens não verbais
+Compreender os significados literal e implícito das mensagens transmitidas por gestos, símbolos e desenhos, como perceber que uma criança está cansada quando ela esfrega os olhos ou que uni alarme significa que há incêndio.
+Inclui: comunicação e recepção de gestos corporais, sinais e símbolos gerais, desenhos e fotografias.
+Subcódigo: d3150 - Comunicação-recepção de gestos corporais
+Compreender o significado transmitido pelas expressões faciais, movimentos das mãos ou sinais, posturas corporais e outras formas de linguagem corporal.
+Subcódigo: d3151 - Comunicação-recepção de sinais e símbolos gerais
+Compreender o significado dos sinais e símbolos públicos, como placas de trânsito, símbolos de alerta, notas musicais ou científicas e ícones.
+Subcódigo: d3152 - Comunicação-recepção de desenhos e fotografias
+Compreender o significado representado por desenhos (e.g., desenhos lineares, desenhos gráficos, pinturas, representações tridimensionais, pictogramas), gráficos, diagramas e fotografias, como entender que ama linha crescente em um gráfico de estatura significa que a criança está crescendo.
+Subcódigo: d3158 - Comunicação-recepção de mensagens não verbais, outra especificada
+Subcódigo: d3159 - Comunicação-recepção de mensagens não verbais, não especificada
+
+Código: d320 - Comunicação-recepção de mensagens na linguagem de sinais convencionais
+Receber e compreender mensagens na linguagem de sinais convencionais com significado literal e implícito.
+
+Código: d325 - Comunicação-recepção de mensagens escritas
+Compreender os significados literal e implícito das mensagens transmitidas por meio da linguagem escrita (incluindo braile), como acompanhar os eventos políticos no jornal diário ou compreender a mensagem de um texto religioso.
+
+Código: d329 - Comunicação-recepção, outra especificada e não especificada
+
+Código: d330 - Fala
+Produzir palavras, frases e passagens mais longas em mensagens faladas com significado literal e implícito, como expressar uni falo ou contar uma história em linguagem oral.
+Subcódigo: d3300 - Produzir sons com significado
+Usar palavras simples para rotular objetos, pessoas ou ações, por exemplo, bola, mamãe, tchau.
+Subcódigo: d3301 - Produzir mensagens faladas simples
+Usar palavras para produzir mensagens faladas simples como uma única ou poucas palavras, ou expressar uma necessidade (e.g., eu quero....) ou sentimento (e.g.: eu gosto...).
+Subcódigo: d3302 - Produzir mensagens faladas complexas
+Usar palavras para produzir mensagens faladas complexas (sentença completa), como dar explicação ou pedir orientações.
+Subcódigo: d3308 - Fala, outra especificada
+Subcódigo: d3309 - Fala, não especificada
+
+Código: d331 - Expressão vocal sem fala
+Vocalizar quando está ciente da proximidade de outra pessoa, como produzir sons quando a mãe está próxima: balbuciando; balbuciando em resposta a estímulo vocal de outra pessoa, Vocalizar em resposta à faia por meio da imitação de sons de fala, como em procedimentos de turnos.
+
+Código: d332 - Cantar
+Usar tons em uma sequência que resulte em melodia para transmitir mensagens.
+Inclui: cantarolar, entoar.
+
+Código: d335 - Produção de mensagens não verbais
+Usar gestos, símbolos e desenhos para transmitir mensagens, como sacudir a cabeça para indicar desacordo ou desenhar uma figura ou um diagrama para transmitir um fator ou uma ideia complexa.
+Inclui: produção de gestos corporais, sinais, símbolos, desenhos e fotografias.
+Subcódigo: d3350 - Produção de linguagem corporal
+Transmitir mensagens por movimentos intencionais do corpo, como gestos faciais (e.g., sorrindo, franzindo a testa, estremecendo), por movimentos do braço e das mãos e por postura (e.g., abraçando para indicar afeto ou apontando para receber atenção ou um objeto).
+Subcódigo: d3351 - Produção de sinais e símbolos
+Transmitir significado por meio da utilização de sinais e símbolos (e.g., ícones, símbolos Bliss, símbolos científicos) e sistemas de notação simbólica, como utilizar uma nota musical para transmitir uma melodia.
+Subcódigo: d3352 - Produção de desenhos e fotografias
+Transmitir mensagens por meio de desenhos, pinturas ou esboços e fazer diagramas, reproduções ou fotografias, como desenhar um mapa para indicar o caminho para um local
+Subcódigo: d3358 - Produção de mensagens não verbais outra especificada
+Subcódigo: d3359 - Produção de mensagens não verbais, não especificada
+
+Código: d340 - Produção de mensagens na linguagem formal dos sinais
+Transmitir, com linguagem de sinais convencionais, significado literal e implícito.
+
+Código: d345 - Escrever mensagens
+Produzir os significados literal e implícito de mensagens que são transmitidas por meio da linguagem escrita, como escrever uma carta para um amigo.
+
+Código: d349 - Comunicação-produção outra especificada e não especificada
+
+Código: d350 - Conversação
+Iniciar, manter c finalizar uma troca de pensamentos c ideias, realizada por meio da linguagem escrita, oral, de sinais cu outras formas de linguagem, com uma ou mais pessoas conhecidas ou estranhas, em um ambiente formal ou informal.
+Inclui: iniciar manter e finalizar uma conversa; conversar com uma ou mais pessoas.
+Subcódigo: d3500 - Iniciar uma conversa
+Iniciar uma troca de ideias como iniciando uma conversa por meio de contato visual ou outros meios que levem à comunicação ou ao diálogo, como se apresentando, fazendo cumprimentos habituais, introduzindo um assunto ou fazendo uma pergunta.
+Subcódigo: d3501 - Manter uma conversação
+Continuar e formular um diálogo ou troca de ideias, respeitando turnos ao assumir a palavra, falando ou se comunicando por linguagem de sinais, ou acrescentando pontos de vista, introduzindo um novo tema ou retomando algum tema previamente mencionado.
+Subcódigo: d3502 - Terminar uma conversa
+Terminar um diálogo ou troca de ideias com declarações ou expressões habituais de finalização e fechar o tema da conversa.
+Subcódigo: d3503 - Conversar com uma pessoa
+Iniciar manter, dar forma e terminar um diálogo ou intercâmbio com uma pessoa, como falar do tempo com um amigo.
+Subcódigo: d3504 - Conversar com muitas pessoas
+Iniciar, manter, dar forma e terminar um diálogo ou intercâmbio com mais de um indivíduo, como iniciar e participar de um intercâmbio de grupo.
+Subcódigo: d3508 - Conversação, outra especificada
+Subcódigo: d3509 - Conversação, não especificada
+
+Código: d355 - Discussão
+iniciar, manter e terminar a análise de um assunto, com argumentos a favor ou contra, ou um debate por meio de linguagem oral, escrita, de sinais ou outras formas de linguagem, com uma ou mais pessoas conhecidas ou estranhas, em um ambiente formal ou informal.
+Inclui: discussão com uma ou várias pessoas.
+Subcódigo: d3550 - Discussão com uma pessoa
+Iniciar, manter, dar forma ou terminar uma discussão ou um debate com uma pessoa.
+Subcódigo: d3551 - Discussão com várias pessoas
+Iniciar, manter, dar forma ou terminar uma discussão ou um debate com mais de uma pessoa.
+Subcódigo: d3558 - Discussão, outra especificada
+Subcódigo: d3559 - Discussão, não especificada
+
+Código: d360 - Utilização de dispositivos e técnicas de comunicação
+Utilizar dispositivos, técnicas e outros meios para se comunicar, como telefonar para um amigo.
+Inclui: utilização de dispositivos de telecomunicações, utilização de maquinas de escrever e técnicas de comunicação.
+Subcódigo: d3600 - Utilização de dispositivos de comunicação
+Utilizar telefone, computador e outros aparelhos eletrônicos como meio de comunicação.
+Subcódigo: d3601 - Utilização de máquina de escrever
+Utilizar máquinas para escrever, como máquinas de. escrever, computadores e máquinas de braile.
+Subcódigo: d3602 - Utilização de técnicas de comunicação
+Realizar ações e tarefas relacionadas com técnicas de comunicação, como leitura labial.
+Subcódigo: d3608 - Utilização de dispositivos e técnicas de comunicação, outros especificados
+Subcódigo: d3609 - Utilização de dispositivos e técnicas de comunicação, não especificados
+
+Código: d369 - Conversação e utilização de dispositivos e técnicas de comunicação, outros especificados e não especificados
+
+Código: d398 - Comunicação, outra especificada
+
+Código: d399 - Comunicação, não especificada
+
+Capítulo d4 - Mobilidade
+Este capítulo é sobre mover-se mudando a posição ou localização do corpo ou transferindo-se de um lugar para outro, carregando, movendo ou manipulando objetos, caminhando, correndo ou escalando e usando várias formas de transporte.
+
+Código: d410 - Mudar a posição básica do corpo
+Adotar e abandonar uma posição corporal e mover-se de um locai para outro, como levantar-se de uma cadeira para deitar-se na cama, e adotar e abandonar posições como sentar, levantar, ajoelhar e agachar.
+Inclui: mudar a posição do corpo de deitado, agachado, ajoelhado, sentado ou em pé. rolando, curvado e mudar o centro de gravidade do corpo
+Subcódigo: d4100 - Deitar-se
+Adotar e abandonar a posição deitada ou mudar a posição horizontal do corpo para qualquer outra posição, como levantar-se ou sentar-se.
+Inclui: assumir uma posição prostrada.
+Subcódigo: d4101 - Agachar-se
+Adotar e abandonai a posição sentada ou agachada sobre o próprio quadril com os joelhos juntos ou sentada sobre os próprios calcanhares, como pode ser necessário em banheiros no nível do piso, ou mudar a posição do corpo de agachado para qualquer outra posição, como levantar-se.
+Subcódigo: d4102 - Ajoelhar-se
+Adotai- e abandonar uma posição em que o corpo é apoiado sobre os joelhos com as pernas dobradas, como quando se reza, ou mudar a posição do corpo de ajoelhado para qualquer outra posição, como levantar-se.
+Subcódigo: d4103 - Sentar-se
+Adotar e abandonar uma posição sentada ou mudar a posição do corpo de sentado para qualquer outra posição, como levantar-se ou deitar-se.
+inclui: adotar urna posição sentada com as pernas dobradas ou cruzadas; adotar uma posição sentada com os pés apoiados ou sem apoio.
+Subcódigo: d4104 - Levantar-se
+Adotar e abandonar uma posição de estar em pé ou mudar a posição do corpo de estar em pé para qualquer outra posição, como deitar-se ou sentar-se.
+Subcódigo: d4105 - Inclinar-se
+Inclinar as costas para baixo ou para o lado, como ao fazer uma reverência ou abaixar-se para pegar um objeto.
+Subcódigo: d4106 - Mudar o centro de gravidade do corpo
+Mudar ou mover o peso do corpo de uma posição para outra enquanto estiver sentado, de pé ou deitado, como mover-se de um pé para o outro enquanto estiver de pé.
+Subcódigo: d4107 - Rolar
+Mover o corpo deitado de uma posição para outra, de um lado para outro ou mudar a posição de deitado de costas para de barriga para baixo.
+Subcódigo: d4108 - Mudar a posição básica do corpo, outra especificada
+Subcódigo: d4109 - Mudar a posição básica do corpo, não especificada
+
+Código: d415 - Manter a posição do corpo
+Manter o corpo na mesma posição durante o tempo necessário, como permanecer sentado ou de pé no trabalho ou na escola.
+Inclui: manter uma posição deitada, agachada. ajoelhado. sentada ou em pé.
+Subcódigo: d4150 - Permanecer deitado
+Permanecer deitado pelo tempo necessário, como permanecer em uma posição de bruços na cama.
+Inclui: permanecer em uma posição de bruços (face para baixo ou prostrado), supina (virado para cima) ou de lado.
+Subcódigo: d4151 - Permanecer agachado
+Permanecer agachado pelo tempo necessário, como quando sentado no chão.
+Subcódigo: d4152 - Permanecer ajoelhado
+Permanecerem uma posição ajoelhada em que o corpo é apoiado sobre os joelhos com pernas dobradas pelo tempo necessário, como durante as preces na igreja.
+Subcódigo: d4153 - Permanecer sentado
+Permanecer sentado, em uma cadeira ou no chão, pelo tempo necessário, como quando sentado em uma carteira ou mesa.
+Inclui: permanecer sentado com pernas retas ou cruzadas, com pés apoiados ou sem apoio.
+Subcódigo: d4154 - Permanecer em pé
+Permanecer em pé durante o tempo necessário, como quando se espera em uma fila.
+Inclui: permanecer de pé em superfícies inclinadas, escorregadias ou duras.
+Subcódigo: d4155 - Manter a posição da cabeça
+Controlar a posição da cabeça e sustentar seu peso por um determinado período de tempo.
+Subcódigo: d4158 - Manter a posição do corpo, outra especificada
+Subcódigo: d4159 - Manter a posição do corpo, não especificada
+
+Código: d420 - Transferir a própria posição
+Mover-se de uma superfície para outra, como escorregar em um banco ou mover-se da cama para a cadeira, sem mudar a posição do corpo.
+Inclui: deslocar-se enquanto estiver sentado ou deitado.
+Subcódigo: d4200 - Transferir-se enquanto estiver sentado
+Mover-se de uma posição sentada, passando de uma cadeira para outra, no mesmo nível ou em nível diferente, ou mover-se de uma cadeira para uma cama.
+Inclui: mover-se de uma cadeira para outra, como para uni assento higiênico: mover se de uma cadeira de rodas para o assento de um veículo.
+Subcódigo: d4201 - Transferir-se enquanto estiver deitado
+Mover-se de uma posição deitada para outra no mesmo nível ou em nível diferente, como mover-se de uma cama para outra.
+Subcódigo: d4208 - Transferir a própria posição, outra especificada
+Subcódigo: d4209 - Transferir a própria posição, não especificada
+
+Código: d429 - Mudar e manter a posição do corpo, outras especificadas e não especificadas
+
+Código: d430 - Levantar e carregar objetos
+Levantar um objeto ou mover algo de um lugar para outro, como levantar uma xícara ou um brinquedo ou carregar uma caixa, ou uma criança de um local para outro.
+Inclui: levantar objetos, carregar nas mãos ou nos braços ou sobre os ombros, quadril, costas ou cabeça: abaixar objetos.
+Subcódigo: d4300 - Levantar objetos
+Levantar um objeto para movê-lo de um nível mais baixo para um nível mais alto, como levantar um copo da mesa.
+Subcódigo: d4301 - Carregar nas mãos
+Pegar ou transportar um objeto de um lugar para outro utilizando as mãos, como carregar um copo ou uma mala.
+Subcódigo: d4302 - Carregar nos braços
+Pegar ou transportar um objeto de um lugar para outro utilizando braços e mãos, como carregar um animal de estimação, uma criança ou outro objeto volumoso.
+Subcódigo: d4303 - Carregar nos ombros, quadris e costas
+Pegar ou transportar um objeto de um lugar para outro usando os ombros, quadris ou costas, ou vários desses membros juntos, como carregar um grande pacote ou uma bolsa escolar.
+Subcódigo: d4304 - Carregar na cabeça
+Pegar ou transportar um objeto de um lugar para outro usando a cabeça, como carregar um recipiente de água na cabeça.
+Subcódigo: d4305 - Abaixar objetos
+Utilizar mãos, braços ou outras partes do corpo para colocar um objeto em uma superfície ou lugar, como colocar um recipiente de água no chão.
+Subcódigo: d4308 - Levantar e carregar, outras especificadas
+Subcódigo: d4309 - Levantar e carregar, outras não especificadas
+
+Código: d435 - Mover objetos com as extremidades inferiores
+Realizar ações coordenadas com o objetivo de mover um objeto utilizando pernas e pés, como ao chutar uma bola ou pedalar.
+Inclui: empurrar com as extremidades inferiores; chutar.
+Subcódigo: d4350 - Empurrar com as extremidades inferiores
+Utilizar pernas e pés para exercer uma força sobre um objeto, para movê-lo do lugar, como empurrar uma cadeira com um pé.
+Subcódigo: d4351 - Chutar
+Utilizar pernas e pés para impulsionar algo para longe, como chutar uma bola.
+Subcódigo: d4358 - Mover objetos com as extremidades inferiores, outras especificadas
+Subcódigo: d4359 - Mover objetos com as extremidades inferiores, não especificadas
+
+Código: d440 - Uso fino da mão
+Realizar as ações coordenadas de manusear objetos, levanta los, manipulados e soltá-los utilizando mãos, dedos c polegar, como necessário para pegar moedas de uma mesa ou girar um botão ou maçaneta.
+Inclui: pegar, segurar, manipular e soltar.
+Subcódigo: d4400 - Pegar
+Levantar ou erguer um pequeno objeto com as mãos e os dedos, como levantar um lápis.
+Subcódigo: d4401 - Agarrar
+Utilizar uma ou ambas as mãos para agarrar e segurar algo, como agarrar uma ferramenta ou uma maçaneta de porta.
+Subcódigo: d4402 - Manipular
+Usar os dedos e as mãos para controlar, dirigir ou guiar algum objeto, como manusear moedas ou outros objetos pequenos como tesoura, laço do sapato, lápis, ou palitos usados como talheres nos países asiáticos, faca e garfo.
+Subcódigo: d4403 - Soltar
+Usar os dedos e as mãos para soltar ou largar algum objeto de maneira que ele caia ou mude de posição, como deixar cair uma peça de roupa ou um pedaço de comida para um animal de estimação.
+Subcódigo: d4408 - Uso fino da mão, outro especificado
+Subcódigo: d4409 - Uso fino da mão, não especificado
+
+Código: d445 - Uso da mão e do braço
+Realizar as ações coordenadas necessárias para mover objetos ou manipulá-los utilizando as mãos e os braços, como virar maçanetas de portas ou jogar ou apanhar um objeto.
+Inclui: puxar ou empurrar objetos; alcançar; virar ou torcer as mãos ou os braços;jogar; apanhar um objeto em movimento.
+Subcódigo: d4450 - Puxar
+Usar os dedos, as mãos e os braços para aproximar um objeto, ou movê-lo de um lugar para outro, como puxar um barbante ou puxar uma porta fechada.
+Subcódigo: d4451 - Empurrar
+Usar os dedos, as mãos e os braços para mover algo para longe, ou para movê-lo de um lugar para outro, como empurrar um brinquedo ou um animal para longe.
+Subcódigo: d4452 - Alcançar
+Usar as mãos e os braços para se esticar e tocar ou agarrar algo, como estender os braços por cima de uma mesa ou carteira para pegar um livro.
+Subcódigo: d4453 - Girar ou torcer as mãos ou os braços
+Usar os dedos, as mãos ou os braços para girar, virar ou dobrar um objeto, como necessário para abrir uma jarra ou usar ferramentas como uma escova de dentes ou uma chave de fenda.
+Subcódigo: d4454 - Jogar
+Usar os dedos, as mãos e os braços para levantar algo e jogá-lo com alguma força através do ar, como arremessar uma bola.
+Subcódigo: d4455 - Apanhar
+Usar os dedos, as mãos e os braços para agarrar um objeto em movimento para pará-lo ou segurá-lo, como apanhar uma bola.
+Subcódigo: d4458 - Uso da mão e do braço, outro especificado
+Subcódigo: d4459 - Uso da mão e do braço, não especificado
+
+Código: d446 - Uso fino dos pés
+Realizar as ações coordenadas de manusear objetos, levantá-los, manipulá- -los e soltá-los utilizando os pés ou dedos dos pés.
+
+Código: d449 - Carregar, mover e manusear objetos, outro especificado e não especificado
+
+Código: d450 - Andar
+Mover-se sobre uma superfície a pé, passo a passo, de maneira que um pé esteja sempre no solo, como passear, caminhar lentamente, andar para a frente, pai a trás ou para o lado.
+Inclui: andar distâncias curtas ou longas; andar sobre superfícies diferentes; andar evitando os obstáculos.
+Subcódigo: d4500 - Andar distâncias curtas
+Andar menos de 1 km, como andar em quartos e corredores, dentro de um prédio ou distâncias curtas no exterior do prédio.
+Subcódigo: d4501 - Andar distâncias longas
+Andar mais de 1 km, como através de uma vilarejo ou cidade, entre cidades ou em espaços abertos.
+Subcódigo: d4502 - Andar sobre superfícies diferentes
+Andar sobre superfícies inclinadas, irregular ou móvel como sobre grama, pedregulho, gelo ou neve, ou entrar em um navio, trem ou outro veículo.
+Subcódigo: d4503 - Andar desviando-se de obstáculos
+Andar da maneira necessária para evitar objetos móveis e fixos, pessoas, animais e veículos, como andarem um supermercado ou loja, ao redor ou através do tráfego ou em espaços com muita gente.
+Subcódigo: d4508 - Andar, outro especificado
+Subcódigo: d4509 - Andar, não especificado
+
+Código: d451 - Subir e descer escadas
+Mover-se para cima e para baixo de forma que, pelo menos, um dos pés esteja sempre no chão, como subir e descer degraus e escadas.
+
+Código: d455 - Deslocar-se
+Mover todo o corpo de um lugar para outro por outros meios que não andando, como escalar uma rocha ou correr por uma rua, saltar, correr em disparada, pular, dar salto mortal ou correr evitando obstáculos.
+Inclui: engatinhar, subir, correr, pular e nadar.
+Subcódigo: d4550 - Engatinhar
+Mover todo o corpo de bruços de um lugar para outro utilizando as mãos, ou mãos e braços, e os joelhos.
+Subcódigo: d4551 - Subir
+Mover todo o corpo para cima ou para baixo sobre superfícies ou objetos, como subir degraus, rochas, escadas móveis ou fixas, meio -fio ou outros objetos.
+Subcódigo: d4552 - Correr
+Mover- se com passos rápidos de maneira que os dois pés podem estar simultaneamente fora do chão.
+Subcódigo: d4553 - Pular
+Levantar-se do solo dobrando e estendendo as pernas, como pular sobre uni pé. saltitar, saltar e pular ou mergulhar na água.
+Subcódigo: d4554 - Nadar
+Impulsionar todo o corpo através da água por meio de movimentos dos membros das extremidades e de todo o corpo sem se apoiar no solo.
+Subcódigo: d4558 - Deslocar-se, outro especificado
+Subcódigo: d4559 - Deslocar-se, não especificado
+
+Código: d460 - Deslocar-se por diferentes locais
+Andar ou se movimentar por vários lugares e situações, como andar entre os cômodos em uma casa, dentro de um prédio ou pela rua de uma cidade.
+Inclui: mover-se dentro de casa, engatinhar ou subir dentro da casa; andar ou mover se dentro de prédios que não a própria casa e fora de casa e em outros prédios
+Subcódigo: d4600 - Deslocar-se dentro de casa
+Andar e mover-se dentro da própria casa, em um ambiente, entre os cômodos e em toda a casa ou habitação.
+Inclui: deslocar-se de uni andar para outro, em um terraço, quintal, varanda ou jardim da casa.
+Subcódigo: d4601 - Deslocar-se dentro de outros edifícios que não a própria casa Andar e deslocar-se em outros prédios que não a própria residência, como na casa de outras pessoas, outros prédios residenciais,
+prédios comunitários e públicos c áreas anexas.
+Inclui: deslocar-se por todas as partes dos prédios e áreas anexas, entre os andares, dentro,fora e em volta dos prédios, tanto públicos como residenciais.
+Subcódigo: d4602 - Deslocar-se fora de casa e de outros prédios
+Andar e deslocar-se perto ou longe da própria casa e de outros prédios sem a utilização de meio de transporte, público ou privado, como andar distâncias curtas ou longas distâncias em um vilarejo ou cidade.
+Inclui: andar ou deslocar- se pela ruas de uma vizinhança, de um vilarejo ou de uma cidade; deslocar-se entre cidades e distâncias maiores, sem utilizar transporte.
+Subcódigo: d4608 - Deslocar-se por diferentes locais, outro especificado
+Subcódigo: d4609 - Deslocar-se por diferentes locais, não especificado
+
+Código: d465 - Deslocar-se utilizando algum tipo de equipamento
+Mover todo o corpo de um lugar para outro sobre qualquer superfície ou espaço utilizando dispositivos específicos para facilitar a movimentação ou criar outras maneiras de se mover com equipamentos como patins, esquis, equipamento de mergulho, ou deslocar-se na rua com cadeira de rodas motorizada ou andador.
+
+Código: d469 - Andar e mover-se, outros especificados e não especificados
+
+Código: d470 - Utilização de transporte
+Utilizar transporte para se deslocar como passageiro, como ser levado em um automóvel, ônibus, carroça, riquixá, carrinho de bebê, carrinho de criança, cadeira de rodas, veículo puxado por tração animal, táxi público ou privado, trem, bonde, metrô, barco ou aeronave, ou usando humanos para o transporte.
+Inclui: usar transporte movido por pessoas: usar transporte motorizado ou público e usando humanos para o transporte.
+Subcódigo: d4700 - Utilização de transporte com tração humana
+Ser transportado como passageiro por um meio de transporte impulsionado por uma ou mais pessoas, como um carrinho de bebê ou de criança, uma cadeira de rodas conduzida por outra pessoa, um barco a remo ou um riquixá.
+Subcódigo: d4701 - Utilização de transporte motorizado privado
+Ser transportado como passageiro por veículo motorizado privado por terra, mar e ar. como em um carro, táxi, aeronave ou barco particular.
+Subcódigo: d4702 - Utilização de transporte público
+Ser transportado como passageiro por um veículo motorizado por terra, mar ou ar projetado para o transporte público, como ser passageiro em um ônibus, trem, metrô ou aeronave.
+Subcódigo: d4703 - Usar humanos para o transporte
+Ser transportado por outra pessoa, como ser carregado nos braços, cm um lençol ou em uma mochila.
+Subcódigo: d4708 - Utilização de transporte, outro especificado
+Subcódigo: d4709 - Utilização de transporte, não especificado
+
+Código: d475 - Dirigir
+Controlar e movimentar um veículo ou o animal que o puxa, movendo-se sob sua própria direção ou tendo à sua disposição qualquer forma de transporte como um carro, bicicleta, barco ou animal.
+Inclui: dirigir transporte com tração humana, veículos motorizados, veículos com tração animal, montar animais.
+Subcódigo: d4750 - Dirigir transporte com tração humana
+Dirigir um veículo de tração humana, como bicicleta, triciclo ou barco a remo.
+Subcódigo: d4751 - Dirigir veículos motorizados
+Dirigir um veículo a motor, como automóvel, motocicleta, barco a motor ou aeronave.
+Subcódigo: d4752 - Dirigir veículos com tração animal
+Dirigir um veículo com tração animal, como carroça ou carruagem puxada por cavalo.
+Subcódigo: d4758 - Dirigir, outro especificado
+Subcódigo: d4759 - Dirigir, não especificado
+
+Código: d480 - Montar animais para transporte
+Deslocar-se no lombo de um animal, como cavalo, boi, camelo ou elefante.
+
+Código: d489 - Deslocar-se utilizando transporte, outros especificados e não especificados
+
+Código: d498 - Mobilidade, outra especificada
+
+Código: d499 - Mobilidade, não especificada
+
+Capítulo d5 - Auto cuidados
+Este capítulo é sobre cuidar de si mesmo, lavar-se e secar-se, cuidar do corpo e partes do corpo, vestir-se, comer e beber e cuidar da saúde.
+
+Código: d510 - Lavar-se
+Lavar e secar todo o corpo, ou partes do corpo, utilizando água e materiais ou métodos de limpeza o secagem apropriados, como tomar banho em banheira ou chuveiro, lavar mãos e pés, face e cabelo; e secar-se com uma toalha.
+Inclui: lavar partes do corpo, rodo o corpo; e secar-se.
+Subcódigo: d5100 - Lavar partes do corpo
+Aplicar água, sabonete e outras substâncias às partes do corpo, como mãos, face, pés. cabelo ou unhas, para limpá-las.
+Subcódigo: d5101 - Lavar todo o corpo
+Aplicar água, sabonete e outras substâncias ao corpo inteiro para se limpar, como tomar um banho de banheira ou uma ducha.
+Subcódigo: d5102 - Secar-se
+Usar uma toalha ou outros meios para secar alguma parte ou partes do próprio corpo, ou todo o corpo, como após se lavar.
+Subcódigo: d5108 - Lavar-se, outro especificado
+Subcódigo: d5109 - Lavar-se, não especificado
+
+Código: d520 - Cuidado das partes do corpo
+Cuidar das panes do corpo, como pele, face, dentes, couro cabeludo, unhas e genitais, que requerem mais do que lavar e secar.
+Inclui: cuidado da pele, dentes, cabelo, unhas das mãos e dos pés e nariz.
+Subcódigo: d5200 - Cuidado da pele
+Cuidar da textura e hidratação da própria pele, como remover calosidades e utilizar loções hidratantes ou cosméticos.
+Subcódigo: d5201 - Cuidado dos dentes
+Cuidar da higiene dental, como escovar os dentes, passar fio dental e cuidar de próteses ou de aparelhos de correção dos dentes.
+Subcódigo: d5202 - Cuidado com os pelos
+Cuidado cabelo e da barba, como pentear, modelar, barbear- se ou aparar.
+Subcódigo: d5203 - Cuidado com as unhas das mãos
+Limpar, cortar ou pintar as unhas das mãos.
+Subcódigo: d5204 - Cuidados com as unhas dos pés
+Limpar, cortar ou pintar as unhas dos pés.
+Subcódigo: d5205 - Cuidado com o nariz
+Limpar o nariz, cuidar da higiene nasal.
+Subcódigo: d5208 - Cuidado das partes do corpo, outro especificado
+Subcódigo: d5209 - Cuidado das partes do corpo, não especificado
+
+Código: d530 - Cuidados relacionados aos processos de excreção
+Planejamento e execução da eliminação da excreção (menstruação, micção e defecação) e posterior higiene.
+Inclui: regulação da micção, defecação e cuidado menstrual.
+Subcódigo: d5300 - Regulação da micção
+Coordenar e gerenciar a micção, como indicar a necessidade, adotar a posição adequada, escolher e ir a um lugar apropriado para urinar, manipular a roupa antes e depois de urinar e limpar-se após urinar.
+Subcódigo: d5301 - Regulação da defecação
+Coordenar e gerenciar a defecação como indicar a necessidade, adotar a posição adequada, escolher e ir a uni lugar apropriado para defecar, manipular a roupa antes e após defecar e limpar-se apus defecar.
+Subcódigo: d5302 - Cuidado menstrual
+Coordenar, planejar e cuidar da menstruação, como prever a menstruação e utilizar absorventes e toalhas higiênicas.
+Subcódigo: d5308 - Cuidados relacionados aos processos de excreção, outro especificado
+Subcódigo: d5309 - Cuidados relacionados aos processos de excreção, não especificado
+
+Código: d540 - Realizar as ações coordenadas e tarefas de vestir e tirar as roupas e os
+sapatos em sequência e de acordo com as condições climáticas e sociais, como vestir, ajustar e tirar camisas, blusas, calças, roupas íntimas, sáris, quimonos, meias, chapéus, luvas, casacos, botas, sandálias e chinelos.
+Inclui: vestir ou tirar roupas e calçados e escolheras roupas apropriadas.
+Subcódigo: d5400 - Vestir-se
+Realizar as tarefas coordenadas de vestir roupas em várias partes do corpo, como vestir a roupa pela cabeça, pelos braços e ombros, e nas metades inferior e superior do corpo; vestir luvas e chapéus.
+Subcódigo: d5401 - Despir-se
+Realizar as tarefas coordenadas de despir a roupa de várias partes do corpo, como puxar a roupa pela cabeça, pelos braços e ombros, e das metades inferior e superior do corpo, tirar luvas e chapéus.
+Subcódigo: d5402 - Calçar
+Realizar as tarefas coordenadas de vestir meias e calçados.
+Subcódigo: d5403 - Tirar o calçado
+Executar as tarefas coordenadas de descalçar meias e calçados.
+Subcódigo: d5404 - Escolha de roupa apropriada
+Seguir códigos de vestimenta implícitos ou explícitos e convenções da própria sociedade e vestir-se de acordo com as condições climáticas.
+Subcódigo: d5408 - Vestir-se, outro especificado
+Subcódigo: d5409 - Vestir-se, não especificado
+
+Código: d550 - Executar as tarefas e ações coordenadas de comer o alimento servido, levá-lo à boca e consumido de maneira culturalmente aceitável; cortar ou partir o alimento em pedaços; abrir embalagens e pacotes; utilizar utensílios para comer; atividades relacionadas com refeições, banquetes e jantares.
+
+Código: d560 - Beber
+Pegar a bebida, levá-la à boca e consumir a bebida de maneira culturalmente aceitável, misturar, mexer e verter líquidos para beber, abrir garrafas e latas, beber através de um canudo ou beber água corrente da torneira ou de uma fonte; amamentar.
+
+Código: d570 - Cuidar da própria saúde
+Garantir conforto físico, saúde e bem-estar físico e mental, como manter unia dieta equilibrada, um nível apropriado de atividade física, uma temperatura corporal adequada; evitar danos à saúde; seguir práticas sexuais seguras, incluindo a utilização de preservativos; seguir o cronograma de imunização e exames físicos regulares.
+Inclui: garantir o próprio conforto físico; controlar a alimentação e a forma física; manter a própria saúde.
+Subcódigo: d5700 - Garantir o próprio conforto físico
+Cuidar de si próprio, tendo consciência da necessidade de tomar medidas, e efetuá las, para garantir que o próprio corpo esteja em uma posição confortável sem sentir muito calor ou frio e que dispõe de iluminação adequada.
+Subcódigo: d5701 - Controle da dieta e forma física
+Cuidar de si próprio, tendo consciência das próprias necessidades, selecionando e consumindo alimentos nutritivos e mantendo a forma física.
+Subcódigo: d5702 - Manter a própria saúde
+Cuidar de si próprio, tendo consciência das próprias necessidades, e fazer o que é preciso para cuidar da própria saúde para reagir às ameaças à saúde e prevenir doenças; procurar ajuda (profissional e não profissional); seguir conselhos médicos e outros sobre a saúde; e gerenciar riscos à saúde como lesões, doenças transmissíveis, uso de drogas e doenças sexualmente transmissíveis.
+Subcódigo: d5708 - Cuidar da própria saúde, outra especificada
+Subcódigo: d5709 - Cuidar da própria saúde, não especificada
+
+Código: d598 - Cuidados pessoais, outros especificados
+
+Código: d599 - Cuidados pessoais, não especificados
+
+Capítulo d6 - Vida doméstica
+Este capítulo trata da realização de ações e tarefas domésticas e cotidianas. As áreas da vida doméstica incluem cuidar dos pertences e do espaço, adquirir alimentos, roupas e outras necessidades, limpar e consertar a casa, cuidar de objetos pessoais e outros objetos domésticos e ajudar outras pessoas.
+
+Código: d610 - Aquisição de uni lugar para morar
+Comprar, alugar, mobiliar e arrumar um cômodo, uma casa, um apartamento ou outra habitação.
+Inclui: comprar ou alugar um lugar para morar e mobiliar um lugar para morar.
+Subcódigo: d6100 - Comprar um lugar para morar
+Adquirir a propriedade de uma casa, de um apartamento ou de outra habitação.
+Subcódigo: d6101 - Alugar um lugar para morar
+Adquirir o uso de uma casa, de um apartamento ou de outra habitação pertencente a outro em troca de pagamento.
+Subcódigo: d6102 - Mobiliar um lugar para morar
+Equipar e organizar a habitação com móveis, acessórios e outras peças, e decorar os ambientes, organizai seu próprio espaço ou ambiente.
+Subcódigo: d6108 - Aquisição de um lugar para morar, outra especificada
+Subcódigo: d6109 - Aquisição de um lugar para morar, não especificada
+
+Código: d620 - Aquisição de bens e serviços
+Selecionar, comprar e transportar todos os bens e serviços necessários para a vida diária, como selecionar, comprar, transportar e armazenar alimentos, bebidas, roupas, materiais de limpeza, combustível, artigos para a casa, utensílios, panelas, brinquedos e material recreacional, aparelhos domésticos e ferramentas; adquirir serviços públicos e outros serviços domésticos; e coletar e entregar correspondências ou pacotes.
+Inclui: comprar e armazenar as necessidades diárias.
+Subcódigo: d6200 - Comprar
+Obter, em troca de dinheiro, bens e serviços necessários para a vida diária (incluindo instruir e supervisionair as compras feitas por um intermediário), como selecionar alimento, bebida, materiais de limpeza, artigos domésticos, brinquedos e material recreacional ou roupas em uma loja ou mercado; comparar a qualidade e o preço dos itens necessários, negociar e pagar pelos bens e serviços escolhidos e transportar mercadorias.
+Subcódigo: d6201 - Obtenção das necessidades diárias
+Obter em troca de dinheiro, bens e serviços necessários para a vida diária (incluindo instruir e supervisionar um intermediário para obter as necessidades diárias), como colher vegetais e frutas, obter água e combustível, e coletar e entregar correspondências ou pacotes.
+Subcódigo: d6208 - Aquisição de bens e serviços, outros especificados
+Subcódigo: d6209 - Aquisição de bens e serviços, não especificados
+
+Código: d629 - Aquisição do necessário para viver, outro especificado e não especificado
+
+Código: d630 - Preparação de refeições
+Planejar, organizar, cozinhar e servir pratos simples e complexos para si próprio e para outros, como elaborar um cardápio, selecionar alimentos comestíveis e bebidas, reunir os ingredientes para preparar os pratos, cozinhar com calor e preparar pratos e bebidas frias, e servir a comida.
+Inclui: preparar refeições simples e complexas.
+Subcódigo: d6300 - Preparar refeições simples
+Organizar, cozinhar e servir pratos com um pequeno número de ingredientes que requerem métodos fáceis para ser preparados e servidos, como fazer um aperitivo ou um lanche e transformar ingredientes, cortando-os e mexendo-os, ferver e aquecer o alimento como arroz ou batatas.
+Subcódigo: d6301 - Preparar refeições complexas
+Planejar, organizar, cozinhar e servir pratos com um grande número de ingredientes que requerem métodos complexos para serem preparados e servidos, como planejar uma refeição com vários pratos c transformar ingredientes por meio de ações combinadas, como descascar, fatiar, misturar, amassar, mexer, apresentar e servir o alimento de maneira apropriada à ocasião e à cultura.
+Subcódigo: d6308 - Preparação de refeições, outra especificada
+Subcódigo: d6309 - Preparação de refeições, não especificada
+
+Código: d640 - Realização das tarefas domésticas
+Administrar a casa: limpar a casa, lavar roupa, utilizar utensílios domésticos, armazenar alimentos e remover o lixo, como varrer, passar pano, lavar mesas, paredes e outras superfícies; coletar e remover o lixo doméstico; amimar quartos, anuários e gavetas; coletar, lavar, secar, dobrar e passar roupas; limpar sapatos; utilizar espanador, vassoura e aspirador de pó; utilizar máquina de lavar, secadora e ferro de passar.
+Inclui: lavar e secar roupas; limpar a cozinha e os utensílios; limpar a casa; utilizar aparelhos domésticos, armazenar as necessidades diárias e remover o lixo.
+Subcódigo: d6400 - Lavar e secar roupas
+Lavar roupas à mão e pendurá-las para secar ao ar livre.
+Subcódigo: d6401 - Limpar a cozinha e os utensílios
+Limpar após cozinhar, como lavar pratos, panelas, caçarolas e utensílios, e limpar mesas e pisos em volta da área da cozinha e do local das refeições.
+Subcódigo: d6402 - Limpar a habitação
+Limpar os ambientes da casa, como arrumar e tirar o pó, varrer, esfregar, passar pano no chão, lavar janelas e paredes, limpar banheiros e vasos sanitários e limpar móveis.
+Subcódigo: d6403 - Utilizar aparelhos domésticos
+Utilizar todos os tipos de aparelhos domésticos, como máquina de lavar, secadora, ferro de passar, aspirador de pó e máquina de lavar louça.
+Subcódigo: d6404 - Armazenar as necessidades diárias
+Armazenar alimentos, bebidas, roupas e outros artigos domésticos necessários para a vida diária; preparar alimentos para conservação enlatando-os, salgando-os ou refrigerando-os. manter os alimentos frescos e fora do alcance de animais.
+Subcódigo: d6405 - Remover o lixo
+Eliminar o lixo doméstico: coletar o lixo da casa, preparar o lixo para remoção, utilizar dispositivos de remoção de lixo; queimar o lixo.
+Subcódigo: d6408 - Realização das tarefas domésticas, outra especificada
+Subcódigo: d6409 - Realização das tarefas domésticas, não especificada
+
+Código: d649 - Tarefas domésticas, outras especificadas e não especificadas
+
+Código: d650 - Cuidar dos objetos da casa
+Manter e consertar a casa e outros objetos pessoais, incluindo a casa e seu conteúdo, roupas, brinquedos e material recreacional. veículos e dispositivos auxiliares: cuidar de plantas e animais; pintar ou colocar papel de parede nos quartos, consertar móveis, encanamento, garantir o funcionamento adequado de veículos, aguar as plantas, tratai e alimentar animais de estimação ou domésticos e cuidar das entradas, calçadas e entrada da garagem.
+Inclui: fazer ou consertar roupas:; manter a habitação, móveis e aparelhos domésticos; manter veículos: manter dispositivos de auxílio; cuidar das plantas (internas e externas), animais. entradas, calçadas e entradas de garagem.
+Subcódigo: d6500 - Fazer e consertar roupas
+Fazer e consertar roupas, corno costurar, produzir ou remendar roupas: costurar botões e fechos; passar roupas, consertar e engraxar sapatos.
+Subcódigo: d6501 - Manter a habitação e os móveis
+Consertar e cuidar da casa, seu exterior, interior e conteúdo, como pintar, consertar artigos e móveis, e utilizar as ferramentas necessárias para trabalho de conserto.
+Subcódigo: d6502 - Manutenção dos aparelhos domésticos
+Consertar e cuidar de todos os aparelhos domésticos para cozinhar, limpar e consertar, como lubrificar e consertar ferramentas e manter a máquina de lavar.
+Subcódigo: d6503 - Manutenção de veículos
+Consertar e cuidar de veículos motorizados e não motorizados de uso pessoal, incluindo bicicletas, carrinhos de mão, automóveis e barcos.
+Subcódigo: d6504 - Manutenção dos dispositivos de auxílio
+Consertar e cuidar dos dispositivos de auxílio, como próteses, ortoses e ferramentas de auxílio especializadas para a manutenção doméstica e o cuidado pessoal ; manter e consertar equipamentos auxiliares como bengalas, andadores, cadeira de rodas e ciclomotores; e manter equipamentos de auxílio para comunicação e recreação.
+Subcódigo: d6505 - Cuidar de plantas internas e externas
+Cuidar das plantas dentro e fora da casa, como plantar, aguar e fertilizar as plantas; fazer jardinagem e cultivar alimentos para consumo pessoal.
+Subcódigo: d6506 - Cuidar de animais
+Cuidar de animais domésticos e de estimação, como alimentar, limpar, tratar e exercitar animais de estimação; cuidar da saúde do animal; planejar o cuidado do anima] na ausência da pessoa.
+Subcódigo: d6507 - Cuidar das calçadas e entradas de garagem
+Cuidar dos caminhos domésticos como calçadas e entradas de garagem (cobertas ou descobertas) como, por exemplo, remover a neve, as folhas, os pedregulhos ou a areia das entradas, assim como espalhar areia ou outro material.
+Subcódigo: d6508 - Cuidado dos objetos domésticos, outro especificado
+Subcódigo: d6509 - Cuidado dos objetos domésticos, não especificado
+
+Código: d660 - Ajudar os outros
+Auxiliar os membros da casa e outros em seu aprendizado, comunicação, cuidado pessoal, movimento, dentro ou fora da casa; preocupar-se com o bem-estar dos membros da casa e outros.
+Inclui: ajudar os outros no cuidado pessoal. movimento, comunicação, relações interpessoais, nutrição e manutenção da saúde.
+Subcódigo: d6600 - Ajudar os outros no cuidado pessoal
+Ajudar os membros da casa a realizar os cuidados pessoais, incluindo ajudá-los a comer, tomar banho e se vestir; tomar conta de crianças ou membros da casa que estão doentes ou que têm dificuldades com o cuidado pessoal básico; ajudai os outros nas atividades relacionadas à excreção.
+Subcódigo: d6601 - Ajudar os outros a se mover
+Ajudar os membros da casa e outros a se mover dentro e fora de casa, como na vizinhança ou cidade, para e do colégio, local de trabalho ou outro destino.
+Subcódigo: d6602 - Ajudar os outros a se comunicar
+Ajudar os membros da casa e outros a se comunicar, como ajudá- -los a falar, escrever ou ler.
+Subcódigo: d6603 - Ajudar os outros nas relações interpessoais
+Ajudar os membros da casa e outros em suas interações interpessoais. como ajudá los a iniciar, manter ou terminar relacionamentos.
+Subcódigo: d6604 - Ajudar os outros na nutrição
+Ajudar os membros da casa e outros com sua nutrição, como ajudá-los a preparar e a comer as refeições.
+Subcódigo: d6605 - Ajudar os outros a manter a saúde
+Ajudar os membros da casa e outros com cuidados de saúde informais e formais, como garantir que uma criança vá ao médico regularmente ou que um parente idoso tome o remédio necessário.
+Subcódigo: d6608 - Ajudar os outros, outra especificada
+Subcódigo: d6609 - Ajudar os outros, não especificada
+
+Código: d669 - Cuidar dos objetos domésticos e ajudar os outros, outros especificados e não especificados
+
+Código: d698 - Vida doméstica, outra especificada
+
+Código: d699 - Vida doméstica, não especificada
+
+Capítulo d7 - Interações e relacionamentos interpessoais
+Este capítulo trata da realização das ações e tarefas necessárias para interações básicas e complexas com pessoas (estranhos, amigos, parentes, familiares e amantes) de maneira contextual e socialmente apropriada.
+
+Código: d710 - Interações interpessoais básicas
+Interagir com as pessoas de maneira contextuai e socialmente adequada, como mostrar consideração e estima quando apropriado ou reagir aos sentimentos dos outros.
+Inclui: mostrar respeito, calor, apreciação e tolerância nos relacionamentos; reagir à crítica e às insinuações sociais nos relacionamentos; e utilizar contato físico apropriado nos relacionamentos.
+Subcódigo: d7100 - Respeito e afeto nos relacionamentos
+Mostrar consideração e estima, e reagir a esses sentimentos de maneira contextuai e socialmente adequada.
+Subcódigo: d7101 - Apreciação nos relacionamentos
+Mostrar satisfação e gratidão, e reagir a esses sentimentos de maneira contextuai e socialmente apropriada.
+Subcódigo: d7102 - Tolerância nos relacionamentos
+Mostrar compreensão e aceitação de comportamento, e reagir a essas atitudes de maneira contextuai e socialmente apropriada.
+Subcódigo: d7103 - Atitude crítica nos relacionamentos
+Explicitar diferenças de opinião, implícitas e explícitas, ou desacordo e reagir a elas de maneira contextuai e socialmente apropriada.
+Subcódigo: d7104 - Insinuações sociais nos relacionamentos
+Fazer sinais e insinuações que ocorrem nas interações sociais e reagir a eles adequadamente.
+Subcódigo: d7105 - Contato físico nos relacionamentos
+Estabelecer contato físico com os outros e reagir a esse contato de maneira contextuai e socialmente apropriada.
+Subcódigo: d7106 - Diferenciar pessoas da família
+Mostrar diferentes respostas aos indivíduos, como ao estender a mão para pessoas da família e diferenciá-las de estranhos e reagir de forma apropriada.
+Subcódigo: d7108 - Interações interpessoais básicas, outras especificadas
+Subcódigo: d7109 - Interações interpessoais básicas, não especificadas
+
+Código: d720 - Interações interpessoais complexas
+Manter e controlar as interações com outras pessoas, de maneira contextuai e socialmente apropriada, como controlar emoções e impulsos, controlar a agressão verbal e física, agir de maneira independente nas interações sociais e agir de acordo com as regras e convenções sociais quando, por exemplo, estiver brincando, estudando ou trabalhando com outras pessoas.
+Inclui: iniciar e terminar relações; controlar comportamentos dentro das interações; interagir de acordo com regras sociais; e manter o espaço social.
+Subcódigo: d7200 - Iniciar relações
+Iniciar e manter relações com outros por um período de tempo curto ou longo, de maneira contextual e socialmente apropriada, como apresentar-se a outra pessoa, encontrar e estabelecer amizades e relações profissionais, iniciar um relacionamento que pode se tomar permanente, romântico ou íntimo.
+Subcódigo: d7201 - Terminar uma relação
+Terminar interações, de maneira contextual e socialmente apropriada, como terminar relacionamentos temporários ao final de uma visita, terminar relacionamentos duradouros com amigos quando ocorre uma mudança para uma nova cidade ou terminar relacionamentos com colegas de trabalho, colegas profissionais e prestadores de serviço, e terminar relacionamentos românticos ou íntimos.
+Subcódigo: d7202 - Regulação dos comportamentos nas interações
+Controlar emoções e impulsos, agressões verbais e físicas nas interações comes outros, de maneira contextuai e socialmente apropriada.
+Subcódigo: d7203 - Interagir de acordo com as regras sociais
+Agir independentemente nas interações sociais e adaptar-se às convenções sociais que regem o papei, posição ou status social da pessoa nas interações com os outros.
+Subcódigo: d7204 - Manter o espaço social
+Estar consciente da necessidade de manter a distância entre si próprio e outros de maneira contextuai, social e culturalmente apropriada.
+Subcódigo: d7208 - Interações interpessoais complexas, outras especificadas
+Subcódigo: d7209 - Interações interpessoais complexas, não especificadas
+
+Código: d729 - Interações interpessoais gerais, outras especificadas e não especificadas
+
+Código: d730 - Relações com estranhos
+Estabelecer contatos e ligações temporárias com estranhos para fins específicos, como perguntar um caminho ou outra informação, ou fazer uma compra.
+
+Código: d740 - Relações formais
+Criar e manter relações específicas em ambientes formais, como com professores, funcionários, profissionais ou prestadores de serviços.
+Inclui: relações com autoridades, subordinados e pares.
+Subcódigo: d7400 - Relações com autoridades
+Criar e manter relações formais com pessoas em posições de poder, de um escalão mais alto ou de mais prestígio em relação à sua posição social, como com um empregador.
+Subcódigo: d7401 - Relações com subordinados
+Criar e manter relações formais com pessoas em posição de escalão mais baixo ou de menor prestígio em relação à sua posição social, como um funcionário ou empregado.
+Subcódigo: d7402 - Relações com pares
+Criar e manter relações formais com pessoas na mesma posição de autoridade, escalão ou prestígio em relação à sua posição social.
+Subcódigo: d7408 - Relações formais, outras especificadas
+Subcódigo: d7409 - Relações formais, não especificadas
+
+Código: d750 - Relações sociais informais
+Iniciar relações com os outros, como relações casuais com pessoas que vivem na mesma comunidade ou residência, ou com colaboradores, estudantes, companheiros de lazer ou pessoas com formação ou profissão similares.
+Inclui: relações informais com amigos, vizinhos, conhecidos, companheiros de moradia e pares.
+Subcódigo: d7500 - Relações informais com amigos
+Criar e manter relações de amizade caracterizadas pela estima mútua e por interesses comuns.
+Subcódigo: d7501 - Relações informais com vizinhos
+Criar e manter relações informais com pessoas que vivem na vizinhança ou na habitação.
+Subcódigo: d7502 - Relações informais com conhecidos
+Criar e manter relações informais com pessoas conhecidas que não são amigas íntimas.
+Subcódigo: d7503 - Relações informais com colegas de habitação
+Criar e manter relações informais com pessoas que moram na mesma casa ou habitação, administrada privada ou publicamente, para qualquer fim.
+Subcódigo: d7504 - Relações informais com pares
+Criar e manter relações informais com pessoas que têm a mesma idade, o mesmo interesse ou outra característica em comum.
+Subcódigo: d7508 - Relações sociais informais, outras especificadas
+Subcódigo: d7509 - Relações sociais informais, não especificadas
+
+Código: d760 - Relações familiares
+Criar e manter relações de parentesco, como com membros do núcleo familiar, parentes, família adotiva e de criação, e parentes não cosanguíneos, relações maís distantes como primos de segundo grau ou tutores legais. Incluí: relações entre pais e filhos. e filhos e pais, entre irmãos e com outros membros familiares.
+Subcódigo: d7600 - Relações pai-filho
+Tornar-se e ser pai, natural ou adotivo, como ter um filho e relacionar-se com ele como pai ou criar e manter um relacionamento paternal com um filho adotivo c garantir a formação física, intelectual e emocional do filho natural ou adotivo.
+Subcódigo: d7601 - Relações filho-pai
+Criar e manter relações com os país, como uma criança pequena obedecer ao pai ou à mãe ou um filho adulto tomar conta de seu(s) pai(s) idosos).
+Subcódigo: d7602 - Relações entre irmãos
+Criar e manter uma relação fraternal com uma pessoa que compartilha um ou ambos os pais por nascimento, adoção ou casamento.
+Subcódigo: d7603 - Relações com outros parentes
+Criar e manter um relacionamento familiar com outros membros da família, como primos, tios e avós.
+Subcódigo: d7608 - Relações familiares, outras especificadas
+Subcódigo: d7609 - Relações familiares, não especificadas
+
+Código: d770 - Relações íntimas
+Criar e manter relações românticas ou íntimas entre indivíduos, como marido e esposa, amantes ou parceiros sexuais.
+Inclui: relações românticas, conjugais e sexuais.
+Subcódigo: d7700 - Relações românticas
+Criar e manter uma relação baseada na atração emocional e física, que leva potencialmente a relacionamentos íntimos de longo prazo.
+Subcódigo: d7701 - Relações maritais
+Criar e manter urna relação íntima de natureza legal com outra pessoa, como no casamento legal, incluindo tomar-se ou ser uma esposa ou marido legalmente casado ou um cônjuge não casado.
+Subcódigo: d7702 - Relações sexuais
+Criar e manter uma relação de natureza sexual, com um cônjuge ou outro parceiro.
+Subcódigo: d7708 - Relações íntimas, outras especificadas
+Subcódigo: d7709 - Relações íntimas, não especificadas
+
+Código: d779 - Relações interpessoais particulares, outras especificadas e não especificadas
+
+Código: d798 - Relações e interações interpessoais, outras especificadas
+
+Código: d799 - Relações e interações interpessoais, não especificadas
+
+Capítulo d8 - Áreas principais da vida
+Este capítulo trata da realização das tarefas e ações necessárias para se envolver em educação, trabalho e emprego e para conduzir transações econômicas.
+
+Código: d810 - Educação informal
+Aprender em casa ou em outro ambiente não institucional, como aprender trabalhos manuais e outras habilidades com pais ou membros familiares, ou escolarização em casa.
+
+Código: d815 - Educação infantil
+Aprender em um nível inicial de instrução organizada, projetada principalmente para introduzir a criança no ambiente escolar e prepará-la para a educação obrigatória, como adquirir habilidades em uma creche ou em um ambiente similar em preparação para a escola.
+
+Código: d820 - Educação escolar
+Obter acesso à escola, participar de todas as responsabilidades e os privilégios relacionados à escola, e aprender o material do curso, a matéria e outras exigências curriculares em um programa educacional fundamental e médio, incluindo ir à escola regularmente, trabalharem cooperação com outros alunos, seguir as orientações dos professores, organizar, estudar e concluir tarefas e projetos designados, e progredir para os outros estágios de educação.
+
+Código: d825 - Treinamento profissional
+Participar de todas as atividades de um programa de formação profissional e aprender as disciplinas do programa curricular que preparam para um negócio, emprego ou profissão.
+
+Código: d830 - Educação superior
+Participar das atividades dos programas educacionais avançados em universidades, faculdades e escolas profissionalizantes, e aprender todos os aspectos do currículo necessários para graduações, diplomas, certificados e outras autorizações, como obter licenciatura ou mestrado, formar-se cm faculdade de medicina ou em outra escola profissionalizante.
+
+Código: d835 - Vida educacional
+Envolver-se em aspectos da vida de instituições educativas, como universidade e associações relacionadas à escolas, incluindo clubes, grupos esportivos, corpo cívico conselho escolar; e outras iniciativas organizadas institucionalmente e que não são parte do currículo acadêmico.
+
+Código: d839 - Educação, outra especificada e não especificada
+
+Código: d840 - Estágio (preparação para o trabalho)
+Participar de programas relacionados à preparação para emprego, como realizar as tarefas necessárias de um estágio, residência, contrato de aprendizado e treinamento no serviço.
+
+Código: d845 - Conseguir, manter e sair de um emprego
+Procurar, encontrar e escolher um emprego, ser contratado e aceitar o emprego, manter e progredir no trabalho, negócio, ocupação ou profissão e sair de um emprego de maneira apropriada.
+Inclui: procurar emprego;preparar um currículo; contatar empregadores e preparar entrevistas; manter um emprego; monitorar o próprio desempenho profissional; dar aviso prévio; e sair de um emprego.
+Subcódigo: d8450 - Procurar emprego
+Localizar e escolher um emprego em um negócio, profissão ou outro tipo de emprego e realizar as tarefas necessárias para ser contratado, como comparecer ao local de trabalho ou participar de uma entrevista de emprego.
+Subcódigo: d8451 - Manter um emprego
+Realizar as tarefas relacionadas ao trabalho para manter uma ocupação, um negócio, uma profissão ou outra forma de emprego e conseguir promoção e outros progressos no emprego.
+Subcódigo: d8452 - Sair de um emprego
+Sair ou demitir-se de um trabalho de maneira apropriada.
+Subcódigo: d8458 - Conseguir, manter e sair de um emprego, outro especificado
+Subcódigo: d8459 - Conseguir, manter e sair de um emprego, não especificado
+
+Código: d850 - Trabalho remunerado
+Participar de todos os aspectos do trabalho, como uma ocupação, um negócio. uma profissão ou outra forma de emprego, em troca de pagamento, como empregado, em tempo integral ou parcial, ou como autônomo, como procurar trabalho e conseguir um emprego, realizar as tarefas necessárias do trabalho, chegar pontualmente ao trabalho, supervisionar outros empregados ou ser supervisionado e realizar as tarefas necessárias sozinho ou em grupo.
+Inclui: trabalho autônomo, trabalho em tempo integral ou parcial.
+Subcódigo: d8500 - Trabalho autônomo
+Participar de trabalho remunerado procurado ou gerado pelo indivíduo ou contratado por outros sem uma relação de emprego formal, como trabalho agrícola migratório, trabalhar como escritor ou consultor autônomo, contrato de trabalho temporário, trabalhar como artista ou artesão, ter ou gerenciar uma loja ou outro negócio.
+Subcódigo: d8501 - Trabalho em tempo parcial
+Participar de todos os aspectos do trabalho para pagamento com base em tempo parcial. como um empregado: procurar trabalho e conseguir emprego, fazer as tarefas necessárias do trabalho, chegar ao trabalho pontualmente, supervisionar outros empregados ou ser supervisionado e realizar as tarefas necessárias sozinho ou em grupos.
+Subcódigo: d8502 - Trabalho em tempo integral
+Participar de todos os aspectos do trabalho para pagamento com base em tempo integral, como um empregado: procurar trabalho e conseguir um emprego, realizar as tarefas necessárias do trabalho, chegar ao trabalho pontualmente. supervisionar outros empregados ou ser supervisionado e realizar as tarefas necessárias sozinho ou em grupos.
+Subcódigo: d8508 - Trabalho remunerado, outro especificado
+Subcódigo: d8509 - Trabalho remunerado, não especificado
+
+Código: d855 - Trabalho não remunerado
+Participar de todos os aspectos do trabalho sem pagamento, em tempo parcial ou integral, incluindo organizar as atividades de trabalho, realizar as tarefas necessárias do trabalho, chegar pontualmente ao trabalho, supervisionar outros trabalhadores ou ser supervisionado e realizar as tarefas necessárias sozinho ou em grupo, como trabalho voluntário, trabalho beneficente, trabalho não remunerado para uma comunidade ou grupo religioso, trabalhar em casa sem remuneração.
+
+Código: d859 - Trabalho e emprego, outros especificados e não especificados
+
+Código: d860 - Transações econômicas básicas
+Participar de qualquer forma de transação econômica simples, como utilizai dinheiro para comprar comida ou fazer permutas, trocar mercadorias ou serviços; ou economizar dinheiro.
+
+Código: d865 - Transações econômicas complexas
+Participar de qualquer forma de transação econômica complexa que envolve o intercâmbio de capital ou propriedade e a criação de lucro ou valor econômico, como comprar um negócio, uma fábrica ou um equipamento, manter uma conta bancária ou negociar mercadorias.
+
+Código: d870 - Autossuficiência econômica
+Ter controle sobre recursos econômicos, de fontes públicas ou privadas, para garantir segurança econômica para as necessidades atuais e futuras.
+Inclui: recursos econômicos pessoais e direitos econômicos públicos.
+Subcódigo: d8700 - Recursos econômicos pessoais
+Ter controle sobre recursos econômicos pessoais ou privados para garantir segurança financeira para as necessidades atuais e futuras.
+Subcódigo: d8701 - Direitos econômicos públicos
+Ter controle sobre recursos econômicos públicos para garantir segurança econômica para as necessidades atuais e futuras.
+Subcódigo: d8708 - Autossuficiência econômica, outra especificada
+Subcódigo: d8709 - Autossuficiência econômica, não especificada
+
+Código: d879 - Vida econômica, outra especificada e não especificada
+
+Código: d898 - Áreas principais da vida, outras especificadas
+
+Código: d899 - Áreas principais da vida, não especificadas
+
+Capítulo d9 - Vida comunitária, social e cívica
+Este capítulo trata da realização das tarefas e ações necessárias para se envolver em educação, trabalho e emprego e para conduzir transações econômicas.
+
+Código: d910 - Vida comunitária
+Participar dos aspectos da vida social comunitária, como participar de organizações beneficentes, de clubes de serviços ou de organizações sociais profissionais.
+Inclui: associações formais e informais; cerimônias.
+Subcódigo: d9100 - Associações informais
+Participar de associações sociais ou comunitárias organizadas por pessoas com interesses comuns, como clubes sociais locais ou grupos étnicos.
+Subcódigo: d9101 - Associações formais
+Participar de grupos sociais profissionais ou outros grupos exclusivos, como associações de advogados, médicos ou acadêmicos.
+Subcódigo: d9102 - Cerimonias
+Participar de ritos não religiosos ou cerimonias sociais, como casamentos, funerais ou cerimonias de iniciação.
+Subcódigo: d9108 - Vida comunitária, outra especificada
+Subcódigo: d9109 - Vida comunitária, não especificada
+
+Código: d920 - Recreação e lazer
+Participar de qualquer forma de jogo, atividade recreativa ou de lazer, como jogo ou esportes informais ou organizados, programas de exercício físico, relaxamento, diversão, ir a galerias de arte, museus, cinema ou teatro, participar de trabalhos artesanais ou hobbies, ler por prazer, tocar instrumentos musicais, fazer excursões, turismo ou viajar por prazer.
+Inclui: jogo, esportes, arte e cultura, artesanato, hobbies e socialização.
+Subcódigo: d9200 - Jogar
+Participar de jogos com regras ou jogos não estruturados ou não organizados e recreação espontânea, como jogar xadrez ou cartas ou brincadeiras de criança.
+Subcódigo: d9201 - Praticar esportes
+Participar de jogos ou eventos competitivos de atletismo, organizados informal ou formalmente, sozinho ou em grupo, como boliche, ginástica ou futebol.
+Subcódigo: d9202 - Arte e cultura
+Participar de eventos culturais e de belas-artes, e apreciá-los. como ir ao teatro, cinema, museu ou galeria de arte, ou participar de uma peça, ler, ouvir alguém ler, dançar, cantar ou tocar um instrumento por prazer.
+Subcódigo: d9203 - Artesanato
+Fazer atividades manuais como artesanato, cerâmica ou tricô.
+Subcódigo: d9204 - Hobbies
+Participar de atividades de passatempo, como colecionar selos, moedas ou antiguidades.
+Subcódigo: d9205 - Socialização
+Participar de encontros informais ou casuais com outros, como visitar amigos ou parentes e ir a encontros informais em locais públicos.
+Subcódigo: d9208 - Recreação e lazer, outros especificados
+Subcódigo: d9209 - Recreação e lazer, não especificados
+
+Código: d930 - Religião e espiritualidade
+Participar de atividades, organizações ou práticas religiosas ou espirituais, com propósito de satisfação pessoal, para encontrar um significado, um valor religioso ou espiritual e estabelecer conexão com um poder divino, como frequentar igreja, templo, mesquita ou sinagoga, rezando ou cantando com propósito religioso e para contemplação espiritual.
+Inclui: religião e espiritualidade organizadas.
+Subcódigo: d9300 - Religião organizada
+Participar de cerimonias, atividades e eventos religiosos organizados.
+Subcódigo: d9301 - Espiritualidade
+Participar de atividades ou eventos espirituais, fora de uma religião organizada.
+Subcódigo: d9308 - Religião e espiritualidade, outra especificada
+Subcódigo: d9309 - Religião e espiritualidade, não especificada
+
+Código: d940 - Direitos humanos
+Desfrutar de todos os direitos nacional e interacionalmente reconhecidos que são atribuídos às pessoas pelo simples fato de sua condição humana, como os direitos humanos reconhecidos pelas Nações Unidas na Declaração Universal dos Direitos Humanos (1948), na Convenção sobre os Direitos da Criança (1989), nas Normas sobre Igualdade de Oportunidades para Pessoas com Deficiência (1993) e na Convenção sobre os Direitos das Pessoas com Deficiência (2006); o direito à autodeterminação ou autonomia; e o direito de controlar o próprio destino.
+
+Código: d950 - Vida política e cidadania
+Participar da vida social, política e governamental de um cidadão, ter o status legal de cidadão e desfrutar dos direitos, proteções, privilégios e deveres associados a esse papel, como o direito ao voto e à candidatura a um cargo político, a formar associações políticas; desfrutar os direitos e as liberdades associadas à cidadania os direitos de liberdade de expressão, associação, religião, proteção contra a busca e apreensão não justificada, direito a um defensor público, a um julgamento e outros direitos legais e proteção contra discriminação); e ter posição legal como cidadão.
+
+Código: d998 - Vida comunitária, social e cívica, outra especificada
+
+Código: d999 - Vida comunitária, social e cívica, não especificada
