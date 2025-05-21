@@ -1,5 +1,5 @@
 import gradio as gr
-from faiss_rag import inicializar_rag, buscar_contexto
+from utils.rag_retriever import inicializar_rag, buscar_contexto
 
 print("Inicializando FAISS...")
 documentos, index, embedder = inicializar_rag()

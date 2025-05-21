@@ -280,7 +280,7 @@ Subcódigo: b21000 - Acuidade binocular da visão de longe
 Funções visuais que permitem perceber o tamanho, a forma e o contorno de objetos distantes utilizando ambos os olhos.
 Subcódigo: b21001 - Acuidade monocular da visão de longe
 Funções visuais que permitem perceber o tamanho, a forma e o contorno dos objetos distantes utilizando apenas o olho direito ou o esquerdo.
-Subcódigo: b21002 - Acuidade binocular da visão de perlo
+Subcódigo: b21002 - Acuidade binocular da visão de perto
 Funções visuais que permitem perceber o tamanho, a forma e o contorno dos objetos próximos utilizando ambos os olhos.
 Subcódigo: b21003 - Acuidade monocular da visão de perto
 Funções visuais que permitem perceber o tamanho, a forma e o contorno dos objetos próximos utilizando apenas o olho direito ou o esquerdo.

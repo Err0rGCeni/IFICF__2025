@@ -1,10 +1,6 @@
 import ollama
-import faiss
 import gradio as gr
-import numpy as np
-import os
-import glob
-from utils.faiss_rag import inicializar_rag, buscar_contexto  # Importe as funções do módulo
+from utils.rag_retriever import inicializar_rag, buscar_contexto  # Importe as funções do módulo
 
 print("Inicializando...")
 
