@@ -4,7 +4,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Me chamo João, gosto de escutar Reggae.
--   Conceito Principal: Gostar de escutar Reggae
+-   Conceito Significativo: Gostar de escutar Reggae
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Atividades e Participação
 -   Categoria CIF: d920 - Recreação e lazer (mais especificamente d9202 Arte e cultura)
@@ -14,7 +14,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Paciente relata dores de cabeça intensas na região frontal, frequentemente constantes.
--   Conceito Principal: Dores de cabeça
+-   Conceito Significativo: Dores de cabeça
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b28010 - Dor na cabeça ou no pescoço
@@ -24,7 +24,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Febre.
--   Conceito Principal: Febre
+-   Conceito Significativo: Febre
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b540 - Funções da temperatura corporal
@@ -34,7 +34,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Tosse.
--   Conceito Principal: Tosse
+-   Conceito Significativo: Tosse
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b440 - Funções respiratórias
@@ -44,7 +44,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: O paciente sente dores abdominais agudas, localizadas principalmente na região inferior do abdômen.
--   Conceito Principal: Dores abdominais
+-   Conceito Significativo: Dores abdominais
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b28012 - Dor no estômago ou abdome
@@ -54,7 +54,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Fadiga.
--   Conceito Principal: Fadiga
+-   Conceito Significativo: Fadiga
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b4552 - Fadiga
@@ -64,7 +64,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Náuseas.
--   Conceito Principal: Náuseas
+-   Conceito Significativo: Náuseas
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b5350 - Sensação de náusea
@@ -74,7 +74,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Vômitos.
--   Conceito Principal: Vômitos
+-   Conceito Significativo: Vômitos
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b51060 - Vômito
@@ -84,7 +84,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Diarreia.
--   Conceito Principal: Diarreia
+-   Conceito Significativo: Diarreia
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b525 - Funções de defecação
@@ -94,7 +94,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Dificuldade para respirar.
--   Conceito Principal: Dificuldade para respirar
+-   Conceito Significativo: Dificuldade para respirar
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b460 - Sensações associadas às funções cardiovasculares e respiratórias
@@ -104,7 +104,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Dor no peito.
--   Conceito Principal: Dor no peito
+-   Conceito Significativo: Dor no peito
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b28011 - Dor no peito
@@ -114,7 +114,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: O paciente observa vermelhidão persistente na pele, acompanhada de coceira em áreas específicas.
--   Conceito Principal: Vermelhidão persistente na pele
+-   Conceito Significativo: Vermelhidão persistente na pele
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b810 - Funções protetoras da pele (Baseado em conhecimento geral da CIF, não explicitamente no RAG)
@@ -124,7 +124,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: O paciente observa vermelhidão persistente na pele, acompanhada de coceira em áreas específicas.
--   Conceito Principal: Coceira em áreas específicas
+-   Conceito Significativo: Coceira em áreas específicas
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b840 - Sensação relacionada à pele
@@ -134,7 +134,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Eu não consigo enxergar objetos a longas distâncias, com visão embaçada ao tentar focar.
--   Conceito Principal: Dificuldade para enxergar objetos a longas distâncias
+-   Conceito Significativo: Dificuldade para enxergar objetos a longas distâncias
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b2100 - Funções da acuidade visual
@@ -144,7 +144,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Tontura ou perda de equilíbrio.
--   Conceito Principal: Tontura ou perda de equilíbrio
+-   Conceito Significativo: Tontura ou perda de equilíbrio
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b240 - Sensações associadas à audição e à função vestibular
@@ -154,7 +154,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: O paciente apresenta fraqueza súbita em um lado do corpo, dificultando movimentos do braço e perna.
--   Conceito Principal: Fraqueza em um lado do corpo
+-   Conceito Significativo: Fraqueza em um lado do corpo
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b7302 - Força dos músculos de um lado do corpo
@@ -164,7 +164,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Ana tem 44 anos e observa a rua atentamente.
--   Conceito Principal: Observar a rua
+-   Conceito Significativo: Observar a rua
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Atividades e Participação
 -   Categoria CIF: d110 - Observar
@@ -174,7 +174,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Ana tem 44 anos e observa a rua atentamente.
--   Conceito Principal: Observar atentamente
+-   Conceito Significativo: Observar atentamente
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Atividades e Participação
 -   Categoria CIF: d160 - Concentrar a atenção
@@ -184,7 +184,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Diagnóstico de cardiopatia congênita, com sopro cardíaco detectado ao nascimento.
--   Conceito Principal: Cardiopatia congênita
+-   Conceito Significativo: Cardiopatia congênita
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Estruturas Corporais
 -   Categoria CIF: s4100 - Coração
@@ -194,7 +194,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Diagnóstico de cardiopatia congênita, com sopro cardíaco detectado ao nascimento.
--   Conceito Principal: Sopro cardíaco
+-   Conceito Significativo: Sopro cardíaco
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b410 - Funções do coração
@@ -204,7 +204,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Defeitos de membros.
--   Conceito Principal: Defeitos de membros
+-   Conceito Significativo: Defeitos de membros
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Estruturas Corporais
 -   Categoria CIF: s730 - Estrutura da extremidade superior; s750 - Estrutura da extremidade inferior
@@ -214,7 +214,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Defeitos de tubo neural.
--   Conceito Principal: Defeitos de tubo neural
+-   Conceito Significativo: Defeitos de tubo neural
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Estruturas Corporais
 -   Categoria CIF: s1 - Estruturas do sistema nervoso (Capítulo)
@@ -224,7 +224,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Anomalias cromossômicas, como Síndrome de Down.
--   Conceito Principal: Anomalias cromossômicas (Síndrome de Down)
+-   Conceito Significativo: Anomalias cromossômicas (Síndrome de Down)
 -   Status de Cobertura pela CIF: Não Coberto
 -   Componente da CIF: N/A
 -   Categoria CIF: N/A
@@ -234,7 +234,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Criança nasceu com fenda labial, afetando a alimentação e a fala.
--   Conceito Principal: Fenda labial
+-   Conceito Significativo: Fenda labial
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Estruturas Corporais
 -   Categoria CIF: s310 - Estrutura da boca (Baseado em conhecimento geral da CIF, não explicitamente no RAG)
@@ -244,7 +244,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Defeitos da parede abdominal.
--   Conceito Principal: Defeitos da parede abdominal
+-   Conceito Significativo: Defeitos da parede abdominal
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Estruturas Corporais
 -   Categoria CIF: s710 - Estrutura do tronco (Baseado em conhecimento geral da CIF, não explicitamente no RAG)
@@ -254,7 +254,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Microcefalia.
--   Conceito Principal: Microcefalia
+-   Conceito Significativo: Microcefalia
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Estruturas Corporais
 -   Categoria CIF: s110 - Estrutura do cérebro (Relacionado)
@@ -264,7 +264,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Espinha bífida.
--   Conceito Principal: Espinha bífida
+-   Conceito Significativo: Espinha bífida
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Estruturas Corporais
 -   Categoria CIF: s1 - Estruturas do sistema nervoso (Capítulo); s760 - Estrutura da coluna vertebral e estruturas relacionadas (Baseado em conhecimento geral da CIF)
@@ -274,7 +274,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Anomalias renais.
--   Conceito Principal: Anomalias renais
+-   Conceito Significativo: Anomalias renais
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Estruturas Corporais
 -   Categoria CIF: s610 - Estrutura do sistema urinário (Baseado em conhecimento geral da CIF, não explicitamente no RAG)
@@ -284,7 +284,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Michael mora no Rio de Janeiro, se mudou recentemente.
--   Conceito Principal: Morar no Rio de Janeiro / Mudança de local
+-   Conceito Significativo: Morar no Rio de Janeiro / Mudança de local
 -   Status de Cobertura pela CIF: Não Coberto
 -   Componente da CIF: N/A
 -   Categoria CIF: N/A
@@ -294,7 +294,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Dificuldade em realizar tarefas diárias devido à falta de tempo.
--   Conceito Principal: Dificuldade em realizar tarefas diárias
+-   Conceito Significativo: Dificuldade em realizar tarefas diárias
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Atividades e Participação
 -   Categoria CIF: d230 - Realizar a rotina diária
@@ -304,7 +304,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Problemas de concentração ou foco em atividades, especialmente com distrações.
--   Conceito Principal: Problemas de concentração ou foco
+-   Conceito Significativo: Problemas de concentração ou foco
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b140 - Funções da atenção
@@ -314,7 +314,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Sensação de sobrecarga com o número de responsabilidades.
--   Conceito Principal: Sensação de sobrecarga com responsabilidades
+-   Conceito Significativo: Sensação de sobrecarga com responsabilidades
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Atividades e Participação
 -   Categoria CIF: d240 - Lidar com o estresse e outras demandas psicológicas
@@ -324,7 +324,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Limitações físicas que dificultam certas atividades, como carregar objetos pesados.
--   Conceito Principal: Dificuldade para carregar objetos pesados
+-   Conceito Significativo: Dificuldade para carregar objetos pesados
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Atividades e Participação
 -   Categoria CIF: d430 - Levantar e carregar objetos
@@ -334,7 +334,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Restrições financeiras que impedem a participação em hobbies ou viagens.
--   Conceito Principal: Restrições financeiras
+-   Conceito Significativo: Restrições financeiras
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Fatores Ambientais
 -   Categoria CIF: e1 - Produtos e tecnologia (Capítulo); e165 - Riqueza e ativos financeiros (Baseado em conhecimento geral da CIF)
@@ -344,7 +344,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Falta de habilidades para realizar tarefas, como usar tecnologia.
--   Conceito Principal: Falta de habilidades para realizar tarefas (usar tecnologia)
+-   Conceito Significativo: Falta de habilidades para realizar tarefas (usar tecnologia)
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Atividades e Participação
 -   Categoria CIF: d210 - Realizar uma única tarefa (Relacionado a tarefas que exigem habilidades específicas)
@@ -354,7 +354,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Ansiedade social que inibe a participação em eventos sociais.
--   Conceito Principal: Ansiedade social
+-   Conceito Significativo: Ansiedade social
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Funções Corporais
 -   Categoria CIF: b152 - Funções emocionais (Baseado em conhecimento geral da CIF, não explicitamente no RAG)
@@ -364,7 +364,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: O gato Gustavo brigou com o cachorro Carlos.
--   Conceito Principal: Briga entre animais
+-   Conceito Significativo: Briga entre animais
 -   Status de Cobertura pela CIF: Não Coberto
 -   Componente da CIF: N/A
 -   Categoria CIF: N/A
@@ -374,7 +374,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Iluminação inadequada em casa ou no trabalho, causando desconforto.
--   Conceito Principal: Iluminação inadequada
+-   Conceito Significativo: Iluminação inadequada
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Fatores Ambientais
 -   Categoria CIF: e240 - Luz
@@ -384,7 +384,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Falta de amigos ou apoio social, levando à sensação de isolamento.
--   Conceito Principal: Falta de amigos ou apoio social
+-   Conceito Significativo: Falta de amigos ou apoio social
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Fatores Ambientais
 -   Categoria CIF: e3 - Apoio e relacionamentos (Capítulo) / e320 - Amigos
@@ -394,7 +394,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Comunidade não acolhedora ou insegura, com alta criminalidade.
--   Conceito Principal: Comunidade insegura / alta criminalidade
+-   Conceito Significativo: Comunidade insegura / alta criminalidade
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Fatores Ambientais
 -   Categoria CIF: N/A (Domínio específico não no RAG, mas coberto por capítulo geral)
@@ -404,7 +404,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Saneamento básico insuficiente, como falta de água potável.
--   Conceito Principal: Saneamento básico insuficiente
+-   Conceito Significativo: Saneamento básico insuficiente
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Fatores Ambientais
 -   Categoria CIF: e530 - Serviços, sistemas e políticas de utilidade pública
@@ -414,7 +414,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Qualidade do ar ruim ou poluição, afetando a saúde.
--   Conceito Principal: Qualidade do ar ruim / poluição
+-   Conceito Significativo: Qualidade do ar ruim / poluição
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Fatores Ambientais
 -   Categoria CIF: e260 - Qualidade do ar
@@ -424,7 +424,7 @@ Okay, sou seu assistente especializado em CIF. Analisarei cada frase e a classif
 ---
 
 -   Frase de Entrada: Poluição sonora.
--   Conceito Principal: Poluição sonora
+-   Conceito Significativo: Poluição sonora
 -   Status de Cobertura pela CIF: Coberto
 -   Componente da CIF: Fatores Ambientais
 -   Categoria CIF: e250 - Som (Relacionado a intensidade e qualidade do som)

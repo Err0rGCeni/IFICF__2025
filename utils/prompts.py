@@ -38,7 +38,7 @@ def icf_gemini(context, input_text):
         **Formato da Saída:**
         Para cada **Conceito Principal** identificado na `Frase de Entrada do Usuário`, retorne um bloco de texto com a seguinte estrutura:
         - Frase de Entrada: [A frase original]
-        - Conceito Principal: [O conceito significativo extraído da frase]
+        - Conceito Significativo: [O conceito significativo extraído da frase]
         - Status de Cobertura pela CIF: [Ex: "Coberto", "Não Coberto", "Não Definido"]
         - Categoria CIF: [Se "Coberto", indique: "Funções Corporais", "Estruturas Corporais", "Atividades e Participação", "Fatores Ambientais". Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
         - Codificação CIF: [Se "Coberto", o código e título mais relevante da CIF. Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]

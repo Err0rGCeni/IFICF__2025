@@ -137,10 +137,16 @@ def create_report(llm_response: str) -> tuple[gr.Plot, gr.Plot, gr.Tabs, gr.TabI
     """
     # Implementar lógica de geração de relatório aqui
     print("Gerando relatório...")
-    plot_pie, plot_bar = generate_report(llm_response)  # Placeholder para a função de geração de relatório
+    df_group, df_group_describe, df_individuals, df_individuals_describe, plot_pie, plot_bar, plot_tree, report_path = generate_report(llm_response)  # Placeholder para a função de geração de relatório
     
-    return gr.Plot(plot_pie), \
+    return gr.DataFrame(df_group), \
+            gr.DataFrame(df_group_describe), \
+            gr.DataFrame(df_individuals), \
+            gr.DataFrame(df_individuals_describe), \
+            gr.Plot(plot_pie), \
             gr.Plot(plot_bar), \
+            gr.Plot(plot_tree), \
+            gr.DownloadButton(value=report_path, label="📥 Baixar Relatório", interactive=True), \
             gr.Tabs(selected=2), \
             gr.TabItem(STRINGS["TAB_2_TITLE"]+" ✅", interactive=True)
 # --- Construção da Interface Gradio ---
@@ -209,14 +215,22 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
 
         with gr.TabItem(STRINGS["TAB_2_TITLE"] + " 🔒", interactive=False, id=2) as tab_2:
             gr.Markdown(STRINGS["TAB_2_SUBTITLE"])
-            
-            out_graph_pie = gr.Plot(
-                label="Gráfico de Setores da Classificação",
-            )
 
-            out_graph_hist = gr.Plot(
-                label="Gráfico de Barras de Classificação",
-            )
+            with gr.Row():
+                grouped_data = gr.DataFrame(label="Tabela de Resultados Agrupados")
+                grouped_describe = gr.DataFrame(label="Descrição Estatística dos Resultados Agrupados")
+
+            with gr.Row():
+                individual_data = gr.DataFrame(label="Tabela de Resultados Individuais")
+                individual_describe = gr.DataFrame(label="Descrição Estatística dos Resultados Individuais")
+            
+            out_graph_pie = gr.Plot(label="Gráfico de Setores da Classificação")
+
+            out_graph_hist = gr.Plot(label="Gráfico de Barras de Classificação")
+
+            out_graph_tree = gr.Plot(label="Gráfico Treemap de Classificação")
+
+            btn_download_report = gr.DownloadButton(label="📥 Baixar Relatório", interactive=True)
 
             btn_return_inputs
 
@@ -229,7 +243,7 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
     btn_create_report.click(
         fn=create_report,  # Placeholder para geração de relatório
         inputs=out_txt_response,
-        outputs=[out_graph_pie, out_graph_hist, tabs_component, tab_2]
+        outputs=[grouped_data, grouped_describe, individual_data, individual_describe, out_graph_pie, out_graph_hist, out_graph_tree, btn_download_report, tabs_component, tab_2]
     )
 
     btn_return_inputs.click(

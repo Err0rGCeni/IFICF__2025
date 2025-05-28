@@ -1,7 +1,9 @@
 import re
-import plotly.express as px
 import plotly.graph_objects as go
+import pandas as pd
 from typing import Dict, Tuple, Optional, List
+from .graph_creation import create_pie_graph, create_bar_graph, create_tree_map_graph
+from .pdf_creation import generate_pdf_report, generate_pdf_report_temp
 
 # Constantes
 CIF_COMPONENTS: Dict[str, str] = {
@@ -23,7 +25,7 @@ CIF_FULL_NUMERIC_CODE_REGEX: str = r'([bdes][0-9]+)'
 # Regex para encontrar todas as linhas de Categoria CIF
 ALL_CIF_CATEGORY_LINES_REGEX: str = r"Categoria CIF: (.+)"
 
-def generate_report(llm_res: str) -> Tuple[Optional[go.Figure], Optional[go.Figure]]:
+def generate_report(llm_res: str) -> Tuple[Optional[pd.DataFrame], Optional[pd.DataFrame], Optional[pd.DataFrame], Optional[pd.DataFrame], Optional[go.Figure], Optional[go.Figure], Optional[go.Figure], Optional[str], Optional[str]]:
     """
     Gera um relatório a partir da resposta da LLM, extraindo dados de múltiplas
     seções de "Categoria CIF" e criando um gráfico de pizza e um gráfico de barras.
@@ -38,18 +40,42 @@ def generate_report(llm_res: str) -> Tuple[Optional[go.Figure], Optional[go.Figu
     """
     # Extrai os dados da resposta da LLM processando todas as linhas de categoria CIF
     target_lines = extrair_linhas_categoria_cif_regex(llm_res)
-    print('target_lines: ', target_lines)
     data_by_group = count_group_frequencies(target_lines)
-    print('data_by_group: ', data_by_group)
-    data_individual_codes = count_individual_frequencies(target_lines) # Descomente se precisar usar
-    print('data_individual_codes: ', data_individual_codes)
-    # data_individual_codes = count_individual_frequencies(llm_res) # Descomente se precisar usar
+    df_group = pd.DataFrame(data_by_group.items(), columns=['Componente CIF', 'Frequencia'])
+    data_individual_codes = count_individual_frequencies(target_lines)
+    df_individual_treemap = create_treemap_dataframe(data_individual_codes)
+
+    translation_map = {
+    'count': 'Contagem',
+    'mean': 'Média',
+    'std': 'Desvio Padrão',
+    'min': 'Mínimo',
+    '25%': '25º Percentil',
+    '50%': 'Mediana (50%)',
+    '75%': '75º Percentil',
+    'max': 'Máximo'
+    }
+
+    df_group_describe = df_group.describe().reset_index()
+    df_group_describe = df_group_describe.rename(columns={'index': 'Estatística'})
+    df_group_describe['Estatística'] = df_group_describe['Estatística'].replace(translation_map)
+    df_treemap_describe = df_group.describe().reset_index()
+    df_treemap_describe = df_treemap_describe.rename(columns={'index': 'Estatística'})
+    df_treemap_describe['Estatística'] = df_treemap_describe['Estatística'].replace(translation_map)
 
     # Cria os gráficos com os dados extraídos
     fig_pie = create_pie_graph(data_by_group, titulo="Distribuição da Classificação por Componentes CIF")
     fig_bar = create_bar_graph(data_by_group, titulo="Frequência da Classificação por Componentes CIF")
+    fig_tree_map = create_tree_map_graph(df_individual_treemap, titulo="Treemap de Frequência por Código CIF")
 
-    return fig_pie, fig_bar
+    temp_file = generate_pdf_report_temp(
+        plotly_figs=[fig_pie, fig_bar, fig_tree_map],
+        dataframes=[df_group, df_group_describe, df_individual_treemap, df_treemap_describe],
+        text=llm_res,
+        titulo_relatorio="Relatório de Classificação por Componentes CIF"
+        )
+
+    return df_group, df_group_describe, df_individual_treemap, df_treemap_describe, fig_pie, fig_bar, fig_tree_map, temp_file
 
 def extrair_linhas_categoria_cif_regex(texto):
     """
@@ -76,7 +102,6 @@ def extrair_linhas_categoria_cif_regex(texto):
     linhas_cif_encontradas = re.findall(padrao, texto)
     
     return '\n'.join(linhas_cif_encontradas)
-
 
 def count_group_frequencies(llm_res: str) -> Dict[str, int]:
     """
@@ -113,7 +138,6 @@ def count_group_frequencies(llm_res: str) -> Dict[str, int]:
 
     return group_frequencies
 
-
 def count_individual_frequencies(llm_res: str) -> Dict[str, int]:
     """
     Conta a frequência acumulada de cada código CIF individual (ex: b123, d456, N.D.)
@@ -149,96 +173,63 @@ def count_individual_frequencies(llm_res: str) -> Dict[str, int]:
             
     return individual_frequencies
 
-
-def create_pie_graph(dados: Dict[str, int], titulo: str = "Distribuição da Classificação") -> Optional[go.Figure]:
+def create_treemap_dataframe(data_dict: dict) -> pd.DataFrame:
     """
-    Gera um gráfico de pizza (pie chart) a partir de um dicionário de atributos e valores.
+    Cria um DataFrame formatado para treemaps do Plotly a partir de um dicionário
+    de códigos e frequências, inferindo a hierarquia 'Parent', 'Subparent' e 'Filho'.
 
     Args:
-        dados (Dict[str, int]): Um dicionário onde as chaves são os nomes dos atributos
-                                 e os valores são os números correspondentes.
-        titulo (str): O título do gráfico.
+        data_dict (dict): Um dicionário onde as chaves são os códigos (ex: 'd920')
+                          e os valores são suas frequências.
 
     Returns:
-        Optional[go.Figure]: O objeto Figure do Plotly contendo o gráfico de pizza,
-                             ou None se não houver dados válidos para plotar.
+        pd.DataFrame: Um DataFrame com as colunas 'Parent', 'Subparent', 'Filho'
+                      e 'Frequencia', pronto para uso com px.treemap(path=...).
     """
-    dados_validos = {k: v for k, v in dados.items() if v > 0}
+    # 1. Converter o dicionário diretamente para um DataFrame com 'Filho' e 'Frequencia'
+    # 'Filho' já representa o código completo original
+    df = pd.DataFrame(list(data_dict.items()), columns=['Filho', 'Frequencia'])
 
-    if not dados_validos:
-        print(f"Aviso: Nenhum dado com valor > 0 para gerar o gráfico de pizza: '{titulo}'.")
-        return None
+    # Listas para armazenar os componentes da hierarquia
+    parents = []
+    subparents = []
 
-    labels = list(dados_validos.keys())
-    valores = list(dados_validos.values())
-    
-    colors = ['#FFC145', '#B7F242', '#4369C0', '#DA3B95', '#CCCCCC']
+    # 2. Iterar sobre cada 'Filho' para derivar a hierarquia
+    for index, row in df.iterrows():
+        code = str(row['Filho']) # O 'Filho' é o código completo original
 
-    fig = px.pie(
-        names=labels,
-        values=valores,
-        title=titulo,
-        color=labels,
-        color_discrete_sequence=colors,
-    )
+        parent = 'Outros'
+        subparent = 'Outros'
+        # 'filho' já está na coluna 'Filho' do DataFrame
 
-    fig.update_layout(legend_title_text='Componentes')
-    fig.update_traces(
-        direction='clockwise',
-        rotation=-30,
-        textinfo="label+value+percent",
-        textposition='outside',
-        textfont_size=16,
-        pull=0.05,
-        hovertemplate="<b>%{label}</b><br>Frequência: %{value}<br>Porcentagem: %{percent}<extra></extra>"
-    )
-    return fig
+        if code.startswith('s'):
+            parent = 's'
+        elif code.startswith('d'):
+            parent = 'd'
+        elif code.startswith('b'):
+            parent = 'b'
+        elif code.startswith('e'):
+            parent = 'e'
 
+        # Extrair o subparent (o primeiro dígito após a letra)
+        match = re.match(r'[sdbbe]([0-9])', code)
+        if match:
+            subparent = parent + match.group(1)
+        elif parent != 'Outros' and len(code) > 1 and code[1:].isdigit():
+            # Caso como 's1' onde o '1' já é o subparent
+            subparent = parent + code[1]
 
-def create_bar_graph(dados: Dict[str, int], titulo: str = "Frequência da Classificação") -> Optional[go.Figure]:
-    """
-    Gera um gráfico de barras a partir de um dicionário de atributos e valores.
+        parents.append(parent)
+        subparents.append(subparent)
 
-    Args:
-        dados (Dict[str, int]): Um dicionário onde as chaves são os nomes dos atributos
-                                 e os valores são os números correspondentes.
-        titulo (str): O título do gráfico.
+    # Adicionar as novas colunas ao DataFrame
+    df['Parent'] = parents
+    df['Subparent'] = subparents
 
-    Returns:
-        Optional[go.Figure]: O objeto Figure do Plotly contendo o gráfico de barras,
-                             ou None se não houver dados válidos para plotar.
-    """
-    dados_validos = {k: v for k, v in dados.items() if v > 0}
+    # Selecionar, reordenar e ordenar as colunas para o `path`
+    # Não precisamos mais de df_treemap = df[['Parent', 'Subparent', 'Filho', 'Frequencia']]
+    # porque o DataFrame 'df' já contém as colunas necessárias e na ordem correta,
+    # exceto pela ordenação.
+    df_treemap = df.sort_values(by=['Parent', 'Subparent', 'Filho']).reset_index(drop=True)
 
-    if not dados_validos:
-        print(f"Aviso: Nenhum dado com valor > 0 para gerar o gráfico de barras: '{titulo}'.")
-        return None
-
-    labels = list(dados_validos.keys())
-    valores = list(dados_validos.values())
-
-    colors = ['#FFC145', '#B7F242', '#4369C0', '#DA3B95', '#CCCCCC']
-
-    fig = px.bar(
-        x=labels,
-        y=valores,
-        title=titulo,
-        labels={'x': 'Componentes CIF', 'y': 'Frequência'},
-        color=labels,
-        color_discrete_sequence=colors,
-        text_auto=True
-    )
-
-    fig.update_layout(
-        legend_title_text='Componentes',
-        xaxis_title="Componentes CIF",
-        yaxis_title="Frequência",
-        showlegend=True
-    )
-    fig.update_traces(
-        textfont_size=14,
-        textangle=0,
-        textposition="outside",
-        hovertemplate="<b>%{x}</b><br>Frequência: %{y}<extra></extra>"
-    )
-    return fig
+    return df_treemap
