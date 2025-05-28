@@ -16,7 +16,7 @@ ROUTES = {
 }
 
 
-with gr.Blocks() as landing:
+with gr.Blocks() as interface:
     gr.Image("static/images/logo.jpeg", height=100)
     gr.Markdown(LABELS["LANDING_TITLE"], elem_id="landing_title")
     with gr.Row():
@@ -24,4 +24,4 @@ with gr.Blocks() as landing:
         gr.Button(LABELS["BTN_ABOUT"], link=ROUTES["ABOUT"], elem_id="btn_about")
 
 if __name__ == "__main__":
-    landing.launch()
+    interface.launch()

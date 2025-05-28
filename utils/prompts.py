@@ -40,9 +40,9 @@ def icf_gemini(context, input_text):
         - Frase de Entrada: [A frase original]
         - Conceito Principal: [O conceito significativo extraído da frase]
         - Status de Cobertura pela CIF: [Ex: "Coberto", "Não Coberto", "Não Definido"]
-        - Componente da CIF: [Se "Coberto", indique: "Funções Corporais", "Estruturas Corporais", "Atividades e Participação", "Fatores Ambientais". Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
-        - Código CIF (e Título): [Se "Coberto", o código e título mais relevante da CIF. Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
-        - Descrição CIF Relevante: [Se "Coberto", a descrição completa ou parte dela que se relaciona mais diretamente com o conceito. Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
+        - Categoria CIF: [Se "Coberto", indique: "Funções Corporais", "Estruturas Corporais", "Atividades e Participação", "Fatores Ambientais". Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
+        - Codificação CIF: [Se "Coberto", o código e título mais relevante da CIF. Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
+        - Descrição CIF: [Se "Coberto", a descrição completa ou parte dela que se relaciona mais diretamente com o conceito. Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
         - Justificativa da Classificação: [Explique brevemente por que o conceito foi classificado dessa forma, referenciando o contexto RAG quando usado, ou explicando a lógica da classificação com base no seu conhecimento da CIF.]
 
         **Frases**:

@@ -2,12 +2,14 @@ import ollama
 import faiss
 import os
 from google import genai
+from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 from utils.rag_retriever import buscar_contexto_completo, buscar_multiplos_contextos
 from utils.prompts import icf_classifier, icf_gemini
 
 # Carrega a chave de API do Gemini de variáveis de ambiente para segurança
 # Certifique-se de que a variável de ambiente 'GEMINI_API_KEY' esteja definida no seu sistema.
+load_dotenv()
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
 if not GEMINI_API_KEY:
