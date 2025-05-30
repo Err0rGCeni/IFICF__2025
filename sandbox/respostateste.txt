@@ -1,0 +1,338 @@
+--- Resposta Fornecida pela LLM ---
+Aqui estão as classificações das frases de acordo com a Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF), utilizando o contexto fornecido e conhecimento adicional quando necessário:
+
+- Frase de Entrada: Me chamo João, gosto de escutar Reggae.
+- Conceito Significativo: Gosto de escutar Reggae (Hobbie/Lazer)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Atividades e Participação
+- Codificação CIF: d920 - Recreação e lazer
+- Descrição CIF: Participar de qualquer forma de jogo, atividade recreativa ou de lazer, como jogo ou esportes informais ou organizados, programas de exercício físico, relaxamento, diversão, ir a galerias de arte, museus, cinema ou teatro, participar de trabalhos artesanais ou hobbies, ler por prazer, tocar instrumentos musicais, fazer excursões, turismo ou viajar por prazer. Inclui: jogo, esportes, arte e cultura, artesanato, hobbies e socialização.
+- Justificativa da Classificação: A frase menciona uma atividade de lazer (ouvir música, Reggae), que se enquadra no domínio de Recreação e lazer (d920) dentro do componente Atividades e Participação, conforme o contexto RAG. O nome "João" é um Fator Pessoal e não é classificado nos componentes da CIF.
+
+- Frase de Entrada: Paciente relata dores de cabeça intensas na região frontal, frequentemente constantes.
+- Conceito Significativo: Dores de cabeça
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b28010 - Dor na cabeça ou no pescoço
+- Descrição CIF: Sensação desagradável sentida na cabeça ou no pescoço que indica lesão potencial ou real de alguma estrutura do corpo.
+- Justificativa da Classificação: O conceito de "dores de cabeça" é explicitamente coberto pelo subcódigo `b28010 - Dor na cabeça ou no pescoço`, que faz parte de `b280 - Sensação de dor`, conforme o contexto RAG fornecido, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Febre.
+- Conceito Significativo: Febre
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b540 - Funções da temperatura corporal
+- Descrição CIF: Funções mentais relacionadas com a regulação da temperatura corporal, como regulação da temperatura e ter febre, hipotermia ou temperatura corporal baixa.
+- Justificativa da Classificação: Febre é uma alteração na regulação da temperatura corporal. Embora o código `b540` não esteja detalhado no contexto RAG, o conceito é uma Função Corporal (componente 'b') padrão na Classificação CIF relacionada à homeostase/regulação corporal.
+
+- Frase de Entrada: Tosse.
+- Conceito Significativo: Tosse
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b440 - Funções respiratórias
+- Descrição CIF: Funções relacionadas à inalação de ar para os pulmões, a troca de gases entre o ar e o sangue e à expulsão do ar.
+- Justificativa da Classificação: Tosse é um reflexo relacionado ao sistema respiratório. O conceito se enquadra nas `Funções respiratórias (b440)`, que está presente no contexto RAG fornecido, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: O paciente sente dores abdominais agudas, localizadas principalmente na região inferior do abdômen.
+- Conceito Significativo: Dores abdominais
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b28012 - Dor no estômago ou abdome
+- Descrição CIF: Sensação desagradável sentida no estômago ou no abdome que indica lesão potencial ou real de alguma estrutura do corpo. Inclui: dor na regido pélvica.
+- Justificativa da Classificação: O conceito de "dores abdominais" é explicitamente coberto pelo subcódigo `b28012 - Dor no estômago ou abdome`, que faz parte de `b280 - Sensação de dor`, conforme o contexto RAG fornecido, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Fadiga.
+- Conceito Significativo: Fadiga
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b4552 - Fadiga
+- Descrição CIF: Funções relacionadas à suscetibilidade à fadiga, cm qualquer nível de exercício.
+- Justificativa da Classificação: O conceito de "Fadiga" é explicitamente coberto pelo subcódigo `b4552 - Fadiga`, que faz parte de `b455 - Funções de tolerância a exercícios`, conforme o contexto RAG fornecido, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Náuseas.
+- Conceito Significativo: Náuseas
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b5350 - Sensação de náusea
+- Descrição CIF: Sensação relacionada à necessidade de vomitar.
+- Justificativa da Classificação: O conceito de "Náuseas" é explicitamente coberto pelo subcódigo `b5350 - Sensação de náusea`, que faz parte de `b535 - Sensações associadas ao sistema digestório`, conforme o contexto RAG fornecido, classificando-o no componente Funções Corporais. O RAG também lista náusea associada a tontura (b2403), mas a náusea isolada se relaciona mais diretamente com o sistema digestório (b5350).
+
+- Frase de Entrada: Vômitos.
+- Conceito Significativo: Vômitos
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b51060 - Vomito
+- Descrição CIF: (Subcódigo de b5106) Funções relacionadas ao movimento de substâncias como alimentos, líquidos, medicamentos, objetos intencionalmente ou involuntariamente engolidos, na direção inversa à ingestão, como na regurgitação e vômito.
+- Justificativa da Classificação: O conceito de "Vômitos" é explicitamente coberto pelo subcódigo `b51060 - Vomito`, que faz parte de `b510 - Funções de ingestão` (funções de expelir conteúdo), conforme o contexto RAG fornecido, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Diarreia.
+- Conceito Significativo: Diarreia
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b525 - Funções de defecação
+- Descrição CIF: Funções de eliminação de resíduos e alimentos não digeridos, como fezes c funções relacionadas. Inclui: funções de eliminação, consistência fecal,frequência de defecação: continência fecal, flatulência; deficiências como constipação, diarreia, fezes líquidas e incompetência ou incontinência do esfincter anal.
+- Justificativa da Classificação: Diarreia é listada como uma deficiência relacionada às `Funções de defecação (b525)` e especificamente à consistência fecal (b5251 - Consistência fecal, que menciona fezes líquidas) no contexto RAG. O código b525 representa o domínio funcional afetado.
+
+- Frase de Entrada: Dificuldade para respirar.
+- Conceito Significativo: Dificuldade para respirar (Dispneia)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b460 - Sensações associadas às funções cardiovasculares e respiratórias
+- Descrição CIF: Sensações como perda de batimento cardíaco, palpitação e diminuição do fôlego. Inclui: sensações de aperto no peito, sensações de batimento cardíaco irregular, dispneia, sufocação, náuseas, respiração ofegante e necessidade de engolir ar.
+- Justificativa da Classificação: A frase "Dificuldade para respirar" (dispneia) é explicitamente listada como uma sensação associada às funções respiratórias sob o código `b460` no contexto RAG fornecido, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Dor no peito.
+- Conceito Significativo: Dor no peito
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b28011 - Dor no peito
+- Descrição CIF: Sensação desagradável sentida no peito e que indica lesão potencial ou real de alguma estrutura do corpo.
+- Justificativa da Classificação: O conceito de "Dor no peito" é explicitamente coberto pelo subcódigo `b28011 - Dor no peito`, que faz parte de `b280 - Sensação de dor`, conforme o contexto RAG fornecido, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: O paciente observa vermelhidão persistente na pele, acompanhada de coceira em áreas específicas.
+- Conceito Significativo: Coceira na pele
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b840 - Sensação relacionada à pele
+- Descrição CIF: Sensações relacionadas à pele como coceira, ardor, sensação de queimação ou de formigamento. Inclui: deficiências coma sensação de alfinetes e agulhas na pele e sensação de formigamento.
+- Justificativa da Classificação: O conceito de "coceira" é explicitamente coberto pelo código `b840 - Sensação relacionada à pele` no contexto RAG fornecido, classificando-o no componente Funções Corporais. A "vermelhidão" é um sinal cutâneo relacionado às funções da pele (Capítulo b8), mas não detalhado com código específico no RAG.
+
+- Frase de Entrada: Eu não consigo enxergar objetos a longas distâncias, com visão embaçada ao tentar focar.
+- Conceito Significativo: Dificuldade para enxergar a longas distâncias / Visão embaçada (Funções da acuidade visual)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b2100 - Funções da acuidade visual
+- Descrição CIF: Funções visuais, tanto monocular como binocular, que permitem perceber a forma e o contorno a curta e longa distância.
+- Justificativa da Classificação: A dificuldade em enxergar a longas distâncias com visão embaçada está diretamente relacionada às `Funções da acuidade visual (b2100)`, que fazem parte de `b210 - Funções da visão`, conforme o contexto RAG fornecido, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Tontura ou perda de equilíbrio.
+- Conceito Significativo: Tontura / Perda de equilíbrio
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b240 - Sensações associadas à audição e à função vestibular
+- Descrição CIF: Sensações de tontura, queda, vibração e vertigem. Inclui: sensações de zumbido nas orelhas, irritação na orelha, pressão auricular, náusea associada à tontura ou vertigem.
+- Justificativa da Classificação: O conceito de "Tontura ou perda de equilíbrio" está coberto pelo código `b240 - Sensações associadas à audição e à função vestibular` no contexto RAG, que lista explicitamente `Tontura` (b2401) e `Sensação de cair` (b2402, relacionada a perda de equilíbrio), classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: O paciente apresenta fraqueza súbita em um lado do corpo, dificultando movimentos do braço e perna.
+- Conceito Significativo: Fraqueza em um lado do corpo (Funções relacionadas à força muscular)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b7302 - Força dos músculos de um lado do corpo
+- Descrição CIF: Funções relacionadas à força gerada pela contração dos músculos e grupos de músculos no lado esquerdo ou direito do corpo. Inclui: deficiências como hemiparesia e hemiplegia.
+- Justificativa da Classificação: O conceito de "fraqueza em um lado do corpo" está diretamente relacionado ao subcódigo `b7302 - Força dos músculos de um lado do corpo`, que faz parte de `b730 - Funções relacionadas à força muscular`, conforme o contexto RAG fornecido, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Ana tem 44 anos e observa a rua atentamente.
+- Conceito Significativo: Observar a rua (atentamente)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Atividades e Participação
+- Codificação CIF: d110 - Observar
+- Descrição CIF: Utilizar intencionalmente o sentido da visão para experimentar estímulos visuais, como acompanhar ou seguir visualmente um objeto, assistir a um evento esportivo ou observar pessoas ou crianças brincando.
+- Justificativa da Classificação: A ação de "observar" está explicitamente coberta pelo código `d110 - Observar` no contexto RAG, pertencente ao componente Atividades e Participação. A idade ("44 anos") é um Fator Pessoal e não é classificada nos componentes da CIF. "Atentamente" pode indicar o uso de funções de atenção (b140) ou atividades de atenção (d160), também presentes no RAG.
+
+- Frase de Entrada: Diagnóstico de cardiopatia congênita, com sopro cardíaco detectado ao nascimento.
+- Conceito Significativo: Cardiopatia congênita (Estrutura do coração)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Estruturas Corporais
+- Codificação CIF: s4100 - Coração
+- Descrição CIF: Estrutura do coração.
+- Justificativa da Classificação: "Cardiopatia congênita" refere-se a uma alteração na estrutura do coração. O conceito de "Estrutura do coração" está explicitamente coberto pelo código `s4100 - Coração`, que faz parte de `s410 - Estrutura do sistema cardiovascular`, conforme o contexto RAG fornecido, classificando-o no componente Estruturas Corporais. O sopro cardíaco é uma manifestação funcional/estrutural, mas a cardiopatia é a estrutura afetada.
+
+- Frase de Entrada: Defeitos de membros.
+- Conceito Significativo: Defeitos de membros (estruturas)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Estruturas Corporais
+- Codificação CIF: s730 - Estrutura da extremidade superior, s750 - Estrutura da extremidade inferior
+- Descrição CIF: s730: Estrutura da extremidade superior; s750: Estrutura da extremidade inferior.
+- Justificativa da Classificação: "Defeitos de membros" refere-se a alterações nas estruturas dos membros. As estruturas das extremidades superior (`s730`) e inferior (`s750`) estão cobertas pelo contexto RAG fornecido, classificando-o no componente Estruturas Corporais.
+
+- Frase de Entrada: Defeitos de tubo neural.
+- Conceito Significativo: Defeitos de tubo neural (Estrutura do sistema nervoso)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Estruturas Corporais
+- Codificação CIF: s1 - Estruturas do sistema nervoso
+- Descrição CIF: Este capítulo é sobre as estruturas do sistema nervoso.
+- Justificativa da Classificação: "Defeitos de tubo neural" são alterações nas estruturas do sistema nervoso. O conceito está coberto pelo domínio `Estruturas do sistema nervoso` (Capítulo s1), mencionado no contexto RAG, classificando-o no componente Estruturas Corporais.
+
+- Frase de Entrada: Anomalias cromossômicas, como Síndrome de Down.
+- Conceito Significativo: Anomalias cromossômicas / Síndrome de Down (Condição de saúde)
+- Status de Cobertura pela CIF: Não Coberto (N.C.)
+- Categoria CIF: N.C.
+- Codificação CIF: N.C.
+- Descrição CIF: N.C.
+- Justificativa da Classificação: A Classificação CIF descreve a funcionalidade e a incapacidade resultantes de condições de saúde, e não a condição diagnóstica ou etiológica em si. "Anomalias cromossômicas" e "Síndrome de Down" são diagnósticos médicos/etiologias e não são codificados diretamente nos componentes da CIF (Funções/Estruturas Corporais, Atividades/Participação, Fatores Ambientais), embora suas consequências possam ser classificadas.
+
+- Frase de Entrada: Criança nasceu com fenda labial, afetando a alimentação e a fala.
+- Conceito Significativo: Fenda labial (Estrutura)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Estruturas Corporais
+- Codificação CIF: s3 - Estruturas relacionadas com a voz e a fala
+- Descrição CIF: Este capítulo é sobre estruturas relacionadas com a voz e a fala.
+- Justificativa da Classificação: "Fenda labial" é uma alteração na estrutura oral/facial. O conceito se enquadra no domínio de `Estruturas relacionadas com a voz e a fala` (Capítulo s3), mencionado no contexto RAG, classificando-o no componente Estruturas Corporais.
+
+- Frase de Entrada: Criança nasceu com fenda labial, afetando a alimentação e a fala.
+- Conceito Significativo: Afetando a alimentação (Funções de ingestão)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b510 - Funções de ingestão
+- Descrição CIF: Funções relacionadas à ingestão e manipulação de sólidos ou líquidos no corpo através da boca.
+- Justificativa da Classificação: A dificuldade na alimentação devido à fenda labial afeta as `Funções de ingestão (b510)`, presentes no contexto RAG, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Criança nasceu com fenda labial, afetando a alimentação e a fala.
+- Conceito Significativo: Afetando a fala (Funções da Voz e Fala)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b3 - Funções da Voz e Fala
+- Descrição CIF: Este capítulo é sobre as funções de produção de sons e fala.
+- Justificativa da Classificação: A dificuldade na fala devido à fenda labial afeta as `Funções da Voz e Fala` (Capítulo b3), mencionadas no contexto RAG, classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Defeitos da parede abdominal.
+- Conceito Significativo: Defeitos da parede abdominal (Estrutura do tronco)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Estruturas Corporais
+- Codificação CIF: s760 - Estrutura do tronco
+- Descrição CIF: (Baseado no conhecimento geral da CIF para s760) Estruturas do tronco, incluindo a coluna vertebral, pelve e caixa torácica e estruturas relacionadas.
+- Justificativa da Classificação: "Defeitos da parede abdominal" refere-se a uma alteração estrutural do tronco. Embora o código específico `s760` não esteja no contexto RAG, o conceito é claramente uma Estrutura Corporal (componente 's') na Classificação CIF, de acordo com o conhecimento geral do framework.
+
+- Frase de Entrada: Microcefalia.
+- Conceito Significativo: Microcefalia (Estrutura do cérebro/cabeça)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Estruturas Corporais
+- Codificação CIF: s110 - Estrutura do cérebro
+- Descrição CIF: Estrutura do cérebro.
+- Justificativa da Classificação: "Microcefalia" é uma alteração estrutural do cérebro e da cabeça. O conceito de `Estrutura do cérebro (s110)` está presente no contexto RAG e é relevante, classificando-o no componente Estruturas Corporais. A estrutura da cabeça (s710) também seria relevante na CIF geral.
+
+- Frase de Entrada: Espinha bífida.
+- Conceito Significativo: Espinha bífida (Estrutura do sistema nervoso/coluna)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Estruturas Corporais
+- Codificação CIF: s1 - Estruturas do sistema nervoso
+- Descrição CIF: Este capítulo é sobre as estruturas do sistema nervoso.
+- Justificativa da Classificação: "Espinha bífida" é uma alteração estrutural da medula espinhal e da coluna vertebral. O conceito se enquadra no domínio `Estruturas do sistema nervoso` (Capítulo s1), mencionado no contexto RAG, e também em estruturas relacionadas ao movimento (s760 para coluna vertebral) na CIF geral, classificando-o no componente Estruturas Corporais.
+
+- Frase de Entrada: Anomalias renais.
+- Conceito Significativo: Anomalias renais (Estrutura)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Estruturas Corporais
+- Codificação CIF: s6 - Estruturas relacionadas com os sistemas geniturinário e reprodutor
+- Descrição CIF: Este capítulo é sobre estruturas relacionadas com os sistemas geniturinário e reprodutor.
+- Justificativa da Classificação: "Anomalias renais" refere-se a alterações na estrutura dos rins. O conceito se enquadra no domínio de `Estruturas relacionadas com os sistemas geniturinário e reprodutor` (Capítulo s6), que abrange o sistema urinário, mencionado no contexto RAG, classificando-o no componente Estruturas Corporais. O código específico para rins na CIF geral é s610.
+
+- Frase de Entrada: Michael mora no Rio de Janeiro, se mudou recentemente.
+- Conceito Significativo: Mudança de local de residência (Fator ambiental/demográfico)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Fatores Ambientais
+- Codificação CIF: e215 - População
+- Descrição CIF: Grupos de pessoas que vivem em um determinado ambiente e compartilham o mesmo padrão de adaptação ambiental. Inclui: mudança demográfica; densidade populacional.
+- Justificativa da Classificação: A mudança de local de residência ("se mudou recentemente") está relacionada à `Mudança demográfica` (e2150), que faz parte do conceito mais amplo de `População` (e215) no contexto RAG, pertencente ao componente Fatores Ambientais. O local específico ("Rio de Janeiro") é um detalhe contextual do ambiente.
+
+- Frase de Entrada: Dificuldade em realizar tarefas diárias devido à falta de tempo.
+- Conceito Significativo: Dificuldade em realizar tarefas diárias
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Atividades e Participação
+- Codificação CIF: d230 - Realizar a rotina diária
+- Descrição CIF: Realizar e coordenar ações simples ou complexas para planejar, gerenciar e concluir as exigências dos procedimentos ou dos deveres do dia a dia, como administrar o tempo e fazer planos para diversas atividades ao longo do dia.
+- Justificativa da Classificação: O conceito de "dificuldade em realizar tarefas diárias" está diretamente relacionado ao código `d230 - Realizar a rotina diária` e ao `Capítulo d2 - Tarefas e exigências gerais` no contexto RAG, pertencente ao componente Atividades e Participação. A "falta de tempo" é um fator contextual que atua como barreira, não sendo um código CIF padrão detalhado no RAG.
+
+- Frase de Entrada: Problemas de concentração ou foco em atividades, especialmente com distrações.
+- Conceito Significativo: Problemas de concentração / foco (Funções da atenção)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Funções Corporais
+- Codificação CIF: b140 - Funções da atenção
+- Descrição CIF: Funções mentais específicas de concentração em um estímulo externo ou experiência interna pelo período de tempo necessário. Inclui: funções de manutenção da atenção, de mudança da atenção, de divisão da atenção, de compartilhar a atenção; concentração; distração.
+- Justificativa da Classificação: O conceito de "problemas de concentração ou foco" está diretamente relacionado às `Funções da atenção (b140)` no contexto RAG, que explicitamente inclui "concentração" e "distração", classificando-o no componente Funções Corporais.
+
+- Frase de Entrada: Sensação de sobrecarga com o número de responsabilidades.
+- Conceito Significativo: Sensação de sobrecarga (ao lidar com estresse e demandas psicológicas)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Atividades e Participação
+- Codificação CIF: d240 - Lidar com o estresse e outras demandas psicológicas
+- Descrição CIF: Realizar e coordenar ações simples ou complexas para gerenciar e controlar as demandas psicológicas necessárias à execução de tarefas que exigem responsabilidades significativas e que envolvem estresse, distração ou crise...
+- Justificativa da Classificação: A "sensação de sobrecarga com responsabilidades" está relacionada a "gerenciar responsabilidades" (d2400) e "lidar com estresse" (d2401), ambos cobertos pelo código `d240 - Lidar com o estresse e outras demandas psicológicas` no contexto RAG, pertencente ao componente Atividades e Participação.
+
+- Frase de Entrada: Limitações físicas que dificultam certas atividades, como carregar objetos pesados.
+- Conceito Significativo: Dificuldade em carregar objetos pesados
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Atividades e Participação
+- Codificação CIF: d430 - Levantar e carregar objetos
+- Descrição CIF: Levantar um objeto ou mover algo de um lugar para outro, como levantar uma xícara ou um brinquedo ou carregar uma caixa, ou uma criança de um local para outro.
+- Justificativa da Classificação: A "dificuldade em carregar objetos pesados" é uma limitação na realização de uma atividade, diretamente relacionada ao código `d430 - Levantar e carregar objetos` no contexto RAG, pertencente ao componente Atividades e Participação. As "limitações físicas" são a causa subjacente (Funções/Estruturas Corporais).
+
+- Frase de Entrada: Restrições financeiras que impedem a participação em hobbies ou viagens.
+- Conceito Significativo: Restrições financeiras (Barreira ambiental)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Fatores Ambientais
+- Codificação CIF: e165 - Recursos financeiros
+- Descrição CIF: (Baseado no conhecimento geral da CIF para e165) Ativos econômicos e fundos em espécie ou em bens que podem ser usados para obter bens e serviços. Inclui: fundos, renda, outros ativos líquidos, bens, propriedades.
+- Justificativa da Classificação: "Restrições financeiras" são um fator ambiental que atua como barreira à participação. Embora o código específico `e165 - Recursos financeiros` não esteja no contexto RAG, é um código padrão da CIF para Fatores Ambientais (componente 'e'), classificado com base no conhecimento geral do framework.
+
+- Frase de Entrada: Falta de habilidades para realizar tarefas, como usar tecnologia.
+- Conceito Significativo: Falta de habilidades / Dificuldade em realizar tarefas (Aquisição/Realização de tarefas)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Atividades e Participação
+- Codificação CIF: d155 - Aquisição de habilidades
+- Descrição CIF: Desenvolver capacidades básicas e complexas em usar conjunto integrado de ações ou tarefas de maneira a iniciar e concluir a aquisição de uma habilidade...
+- Justificativa da Classificação: A "falta de habilidades para realizar tarefas" (como usar tecnologia) está relacionada à `Aquisição de habilidades (d155)` e a `Realizar uma única tarefa (d210)`, ambos cobertos pelo contexto RAG e pertencentes ao componente Atividades e Participação. O d155 foca na aprendizagem da habilidade.
+
+- Frase de Entrada: Ansiedade social que inibe a participação em eventos sociais.
+- Conceito Significativo: Dificuldade na participação em eventos sociais
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Atividades e Participação
+- Codificação CIF: d910 - Vida comunitária
+- Descrição CIF: Participar dos aspectos da vida social comunitária, como participar de organizações beneficentes, de clubes de serviços ou de organizações sociais profissionais.
+- Justificativa da Classificação: A "participação em eventos sociais" está relacionada a `Vida comunitária (d910)` e `Socialização (d9205)`, ambos cobertos pelo contexto RAG e pertencentes ao componente Atividades e Participação. A "ansiedade social" é uma função mental (b152 na CIF geral) que atua como barreira à participação.
+
+- Frase de Entrada: O gato Gustavo brigou com o cachorro Carlos.
+- Conceito Significativo: Briga entre animais de estimação
+- Status de Cobertura pela CIF: Não Coberto (N.C.)
+- Categoria CIF: N.C.
+- Codificação CIF: N.C.
+- Descrição CIF: N.C.
+- Justificativa da Classificação: A Classificação CIF foca na funcionalidade humana e seus fatores contextuais. Uma briga entre animais de estimação, por si só, não é um conceito classificado nos componentes da CIF, a menos que esteja explicitly relacionada a um impacto na vida, saúde ou participação de uma pessoa.
+
+- Frase de Entrada: Iluminação inadequada em casa ou no trabalho, causando desconforto.
+- Conceito Significativo: Iluminação inadequada (Luz ambiental)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Fatores Ambientais
+- Codificação CIF: e240 - Luz
+- Descrição CIF: Radiação eletromagnética por meio da qual as coisas se tomam visíveis por luz solar ou iluminação artificial (...) e que pode fornecer informações úteis sobre o mundo ou provocar distrações. Inclui: intensidade da luz: qualidade da luz; contraste de cores.
+- Justificativa da Classificação: "Iluminação inadequada" refere-se a características da luz no ambiente físico, o que está coberto pelo código `e240 - Luz` no contexto RAG, pertencente ao componente Fatores Ambientais.
+
+- Frase de Entrada: Falta de amigos ou apoio social, levando à sensação de isolamento.
+- Conceito Significativo: Falta de amigos / apoio social (Barreira ambiental)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Fatores Ambientais
+- Codificação CIF: e3 - Apoio e relacionamentos
+- Descrição CIF: Este capítulo é sobre pessoas ou animais que fornecem apoio físico ou emocional prático, nutrição, proteção, assistência e relacionamentos a outras pessoas...
+- Justificativa da Classificação: "Falta de amigos ou apoio social" é um fator ambiental negativo ("barreira") relacionado a `Apoio e relacionamentos` (Capítulo e3) e especificamente a `Amigos` (e320), ambos no contexto RAG e pertencentes ao componente Fatores Ambientais.
+
+- Frase de Entrada: Comunidade não acolhedora ou insegura, com alta criminalidade.
+- Conceito Significativo: Comunidade insegura / alta criminalidade (Barreira ambiental)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Fatores Ambientais
+- Codificação CIF: e5 - Serviços, sistemas e políticas
+- Descrição CIF: (Baseado no conhecimento geral da CIF para Capítulo e5) Serviços, sistemas e políticas.
+- Justificativa da Classificação: As características de segurança de uma comunidade ("insegura", "alta criminalidade") são fatores ambientais que impactam a participação social. Embora não explicitamente detalhado no contexto RAG, o conceito se enquadra no domínio de Fatores Ambientais (componente 'e'), relacionado a serviços, sistemas e políticas de segurança (Capítulo e5 na CIF geral), classificado com base no conhecimento geral do framework.
+
+- Frase de Entrada: Saneamento básico insuficiente, como falta de água potável.
+- Conceito Significativo: Saneamento básico insuficiente / falta de água potável (Barreira ambiental)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Fatores Ambientais
+- Codificação CIF: e530 - Serviços, sistemas e políticas de utilidade pública
+- Descrição CIF: Serviços, sistemas e políticas de utilidade pública, como abastecimento de água, combustível, energia elétrica, saneamento, transporte público e serviços essenciais.
+- Justificativa da Classificação: "Saneamento básico insuficiente" e "falta de água potável" são fatores ambientais negativos ("barreiras") diretamente cobertos pelo código `e530 - Serviços, sistemas e políticas de utilidade pública` no contexto RAG, pertencente ao componente Fatores Ambientais.
+
+- Frase de Entrada: Qualidade do ar ruim ou poluição, afetando a saúde.
+- Conceito Significativo: Qualidade do ar ruim / poluição (Barreira ambiental)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Fatores Ambientais
+- Codificação CIF: e260 - Qualidade do ar
+- Descrição CIF: Características da atmosfera (fora dos edifícios) ou espaços internos de ar (dentro de edifícios) que podem fornecer informações úteis ou confusas sobre o mundo. Inclui: qualidade do ar interno e externo.
+- Justificativa da Classificação: "Qualidade do ar ruim" ou "poluição" é um fator ambiental negativo ("barreira") diretamente coberto pelo código `e260 - Qualidade do ar` no contexto RAG, pertencente ao componente Fatores Ambientais.
+
+- Frase de Entrada: Poluição sonora.
+- Conceito Significativo: Poluição sonora (Barreira ambiental)
+- Status de Cobertura pela CIF: Coberto
+- Categoria CIF: Fatores Ambientais
+- Codificação CIF: e250 - Som
+- Descrição CIF: Um fenômeno que é ou que pode ser ouvido, como batida, toque, pancada, canto, assobio, grito ou zumbido. em qualquer volume, timbre ou tom, e que pode fornecer informações úteis sobre o mundo. Inclui: intensidade do som; qualidade do som.
+- Justificativa da Classificação: "Poluição sonora" refere-se a características do som no ambiente que atuam como barreiras/distrações. O conceito está relacionado ao código `e250 - Som` no contexto RAG (descrevendo o som como fator ambiental) e se enquadra no domínio de Fatores Ambientais.

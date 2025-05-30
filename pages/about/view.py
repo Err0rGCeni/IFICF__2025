@@ -3,7 +3,7 @@ import os
 
 img1 = os.path.join(os.path.dirname(__file__), "../static/images/logo.jpeg")
 
-with gr.Blocks() as about:
+with gr.Blocks() as interface:
     gr.Markdown("## Sobre a Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF)")
     gr.Markdown("A Classificação Internacional de Funcionalidade (CIF) é uma ferramenta de classificação da Organização Mundial da Saúde (OMS) que fornece uma estrutura para entender e descrever a funcionalidade e a incapacidade em diferentes contextos.")
     gr.Markdown("## Conceito Significativo: **Propósito da informação** a ser linkada. Qual a ideia central? Sobre o que é essa informação?")
@@ -11,4 +11,4 @@ with gr.Blocks() as about:
     gr.Image(img1, height=200)
 
 if __name__ == "__main__":
-    about.launch()
+    interface.launch()

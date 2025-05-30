@@ -1,137 +1,146 @@
-import fitz  # PyMuPDF: Biblioteca para trabalhar com arquivos PDF
-from docx import Document # python-docx: Biblioteca para trabalhar com arquivos DOCX
-import os # Módulo para interagir com o sistema operacional (caminhos de arquivo)
+import fitz  # PyMuPDF: Library for working with PDF files
+from docx import Document  # python-docx: Library for working with DOCX files
+import os  # Module for interacting with the operating system (file paths)
 
-def ler_pdf(caminho_pdf: str) -> str:
+def _read_pdf_text(pdf_path: str) -> str:
     """
-    Lê o conteúdo textual de um arquivo PDF.
+    Reads the textual content from a PDF file.
 
-    Esta função abre o arquivo PDF especificado, itera por suas páginas
-    e extrai todo o texto contido nelas, concatenando-o em uma única string.
+    This function opens the specified PDF file, iterates through its pages,
+    and extracts all text contained within them, concatenating it into a single string.
 
     Args:
-        caminho_pdf (str): O caminho completo para o arquivo PDF a ser lido.
+        pdf_path (str): The full path to the PDF file to be read.
 
     Returns:
-        str: Uma string contendo todo o texto extraído do PDF.
-             Retorna uma string vazia se ocorrer um erro durante a leitura.
+        str: A string containing all text extracted from the PDF.
+             Returns an empty string if an error occurs during reading.
     """
     try:
-        doc = fitz.open(caminho_pdf)
-        texto_total = ""
-        for pagina in doc:
-            texto_total += pagina.get_text()
-        return texto_total
+        pdf_document = fitz.open(pdf_path)
+        full_text = ""
+        for page in pdf_document:
+            full_text += page.get_text()
+        pdf_document.close() # Good practice to close the document
+        return full_text
     except Exception as e:
-        print(f"Erro ao ler PDF '{caminho_pdf}': {e}")
+        print(f"Error reading PDF '{pdf_path}': {e}")
         return ""
 
-def ler_docx(caminho_docx: str) -> str:
+def _read_docx_text(docx_path: str) -> str:
     """
-    Lê o conteúdo textual de um arquivo DOCX (Microsoft Word).
+    Reads the textual content from a DOCX (Microsoft Word) file.
 
-    Esta função abre o arquivo DOCX especificado e extrai o texto
-    de todos os parágrafos, concatenando-o em uma única string.
+    This function opens the specified DOCX file and extracts the text
+    from all paragraphs, concatenating it into a single string.
+    A newline character is added after each paragraph's text.
 
     Args:
-        caminho_docx (str): O caminho completo para o arquivo DOCX a ser lido.
+        docx_path (str): The full path to the DOCX file to be read.
 
     Returns:
-        str: Uma string contendo todo o texto extraído do DOCX.
-             Retorna uma string vazia se ocorrer um erro durante a leitura.
+        str: A string containing all text extracted from the DOCX.
+             Returns an empty string if an error occurs during reading.
     """
     try:
-        doc = Document(caminho_docx)
-        texto_total = ""
-        for paragrafo in doc.paragraphs:
-            texto_total += paragrafo.text + "\n" # Adiciona nova linha entre parágrafos
-        return texto_total
+        docx_document = Document(docx_path)
+        full_text = [] # Use a list for efficient concatenation
+        for paragraph in docx_document.paragraphs:
+            full_text.append(paragraph.text)
+        return "\n".join(full_text) # Join with newlines
     except Exception as e:
-        print(f"Erro ao ler DOCX '{caminho_docx}': {e}")
+        print(f"Error reading DOCX '{docx_path}': {e}")
         return ""
 
-def ler_txt(caminho_txt: str) -> str:
+def _read_txt_file(txt_path: str) -> str:
     """
-    Lê o conteúdo textual de um arquivo TXT.
+    Reads the textual content from a TXT file.
 
-    Esta função abre o arquivo de texto especificado e lê todo o seu conteúdo.
+    This function opens the specified text file and reads its entire content.
+    It assumes UTF-8 encoding.
 
     Args:
-        caminho_txt (str): O caminho completo para o arquivo TXT a ser lido.
+        txt_path (str): The full path to the TXT file to be read.
 
     Returns:
-        str: Uma string contendo todo o texto lido do arquivo TXT.
-             Retorna uma string vazia se ocorrer um erro durante a leitura.
+        str: A string containing all text read from the TXT file.
+             Returns an empty string if an error occurs during reading.
     """
     try:
-        with open(caminho_txt, "r", encoding="utf-8") as arquivo:
-            return arquivo.read()
+        with open(txt_path, "r", encoding="utf-8") as text_file:
+            return text_file.read()
     except Exception as e:
-        print(f"Erro ao ler TXT '{caminho_txt}': {e}")
+        print(f"Error reading TXT '{txt_path}': {e}")
         return ""
 
-def limpar_e_filtrar_frases(texto: str) -> list[str]:
+def _clean_and_filter_phrases(raw_text: str) -> list[str]:
     """
-    Processa um bloco de texto, dividindo-o em linhas, limpando cada linha
-    e filtrando frases que são vazias, contêm apenas espaços ou são puramente numéricas.
-    Garante que as frases retornadas sejam únicas.
+    Processes a block of text, splitting it into lines, cleaning each line,
+    and filtering out phrases that are empty, contain only whitespace, or are purely numeric.
+    Ensures that the returned phrases are unique.
 
     Args:
-        texto (str): O bloco de texto bruto a ser processado.
+        raw_text (str): The raw text block to be processed.
 
     Returns:
-        list[str]: Uma lista de strings, onde cada string é uma frase limpa e única.
-                   A ordem das frases na lista pode não ser a mesma do texto original
-                   devido ao uso de um `set` para garantir unicidade.
+        list[str]: A list of strings, where each string is a unique, cleaned phrase.
+                   The order of phrases in the list might not be the same as in the
+                   original text due to the use of a set for ensuring uniqueness.
     """
-    if not texto:
+    if not raw_text:
         return []
 
-    linhas = texto.split('\n')
-    frases_processadas = set() # Usar um set para garantir unicidade automaticamente
+    lines = raw_text.split('\n')
+    # Use a set to automatically ensure uniqueness and for efficient addition
+    unique_cleaned_phrases = set()
 
-    for linha in linhas:
-        linha_limpa = linha.strip()
-        # Ignora linhas vazias ou que contêm apenas dígitos
-        if linha_limpa and not linha_limpa.isdigit():
-            frases_processadas.add(linha_limpa)
+    for line in lines:
+        cleaned_line = line.strip()
+        # Ignore empty lines or lines that contain only digits
+        if cleaned_line and not cleaned_line.isdigit():
+            unique_cleaned_phrases.add(cleaned_line)
 
-    return list(frases_processadas) # Converte de volta para lista
+    return list(unique_cleaned_phrases) # Convert the set back to a list
 
-def processar_arquivo(caminho_arquivo: str) -> list[str]:
+def process_file_content(file_path: str) -> list[str]:
     """
-    Função principal que processa um arquivo de entrada (PDF, DOCX ou TXT),
-    extrai seu conteúdo textual e, em seguida, limpa e filtra as frases
-    encontradas.
+    Main function that processes an input file (PDF, DOCX, or TXT),
+    extracts its textual content, and then cleans and filters the
+    phrases found.
 
     Args:
-        caminho_arquivo (str): O caminho completo para o arquivo a ser processado.
+        file_path (str): The full path to the file to be processed.
 
     Returns:
-        list[str]: Uma lista de strings, onde cada string é uma frase limpa e única
-                   extraída do arquivo.
+        list[str]: A list of strings, where each string is a unique, cleaned phrase
+                   extracted from the file. Returns an empty list if no text
+                   is extracted or if an error occurs.
 
     Raises:
-        ValueError: Se o formato do arquivo não for suportado (apenas .pdf, .docx, .txt).
+        ValueError: If the file format is not supported (only .pdf, .docx, .doc, .txt).
     """
-    extensao = os.path.splitext(caminho_arquivo)[-1].lower() # Extrai a extensão do arquivo
-    texto_bruto = ""
+    _, file_extension = os.path.splitext(file_path)
+    file_extension = file_extension.lower() # Normalize to lowercase
 
-    if extensao == ".pdf":
-        texto_bruto = ler_pdf(caminho_arquivo)
-    elif extensao in [".doc", ".docx"]: # Suporta ambas as extensões para DOCX
-        texto_bruto = ler_docx(caminho_arquivo)
-    elif extensao == ".txt":
-        texto_bruto = ler_txt(caminho_arquivo)
+    raw_text_content = ""
+
+    if file_extension == ".pdf":
+        raw_text_content = _read_pdf_text(file_path)
+    elif file_extension in [".doc", ".docx"]: # Support both .doc and .docx
+        raw_text_content = _read_docx_text(file_path)
+    elif file_extension == ".txt":
+        raw_text_content = _read_txt_file(file_path)
     else:
-        raise ValueError(f"Formato de arquivo não suportado: '{extensao}'. Use PDF, DOCX ou TXT.")
+        raise ValueError(
+            f"Formato não suportado: '{file_extension}'. Utilizar PDF, DOCX, or TXT."
+        )
 
-    if not texto_bruto:
-        print(f"Atenção: Não foi possível extrair texto do arquivo '{caminho_arquivo}'.")
+    if not raw_text_content:
+        print(f"Alerta: Não foi possível realizar a extração:  '{file_path}'.")
         return []
 
-    frases = limpar_e_filtrar_frases(texto_bruto)
-    return frases
+    cleaned_phrases = _clean_and_filter_phrases(raw_text_content)
+    return cleaned_phrases
 
 # --- Exemplo de Uso (Mantido para Teste Local) ---
 if __name__ == "__main__":
@@ -142,7 +151,7 @@ if __name__ == "__main__":
     if os.path.exists(caminho_arquivo_exemplo):
         print(f"Tentando processar o arquivo: '{caminho_arquivo_exemplo}'")
         try:
-            frases_extraidas = processar_arquivo(caminho_arquivo_exemplo)
+            frases_extraidas = process_file_content(caminho_arquivo_exemplo)
             print(f"\nTipo do resultado: {type(frases_extraidas)}")
             print(f"Frases extraídas de '{caminho_arquivo_exemplo}' ({len(frases_extraidas)}):\n")
             

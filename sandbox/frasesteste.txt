@@ -1,0 +1,40 @@
+Me chamo João, gosto de escutar Reggae.
+Paciente relata dores de cabeça intensas na região frontal, frequentemente constantes.
+Febre.
+Tosse.
+O paciente sente dores abdominais agudas, localizadas principalmente na região inferior do abdômen.
+Fadiga.
+Náuseas.
+Vômitos. 
+Diarreia.
+Dificuldade para respirar.
+Dor no peito.
+O paciente observa vermelhidão persistente na pele, acompanhada de coceira em áreas específicas.
+Eu não consigo enxergar objetos a longas distâncias, com visão embaçada ao tentar focar.
+Tontura ou perda de equilíbrio.
+O paciente apresenta fraqueza súbita em um lado do corpo, dificultando movimentos do braço e perna.
+Ana tem 44 anos e observa a rua atentamente.
+Diagnóstico de cardiopatia congênita, com sopro cardíaco detectado ao nascimento.
+Defeitos de membros.
+Defeitos de tubo neural.
+Anomalias cromossômicas, como Síndrome de Down.
+Criança nasceu com fenda labial, afetando a alimentação e a fala.
+Defeitos da parede abdominal.
+Microcefalia.
+Espinha bífida.
+Anomalias renais.
+Michael mora no Rio de Janeiro, se mudou recentemente.
+Dificuldade em realizar tarefas diárias devido à falta de tempo.  
+Problemas de concentração ou foco em atividades, especialmente com distrações.
+Sensação de sobrecarga com o número de responsabilidades.
+Limitações físicas que dificultam certas atividades, como carregar objetos pesados.
+Restrições financeiras que impedem a participação em hobbies ou viagens.
+Falta de habilidades para realizar tarefas, como usar tecnologia.
+Ansiedade social que inibe a participação em eventos sociais.
+O gato Gustavo brigou com o cachorro Carlos.
+Iluminação inadequada em casa ou no trabalho, causando desconforto.  
+Falta de amigos ou apoio social, levando à sensação de isolamento.  
+Comunidade não acolhedora ou insegura, com alta criminalidade.  
+Saneamento básico insuficiente, como falta de água potável.  
+Qualidade do ar ruim ou poluição, afetando a saúde.  
+Poluição sonora.
