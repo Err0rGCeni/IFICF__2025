@@ -1,5 +1,7 @@
 import gradio as gr
-from pages import help_page, about_page, main_page
+from pages.main import view as main_page
+from pages.about import view as about_page
+from pages.help import view as help_page
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:    
     main_page.interface.render()

@@ -1,5 +1,5 @@
-def icf_classifier(context, input_text):
-    """Retorna um prompt para classificação CIF."""
+def icf_classifier_prompt(context, input_text):
+    """It returns a prompt for Ollama or other LLMs."""
     return f"""
         Você é um assistente de saúde especializado na Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF).
         Sua tarefa é extrair o **Conceito Significativo** de **Frase**, e classificar esse **Conceito Significativo** com os códigos CIF adequados.
@@ -17,8 +17,8 @@ def icf_classifier(context, input_text):
         - **Justificativa**: [Explicação baseada no Contexto]
     """
 
-def icf_gemini(context, input_text):
-    """Retorna um prompt para classificação CIF para o GEMINI."""
+def icf_gemini_prompt(context, input_text):
+    """It returns a prompt for GEMINI."""
     return f"""
         Você é um assistente especializado na Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF). Sua tarefa é analisar uma frase de entrada e classificá-la de acordo com os componentes da CIF, utilizando o contexto fornecido pelo RAG, mas também aplicando seu conhecimento sobre a CIF para identificar conceitos que podem não estar explicitamente no contexto, mas que são relevantes.
 
@@ -36,13 +36,13 @@ def icf_gemini(context, input_text):
         4.  **"Não Definido":** Se um termo ou conceito for claramente mencionado na CIF (seja no contexto ou no seu conhecimento geral), mas não puder ser categorizado em nenhum dos quatro componentes principais da CIF, classifique-o como "Não definido." Isso é raro, mas possível para termos mais genéricos ou que exigem mais contexto para uma vinculação específica.
 
         **Formato da Saída:**
-        Para cada **Conceito Principal** identificado na `Frase de Entrada do Usuário`, retorne um bloco de texto com a seguinte estrutura:
+        Para cada **Conceito Principal** identificado na `Frase de Entrada do Usuário`, retorne um bloco de texto, respeitando o idioma de entrada, com a seguinte estrutura:
         - Frase de Entrada: [A frase original]
         - Conceito Significativo: [O conceito significativo extraído da frase]
-        - Status de Cobertura pela CIF: [Ex: "Coberto", "Não Coberto", "Não Definido"]
-        - Categoria CIF: [Se "Coberto", indique: "Funções Corporais", "Estruturas Corporais", "Atividades e Participação", "Fatores Ambientais". Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
-        - Codificação CIF: [Se "Coberto", o código e título mais relevante da CIF. Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
-        - Descrição CIF: [Se "Coberto", a descrição completa ou parte dela que se relaciona mais diretamente com o conceito. Se "Não Coberto" ou "Não Definido", deixe em branco ou indique "N/A"]
+        - Status de Cobertura pela CIF: ["Coberto", "Não Coberto (N.C.)", ou "Não Definido (N.D.)"]
+        - Categoria CIF: [Se "Coberto", indique: "Funções Corporais", "Estruturas Corporais", "Atividades e Participação", "Fatores Ambientais". Caso contrário, retorne "N.C." ou "N.D.""]
+        - Codificação CIF: [Se "Coberto", o código e título mais relevante da CIF. Caso contrário, retorne "N.C." ou "N.D."]
+        - Descrição CIF: [Se "Coberto", a descrição completa ou parte dela que se relaciona mais diretamente com o conceito. Caso contrário, retorne "N.C." ou "N.D."]
         - Justificativa da Classificação: [Explique brevemente por que o conceito foi classificado dessa forma, referenciando o contexto RAG quando usado, ou explicando a lógica da classificação com base no seu conhecimento da CIF.]
 
         **Frases**:

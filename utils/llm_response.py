@@ -1,11 +1,14 @@
 import ollama
 import faiss
 import os
+
 from google import genai
+from google.genai import types
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
-from utils.rag_retriever import buscar_contexto_completo, buscar_multiplos_contextos
-from utils.prompts import icf_classifier, icf_gemini
+
+from utils.rag_retriever import search_with_full_query, search_with_multiple_sentences # Assuming these are the new names
+from utils.prompts import icf_classifier_prompt, icf_gemini_prompt # Assuming these are the new names
 
 # Carrega a chave de API do Gemini de variáveis de ambiente para segurança
 # Certifique-se de que a variável de ambiente 'GEMINI_API_KEY' esteja definida no seu sistema.
@@ -14,166 +17,195 @@ GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
 if not GEMINI_API_KEY:
     print("AVISO: A variável de ambiente 'GEMINI_API_KEY' não está definida. A API do Gemini pode não funcionar.")
+    # WARNING: The 'GEMINI_API_KEY' environment variable is not set. The Gemini API may not work.
 
-def gerar_contexto_para_llm(frase_entrada: str, documentos: list, index: faiss.Index, embedder: SentenceTransformer, estrategia_busca: str = 'multiplo') -> str:
+def _generate_context_for_llm(
+    input_phrase: str,
+    documents: list,
+    index: faiss.Index,
+    embedder: SentenceTransformer,
+    search_strategy: str = 'multiple'
+) -> str:
     """
-    Gera um contexto relevante para a frase de entrada, utilizando o sistema RAG.
+    Generates relevant context for the input phrase using the RAG system.
 
-    Esta função permite escolher entre duas estratégias de busca de contexto:
-    'completo': Busca os contextos mais relevantes para a pergunta inteira.
-    'multiplo': Segmenta a pergunta em frases e busca múltiplos contextos, garantindo unicidade.
+    This function allows choosing between two context search strategies:
+    'full': Searches for the most relevant contexts for the entire question.
+    'multiple': Segments the question into sentences and searches for multiple contexts, ensuring uniqueness.
 
     Args:
-        frase_entrada (str): A frase ou pergunta do usuário para a qual o contexto será gerado.
-        documentos (list): Uma lista de strings, representando os documentos/textos de onde o contexto será recuperado.
-        index (faiss.Index): O índice FAISS pré-construído para busca de similaridade nos embeddings dos documentos.
-        embedder (SentenceTransformer): O modelo de embedding utilizado para converter texto em vetores.
-        estrategia_busca (str, opcional): A estratégia de busca de contexto a ser utilizada.
-                                          Pode ser 'completo' ou 'multiplo'. Padrão é 'multiplo'.
+        input_phrase (str): The user's phrase or question for which context will be generated.
+        documents (list): A list of strings, representing the documents/texts from which context will be retrieved.
+        index (faiss.Index): The pre-built FAISS index for similarity search in document embeddings.
+        embedder (SentenceTransformer): The embedding model used to convert text into vectors.
+        search_strategy (str, optional): The context search strategy to be used.
+                                         Can be 'full' or 'multiple'. Defaults to 'multiple'.
 
     Returns:
-        str: Uma string contendo os contextos recuperados, unidos por quebras de linha.
-             Retorna uma string vazia se nenhum contexto for encontrado ou se a estratégia for inválida.
+        str: A string containing the retrieved contexts, joined by newlines.
+             Returns an empty string if no context is found or if the strategy is invalid.
 
     Raises:
-        ValueError: Se a estratégia de busca fornecida for inválida.
+        ValueError: If the provided search strategy is invalid.
     """
-    contextos_com_distancia = []
-    if estrategia_busca == 'completo':
-        contextos_com_distancia = buscar_contexto_completo(frase_entrada, documentos, index, embedder, k=5) # k=5 como padrão para contexto completo
-    elif estrategia_busca == 'multiplo':
-        contextos_com_distancia = buscar_multiplos_contextos(frase_entrada, documentos, index, embedder, k_por_frase=3) # k_por_frase=3 para múltiplos
+    # contexts_with_distance = [] # Original variable, can be removed if not used elsewhere
+    retrieved_contexts_with_distance = [] # More descriptive name
+
+    if search_strategy == 'full':
+        # k=5 como padrão para contexto completo
+        # k=5 as default for full context
+        retrieved_contexts_with_distance = search_with_full_query(
+            input_phrase, documents, index, embedder, k=5
+        )
+    elif search_strategy == 'multiple':
+        # k_por_frase=3 para múltiplos
+        # k_per_sentence=3 for multiple contexts
+        retrieved_contexts_with_distance = search_with_multiple_sentences(
+            input_phrase, documents, index, embedder, k_per_sentence=3
+        )
     else:
-        raise ValueError(f"Estratégia de busca de contexto inválida: '{estrategia_busca}'. Use 'completo' ou 'multiplo'.")
+        raise ValueError(
+            f"Estratégia de busca de contexto inválida: '{search_strategy}'. Use 'completo' ou 'multiplo'."
+            # Invalid context search strategy: '{search_strategy}'. Use 'full' or 'multiple'.
+        )
 
     # Extrai apenas o texto dos documentos da lista de tuplas (índice, texto, distância)
-    contexto_textos = [texto for _, texto, _ in contextos_com_distancia]
-    contexto_str = "\n".join(contexto_textos)
-    return contexto_str
+    # Extracts only the text from the documents in the list of tuples (index, text, distance)
+    context_texts = [text for _, text, _ in retrieved_contexts_with_distance]
+    context_string = "\n".join(context_texts)
+    return context_string
 
-def gerar_resposta_ollama(frase_entrada: str, contexto: str) -> str:
+def generate_ollama_response(input_phrase: str, context: str) -> str:
     """
-    Gera uma resposta utilizando o modelo de linguagem Ollama localmente.
+    Generates a response using the Ollama language model locally.
 
-    Constrói um prompt detalhado com a frase de entrada do usuário e o contexto recuperado
-    para guiar o modelo na geração de uma resposta informada sobre CIF.
+    Constructs a detailed prompt with the user's input phrase and the retrieved
+    context to guide the model in generating an informed response about ICF.
 
     Args:
-        frase_entrada (str): A frase ou pergunta original do usuário.
-        contexto (str): Uma string contendo o contexto relevante recuperado do RAG.
+        input_phrase (str): The user's original phrase or question.
+        context (str): A string containing the relevant context retrieved from RAG.
 
     Returns:
-        str: A resposta gerada pelo modelo Ollama.
+        str: The response generated by the Ollama model.
 
     Raises:
-        ollama.ResponseError: Se houver um erro na comunicação com o servidor Ollama.
-        Exception: Para outros erros inesperados durante a geração da resposta.
+        ollama.ResponseError: If there is an error communicating with the Ollama server.
+        Exception: For other unexpected errors during response generation.
     """
     # Prompt com instruções detalhadas sobre CIF
-    prompt = icf_classifier(contexto, frase_entrada)
-    print("\n--- Prompt Gerado para Ollama ---")
-    print(prompt)
-    print("--- Fim do Prompt Ollama ---")
+    # Prompt with detailed instructions about ICF
+    prompt_text = icf_classifier_prompt(context, input_phrase)
+    print("\n--- Prompt Gerado para Ollama ---") # Generated Prompt for Ollama
+    print(prompt_text)
+    print("--- Fim do Prompt Ollama ---") # End of Ollama Prompt
 
     try:
-        resposta = ollama.generate(model='gemma3:1b', prompt=prompt)
-        return resposta.get('response', 'Nenhuma resposta gerada pelo Ollama.')
+        # Assume 'gemma2:latest' or similar appropriate model for Ollama
+        response_data = ollama.generate(model='gemma2:latest', prompt=prompt_text)
+        return response_data.get('response', 'Nenhuma resposta gerada pelo Ollama.') # No response generated by Ollama.
     except ollama.ResponseError as e:
-        print(f"Erro de resposta do Ollama: {e}")
-        return f"Desculpe, ocorreu um erro ao gerar a resposta com Ollama: {e}"
+        print(f"Erro de resposta do Ollama: {e}") # Ollama response error
+        return f"Desculpe, ocorreu um erro ao gerar a resposta com Ollama: {e}" # Sorry, an error occurred while generating the response with Ollama
     except Exception as e:
-        print(f"Erro inesperado ao gerar resposta com Ollama: {e}")
-        return f"Desculpe, ocorreu um erro inesperado: {e}"
+        print(f"Erro inesperado ao gerar resposta com Ollama: {e}") # Unexpected error generating response with Ollama
+        return f"Desculpe, ocorreu um erro inesperado: {e}" # Sorry, an unexpected error occurred
 
-def gerar_resposta_gemini(frase_entrada: str, contexto: str) -> str:
+def generate_gemini_response(input_phrase: str, context: str) -> str:
     """
-    Gera uma resposta utilizando a API do Google Gemini.
+    Generates a response using the Google Gemini API.
 
-    Conecta-se à API do Gemini, constrói um prompt específico para o modelo
-    e envia a requisição para obter uma resposta com base na frase do usuário e no contexto.
+    Connects to the Gemini API, constructs a model-specific prompt,
+    and sends the request to obtain a response based on the user's phrase and context.
 
     Args:
-        frase_entrada (str): A frase ou pergunta original do usuário.
-        contexto (str): Uma string contendo o contexto relevante recuperado do RAG.
+        input_phrase (str): The user's original phrase or question.
+        context (str): A string containing the relevant context retrieved from RAG.
 
     Returns:
-        str: A resposta gerada pelo modelo Gemini.
-
-    Raises:
-        google.api_core.exceptions.GoogleAPIError: Se houver um erro na comunicação com a API do Gemini.
-        Exception: Para outros erros inesperados durante a geração da resposta.
+        str: The response generated by the Gemini model.
     """
     if not GEMINI_API_KEY:
         return "Erro: Chave de API do Gemini não configurada. Por favor, defina a variável de ambiente 'GEMINI_API_KEY'."
+        # Error: Gemini API key not configured. Please set the 'GEMINI_API_KEY' environment variable.
 
     try:
-        client = genai.Client(api_key=GEMINI_API_KEY)
+        client = genai.Client(api_key='GEMINI_API_KEY')
 
         # Prompt com instruções detalhadas sobre CIF
-        prompt_gemini = icf_gemini(contexto, frase_entrada)
+        # Prompt with detailed instructions about ICF
+        gemini_prompt_text = icf_gemini_prompt(context, input_phrase)
 
-        print("\n--- Prompt Gerado para Gemini ---")
-        print(prompt_gemini)
-        print("--- Fim do Prompt Gemini ---")
+        print("\n--- Prompt Gerado para Gemini ---") # Generated Prompt for Gemini
+        print(gemini_prompt_text)
+        print("--- Fim do Prompt Gemini ---") # End of Gemini Prompt
 
         # Configuração da requisição para o modelo Gemini
-        model_name = "gemini-2.5-flash-preview-04-17" # Preferindo "flash" para velocidade e custo
-        
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt_gemini,
+        model_name = "gemini-2.5-flash-preview-05-20"
+        api_response = client.models.generate_content(
+                model=model_name, contents=gemini_prompt_text
         )
-        
-        # Retorna o texto da resposta
-        return response.text
-    except e:
-        # Capture a exceção geral de API do Google.
-        # Erros como autenticação (Unauthenticated), argumentos inválidos (InvalidArgument)
-        # ou limites de taxa (ResourceExhausted) seriam subclasses de GoogleAPIError.
+
+        return api_response.text
+    
+    except Exception as e:
         print(f"Erro da API do Gemini: {e}. Verifique sua GEMINI_API_KEY e os detalhes do erro.")
+        
         if "Authentication" in str(e) or "API key" in str(e):
             return "Erro de autenticação com a API do Gemini. Verifique sua chave de API e permissões."
         return f"Desculpe, ocorreu um erro na API do Gemini: {e}"
-    except Exception as e:
-        print(f"Erro inesperado ao gerar resposta com Gemini: {e}")
-        return f"Desculpe, ocorreu um erro inesperado: {e}"
 
 # Função unificada para gerar resposta, permitindo escolher o LLM
-def res_generate_API(frase_entrada: str, documentos: list, index: faiss.Index, embedder: SentenceTransformer,
-                     llm_choice: str = 'gemini', rag_strategy: str = 'multiplo') -> str:
+# Unified function to generate response, allowing LLM choice
+def generate_response_with_llm(
+    input_phrase: str,
+    documents: list,
+    index: faiss.Index,
+    embedder: SentenceTransformer,
+    llm_choice: str = 'gemini',
+    rag_strategy: str = 'multiple'
+) -> str:
     """
-    Função principal para gerar uma resposta utilizando um LLM (Ollama ou Gemini),
-    com base em um contexto recuperado via RAG.
+    Main function to generate a response using an LLM (Ollama or Gemini),
+    based on context retrieved via RAG.
 
     Args:
-        frase_entrada (str): A frase ou pergunta original do usuário.
-        documentos (list): Uma lista de strings, representando os documentos de onde o contexto será recuperado.
-        index (faiss.Index): O índice FAISS pré-construído para busca de similaridade nos embeddings.
-        embedder (SentenceTransformer): O modelo de embedding.
-        llm_choice (str, optional): O LLM a ser utilizado ('ollama' ou 'gemini'). Padrão é 'gemini'.
-        rag_strategy (str, optional): A estratégia de busca de contexto ('completo' ou 'multiplo'). Padrão é 'multiplo'.
+        input_phrase (str): The user's original phrase or question.
+        documents (list): A list of strings, representing the documents from which context will be retrieved.
+        index (faiss.Index): The pre-built FAISS index for similarity search in embeddings.
+        embedder (SentenceTransformer): The embedding model.
+        llm_choice (str, optional): The LLM to be used ('ollama' or 'gemini'). Defaults to 'gemini'.
+        rag_strategy (str, optional): The context search strategy ('full' or 'multiple'). Defaults to 'multiple'.
 
     Returns:
-        str: A resposta gerada pelo LLM.
-
-    Raises:
-        ValueError: Se a escolha do LLM for inválida.
+        str: The response generated by the LLM.
     """
     # 1. Gerar o contexto
+    # 1. Generate context
+    retrieved_context = ""
     try:
-        contexto_recuperado = gerar_contexto_para_llm(frase_entrada, documentos, index, embedder, estrategia_busca=rag_strategy)
+        retrieved_context = _generate_context_for_llm(
+            input_phrase, documents, index, embedder, search_strategy=rag_strategy
+        )
     except ValueError as e:
-        return str(e) # Retorna a mensagem de erro da estratégia inválida
+        # Retorna a mensagem de erro da estratégia inválida
+        # Returns the error message for invalid strategy
+        return str(e)
     except Exception as e:
+        # Error retrieving context
         return f"Erro ao recuperar contexto: {e}"
 
-    if not contexto_recuperado:
+
+    if not retrieved_context:
         return "Não foi possível encontrar contexto relevante para a sua pergunta. Por favor, reformule ou forneça mais detalhes."
+        # Could not find relevant context for your question. Please rephrase or provide more details.
 
     # 2. Gerar a resposta usando o LLM escolhido
+    # 2. Generate response using the chosen LLM
     if llm_choice.lower() == 'ollama':
-        return gerar_resposta_ollama(frase_entrada, contexto_recuperado)
+        return generate_ollama_response(input_phrase, retrieved_context)
     elif llm_choice.lower() == 'gemini':
-        return gerar_resposta_gemini(frase_entrada, contexto_recuperado)
+        return generate_gemini_response(input_phrase, retrieved_context)
     else:
+        # Error: Invalid LLM choice ('{llm_choice}'). Valid options are 'ollama' or 'gemini'.
         return f"Erro: Escolha de LLM inválida ('{llm_choice}'). Opções válidas são 'ollama' ou 'gemini'."

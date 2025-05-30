@@ -4,257 +4,291 @@ import os
 import tempfile
 import plotly.graph_objects as go
 import pandas as pd
+
+from datetime import datetime
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle, PageBreak
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY # Importe TA_JUSTIFY
 from reportlab.lib import colors
-from datetime import datetime
+from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY
 
-def _handle_text_content(story: list, text: str, styles) -> None:
+_STRINGS = {
+    "TXT_TIMESTAMP": lambda date: f"AI Generated Response on {date}",
+    "TXT_DISCLAIMER": "IAs podem cometer erros. Revise o conteúdo gerado.",
+}
+
+# --- Pre-compiled Regex Patterns ---
+# Regex para identificar e tratar 'Frase de Entrada: ...'.
+_INPUT_PHRASE_REGEX = re.compile(r'^-?\s*(Frase de Entrada:.*)', re.IGNORECASE)
+
+# Regex para tratar itens de lista.
+# Captura caracteres válidos.
+_LIST_ITEM_CONTENT_REGEX = re.compile(r'^-?\s*(.*)')
+
+# --- Constantes para lidar com Plotlys ---
+_PLOT_IMAGE_COMMON_WIDTH_EXPORT = 800
+_PLOT_IMAGE_DEFAULT_HEIGHT_EXPORT = 500
+_PLOT_IMAGE_SPECIAL_HEIGHT_EXPORT = 800  # TreeMap
+_PLOT_IMAGE_SCALE = 2
+
+_PLOT_IMAGE_COMMON_DRAW_WIDTH = 550
+_PLOT_IMAGE_DEFAULT_DRAW_HEIGHT = 350
+_PLOT_IMAGE_SPECIAL_DRAW_HEIGHT = 550  # TreeMap
+
+_SPECIAL_PLOT_INDEX = 2 # TreeMap
+
+# --- Constants for Text Styling ---
+_LLM_RESPONSE_STARTERS = (
+    'resposta fornecida pela llm',
+    'okay, sou seu assistente especializado em cif'
+)
+
+def _handle_text_content(story: list, text_content: str, styles: dict) -> None:
     """
-    Processa e adiciona blocos de texto ao story para o PDF,
-    utilizando regex para formatar a "Frase de Entrada" e garantindo negrito.
+    Processes and adds text blocks to the PDF story.
+
+    This function formats text, applying specific styles for headers,
+    input phrases, and list items. It uses regular expressions to identify
+    and format "Input Phrase:" lines, ensuring they are bold.
+    It also adds a timestamped AI generation notice and a disclaimer.
 
     Args:
-        story (list): A lista de elementos do ReportLab a serem adicionados ao PDF.
-        text (str): O texto a ser processado.
-        styles: Os estilos de parágrafo do ReportLab.
+        story (list): The list of ReportLab Platypus elements to be added to the PDF.
+        text_content (str): The raw text string to be processed and formatted.
+        styles (dict): A dictionary of ReportLab sample paragraph styles.
     """
-    # Criar um estilo customizado para a "Frase de Entrada" em negrito
-    # Copia o estilo h3 e adiciona o negrito
 
-    h2_bold_style = ParagraphStyle(
-        name='H2Bold',
+    # --- Estilização Customizada ---
+    h2_bold_centered_style = ParagraphStyle(
+        name='H2BoldCentered',
         parent=styles['h2'],
-        fontName='Helvetica-Bold', # Garante que a fonte seja negrito
+        fontName='Helvetica-Bold',
         textColor=colors.darkred,
-        alignment=TA_CENTER # Aplica o alinhamento justificado
+        alignment=TA_CENTER
     )
 
     h3_bold_style = ParagraphStyle(
         name='H3Bold',
         parent=styles['h3'],
-        fontName='Helvetica-Bold' # Garante que a fonte seja negrito
+        fontName='Helvetica-Bold'
     )
 
-    alert_style = ParagraphStyle(
-        name='Alert',
+    alert_message_style = ParagraphStyle(
+        name='AlertMessage',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
         fontSize=12,
         textColor=colors.gray,
-        alignment=TA_JUSTIFY # Aplica o alinhamento justificado
+        alignment=TA_JUSTIFY
     )
 
-    # Criar um estilo customizado para parágrafos normais justificados
-    normal_justify_style = ParagraphStyle(
-        name='NormalJustify',
+    normal_justified_style = ParagraphStyle(
+        name='NormalJustified',
         parent=styles['Normal'],
-        alignment=TA_JUSTIFY # Aplica o alinhamento justificado
+        alignment=TA_JUSTIFY
     )
 
-    # Criar um estilo customizado para itens de lista justificados (opcional)
-    list_item_justify_style = ParagraphStyle(
-        name='ListItemJustify',
-        parent=styles['Normal'], # Baseado no estilo normal
-        leftIndent=20,           # Indentação para itens de lista
-        alignment=TA_JUSTIFY     # Aplica o alinhamento justificado
+    list_item_justified_style = ParagraphStyle(
+        name='ListItemJustified',
+        parent=styles['Normal'],
+        leftIndent=20,
+        alignment=TA_JUSTIFY
     )
 
-    story.append(Paragraph(f"Resposta Gerada por IA em {datetime.now().strftime('%d-%m-%Y')}", h2_bold_style))
-    story.append(Paragraph(f"IAs podem cometer erros. Quando possível, revise o conteúdo gerado.", alert_style))
-    story.append(Spacer(1, 2 * 10))
+    # Timestamp & Disclaimer
+    generation_timestamp_text = _STRINGS['TXT_TIMESTAMP'](datetime.now().strftime('%d-%m-%Y'))
+    story.append(Paragraph(generation_timestamp_text, h2_bold_centered_style))
 
-    blocos = text.split('---')
-    
-    for bloco in blocos:
-      bloco = bloco.strip()
-      if not bloco:
-          continue
+    disclaimer_text = _STRINGS['TXT_DISCLAIMER']
+    story.append(Paragraph(disclaimer_text, alert_message_style))
+    story.append(Spacer(1, 20)) # Standard spacer after disclaimer
 
-      linhas = [linha.strip() for linha in bloco.split('\n') if linha.strip()]
-      if not linhas:
-          continue
+    # Processamento do conteúdo principal
+    text_blocks = text_content.split('---')
 
-      primeira_linha = linhas[0]
+    for block in text_blocks:
+        block = block.strip()
+        if not block:
+            continue
 
-      match_frase_entrada = re.match(r'^-?\s*(Frase de Entrada:.*)', primeira_linha, re.IGNORECASE)
+        lines_in_block = [line.strip() for line in block.split('\n') if line.strip()]
+        if not lines_in_block:
+            continue
 
-      if primeira_linha.lower().startswith('resposta fornecida pela llm') or \
-          primeira_linha.lower().startswith('okay, sou seu assistente especializado em cif'):
-          # Usa o novo estilo justificado para parágrafos normais
-          story.append(Paragraph(primeira_linha, normal_justify_style))
-      elif match_frase_entrada:
-          story.append(Spacer(1, 0.2 * 10))
+        first_line_in_block = lines_in_block[0]
+        input_phrase_match = _INPUT_PHRASE_REGEX.match(first_line_in_block)
 
-          conteudo_frase = match_frase_entrada.group(1).strip()
-          story.append(Paragraph(conteudo_frase, h3_bold_style))
-      else:
-          # Usa o novo estilo justificado para parágrafos normais
-          story.append(Paragraph(primeira_linha, normal_justify_style))
+        if any(first_line_in_block.lower().startswith(starter) for starter in _LLM_RESPONSE_STARTERS):
+            story.append(Paragraph(first_line_in_block, normal_justified_style))
+        elif input_phrase_match:
+            story.append(Spacer(1, 2))
+            input_phrase_text = input_phrase_match.group(1).strip()
+            story.append(Paragraph(input_phrase_text, h3_bold_style))
+        else:
+            story.append(Paragraph(first_line_in_block, normal_justified_style))
 
-      for i in range(1, len(linhas)):
-          linha = linhas[i]
-          if re.match(r'^-?\s*(.*)', linha):
-              conteudo_lista_match = re.match(r'^-?\s*(.*)', linha)
-              if conteudo_lista_match:
-                  conteudo_lista = conteudo_lista_match.group(1).strip()
-                  # Usa o estilo justificado para itens de lista
-                  story.append(Paragraph(f"• {conteudo_lista}", list_item_justify_style))
-              else:
-                  # Fallback para texto normal justificado
-                  story.append(Paragraph(linha, normal_justify_style))
-          else:
-              # Usa o novo estilo justificado para parágrafos normais
-              story.append(Paragraph(linha, normal_justify_style))
-      story.append(Spacer(1, 0.2 * 10))
+        # Process subsequent lines in the block
+        for i in range(1, len(lines_in_block)):
+            line_text = lines_in_block[i]
+            list_item_match = _LIST_ITEM_CONTENT_REGEX.match(line_text)
 
-def _handle_dataframe_content(story: list, dataframes: list[pd.DataFrame], styles) -> None:
+            if list_item_match:
+                # group(1) captura o conteúdo após hífen e espaços.
+                list_item_content = list_item_match.group(1).strip()
+                story.append(Paragraph(f"• {list_item_content}", list_item_justified_style))
+            else:                
+                story.append(Paragraph(line_text, normal_justified_style))
+        story.append(Spacer(1, 2)) # Separador de blocos
+
+
+def _handle_dataframe_content(story: list, dataframes_list: list[pd.DataFrame], styles: dict) -> None:
     """
-    Adiciona DataFrames formatados como tabelas ao story para o PDF.
+    Adds pandas DataFrames to the PDF story, formatted as tables.
+
+    Each DataFrame is preceded by a page break and a title.
+    Table styling includes a header row with a grey background and white text,
+    and a beige background for data rows, with a grid.
 
     Args:
-        story (list): A lista de elementos do ReportLab a serem adicionados ao PDF.
-        dataframes (list[pd.DataFrame]): Uma lista de DataFrames a serem incluídos.
-        styles: Os estilos de parágrafo do ReportLab.
+        story (list): The list of ReportLab Platypus elements.
+        dataframes_list (list[pd.DataFrame]): A list of pandas DataFrames to include.
+        styles (dict): A dictionary of ReportLab sample paragraph styles.
     """
-    for i, df in enumerate(dataframes):
-        story.append(PageBreak()) # Adiciona quebra de página antes de cada gráfico
-        story.append(Paragraph(f"Dados (DataFrame {i+1}):", styles['h2']))
-        story.append(Spacer(1, 0.1 * 10))
+    for df_index, df in enumerate(dataframes_list):
+        story.append(PageBreak())
+        story.append(Paragraph(f"Data (DataFrame {df_index + 1}):", styles['h2']))
+        story.append(Spacer(1, 1))
 
-        data_for_table = [df.columns.tolist()] + df.values.tolist()
-        table = Table(data_for_table)
+        # Preparação do dataframe para tabela
+        table_data = [df.columns.tolist()] + df.values.tolist()
+        pdf_table = Table(table_data)
 
-        table.setStyle(TableStyle([
-            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
-            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
-            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
-            ('GRID', (0, 0), (-1, -1), 1, colors.black)
+        pdf_table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),      # Header row background
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke), # Header row text color
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),             # Center alignment for all cells
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),   # Header row font
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),            # Header row bottom padding
+            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),    # Data rows background
+            ('GRID', (0, 0), (-1, -1), 1, colors.black)        # Grid for the entire table
         ]))
 
-        story.append(table)
-        story.append(Spacer(1, 0.5 * 10))
+        story.append(pdf_table)
+        story.append(Spacer(1, 5))
 
-def _handle_plotly_plot(story: list, plotly_figs: list[go.Figure], styles) -> None:
+
+def _handle_plotly_plot(story: list, plotly_figures: list[go.Figure], styles: dict) -> None:
     """
-    Converte gráficos Plotly em imagens e os adiciona ao story para o PDF.
+    Converts Plotly figures to PNG images and adds them to the PDF story.
+
+    Each plot is preceded by a page break and a title.
+    Handles potential errors during image conversion.
+    The third plot (index 2) has specific dimensions.
 
     Args:
-        story (list): A lista de elementos do ReportLab a serem adicionados ao PDF.
-        plotly_figs (list[go.Figure]): Uma lista de objetos Plotly Figure a serem incluídos.
-        styles: Os estilos de parágrafo do ReportLab.
+        story (list): The list of ReportLab Platypus elements.
+        plotly_figures (list[go.Figure]): A list of Plotly Figure objects.
+        styles (dict): A dictionary of ReportLab sample paragraph styles.
     """
-    for i, fig_plotly in enumerate(plotly_figs):
+    for fig_index, plotly_figure in enumerate(plotly_figures):
         try:
-            img_buffer = io.BytesIO()
-            fig_plotly.write_image(img_buffer, format="png", width=800, height=500, scale=2)
-            img_buffer.seek(0)
+            image_buffer = io.BytesIO()
 
-            img = Image(img_buffer)
-            img.drawHeight = 350
-            img.drawWidth = 550
-            
-            story.append(PageBreak()) # Adiciona quebra de página antes de cada gráfico
-            story.append(Paragraph(f"Gráfico Gerado ({i+1}):", styles['h2']))
-            story.append(Spacer(1, 0.1 * 10))
-            story.append(img)
-            story.append(Spacer(1, 0.4 * 10))
+            # Determine export and draw dimensions based on plot index
+            if fig_index == _SPECIAL_PLOT_INDEX:
+                export_height = _PLOT_IMAGE_SPECIAL_HEIGHT_EXPORT
+                draw_height = _PLOT_IMAGE_SPECIAL_DRAW_HEIGHT
+            else:
+                export_height = _PLOT_IMAGE_DEFAULT_HEIGHT_EXPORT
+                draw_height = _PLOT_IMAGE_DEFAULT_DRAW_HEIGHT
+
+            plotly_figure.write_image(
+                image_buffer,
+                format="png",
+                width=_PLOT_IMAGE_COMMON_WIDTH_EXPORT,
+                height=export_height,
+                scale=_PLOT_IMAGE_SCALE
+            )
+            image_buffer.seek(0)
+
+            reportlab_image = Image(image_buffer)
+            reportlab_image.drawHeight = draw_height
+            reportlab_image.drawWidth = _PLOT_IMAGE_COMMON_DRAW_WIDTH
+
+            story.append(PageBreak())
+            story.append(Paragraph(f"Generated Plot ({fig_index + 1}):", styles['h2']))
+            story.append(Spacer(1, 1))
+            story.append(reportlab_image)
+            story.append(Spacer(1, 4))
+
         except Exception as e:
-            story.append(Paragraph(f"Erro ao adicionar gráfico Plotly {i+1}: {e}", styles['Normal']))
-            story.append(Spacer(1, 0.2 * 10))
+            error_message = f"Error adding Plotly plot {fig_index + 1}: {e}"
+            story.append(Paragraph(error_message, styles['Normal']))
+            story.append(Spacer(1, 2))
 
-def generate_pdf_report(plotly_figs: list[go.Figure], dataframes: list[pd.DataFrame], text: str, titulo_relatorio: str) -> str:
+
+def generate_pdf_report_temp(
+    plotly_figs_list: list[go.Figure],
+    dataframes_list: list[pd.DataFrame],
+    text_block: str,
+    report_title_text: str
+) -> str:
     """
-    Gera um arquivo PDF contendo múltiplos gráficos Plotly, DataFrames e um título,
-    segmentando o conteúdo em funções menores.
+    Generates a PDF report and saves it as a temporary file.
+
+    The report includes a title, processed text content, DataFrames as tables,
+    and Plotly figures as images.
 
     Args:
-        plotly_figs (list[go.Figure]): Uma lista de objetos Plotly Figure a serem incluídos no PDF.
-        dataframes (list[pd.DataFrame]): Uma lista de DataFrames a serem incluídos no PDF.
-        text (str): O texto a ser incluído no PDF.
-        titulo_relatorio (str): Uma string para ser usada como título/descrição no PDF.
+        plotly_figs_list (list[go.Figure]): A list of Plotly Figure objects.
+        dataframes_list (list[pd.DataFrame]): A list of pandas DataFrames.
+        text_block (str): A string containing the text content to be included.
+        report_title_text (str): The title for the PDF report.
 
     Returns:
-        str: O caminho completo para o arquivo PDF gerado.
+        str: The full path to the generated temporary PDF file.
+             Returns an empty string if PDF generation fails.
     """
-    pdf_filename = f"{titulo_relatorio.replace(' ', '_').lower()}.pdf"
-    doc = SimpleDocTemplate(pdf_filename, pagesize=letter)
+    pdf_filepath = ""
+    # Create a temporary file; it won't be deleted automatically (delete=False).
+    # This is useful if an external process (like Gradio serving the file) needs it.
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_pdf:
+        pdf_filepath = temp_pdf.name
+
+    document = SimpleDocTemplate(pdf_filepath, pagesize=letter)
     styles = getSampleStyleSheet()
-    story = []
+    story_elements = [] # List to hold all PDF elements
 
-    # 1. Adicionar o Título do Relatório
+    # 1. Report Title
     title_style = styles['h1']
-    title_style.alignment = TA_CENTER
-    story.append(Paragraph(titulo_relatorio, title_style))
-    story.append(Spacer(1, 0.8 * 10))
+    title_style.alignment = TA_CENTER # Center align the main title
+    story_elements.append(Paragraph(report_title_text, title_style))
+    story_elements.append(Spacer(1, 6)) # Spacer after title
 
-    # 2. Adicionar conteúdo de texto
-    _handle_text_content(story, text, styles)
+    # 2. Processed Text Content
+    if text_block and text_block.strip():
+        _handle_text_content(story_elements, text_block, styles)
 
-    # 3. Adicionar DataFrames
-    if dataframes: # Só adiciona se houver DataFrames na lista
-        _handle_dataframe_content(story, dataframes, styles)
+    # 3. DataFrames as Tables
+    if dataframes_list: # Only add if there are DataFrames
+        _handle_dataframe_content(story_elements, dataframes_list, styles)
 
-    # 4. Adicionar os Gráficos Plotly
-    if plotly_figs: # Só adiciona se houver gráficos na lista
-        _handle_plotly_plot(story, plotly_figs, styles)
+    # 4. Plotly Figures as Images
+    if plotly_figs_list: # Only add if there are Plotly figures
+        _handle_plotly_plot(story_elements, plotly_figs_list, styles)
 
-    # 5. Construir o PDF
+    # 5. Build the PDF
     try:
-        doc.build(story)
-        print(f"PDF '{pdf_filename}' gerado com sucesso!")
-        return pdf_filename
+        document.build(story_elements)
+        print(f"Temporary PDF report '{pdf_filepath}' generated successfully!")
+        return pdf_filepath
     except Exception as e:
-        print(f"Erro ao gerar o PDF: {e}")
-        return ""
-    
-def generate_pdf_report_temp(plotly_figs: list[go.Figure], dataframes: list[pd.DataFrame], text: str, titulo_relatorio: str) -> str:
-    """
-    Gera um arquivo PDF temporário para download.
-    Args:
-        plotly_figs (list[go.Figure]): Uma lista de objetos Plotly Figure a serem incluídos no PDF.
-        dataframes (list[pd.DataFrame]): Uma lista de DataFrames a serem incluídos no PDF.
-        text (str): O texto a ser incluído no PDF.
-        titulo_relatorio (str): Uma string para ser usada como título/descrição no PDF.
-
-    Returns:
-        str: O caminho completo para o arquivo PDF gerado.
-    """
-    pdf_filename = f"{titulo_relatorio.replace(' ', '_').lower()}.pdf"
-    doc = SimpleDocTemplate(pdf_filename, pagesize=letter)
-    styles = getSampleStyleSheet()
-    story = []
-
-    # 1. Adicionar o Título do Relatório
-    title_style = styles['h1']
-    title_style.alignment = TA_CENTER
-    story.append(Paragraph(titulo_relatorio, title_style))
-    story.append(Spacer(1, 0.6 * 10))
-
-    # 2. Adicionar conteúdo de texto
-    _handle_text_content(story, text, styles)
-
-    # 3. Adicionar DataFrames
-    if dataframes: # Só adiciona se houver DataFrames na lista
-        _handle_dataframe_content(story, dataframes, styles)
-
-    # 4. Adicionar os Gráficos Plotly
-    if plotly_figs: # Só adiciona se houver gráficos na lista
-        _handle_plotly_plot(story, plotly_figs, styles)
-
-    # 5. Construir o PDF
-    try:
-        doc.build(story)
-        print(f"PDF temporário '{pdf_filename}' gerado com sucesso!")
-        return pdf_filename
-    except Exception as e:
-        print(f"Erro ao gerar o PDF: {e}")
-        # Se ocorrer um erro, tente remover o arquivo temporário se ele foi criado
-        if os.path.exists(pdf_filename):
-            os.remove(pdf_filename)
+        print(f"Error generating PDF report: {e}")
+        # Attempt to remove the temporary file if an error occurred during PDF build
+        if os.path.exists(pdf_filepath):
+            try:
+                os.remove(pdf_filepath)
+                print(f"Cleaned up temporary file '{pdf_filepath}' due to error.")
+            except OSError as ose:
+                print(f"Error removing temporary file '{pdf_filepath}': {ose}")
         return ""
