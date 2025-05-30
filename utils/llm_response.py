@@ -130,7 +130,7 @@ def generate_gemini_response(input_phrase: str, context: str) -> str:
         # Error: Gemini API key not configured. Please set the 'GEMINI_API_KEY' environment variable.
 
     try:
-        client = genai.Client(api_key='GEMINI_API_KEY')
+        client = genai.Client(api_key=GEMINI_API_KEY)
 
         # Prompt com instruções detalhadas sobre CIF
         # Prompt with detailed instructions about ICF
@@ -141,7 +141,8 @@ def generate_gemini_response(input_phrase: str, context: str) -> str:
         print("--- Fim do Prompt Gemini ---") # End of Gemini Prompt
 
         # Configuração da requisição para o modelo Gemini
-        model_name = "gemini-2.5-flash-preview-05-20"
+        #model_name = "gemini-2.5-flash-preview-05-20"
+        model_name = "gemini-2.0-flash-001"
         api_response = client.models.generate_content(
                 model=model_name, contents=gemini_prompt_text
         )

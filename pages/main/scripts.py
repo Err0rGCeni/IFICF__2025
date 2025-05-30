@@ -31,15 +31,15 @@ def process_phrases_with_rag_llm(input_phrases_text: str, rag_docs:list[str], ra
     Returns a status textbox, a formatted responses textbox, and updates tabs to switch to the results tab.
     """
     print(f"Processando o bloco de frases para geração de resposta: \"{input_phrases_text[:100]}...\"")
-    current_symbol = "♾️"  # Emojis para indicar status de processamento e sucesso    
+    current_symbol = " ♾️"  # Emojis para indicar status de processamento e sucesso    
 
     # --- Ação 1: Mudar de aba IMEDIATAMENTE e mostrar mensagem de processamento ---
     # O 'yield' envia: (Status, Resultado, Tabs)
     yield (
-        gr.Textbox(value=STRINGS["TXTBOX_STATUS_IDLE"], interactive=False),
-        gr.Textbox(value="", interactive=False),
-        gr.Tabs(selected=1),
-        gr.TabItem(STRINGS["TAB_1_TITLE"]+" "+current_symbol, interactive=True)
+        gr.update(value=STRINGS["TXTBOX_STATUS_IDLE"], interactive=False),
+        gr.update(value="", interactive=False),
+        gr.update(selected=1),
+        gr.update(label=STRINGS["TAB_1_TITLE"]+current_symbol, interactive=True)
         )
     
     # time.sleep(1)  # Simula um pequeno atraso para processamento
@@ -49,8 +49,8 @@ def process_phrases_with_rag_llm(input_phrases_text: str, rag_docs:list[str], ra
         # O LLM então usará os múltiplos contextos recuperados para gerar uma única resposta consolidada.
 
         llm_response = generate_response_with_llm(
-            frase_entrada=input_phrases_text,
-            documentos=rag_docs,
+            input_phrase=input_phrases_text,
+            documents=rag_docs,
             index=rag_index,
             embedder=rag_embedder,
             llm_choice='gemini', # ou 'ollama', conforme a necessidade
@@ -62,18 +62,18 @@ def process_phrases_with_rag_llm(input_phrases_text: str, rag_docs:list[str], ra
 
         status_message = STRINGS["TXTBOX_STATUS_OK"]
         formatted_output = f"--- Resposta Fornecida pela LLM ---\n{llm_response}\n"
-        current_symbol = "✅" 
+        current_symbol = " ✅" 
 
     except Exception as e:
         status_message = STRINGS["TXTBOX_STATUS_ERROR"]
-        formatted_output = f"\n{STRINGS['ERROR_MESSAGE']}\nDetalhes: {e}"
-        current_symbol = "⚠️"
+        formatted_output = f"\n{STRINGS['--- Erro ---']}\nDetalhes: {e}"
+        current_symbol = " ⚠️"
 
     # --- Ação 3: Retornar o resultado final e o status ---
     # A aba já está selecionada, então gr.Tabs() aqui apenas satisfaz a assinatura e mantém a aba atual.
     yield (
-        gr.Textbox(value=status_message, interactive=False), \
-        gr.Textbox(value=formatted_output, interactive=False), \
-        gr.Tabs(), \
-        gr.TabItem(STRINGS["TAB_1_TITLE"]+" "+current_symbol, interactive=True)
+        gr.update(value=status_message, interactive=False),
+        gr.update(value=formatted_output, interactive=False),
+        gr.update(),
+        gr.update(label=STRINGS["TAB_1_TITLE"]+current_symbol, interactive=True)
     )

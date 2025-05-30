@@ -11,7 +11,7 @@ LABELS = {
 }
 
 ROUTES = {
-    "MAIN": "/main",
+    "MAIN": "/",
     "ABOUT": "/about"
 }
 

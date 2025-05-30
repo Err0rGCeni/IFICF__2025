@@ -21,7 +21,7 @@ STRINGS = {
     "BTN_PROCESS_INPUT_LABEL_ENABLED": "Processar Frases",
     # textbox_output_status
     "TXTBOX_STATUS_LABEL": "Status da Geração da Resposta:",
-    "TXTBOX_STATUS_IDLE": "Gerando Resposta, aguarde...",
+    "TXTBOX_STATUS_IDLE": "Gerando resposta, aguarde...",
     "TXTBOX_STATUS_OK": "Resposta gerada com sucesso!",
     "TXTBOX_STATUS_ERROR": "Erro ao gerar resposta. Verifique os detalhes.",
     # textbox_output_llm_response
@@ -45,4 +45,5 @@ STRINGS = {
     "DOWNLOAD_BTN_REPORT_LABEL_DISABLED": "Gerando PDF...",
     "DOWNLOAD_BTN_REPORT_LABEL_ENABLED": "Baixar Relatório",
     "DOWNLOAD_BTN_REPORT_LABEL_ERROR": "Erro na Geração!",
+    #
 }

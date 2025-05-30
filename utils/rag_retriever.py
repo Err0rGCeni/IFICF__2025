@@ -10,8 +10,10 @@ import nltk
 
 # Baixar o tokenizador de frases do NLTK (necessário apenas uma vez)
 try:
+    print("tentanto encontrar o tokenizador de frases do NLTK...")
     nltk.data.find('tokenizers/punkt') or nltk.download('tokenizers/punkt_tab')
 except nltk.downloader.DownloadError:
+    print("Tokenizador de frases do NLTK não encontrado. Baixando...")
     nltk.download('punkt_tab')
 
 # Configurações

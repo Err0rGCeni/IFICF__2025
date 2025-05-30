@@ -13,7 +13,7 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY
 
 _STRINGS = {
-    "TXT_TIMESTAMP": lambda date: f"AI Generated Response on {date}",
+    "TXT_TIMESTAMP": lambda date: f"Resposta Gerada com IA em {date}",
     "TXT_DISCLAIMER": "IAs podem cometer erros. Revise o conteúdo gerado.",
 }
 

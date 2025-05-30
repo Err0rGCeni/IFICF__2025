@@ -4,7 +4,6 @@ import pandas as pd
 from typing import Dict, Optional, List
 
 # Definindo as 5 categorias CIF fixas e a ordem desejada
-# Defining the 5 fixed ICF categories and the desired order
 FIXED_ICF_COMPONENT_LABELS: List[str] = [
     'Funções Corporais (b)',
     'Atividades e Participação (d)',
@@ -14,13 +13,12 @@ FIXED_ICF_COMPONENT_LABELS: List[str] = [
 ]
 
 # Mapeamento fixo de cores para cada categoria
-# Fixed color mapping for each category
 ICF_COMPONENT_COLOR_MAP: Dict[str, str] = {
-    'Funções Corporais (b)': '#FFC145',  # Amarelo/Laranja
-    'Atividades e Participação (d)': '#B7F242', # Verde claro
-    'Ambiente (e)': '#4369C0',           # Azul
-    'Estruturas Corporais (s)': '#DA3B95', # Rosa/Roxo
-    'Outros': '#CCCCCC'                   # Cinza
+    'Funções Corporais (b)': '#FFC145',      # Amarelo/Laranja
+    'Atividades e Participação (d)': '#B7F242',  # Verde claro
+    'Ambiente (e)': '#4369C0',              # Azul
+    'Estruturas Corporais (s)': '#DA3B95',    # Rosa/Roxo
+    'Outros': '#AAAAAA'                     # Cinza
 }
 
 def create_pie_chart(
@@ -28,8 +26,8 @@ def create_pie_chart(
     title: str = "Distribuição da Classificação"
 ) -> Optional[go.Figure]:
     """
-    Generates a pie chart from a DataFrame, ensuring all 5 fixed ICF
-    categories are represented with consistent colors.
+    Generates a pie chart from a DataFrame, using consistent colors for ICF categories
+    present in the input data.
 
     Args:
         input_df (pd.DataFrame): DataFrame with 'Componente CIF' (labels)
@@ -38,59 +36,42 @@ def create_pie_chart(
 
     Returns:
         Optional[go.Figure]: The Plotly Figure object containing the pie chart,
-                             or None if there is no valid data to plot.
+                             or None if there is no valid data to plot (e.g., all frequencies are zero or negative).
     """
-    # Criar um DataFrame com todas as categorias fixas e frequência 0
-    # Create a DataFrame with all fixed categories and frequency 0
-    base_df_with_all_categories = pd.DataFrame({
-        'Componente CIF': FIXED_ICF_COMPONENT_LABELS,
-        'Frequencia': 0
-    })
+    # Verificar se o DataFrame de entrada está vazio
+    # Check if the input DataFrame is empty
+    if input_df.empty:
+        print(f"Aviso: DataFrame de entrada para o gráfico de pizza '{title}' está vazio. Retornando None.")
+        return None
 
-    # Mesclar o DataFrame de entrada com o DataFrame de categorias completas
-    # Isso garante que todas as 5 categorias estejam presentes, preenchendo 0 para as ausentes
-    # Merge the input DataFrame with the DataFrame of all categories
-    # This ensures all 5 categories are present, filling 0 for missing ones
-    merged_df = pd.merge(
-        base_df_with_all_categories,
-        input_df[['Componente CIF', 'Frequencia']],
-        on='Componente CIF',
-        how='left',
-        suffixes=('_base', '') # Suffix for columns from the left DataFrame if there are overlaps
-    )
-    # Atualizar a frequência com os valores do df de entrada, onde existirem
-    # Update the frequency with values from the input_df where they exist
-    merged_df['Frequencia'] = merged_df['Frequencia'].fillna(0)
+    # Filtrar categorias com frequência zero ou negativa, pois não aparecem no gráfico de pizza
+    # Filter out categories with zero or negative frequency, as they don't appear in a pie chart
+    plot_df = input_df[input_df['Frequencia'] > 0].copy()
 
-    # Remover a coluna 'Frequencia_base' se ela foi criada (devido ao sufixo no merge)
-    # Remove the 'Frequencia_base' column if it was created (due to the suffix in merge)
-    if 'Frequencia_base' in merged_df.columns:
-        merged_df = merged_df.drop(columns=['Frequencia_base'])
+    # Verificar se há dados válidos para plotar após a filtragem
+    # Check if there's any valid data to plot after filtering
+    if plot_df.empty:
+        print(f"Aviso: Nenhum dado com frequência positiva para gerar o gráfico de pizza: '{title}'. Retornando None.")
+        return None
 
-    # Garantir a ordem das categorias no gráfico e na legenda
-    # Ensure the order of categories in the chart and legend
+    # Garantir a ordem das categorias no gráfico e na legenda para as categorias presentes
+    # Ensure the order of categories in the chart and legend for present categories
     category_order_map = {'Componente CIF': FIXED_ICF_COMPONENT_LABELS}
 
     figure = px.pie(
-        merged_df,
+        plot_df,
         names='Componente CIF',
         values='Frequencia',
         title=title,
         color='Componente CIF',
         color_discrete_map=ICF_COMPONENT_COLOR_MAP, # Usar o mapeamento fixo de cores
-        category_orders=category_order_map # Forçar a ordem
+        category_orders=category_order_map          # Forçar a ordem para categorias presentes
     )
-
-    # Verificar se há alguma frequência maior que zero para evitar erro ou gráfico vazio
-    # Check if there is any frequency greater than zero to avoid errors or an empty chart
-    if merged_df['Frequencia'].sum() == 0:
-        print(f"Aviso: Todos os dados têm valor 0 para gerar o gráfico de pizza: '{title}'. Retornando None.")
-        return None
 
     figure.update_layout(legend_title_text='Componentes')
     figure.update_traces(
         direction='clockwise',
-        rotation=-30,
+        rotation=-30, # Rotação inicial das fatias
         textinfo="label+value+percent",
         textposition='outside',
         textfont_size=16,
@@ -104,8 +85,8 @@ def create_bar_chart(
     title: str = "Frequência da Classificação"
 ) -> Optional[go.Figure]:
     """
-    Generates a bar chart from a DataFrame, ensuring all 5 fixed ICF
-    categories are represented with consistent colors.
+    Generates a bar chart from a DataFrame, using consistent colors for ICF categories
+    present in the input data.
 
     Args:
         input_df (pd.DataFrame): DataFrame with 'Componente CIF' (X-axis)
@@ -114,54 +95,41 @@ def create_bar_chart(
 
     Returns:
         Optional[go.Figure]: The Plotly Figure object containing the bar chart,
-                             or None if there is no valid data to plot.
+                             or None if there is no valid data to plot (e.g., all frequencies are zero).
     """
-    # Criar um DataFrame com todas as categorias fixas e frequência 0
-    # Create a DataFrame with all fixed categories and frequency 0
-    base_df_with_all_categories = pd.DataFrame({
-        'Componente CIF': FIXED_ICF_COMPONENT_LABELS,
-        'Frequencia': 0
-    })
+    # Verificar se o DataFrame de entrada está vazio
+    # Check if the input DataFrame is empty
+    if input_df.empty:
+        print(f"Aviso: DataFrame de entrada para o gráfico de barras '{title}' está vazio. Retornando None.")
+        return None
 
-    # Mesclar o DataFrame de entrada com o DataFrame de categorias completas
-    # Merge the input DataFrame with the DataFrame of all categories
-    merged_df = pd.merge(
-        base_df_with_all_categories,
-        input_df[['Componente CIF', 'Frequencia']],
-        on='Componente CIF',
-        how='left',
-        suffixes=('_base', '')
-    )
+    # Verificar se todas as frequências são zero (ou menores)
+    # Check if all frequencies are zero (or less)
+    # Embora frequências devam ser não-negativas, somar pode ser problemático se houver NaNs.
+    # A simple check for non-positive sum is robust if data is clean.
+    # If 'Frequencia' can have NaN, they should be handled (e.g., fillna(0) or dropna())
+    # For simplicity, assuming 'Frequencia' is numeric and NaNs are not the primary concern here.
+    # A more robust check for "no positive data" might be (input_df['Frequencia'] <= 0).all()
+    # but sum() == 0 is what was implicitly checked before with merged_df.
+    if input_df['Frequencia'].sum() == 0: # Assuming frequencies are non-negative
+        print(f"Aviso: Todos os dados em input_df têm frequência 0 para o gráfico de barras: '{title}'. Retornando None.")
+        return None
 
-    # Atualizar a frequência com os valores do df de entrada, onde existirem
-    # Update the frequency with values from the input_df where they exist
-    merged_df['Frequencia'] = merged_df['Frequencia'].fillna(0)
-    # Remover a coluna 'Frequencia_base' se ela foi criada
-    # Remove the 'Frequencia_base' column if it was created
-    if 'Frequencia_base' in merged_df.columns:
-        merged_df = merged_df.drop(columns=['Frequencia_base'])
-
-    # Garantir a ordem das categorias no gráfico
-    # Ensure the order of categories in the chart
+    # Garantir a ordem das categorias no gráfico para as categorias presentes
+    # Ensure the order of categories in the chart for present categories
     category_order_map = {'Componente CIF': FIXED_ICF_COMPONENT_LABELS}
 
     figure = px.bar(
-        merged_df,
+        input_df, # Usar o DataFrame de entrada diretamente
         x='Componente CIF',
         y='Frequencia',
         title=title,
         labels={'Componente CIF': 'Componentes CIF', 'Frequencia': 'Frequência'},
         color='Componente CIF',
         color_discrete_map=ICF_COMPONENT_COLOR_MAP, # Usar o mapeamento fixo de cores
-        category_orders=category_order_map, # Forçar a ordem
+        category_orders=category_order_map,         # Forçar a ordem para categorias presentes
         text_auto=True # Exibe o valor da frequência em cima da barra automaticamente
     )
-
-    # Verificar se há alguma frequência maior que zero
-    # Check if there is any frequency greater than zero
-    if merged_df['Frequencia'].sum() == 0:
-        print(f"Aviso: Todos os dados têm valor 0 para gerar o gráfico de barras: '{title}'. Retornando None.")
-        return None
 
     figure.update_layout(
         legend_title_text='Componentes',
@@ -172,7 +140,7 @@ def create_bar_chart(
     figure.update_traces(
         textfont_size=14,
         textangle=0,
-        textposition="outside", # Posição do texto da frequência
+        textposition="inside", # Posição do texto da frequência (pode ser 'inside' ou 'outside')
         hovertemplate="<b>%{x}</b><br>Frequência: %{y}<extra></extra>"
     )
     return figure

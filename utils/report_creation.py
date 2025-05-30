@@ -2,7 +2,7 @@ import re
 import plotly.graph_objects as go
 import pandas as pd
 from typing import Dict, Tuple, Optional, List
-from .graph_creation import create_pie_graph, create_bar_graph, create_tree_map_graph
+from .graph_creation import create_pie_chart, create_bar_chart, create_tree_map_chart
 from .pdf_creation import generate_pdf_report_temp
 
 # Constantes
@@ -81,7 +81,7 @@ def create_report_plots(df_group: pd.DataFrame, df_individual_treemap: pd.DataFr
             - fig_tree_map (go.Figure): Figura do gráfico treemap.
     """
     print("Gerando gráficos...")
-    # As funções create_pie_graph, create_bar_graph, create_tree_map_graph
+    # As funções create_pie_chart, create_bar_chart, create_tree_map_chart
     # precisam do dicionário original 'data_by_group' e 'data_individual_codes'
     # ou de uma forma de recriá-los a partir dos DataFrames, ou de aceitar os DataFrames diretamente.
     # Por simplicidade, vou assumir que 'data_by_group' pode ser reconstruído de 'df_group'
@@ -90,9 +90,9 @@ def create_report_plots(df_group: pd.DataFrame, df_individual_treemap: pd.DataFr
     # Reconstruindo data_by_group do df_group para as funções de criação de gráfico
     data_by_group = dict(zip(df_group['Componente CIF'], df_group['Frequencia']))
 
-    fig_pie = create_pie_graph(df_group, titulo="Distribuição da Classificação por Componentes CIF")
-    fig_bar = create_bar_graph(df_group, titulo="Frequência da Classificação por Componentes CIF")
-    fig_tree_map = create_tree_map_graph(df_individual_treemap, titulo="Treemap de Frequência por Código CIF")
+    fig_pie = create_pie_chart(df_group, title="Distribuição da Classificação por Componentes CIF")
+    fig_bar = create_bar_chart(df_group, title="Frequência da Classificação por Componentes CIF")
+    fig_tree_map = create_tree_map_chart(df_individual_treemap, title="Treemap de Frequência por Código CIF")
     
     return (fig_pie, fig_bar, fig_tree_map)
 
@@ -113,10 +113,10 @@ def generate_report_pdf(llm_res: str, df_group: pd.DataFrame, df_group_describe:
     """
     print("Gerando PDF...")
     temp_file = generate_pdf_report_temp(
-        plotly_figs=[fig_pie, fig_bar, fig_tree_map],
-        dataframes=[df_group, df_group_describe, df_individual_treemap, df_treemap_describe],
-        text=llm_res,
-        titulo_relatorio="Relatório de Classificação por Componentes CIF"
+        plotly_figs_list=[fig_pie, fig_bar, fig_tree_map],
+        dataframes_list=[df_group, df_group_describe, df_individual_treemap, df_treemap_describe],
+        text_block=llm_res,
+        report_title_text="Relatório de Classificação por Componentes CIF"
     )
     return temp_file
 
