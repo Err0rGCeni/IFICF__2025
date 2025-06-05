@@ -1,3 +1,4 @@
+import os
 import pandas as pd # Importado para type hinting em _update_dataframes_from_states
 import plotly.graph_objects as go # Importado para type hinting em _update_plots_from_states
 import gradio as gr
@@ -7,12 +8,14 @@ from functools import partial
 from utils.rag_retriever import initialize_rag_system
 from utils.report_creation import process_report_data, create_report_plots, generate_report_pdf
 
-from .scripts import extract_phrases_from_gradio_file, process_phrases_with_rag_llm
+#from .scripts import extract_phrases_from_gradio_file, process_phrases_with_rag_llm
+from .scripts import process_phrases_with_rag_llm
 from .strings import STRINGS
 
 # --- Configurações Iniciais do RAG ---
 # rag_docs, rag_index, rag_embedder = [None, None, None]  # TODO: Apenas para Teste
 rag_docs, rag_index, rag_embedder = initialize_rag_system()
+img1 = os.path.join(os.getcwd(), "static", "images", "logo.jpg")
 
 # --- Função Auxiliadora para Processamento de Frases ---
 process_fn_with_rag_args = partial(
@@ -30,9 +33,9 @@ def _handle_input_text_change(text_input: str) -> gr.Button:
     based on the content of the textbox.
     """
     if len(text_input.strip()) > 2:
-        return gr.update(value=STRINGS["BTN_PROCESS_INPUT_LABEL_ENABLED"], interactive=True)
+        return gr.update(value=STRINGS["BTN_PROCESS_INPUT_LABEL_ENABLED"], interactive=True, variant="primary")
     else:
-        return gr.update(value=STRINGS["BTN_PROCESS_INPUT_LABEL_DISABLED"], interactive=False)
+        return gr.update(value=STRINGS["BTN_PROCESS_INPUT_LABEL_DISABLED"], interactive=False, variant="secondary")
 
 def _handle_status_text_change(status_text: str) -> gr.Button:
     """
@@ -40,9 +43,9 @@ def _handle_status_text_change(status_text: str) -> gr.Button:
     based on the content of the status textbox.
     """
     if status_text == STRINGS["TXTBOX_STATUS_OK"]:
-        return gr.update(value=STRINGS["BTN_CREATE_REPORT_LABEL_ENABLED"], interactive=True)
+        return gr.update(value=STRINGS["BTN_CREATE_REPORT_LABEL_ENABLED"], interactive=True, variant="primary")
     else:
-        return gr.update(value=STRINGS["BTN_CREATE_REPORT_LABEL_DISABLED"], interactive=False)
+        return gr.update(value=STRINGS["BTN_CREATE_REPORT_LABEL_DISABLED"], interactive=False, variant="secondary")
 
 def _switch_to_report_tab_and_enable_interaction() -> Tuple[gr.Tabs, gr.TabItem]:
     """
@@ -52,7 +55,6 @@ def _switch_to_report_tab_and_enable_interaction() -> Tuple[gr.Tabs, gr.TabItem]
     return gr.update(selected=2), gr.update(label=STRINGS["TAB_2_TITLE"] + " ✅", interactive=True)
 
 # --- Atualizar Componentes Visíveis a partir de States ---
-
 def _update_dataframe_components(group_data_df: Optional[pd.DataFrame],
                                  group_description_df: Optional[pd.DataFrame],
                                  individuals_data_df: Optional[pd.DataFrame],
@@ -87,9 +89,9 @@ def _update_download_button_component(report_file_path: Optional[str]) -> gr.Dow
     Updates the Gradio DownloadButton component with the PDF path.
     """
     if report_file_path:
-        return gr.update(value=report_file_path, label=STRINGS["DOWNLOAD_BTN_REPORT_LABEL_ENABLED"], interactive=True)
+        return gr.update(value=report_file_path, label=STRINGS["DOWNLOAD_BTN_REPORT_LABEL_ENABLED"], interactive=True, variant="primary")
     else:
-        return gr.update(label=STRINGS["DOWNLOAD_BTN_REPORT_LABEL_ERROR"], interactive=False)
+        return gr.update(label=STRINGS["DOWNLOAD_BTN_REPORT_LABEL_ERROR"], interactive=False, variant="secondary")
 
 
 # --- Construção da Interface Gradio ---
@@ -105,19 +107,38 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
     state_report_file_path = gr.State(None)
     state_llm_response = gr.State(None)
 
-    gr.Markdown(f"# {STRINGS["APP_TITLE"]}")
-    gr.Markdown(STRINGS["APP_DESCRIPTION"])
+    with gr.Row():
+        with gr.Column(scale=1):
+            gr.Markdown(
+                f"# {STRINGS['APP_TITLE']}",
+                elem_id="md_app_title",
+            )
+            gr.Markdown(
+                f"{STRINGS['APP_DESCRIPTION']}",
+                elem_id="md_app_description",
+            )
+    
+        gr.Image(
+        value=img1,
+        height=64,
+        elem_id="logo_img",
+        placeholder="CIF Link Logo",
+        container=False,
+        show_label=False,
+        show_download_button=False,
+        scale=0
+        )
 
     with gr.Tabs() as tabs_main_navigation:
         with gr.TabItem(STRINGS["TAB_0_TITLE"], id=0):
             gr.Markdown(STRINGS["TAB_0_SUBTITLE"])
-
-            file_input_user_document = gr.File(
-                label=STRINGS["FILE_INPUT_LABEL"],
-                type="filepath",
-                file_types=['.txt', '.pdf', '.docx'],
-                interactive=False
-            )
+# DEPRECATED: gr.File volta em uma futura versão 
+#            file_input_user_document = gr.File(
+#                label=STRINGS["FILE_INPUT_LABEL"],
+#                type="filepath",
+#                file_types=['.txt', '.pdf', '.docx'],
+#                interactive=False
+#            )
 
             textbox_input_phrases = gr.Textbox(
                 label=STRINGS["TXTBOX_INPUT_PHRASES_LABEL"],
@@ -126,13 +147,13 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
                 interactive=True
             )
 
-            button_process_input = gr.Button(STRINGS["BTN_PROCESS_INPUT_LABEL_DISABLED"], interactive=False)
+            button_process_input = gr.Button(STRINGS["BTN_PROCESS_INPUT_LABEL_DISABLED"], interactive=False, variant="secondary")
 
-            file_input_user_document.upload(
-                fn=extract_phrases_from_gradio_file,
-                inputs=file_input_user_document,
-                outputs=textbox_input_phrases
-            )
+#            file_input_user_document.upload(
+#                fn=extract_phrases_from_gradio_file,
+#                inputs=file_input_user_document,
+#                outputs=textbox_input_phrases
+#            )
 
             textbox_input_phrases.change(
                 fn=_handle_input_text_change,
@@ -156,8 +177,8 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
                 placeholder=STRINGS["TXTBOX_OUTPUT_LLM_RESPONSE_PLACEHOLDER"]
             )
 
-            button_create_report = gr.Button(STRINGS["BTN_CREATE_REPORT_LABEL_DISABLED"], interactive=False)
-            button_return_to_input_tab_from_results = gr.Button(STRINGS["BTN_RETURN_LABEL"])
+            button_create_report = gr.Button(STRINGS["BTN_CREATE_REPORT_LABEL_DISABLED"], interactive=False, variant="secondary")
+            button_return_to_input_tab_from_results = gr.Button(STRINGS["BTN_RETURN_LABEL"], variant="secondary")
 
             textbox_output_status.change(
                 fn=_handle_status_text_change,
@@ -187,8 +208,8 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
             plot_display_bar_chart = gr.Plot(label=STRINGS["PLOT_BAR_LABEL"])
             plot_display_tree_map = gr.Plot(label=STRINGS["PLOT_TREE_LABEL"])
 
-            download_button_report_pdf = gr.DownloadButton(label=STRINGS["DOWNLOAD_BTN_REPORT_LABEL_DISABLED"], interactive=False)
-            button_return_to_input_tab_from_report = gr.Button(STRINGS["BTN_RETURN_LABEL"]) # Botão para voltar à aba 0 da aba 2
+            download_button_report_pdf = gr.DownloadButton(label=STRINGS["DOWNLOAD_BTN_REPORT_LABEL_DISABLED"], interactive=False, variant="secondary")
+            button_return_to_input_tab_from_report = gr.Button(STRINGS["BTN_RETURN_LABEL"], variant="secondary") # Botão para voltar à aba 0 da aba 2
 
     # --- FLUXO DE EVENTOS MULTI-CHAINING PARA O RELATÓRIO ---
     button_process_input.click(

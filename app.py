@@ -1,9 +1,10 @@
 import gradio as gr
+from pages.theme import softCIF
 from pages.main import view as main_page
 from pages.about import view as about_page
 from pages.help import view as help_page
 
-with gr.Blocks(theme=gr.themes.Soft()) as demo:    
+with gr.Blocks(theme=softCIF) as demo:    
     main_page.interface.render()
 with demo.route("Ajuda", "help"):
     help_page.interface.render()
