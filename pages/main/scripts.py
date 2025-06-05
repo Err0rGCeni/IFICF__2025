@@ -6,23 +6,23 @@ from utils.llm_response import generate_response_with_llm # A função unificada
 from utils.phrase_extractor import process_file_content
 #from utils.report_creation import generate_report
 from .strings import STRINGS
-
-def extract_phrases_from_gradio_file(gradio_file: gr.File) -> gr.Textbox:
-    """
-    Utilizes the 'process_file' function from 'utils.phrase_extractor' to read the
-    file content and extract phrases, returning them as a text block for Gradio.
-    """
-    if gradio_file is None:
-        return gr.Textbox(value="", placeholder=STRINGS["TEXT_INPUT_PLACEHOLDER_EMPTY"])
-
-    try:
-        # Chama a função unificada de processamento de arquivo que retorna uma lista de frases
-        phrases = process_file_content(gradio_file.name)
-        
-        phrases_text = "\n".join(phrases)
-        return gr.Textbox(value=phrases_text, placeholder=STRINGS["TEXT_INPUT_PLACEHOLDER_LOADED"])
-    except Exception as e:
-        return gr.Textbox(value=f"Error: {e}", placeholder=STRINGS["TEXT_INPUT_PLACER_EMPTY"])
+# DEPRECATED: A função volta com a consolidação de um futuro OCR.
+#def extract_phrases_from_gradio_file(gradio_file: gr.File) -> gr.Textbox:
+#    """
+#    Utilizes the 'process_file' function from 'utils.phrase_extractor' to read the
+#    file content and extract phrases, returning them as a text block for Gradio.
+#    """
+#    if gradio_file is None:
+#        return gr.Textbox(value="", placeholder=STRINGS["TEXT_INPUT_PLACEHOLDER_EMPTY"])
+#
+#    try:
+#        # Chama a função unificada de processamento de arquivo que retorna uma lista de frases
+#        phrases = process_file_content(gradio_file.name)
+#        
+#        phrases_text = "\n".join(phrases)
+#        return gr.Textbox(value=phrases_text, placeholder=STRINGS["TEXT_INPUT_PLACEHOLDER_LOADED"])
+#    except Exception as e:
+#        return gr.Textbox(value=f"Error: {e}", placeholder=STRINGS["TEXT_INPUT_PLACER_EMPTY"])
 
 def process_phrases_with_rag_llm(input_phrases_text: str, rag_docs:list[str], rag_index:faiss.Index, rag_embedder:SentenceTransformer) -> Generator[tuple[gr.Textbox, gr.Textbox, gr.Tabs, gr.TabItem]]:
     """
