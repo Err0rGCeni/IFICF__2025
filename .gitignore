@@ -1,3 +1,4 @@
 .env
 /venv_llm
+/credentials
 __pycache__/

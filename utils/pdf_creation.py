@@ -17,7 +17,7 @@ _STRINGS = {
     "TXT_DISCLAIMER": "IAs podem cometer erros. Revise o conteúdo gerado.",
 }
 
-# --- Pre-compiled Regex Patterns ---
+# --- Regex Patterns ---
 # Regex para identificar e tratar 'Frase de Entrada: ...'.
 _INPUT_PHRASE_REGEX = re.compile(r'^-?\s*(Frase de Entrada:.*)', re.IGNORECASE)
 
@@ -40,7 +40,6 @@ _SPECIAL_PLOT_INDEX = 2 # TreeMap
 # --- Constants for Text Styling ---
 _LLM_RESPONSE_STARTERS = (
     'resposta fornecida pela llm',
-    'okay, sou seu assistente especializado em cif'
 )
 
 def _handle_text_content(story: list, text_content: str, styles: dict) -> None:
@@ -95,50 +94,66 @@ def _handle_text_content(story: list, text_content: str, styles: dict) -> None:
         alignment=TA_JUSTIFY
     )
 
-    # Timestamp & Disclaimer
-    generation_timestamp_text = _STRINGS['TXT_TIMESTAMP'](datetime.now().strftime('%d-%m-%Y'))
-    story.append(Paragraph(generation_timestamp_text, h2_bold_centered_style))
+    # Timestamp & Disclaimer (gerado uma vez no início do conteúdo textual)
+    if not story: # Adiciona apenas se a story estiver vazia, para não repetir a cada chamada se a função for reutilizada
+        generation_timestamp_text = _STRINGS['TXT_TIMESTAMP'](datetime.now().strftime('%d-%m-%Y'))
+        story.append(Paragraph(generation_timestamp_text, h2_bold_centered_style))
 
-    disclaimer_text = _STRINGS['TXT_DISCLAIMER']
-    story.append(Paragraph(disclaimer_text, alert_message_style))
-    story.append(Spacer(1, 20)) # Standard spacer after disclaimer
+        disclaimer_text = _STRINGS['TXT_DISCLAIMER']
+        story.append(Paragraph(disclaimer_text, alert_message_style))
+        story.append(Spacer(1, 20))
 
     # Processamento do conteúdo principal
     text_blocks = text_content.split('---')
 
-    for block in text_blocks:
-        block = block.strip()
-        if not block:
+    for block_content_full in text_blocks: # Renomeado para evitar conflito com 'block' do ReportLab
+        current_block_text = block_content_full.strip()
+        if not current_block_text:
             continue
 
-        lines_in_block = [line.strip() for line in block.split('\n') if line.strip()]
+        lines_in_block = [line.strip() for line in current_block_text.split('\n') if line.strip()]
         if not lines_in_block:
             continue
 
+        # Processa a primeira linha do bloco atual
         first_line_in_block = lines_in_block[0]
-        input_phrase_match = _INPUT_PHRASE_REGEX.match(first_line_in_block)
+        input_phrase_match_first = _INPUT_PHRASE_REGEX.match(first_line_in_block)
 
         if any(first_line_in_block.lower().startswith(starter) for starter in _LLM_RESPONSE_STARTERS):
             story.append(Paragraph(first_line_in_block, normal_justified_style))
-        elif input_phrase_match:
+        elif input_phrase_match_first:
             story.append(Spacer(1, 2))
-            input_phrase_text = input_phrase_match.group(1).strip()
+            input_phrase_text = input_phrase_match_first.group(1).strip()
             story.append(Paragraph(input_phrase_text, h3_bold_style))
         else:
             story.append(Paragraph(first_line_in_block, normal_justified_style))
 
-        # Process subsequent lines in the block
-        for i in range(1, len(lines_in_block)):
-            line_text = lines_in_block[i]
-            list_item_match = _LIST_ITEM_CONTENT_REGEX.match(line_text)
+        # Processa as linhas subsequentes do bloco atual (SE HOUVER)
+        if len(lines_in_block) > 1:
+            for i in range(1, len(lines_in_block)):
+                line_text = lines_in_block[i]
+                
+                # VERIFICAR "Frase de Entrada" PRIMEIRO para linhas subsequentes
+                input_phrase_match_subsequent = _INPUT_PHRASE_REGEX.match(line_text)
 
-            if list_item_match:
-                # group(1) captura o conteúdo após hífen e espaços.
-                list_item_content = list_item_match.group(1).strip()
-                story.append(Paragraph(f"• {list_item_content}", list_item_justified_style))
-            else:                
-                story.append(Paragraph(line_text, normal_justified_style))
-        story.append(Spacer(1, 2)) # Separador de blocos
+                if input_phrase_match_subsequent:
+                    story.append(Spacer(1, 2))
+                    input_phrase_text_subsequent = input_phrase_match_subsequent.group(1).strip()
+                    story.append(Paragraph(input_phrase_text_subsequent, h3_bold_style))
+                else:
+                    # Se não for "Frase de Entrada", então processe como item de lista ou texto normal
+                    list_item_match = _LIST_ITEM_CONTENT_REGEX.match(line_text)
+                    
+                    if list_item_match:
+                        list_item_content = list_item_match.group(1).strip()
+                        if list_item_content:
+                            story.append(Paragraph(f"• {list_item_content}", list_item_justified_style))
+                        # else: (opcional) tratar o caso de list_item_content ser vazio após o strip
+                    else:
+                        # Com o _LIST_ITEM_CONTENT_REGEX atual, este 'else' é raramente atingido
+                        story.append(Paragraph(line_text, normal_justified_style))
+            
+        story.append(Spacer(1, 12)) # Espaçador após cada bloco de conteúdo (ajuste o valor do spacer conforme necessário)
 
 
 def _handle_dataframe_content(story: list, dataframes_list: list[pd.DataFrame], styles: dict) -> None:

@@ -1,6 +1,6 @@
 STRINGS = {
     "APP_TITLE": "Sistema para Vinculação CIF de Frases",
-    "APP_DESCRIPTION": "Insira frases, receba as vinculações aos conceitos feitas por IA e gere relatórios.",
+    "APP_DESCRIPTION": "Insira frases, obtenha as vinculações dos conceitos significativos à CIF feitas por IA.",
     # tab id = 0
     "TAB_0_TITLE": "Entrada de Frases via Arquivos",
     "TAB_0_SUBTITLE": "## 📝 Passo 1: Forneça as Frases",

@@ -1,0 +1,84 @@
+import gradio as gr
+import gspread
+import datetime
+import os
+from dotenv import load_dotenv
+
+# Carrega as variáveis de ambiente do arquivo .env
+load_dotenv()
+
+# --- Configuração do Google Sheets ---
+service_account_key_path = os.getenv('SERVICE_ACCOUNT_KEY_PATH')
+if not service_account_key_path:
+    print("Erro: A variável de ambiente 'SERVICE_ACCOUNT_KEY_PATH' não está definida no .env.")
+    exit()
+
+try:
+    gc = gspread.service_account(filename=service_account_key_path)
+except Exception as e:
+    print(f"Erro ao carregar a chave de serviço: {e}")
+    exit()
+
+spreadsheet_name = os.getenv('GOOGLE_SHEETS_NAME')
+if not spreadsheet_name:
+    print("Erro: A variável de ambiente 'GOOGLE_SHEETS_NAME' não está definida no .env.")
+    exit()
+
+try:
+    sh = gc.open(spreadsheet_name)
+    worksheet = sh.sheet1
+except gspread.exceptions.SpreadsheetNotFound:
+    print(f"Erro: Planilha '{spreadsheet_name}' não encontrada. Verifique o nome e o compartilhamento.")
+    exit()
+except Exception as e:
+    print(f"Erro ao acessar a planilha: {e}")
+    exit()
+
+# --- Função para enviar feedback ---
+# Agora a função recebe 'feedback_type' e 'comment_text'
+def submit_feedback_sheets(feedback_type, comment_text):
+    if not comment_text.strip():
+        return "Erro: Por favor, insira algum comentário."
+    if not feedback_type: # Verifica se um tipo foi selecionado
+        return "Erro: Por favor, selecione o tipo de feedback."
+
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    try:
+        # A ordem dos elementos na lista DEVE CORRESPONDER à ordem dos cabeçalhos na planilha
+        # [Type, Timestamp, Comment]
+        worksheet.append_row([timestamp, feedback_type, comment_text])
+        return "Obrigado! Seu feedback foi enviado com sucesso."
+    except Exception as e:
+        return f"Ocorreu um erro ao enviar o feedback: {e}"
+
+# --- Aplicação Gradio ---
+with gr.Blocks() as demo:
+    gr.Markdown("## Envie seu Feedback")
+
+    # Novo componente para o tipo de feedback (Dropdown)
+    type_input = gr.Dropdown(
+        label="Tipo de Feedback:",
+        choices=["Bug", "Sugestão de Melhoria", "Dúvida", "Elogio", "Outro"],
+        value="Sugestão de Melhoria", # Valor padrão
+        interactive=True
+    )
+
+    # Campo de comentário
+    comment_input = gr.Textbox(
+        label="Seu Comentário:",
+        placeholder="Descreva seu feedback ou sugestão em detalhes...",
+        lines=7 # Aumentei as linhas para comentários mais detalhados
+    )
+
+    submit_button = gr.Button("Enviar Feedback")
+    output_message = gr.Textbox(label="Status", interactive=False)
+
+    submit_button.click(
+        fn=submit_feedback_sheets,
+        # A ordem dos inputs aqui DEVE CORRESPONDER à ordem dos parâmetros da função fn
+        inputs=[type_input, comment_input],
+        outputs=output_message
+    )
+
+demo.launch()

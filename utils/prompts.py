@@ -41,7 +41,7 @@ def icf_gemini_prompt(context, input_text):
         - Conceito Significativo: [O conceito significativo extraído da frase]
         - Status de Cobertura pela CIF: ["Coberto", "Não Coberto (N.C.)", ou "Não Definido (N.D.)"]
         - Categoria CIF: [Se "Coberto", indique: "Funções Corporais", "Estruturas Corporais", "Atividades e Participação", "Fatores Ambientais". Caso contrário, retorne "N.C." ou "N.D.""]
-        - Codificação CIF: [Se "Coberto", o código e título mais relevante da CIF. Caso contrário, retorne "N.C." ou "N.D."]
+        - Codificação CIF: [Código + Título] [Se "Coberto", o código e título mais relevante da CIF. Caso contrário, retorne "N.C." ou "N.D."]
         - Descrição CIF: [Se "Coberto", a descrição completa ou parte dela que se relaciona mais diretamente com o conceito. Caso contrário, retorne "N.C." ou "N.D."]
         - Justificativa da Classificação: [Explique brevemente por que o conceito foi classificado dessa forma, referenciando o contexto RAG quando usado, ou explicando a lógica da classificação com base no seu conhecimento da CIF.]
 
