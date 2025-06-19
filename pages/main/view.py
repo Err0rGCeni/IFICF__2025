@@ -9,22 +9,16 @@ from utils.rag_retriever import initialize_rag_system
 from utils.report_creation import process_report_data, create_report_plots, generate_report_pdf
 
 #from .scripts import extract_phrases_from_gradio_file, process_phrases_with_rag_llm
-from .scripts import process_phrases_with_rag_llm
+from .scripts import process_phrases_with_api_llm
 from .strings import STRINGS
 
 # --- Configurações Iniciais do RAG ---
-# rag_docs, rag_index, rag_embedder = [None, None, None]  # TODO: Apenas para Teste
-rag_docs, rag_index, rag_embedder = initialize_rag_system()
+#rag_docs, rag_index, rag_embedder = [None, None, None] # TODO: Apenas para Teste
+# rag_docs, rag_index, rag_embedder = initialize_rag_system() # DEPRECATED
 img1 = os.path.join(os.getcwd(), "static", "images", "logo.jpg")
 
 # --- Função Auxiliadora para Processamento de Frases ---
-process_fn_with_rag_args = partial(
-    process_phrases_with_rag_llm,
-    # Passe os argumentos fixos aqui.
-    rag_docs=rag_docs,
-    rag_index=rag_index,
-    rag_embedder=rag_embedder
-)
+process_fn_with_rag_args = partial(process_phrases_with_api_llm)
 
 # --- Funções Auxiliares (Listeners e Controladores de UI) ---
 def _handle_input_text_change(text_input: str) -> gr.Button:
@@ -223,34 +217,34 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
         inputs=[],
         outputs=[tabs_main_navigation, tab_item_report_visualization]
     ).then(
-        fn=process_report_data, # 2. Processa a resposta da LLM e salva os DataFrames brutos nos states - Processes LLM response and saves raw DataFrames to states
+        fn=process_report_data, # 2. Processa a resposta da LLM e salva os DataFrames brutos nos states
         inputs=[state_llm_response],
         outputs=[
             state_dataframe_group, state_dataframe_group_description,
             state_dataframe_individuals, state_dataframe_individuals_description
         ]
     ).then(
-        fn=_update_dataframe_components, # 3. Atualiza os componentes Gradio DataFrame visíveis - Updates visible Gradio DataFrame components
+        fn=_update_dataframe_components, # 3. Atualiza os componentes Gradio DataFrame visíveis
         inputs=[state_dataframe_group, state_dataframe_group_description, state_dataframe_individuals, state_dataframe_individuals_description],
         outputs=[dataframe_display_grouped_data, dataframe_display_grouped_description, dataframe_display_individual_data, dataframe_display_individual_description]
     ).then(
-        fn=create_report_plots, # 4. Pega DataFrames dos states e gera os gráficos Plotly brutos nos states - Takes DataFrames from states and generates raw Plotly charts in states
+        fn=create_report_plots, # 4. Pega DataFrames dos states e gera os gráficos Plotly brutos nos states
         inputs=[state_dataframe_group, state_dataframe_individuals],
         outputs=[state_figure_pie_chart, state_figure_bar_chart, state_figure_tree_map]
     ).then(
-        fn=_update_plot_components, # 5. Atualiza os componentes Gradio Plot visíveis - Updates visible Gradio Plot components
+        fn=_update_plot_components, # 5. Atualiza os componentes Gradio Plot visíveis
         inputs=[state_figure_pie_chart, state_figure_bar_chart, state_figure_tree_map],
         outputs=[plot_display_pie_chart, plot_display_bar_chart, plot_display_tree_map]
     ).then(
-        fn=generate_report_pdf, # 6. Gera o PDF a partir de todos os dados e gráficos (states) - Generates PDF from all data and charts (states)
+        fn=generate_report_pdf, # 6. Gera o PDF a partir de todos os dados e gráficos (states)
         inputs=[
             state_llm_response, # Resposta LLM original - Original LLM response
             state_dataframe_group, state_dataframe_group_description, state_dataframe_individuals, state_dataframe_individuals_description,
             state_figure_pie_chart, state_figure_bar_chart, state_figure_tree_map
         ],
-        outputs=[state_report_file_path] # Atualiza o state do caminho do PDF - Updates the PDF path state
+        outputs=[state_report_file_path] # Atualiza o state do caminho do PDF
     ).then(
-        fn=_update_download_button_component, # 7. Atualiza o botão de download - Updates the download button
+        fn=_update_download_button_component, # 7. Atualiza o botão de download
         inputs=[state_report_file_path],
         outputs=[download_button_report_pdf]
     )

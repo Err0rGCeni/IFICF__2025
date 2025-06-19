@@ -1,24 +1,16 @@
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
-from typing import Dict, Optional, List
+from typing import Optional # Dict e List não são mais necessários para as constantes globais
 
-# Definindo as 5 categorias CIF fixas e a ordem desejada
-FIXED_ICF_COMPONENT_LABELS: List[str] = [
-    'Funções Corporais (b)',
-    'Atividades e Participação (d)',
-    'Ambiente (e)',
-    'Estruturas Corporais (s)',
-    'Outros'
-]
+# Importa a Enum para centralizar as definições de categoria, rótulos e cores
+from .icf_categories import ICFComponent
 
-# Mapeamento fixo de cores para cada categoria
-ICF_COMPONENT_COLOR_MAP: Dict[str, str] = {
-    'Funções Corporais (b)': '#FFC145',      # Amarelo/Laranja
-    'Atividades e Participação (d)': '#B7F242',  # Verde claro
-    'Ambiente (e)': '#4369C0',              # Azul
-    'Estruturas Corporais (s)': '#DA3B95',    # Rosa/Roxo
-    'Outros': '#AAAAAA'                     # Cinza
+# Obtém as informações de ordenação e cores diretamente da Enum ICFComponent
+ORDERED_ICF_LABELS = ICFComponent.get_ordered_labels()
+ICF_COLOR_MAP_FROM_LABEL = ICFComponent.get_color_map() # Mapeia Rótulo Completo -> Cor
+ICF_COLOR_MAP_FROM_SHORT_CODE = { # Mapeia Código Curto -> Cor (para o Treemap)
+    member.short_code: member.color for member in ICFComponent
 }
 
 def create_pie_chart(
@@ -26,158 +18,162 @@ def create_pie_chart(
     title: str = "Distribuição da Classificação"
 ) -> Optional[go.Figure]:
     """
-    Generates a pie chart from a DataFrame, using consistent colors for ICF categories
-    present in the input data.
+    Gera um gráfico de pizza a partir de um DataFrame, usando cores consistentes
+    para as categorias CIF presentes nos dados de entrada.
 
     Args:
-        input_df (pd.DataFrame): DataFrame with 'Componente CIF' (labels)
-                                 and 'Frequencia' (values) columns.
-        title (str): The title of the chart.
+        input_df (pd.DataFrame): DataFrame com colunas 'Componente CIF' (rótulos)
+                                 e 'Frequencia' (valores).
+                                 Espera-se que 'Componente CIF' já esteja como
+                                 pd.Categorical ordenado.
+        title (str): O título do gráfico.
 
     Returns:
-        Optional[go.Figure]: The Plotly Figure object containing the pie chart,
-                             or None if there is no valid data to plot (e.g., all frequencies are zero or negative).
+        Optional[go.Figure]: Objeto Plotly Figure ou None se não houver dados válidos.
     """
-    # Verificar se o DataFrame de entrada está vazio
-    # Check if the input DataFrame is empty
     if input_df.empty:
         print(f"Aviso: DataFrame de entrada para o gráfico de pizza '{title}' está vazio. Retornando None.")
         return None
 
-    # Filtrar categorias com frequência zero ou negativa, pois não aparecem no gráfico de pizza
-    # Filter out categories with zero or negative frequency, as they don't appear in a pie chart
-    plot_df = input_df[input_df['Frequencia'] > 0].copy()
+    plot_df = input_df[input_df['Frequência'] > 0].copy()
 
-    # Verificar se há dados válidos para plotar após a filtragem
-    # Check if there's any valid data to plot after filtering
     if plot_df.empty:
         print(f"Aviso: Nenhum dado com frequência positiva para gerar o gráfico de pizza: '{title}'. Retornando None.")
         return None
 
-    # Garantir a ordem das categorias no gráfico e na legenda para as categorias presentes
-    # Ensure the order of categories in the chart and legend for present categories
-    category_order_map = {'Componente CIF': FIXED_ICF_COMPONENT_LABELS}
+    category_order_map = {'Componente CIF': ORDERED_ICF_LABELS}
 
     figure = px.pie(
         plot_df,
         names='Componente CIF',
-        values='Frequencia',
+        # values='Frequencia', # ANTES
+        values='Frequência', # DEPOIS
         title=title,
         color='Componente CIF',
-        color_discrete_map=ICF_COMPONENT_COLOR_MAP, # Usar o mapeamento fixo de cores
-        category_orders=category_order_map          # Forçar a ordem para categorias presentes
+        color_discrete_map=ICF_COLOR_MAP_FROM_LABEL,
+        category_orders=category_order_map
     )
 
     figure.update_layout(legend_title_text='Componentes')
     figure.update_traces(
         direction='clockwise',
-        rotation=-30, # Rotação inicial das fatias
+        rotation=-30,
         textinfo="label+value+percent",
         textposition='outside',
         textfont_size=16,
-        pull=0.05, # Destaca ligeiramente as fatias
+        pull=[0.05 if val > 0 else 0 for val in plot_df['Frequência']], # DEPOIS
         hovertemplate="<b>%{label}</b><br>Frequência: %{value}<br>Porcentagem: %{percent}<extra></extra>"
     )
     return figure
+
 
 def create_bar_chart(
     input_df: pd.DataFrame,
     title: str = "Frequência da Classificação"
 ) -> Optional[go.Figure]:
     """
-    Generates a bar chart from a DataFrame, using consistent colors for ICF categories
-    present in the input data.
+    Gera um gráfico de barras a partir de um DataFrame, usando cores consistentes
+    para as categorias CIF.
 
     Args:
-        input_df (pd.DataFrame): DataFrame with 'Componente CIF' (X-axis)
-                                 and 'Frequencia' (Y-axis) columns.
-        title (str): The title of the chart.
+        input_df (pd.DataFrame): DataFrame com colunas 'Componente CIF' (eixo X)
+                                 e 'Frequencia' (eixo Y).
+                                 Espera-se que 'Componente CIF' já esteja como
+                                 pd.Categorical ordenado.
+        title (str): O título do gráfico.
 
     Returns:
-        Optional[go.Figure]: The Plotly Figure object containing the bar chart,
-                             or None if there is no valid data to plot (e.g., all frequencies are zero).
+        Optional[go.Figure]: Objeto Plotly Figure ou None se não houver dados válidos.
     """
-    # Verificar se o DataFrame de entrada está vazio
-    # Check if the input DataFrame is empty
     if input_df.empty:
         print(f"Aviso: DataFrame de entrada para o gráfico de barras '{title}' está vazio. Retornando None.")
         return None
 
-    # Verificar se todas as frequências são zero (ou menores)
-    # Check if all frequencies are zero (or less)
-    # Embora frequências devam ser não-negativas, somar pode ser problemático se houver NaNs.
-    # A simple check for non-positive sum is robust if data is clean.
-    # If 'Frequencia' can have NaN, they should be handled (e.g., fillna(0) or dropna())
-    # For simplicity, assuming 'Frequencia' is numeric and NaNs are not the primary concern here.
-    # A more robust check for "no positive data" might be (input_df['Frequencia'] <= 0).all()
-    # but sum() == 0 is what was implicitly checked before with merged_df.
-    if input_df['Frequencia'].sum() == 0: # Assuming frequencies are non-negative
-        print(f"Aviso: Todos os dados em input_df têm frequência 0 para o gráfico de barras: '{title}'. Retornando None.")
-        return None
+    # Para gráficos de barra, podemos plotar frequências zero, então não filtramos > 0
+    if not input_df['Frequência'].any(): # DEPOIS
+         print(f"Aviso: Todos os dados em input_df têm frequência 0 para o gráfico de barras: '{title}'.")
 
-    # Garantir a ordem das categorias no gráfico para as categorias presentes
-    # Ensure the order of categories in the chart for present categories
-    category_order_map = {'Componente CIF': FIXED_ICF_COMPONENT_LABELS}
+    category_order_map = {'Componente CIF': ORDERED_ICF_LABELS}
 
     figure = px.bar(
-        input_df, # Usar o DataFrame de entrada diretamente
+        input_df,
         x='Componente CIF',
-        y='Frequencia',
+        y='Frequência', # DEPOIS
         title=title,
-        labels={'Componente CIF': 'Componentes CIF', 'Frequencia': 'Frequência'},
+        labels={'Componente CIF': 'Componentes CIF', 'Frequência': 'Frequência'}, # DEPOIS (chave 'Frequência')
         color='Componente CIF',
-        color_discrete_map=ICF_COMPONENT_COLOR_MAP, # Usar o mapeamento fixo de cores
-        category_orders=category_order_map,         # Forçar a ordem para categorias presentes
-        text_auto=True # Exibe o valor da frequência em cima da barra automaticamente
+        color_discrete_map=ICF_COLOR_MAP_FROM_LABEL,
+        category_orders=category_order_map,
+        text_auto=True
     )
-
     figure.update_layout(
         legend_title_text='Componentes',
         xaxis_title="Componentes CIF",
         yaxis_title="Frequência",
-        showlegend=True # Garante que a legenda seja mostrada
+        showlegend=True
     )
     figure.update_traces(
         textfont_size=14,
         textangle=0,
-        textposition="inside", # Posição do texto da frequência (pode ser 'inside' ou 'outside')
+        textposition="inside",
         hovertemplate="<b>%{x}</b><br>Frequência: %{y}<extra></extra>"
     )
     return figure
+
 
 def create_tree_map_chart(
     tree_map_df: pd.DataFrame,
     title: str = "Treemap de Frequências por Hierarquia de Códigos"
 ) -> Optional[go.Figure]:
     """
-    Generates a Treemap chart from a DataFrame.
+    Gera um gráfico Treemap a partir de um DataFrame hierárquico.
+    As cores do nível 'Parent' são baseadas nos códigos curtos dos componentes CIF.
 
     Args:
-        tree_map_df (pd.DataFrame): DataFrame with 'Parent', 'Subparent',
-                                    'Filho' (Child), and 'Frequencia' (Frequency) columns.
-        title (str): The title of the chart.
+        tree_map_df (pd.DataFrame): DataFrame com colunas 'Parent', 'Subparent',
+                                    'Filho' (Rótulo), e 'Frequencia'.
+        title (str): O título do gráfico.
 
     Returns:
-        Optional[go.Figure]: The Plotly Figure object containing the Treemap chart,
-                             or None if the DataFrame is empty.
+        Optional[go.Figure]: Objeto Plotly Figure ou None se o DataFrame estiver vazio.
     """
     if tree_map_df.empty:
         print(f"Aviso: DataFrame vazio para gerar o Treemap: '{title}'.")
         return None
 
+    # Filtra linhas onde 'Filho' é nulo ou vazio, pois podem causar problemas no treemap
+    # e geralmente representam nós estruturais que não devem ser folhas.
+    plot_df = tree_map_df.dropna(subset=['Código'])
+    plot_df = plot_df[plot_df['Código'] != ""]
+
+    if plot_df.empty:
+        print(f"Aviso: DataFrame para Treemap não contém 'Códigos' válidos após filtragem: '{title}'.") # DEPOIS
+        return None
+
     figure = px.treemap(
-        tree_map_df,
-        path=['Parent', 'Subparent', 'Filho'], # Define a hierarquia
-        values='Frequencia', # Define os valores que determinam o tamanho dos retângulos
+        plot_df,
+        path=['Componente', 'Capítulo', 'Código'],
+        values='Frequência',
         title=title,
-        color='Frequencia', # Colore os retângulos com base na frequência
-        color_continuous_scale='spectral_r', # Esquema de cores
-        height=700, # Altura do gráfico
+        color='Componente',
+        color_discrete_map=ICF_COLOR_MAP_FROM_SHORT_CODE,
+        height=700
     )
 
     figure.update_traces(
-        textinfo="label+value+percent entry", # Informações exibidas em cada retângulo
-        hovertemplate='<b>%{label}</b><br>Frequência: %{value}<br>Porcentagem: %{percentEntry:.1%}<extra></extra>',
+        textinfo="label+value+percent entry", # Informações exibidas
+        # Para hovertemplate, %{customdata} pode ser usado se você adicionar colunas extras
+        # Exemplo: customdata=plot_df[['Parent', 'Subparent']]
+        # hovertemplate='<b>%{label}</b> (%{customdata[0]} > %{customdata[1]})<br>Frequência: %{value}<br>Porcentagem da Entrada: %{percentEntry:.1%}<extra></extra>',
+        hovertemplate='<b>%{label}</b><br>Frequência: %{value}<br>Porcentagem da Entrada: %{percentEntry:.1%}<extra></extra>',
+        marker_line_width=1,
+        marker_line_color='white' # Linhas brancas para separar os blocos
     )
-
+    
+    figure.update_layout(
+        hoverlabel=dict(
+            bgcolor="white",
+            font_size=12,
+        )
+    )
     return figure

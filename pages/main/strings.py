@@ -1,6 +1,6 @@
 STRINGS = {
     "APP_TITLE": "Sistema para Vinculação CIF de Frases",
-    "APP_DESCRIPTION": "Insira frases, receba as vinculações aos conceitos feitas por IA e gere relatórios.",
+    "APP_DESCRIPTION": "Insira frases, obtenha as vinculações dos conceitos significativos à CIF feitas por IA.",
     # tab id = 0
     "TAB_0_TITLE": "Entrada de Frases via Arquivos",
     "TAB_0_SUBTITLE": "## 📝 Passo 1: Forneça as Frases",
@@ -15,7 +15,7 @@ STRINGS = {
     "FILE_INPUT_PLACEHOLDER": "Envie um arquivo de texto, PDF ou DOCX para extrair frases automaticamente.",
     # textbox_input_phrases 
     "TXTBOX_INPUT_PHRASES_LABEL": "Frases para Análise",
-    "TXTBOX_INPUT_PHRASES_PLACEHOLDER": "Digite as frases aqui. Separe as frases preferencialmente por ponto (.) ou ponto e vírgula (;).",
+    "TXTBOX_INPUT_PHRASES_PLACEHOLDER": "Digite as frases aqui. Separe as frases preferencialmente por ponto (.), ou ponto e vírgula (;), ou novas linhas.",
     # button_process_input
     "BTN_PROCESS_INPUT_LABEL_DISABLED": "Aguardando Frases...",
     "BTN_PROCESS_INPUT_LABEL_ENABLED": "Vincular Frases",
