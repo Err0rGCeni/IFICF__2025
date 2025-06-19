@@ -1,10 +1,13 @@
 import gradio as gr
 
+font=gr.themes.GoogleFont('Montserrat'),
+
 softCIF = gr.themes.Soft(
     primary_hue=gr.themes.Color(c100="#F7CDC9", c200="#F1A9A2", c300="#EB867B", c400="#E56556", c50="#FCEEED", c500="#D4291A", c600="#C02417", c700="#A91F14", c800="#991b1b", c900="#921A11", c950="#7B150E"),
     secondary_hue="teal",
     neutral_hue="slate",
-    font=['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+    font=gr.themes.GoogleFont('Montserrat'),
+    font_mono=gr.themes.GoogleFont('Fira Code')
 ).set(
     background_fill_primary='white',
     shadow_drop='rgba(0,0,0,0.05) 0px 1px 2px 0px',

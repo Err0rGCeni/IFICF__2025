@@ -9,22 +9,16 @@ from utils.rag_retriever import initialize_rag_system
 from utils.report_creation import process_report_data, create_report_plots, generate_report_pdf
 
 #from .scripts import extract_phrases_from_gradio_file, process_phrases_with_rag_llm
-from .scripts import process_phrases_with_rag_llm
+from .scripts import process_phrases_with_api_llm
 from .strings import STRINGS
 
 # --- Configurações Iniciais do RAG ---
 #rag_docs, rag_index, rag_embedder = [None, None, None] # TODO: Apenas para Teste
-rag_docs, rag_index, rag_embedder = initialize_rag_system()
+# rag_docs, rag_index, rag_embedder = initialize_rag_system() # DEPRECATED
 img1 = os.path.join(os.getcwd(), "static", "images", "logo.jpg")
 
 # --- Função Auxiliadora para Processamento de Frases ---
-process_fn_with_rag_args = partial(
-    process_phrases_with_rag_llm,
-    # Passe os argumentos fixos aqui.
-    rag_docs=rag_docs,
-    rag_index=rag_index,
-    rag_embedder=rag_embedder
-)
+process_fn_with_rag_args = partial(process_phrases_with_api_llm)
 
 # --- Funções Auxiliares (Listeners e Controladores de UI) ---
 def _handle_input_text_change(text_input: str) -> gr.Button:

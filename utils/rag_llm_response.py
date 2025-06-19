@@ -157,7 +157,6 @@ def generate_gemini_response(input_phrase: str, context: str) -> str:
         return f"Desculpe, ocorreu um erro na API do Gemini: {e}"
 
 # Função unificada para gerar resposta, permitindo escolher o LLM
-# Unified function to generate response, allowing LLM choice
 def generate_response_with_llm(
     input_phrase: str,
     documents: list,
