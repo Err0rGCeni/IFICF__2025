@@ -6,7 +6,7 @@ from pages.feedback import view as feedback_page
 
 with gr.Blocks(theme=softCIF) as demo:    
     main_page.interface.render()
-with demo.route("Ajuda", "help"):
+with demo.route("Sobre", "about"):
     about_page.interface.render()
 with demo.route("Contato", "feedback"):
     feedback_page.interface.render()

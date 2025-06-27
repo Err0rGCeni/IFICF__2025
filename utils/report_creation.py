@@ -23,10 +23,6 @@ def create_report_plots(df_group: pd.DataFrame, df_individual_treemap: pd.DataFr
     
     fig_pie = create_pie_chart(df_group, title="Distribuição da Classificação por Componentes CIF")
     fig_bar = create_bar_chart(df_group, title="Frequência da Classificação por Componentes CIF")
-    
-    # Para o treemap, a função create_tree_map_chart precisa ser compatível com o DataFrame
-    # df_individual_treemap que agora inclui 'Filho', 'Parent', 'Subparent', 'Frequencia'.
-    # Ela usará 'Filho' como labels, 'Parent' (ou 'Subparent') como parents, e 'Frequencia' como values.
     fig_tree_map = create_tree_map_chart(df_individual_treemap, title="Treemap de Frequência por Código CIF")
     
     return fig_pie, fig_bar, fig_tree_map

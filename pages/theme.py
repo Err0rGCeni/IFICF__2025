@@ -1,7 +1,5 @@
 import gradio as gr
 
-font=gr.themes.GoogleFont('Montserrat'),
-
 softCIF = gr.themes.Soft(
     primary_hue=gr.themes.Color(c100="#F7CDC9", c200="#F1A9A2", c300="#EB867B", c400="#E56556", c50="#FCEEED", c500="#D4291A", c600="#C02417", c700="#A91F14", c800="#991b1b", c900="#921A11", c950="#7B150E"),
     secondary_hue="teal",

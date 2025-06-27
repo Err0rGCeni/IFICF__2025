@@ -1,3 +1,4 @@
+# pages/main/scripts.py
 import faiss
 import gradio as gr
 from typing import Any, Generator
@@ -80,58 +81,76 @@ def process_phrases_with_rag_llm(input_phrases_text: str, rag_docs:list[str], ra
         gr.update(label=STRINGS["TAB_1_TITLE"]+current_symbol, interactive=True)
     )
 
-def process_phrases_with_api_llm(input_phrases_text: str) -> Generator[tuple[gr.Textbox, gr.Textbox, gr.Tabs, gr.TabItem]]:
+def process_inputs_to_api(
+    input_text: str,
+    input_file: Any  # Objeto de arquivo do Gradio (ex: tempfile._TemporaryFileWrapper)
+) -> Generator[tuple, None, None]:
     """
-    Receives a block of text and processes it
-    with the API (`res_generate_API`).
-    Returns a status textbox, a formatted responses textbox, and updates tabs to switch to the results tab.
-    """
-    print(f"Processando o bloco de frases para geração de resposta: \"{input_phrases_text[:100]}...\"")
-    current_symbol = " ♾️"  # Emojis para indicar status de processamento e sucesso    
+    Processa a entrada do usuário (texto ou arquivo) com a API do Gemini.
 
-    # --- Ação 1: Mudar de aba IMEDIATAMENTE e mostrar mensagem de processamento ---
-    # O 'yield' envia: (Status, Resultado, Tabs)
+    Esta função serve como o handler para a interface Gradio. Ela implementa a
+    lógica XOR para garantir que apenas uma forma de entrada seja fornecida,
+    atualiza a UI com o status e exibe o resultado da análise.
+
+    Args:
+        input_text: O conteúdo do componente gr.Textbox.
+        input_file: O objeto do componente gr.File. É None se nenhum arquivo for carregado.
+
+    Yields:
+        Atualizações para os componentes da interface do Gradio.
+    """
+    current_symbol = " ♾️"  # Símbolo de processamento
+    formatted_output = ""
+    status_message = STRINGS["TXTBOX_STATUS_IDLE"]
+
+    # --- Ação 1: Atualiza a UI para mostrar que o processamento começou ---
     yield (
-        gr.update(value=STRINGS["TXTBOX_STATUS_IDLE"], interactive=False),
+        gr.update(value=status_message, interactive=False),
         gr.update(value="", interactive=False),
-        gr.update(selected=1),
-        gr.update(label=STRINGS["TAB_1_TITLE"]+current_symbol, interactive=True)
-        )
-    
-    # time.sleep(1)  # Simula um pequeno atraso para processamento
+        gr.update(selected=1),  # Muda para a aba de resultados
+        gr.update(label=STRINGS["TAB_1_TITLE"] + current_symbol, interactive=True)
+    )
 
     try:
-        # Chama a função unificada de geração de resposta, especificando a estratégia RAG
-        # O LLM então usará os múltiplos contextos recuperados para gerar uma única resposta consolidada.
+        # --- Ação 2: Lógica de validação XOR para as entradas da UI ---
+        # Verifica se as entradas são válidas (não vazias)
+        texto_fornecido = bool(input_text and input_text.strip())
+        arquivo_fornecido = input_file is not None
 
-#        llm_response = generate_response_with_llm(
-#            input_phrase=input_phrases_text,
-#            documents=rag_docs,
-#            index=rag_index,
-#            embedder=rag_embedder,
-#            llm_choice='gemini', # ou 'ollama', conforme a necessidade
-#            rag_strategy='multiple' # A chave para usar a busca por múltiplos contextos
-#        )
+        if texto_fornecido and arquivo_fornecido:
+            raise ValueError("Por favor, forneça texto OU um arquivo PDF, não ambos.")
+        
+        if not texto_fornecido and not arquivo_fornecido:
+            raise ValueError("Nenhuma entrada fornecida. Por favor, digite um texto ou faça o upload de um arquivo.")
 
-#        with open("./sandbox/respostateste.txt", "r", encoding="utf-8") as arquivo:
-#            llm_response = arquivo.read() #TEST: Test Only
+        # --- Ação 3: Chama o backend com o parâmetro correto ---
+        params_para_api = {}
+        if texto_fornecido:
+            print(f"Processando via texto: \"{input_text[:100]}...\"")
+            params_para_api['input_text'] = input_text
+        elif arquivo_fornecido:
+            # O objeto do Gradio tem um atributo .name que contém o caminho temporário do arquivo
+            print(f"Processando via arquivo: {input_file.name}")
+            params_para_api['input_file'] = input_file.name
 
-        llm_response = api_generate(user_input=input_phrases_text)
+        # Chama a função de backend com os parâmetros corretos
+        llm_response = api_generate(**params_para_api)
 
         status_message = STRINGS["TXTBOX_STATUS_OK"]
         formatted_output = f"--- Resposta Fornecida pela LLM ---\n{llm_response}\n"
-        current_symbol = " ✅" 
+        current_symbol = " ✅"
 
     except Exception as e:
+        # Captura qualquer erro (de validação ou da API) e o exibe na UI
         status_message = STRINGS["TXTBOX_STATUS_ERROR"]
-        formatted_output = f"\n{STRINGS['--- Erro ---']}\nDetalhes: {e}"
+        formatted_output = f"\n--- Erro ao Processar ---\nDetalhes: {e}"
         current_symbol = " ⚠️"
+        print(f"ERRO na interface Gradio: {e}") # Loga o erro completo no console
 
-    # --- Ação 3: Retornar o resultado final e o status ---
-    # A aba já está selecionada, então gr.Tabs() aqui apenas satisfaz a assinatura e mantém a aba atual.
+    # --- Ação Final: Retorna o resultado (sucesso ou erro) para a UI ---
     yield (
         gr.update(value=status_message, interactive=False),
-        gr.update(value=formatted_output, interactive=False),
+        gr.update(value=formatted_output, interactive=True), # Permite copiar o resultado
         gr.update(),
-        gr.update(label=STRINGS["TAB_1_TITLE"]+current_symbol, interactive=True)
+        gr.update(label=STRINGS["TAB_1_TITLE"] + current_symbol, interactive=True)
     )

@@ -1,3 +1,4 @@
+# pages/main/strings.py
 STRINGS = {
     "APP_TITLE": "Sistema para Vinculação CIF de Frases",
     "APP_DESCRIPTION": "Insira frases, obtenha as vinculações dos conceitos significativos à CIF feitas por IA.",

@@ -1,3 +1,4 @@
+# utils/pdf_creation.py
 import io
 import re
 import os
@@ -18,28 +19,17 @@ _STRINGS = {
 }
 
 # --- Regex Patterns ---
-# Regex para identificar e tratar 'Frase de Entrada: ...'.
-_INPUT_PHRASE_REGEX = re.compile(r'^-?\s*(Frase de Entrada:.*)', re.IGNORECASE)
+# Regex para identificar e tratar (o acento pode ser problemático para llms as vezes) 'Frase de Extraída: ...'.
+
+_INPUT_PHRASE_REGEX = re.compile(r'^-?\s*(Frase Extra.*:.*)', re.IGNORECASE)
 
 # Regex para tratar itens de lista.
 # Captura caracteres válidos.
 _LIST_ITEM_CONTENT_REGEX = re.compile(r'^-?\s*(.*)')
 
-# --- Constantes para lidar com Plotlys ---
-_PLOT_IMAGE_COMMON_WIDTH_EXPORT = 800
-_PLOT_IMAGE_DEFAULT_HEIGHT_EXPORT = 500
-_PLOT_IMAGE_SPECIAL_HEIGHT_EXPORT = 800  # TreeMap
-_PLOT_IMAGE_SCALE = 2
-
-_PLOT_IMAGE_COMMON_DRAW_WIDTH = 550
-_PLOT_IMAGE_DEFAULT_DRAW_HEIGHT = 350
-_PLOT_IMAGE_SPECIAL_DRAW_HEIGHT = 550  # TreeMap
-
-_SPECIAL_PLOT_INDEX = 2 # TreeMap
-
 # --- Constants for Text Styling ---
 _LLM_RESPONSE_STARTERS = (
-    'resposta fornecida pela llm',
+    'Resposta Fornecida pela LLM',
 )
 
 def _handle_text_content(story: list, text_content: str, styles: dict) -> None:
@@ -95,13 +85,13 @@ def _handle_text_content(story: list, text_content: str, styles: dict) -> None:
     )
 
     # Timestamp & Disclaimer (gerado uma vez no início do conteúdo textual)
-    if not story: # Adiciona apenas se a story estiver vazia, para não repetir a cada chamada se a função for reutilizada
-        generation_timestamp_text = _STRINGS['TXT_TIMESTAMP'](datetime.now().strftime('%d-%m-%Y'))
-        story.append(Paragraph(generation_timestamp_text, h2_bold_centered_style))
+    # if not story: # Adiciona apenas se a story estiver vazia, para não repetir a cada chamada se a função for reutilizada
+    generation_timestamp_text = _STRINGS['TXT_TIMESTAMP'](datetime.now().strftime('%d-%m-%Y'))
+    story.append(Paragraph(generation_timestamp_text, h2_bold_centered_style))
 
-        disclaimer_text = _STRINGS['TXT_DISCLAIMER']
-        story.append(Paragraph(disclaimer_text, alert_message_style))
-        story.append(Spacer(1, 20))
+    disclaimer_text = _STRINGS['TXT_DISCLAIMER']
+    story.append(Paragraph(disclaimer_text, alert_message_style))
+    story.append(Spacer(1, 20))
 
     # Processamento do conteúdo principal
     text_blocks = text_content.split('---')
@@ -157,35 +147,36 @@ def _handle_text_content(story: list, text_content: str, styles: dict) -> None:
 
 
 def _handle_dataframe_content(story: list, dataframes_list: list[pd.DataFrame], styles: dict) -> None:
-    """
-    Adds pandas DataFrames to the PDF story, formatted as tables.
+    """Adiciona DataFrames ao PDF, usando um dicionário interno para títulos descritivos."""
+    
+    # Dicionário que mapeia o índice do DataFrame ao seu título específico.
+    DATAFRAME_TITLES = {
+        0: "Tabela de Frequência por Componente CIF",
+        1: "Estatísticas Descritivas dos Componentes",
+        2: "Tabela de Frequência por Código CIF Específico",
+        3: "Estatísticas Descritivas dos Códigos CIF"
+    }
 
-    Each DataFrame is preceded by a page break and a title.
-    Table styling includes a header row with a grey background and white text,
-    and a beige background for data rows, with a grid.
-
-    Args:
-        story (list): The list of ReportLab Platypus elements.
-        dataframes_list (list[pd.DataFrame]): A list of pandas DataFrames to include.
-        styles (dict): A dictionary of ReportLab sample paragraph styles.
-    """
     for df_index, df in enumerate(dataframes_list):
+        # Usa o título do dicionário se o índice existir; senão, usa um título genérico.
+        title = DATAFRAME_TITLES.get(df_index, f"Data (DataFrame {df_index + 1})")
+        
         story.append(PageBreak())
-        story.append(Paragraph(f"Data (DataFrame {df_index + 1}):", styles['h2']))
+        story.append(Paragraph(title, styles['h2']))
         story.append(Spacer(1, 1))
 
-        # Preparação do dataframe para tabela
+        # O restante da lógica para criar a tabela permanece o mesmo.
         table_data = [df.columns.tolist()] + df.values.tolist()
         pdf_table = Table(table_data)
 
         pdf_table.setStyle(TableStyle([
-            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),      # Header row background
-            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke), # Header row text color
-            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),             # Center alignment for all cells
-            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),   # Header row font
-            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),            # Header row bottom padding
-            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),    # Data rows background
-            ('GRID', (0, 0), (-1, -1), 1, colors.black)        # Grid for the entire table
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -1), colors.whitesmoke),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black)
         ]))
 
         story.append(pdf_table)
@@ -193,51 +184,57 @@ def _handle_dataframe_content(story: list, dataframes_list: list[pd.DataFrame], 
 
 
 def _handle_plotly_plot(story: list, plotly_figures: list[go.Figure], styles: dict) -> None:
-    """
-    Converts Plotly figures to PNG images and adds them to the PDF story.
+    """Converte e adiciona gráficos Plotly, usando dicionários internos para títulos e configurações."""
 
-    Each plot is preceded by a page break and a title.
-    Handles potential errors during image conversion.
-    The third plot (index 2) has specific dimensions.
+    # Dicionário que mapeia o índice do gráfico ao seu título.
+    PLOT_TITLES = {
+        0: "Distribuição Percentual por Componente",
+        1: "Gráfico de Frequência por Componente CIF",
+        2: "Análise Hierárquica de Códigos CIF (Treemap)"
+    }
+    
+    # Dicionário que mapeia o índice do gráfico a uma configuração especial.
+    PLOT_CONFIGS = {
+        2: {'type': 'treemap'}  # O gráfico de índice 2 é um treemap
+    }
 
-    Args:
-        story (list): The list of ReportLab Platypus elements.
-        plotly_figures (list[go.Figure]): A list of Plotly Figure objects.
-        styles (dict): A dictionary of ReportLab sample paragraph styles.
-    """
     for fig_index, plotly_figure in enumerate(plotly_figures):
         try:
+            # Pega o título do dicionário, com fallback para o genérico.
+            title = PLOT_TITLES.get(fig_index, f"Generated Plot ({fig_index + 1})")
+            
+            # Pega a configuração do dicionário.
+            config = PLOT_CONFIGS.get(fig_index, {})
+            plot_type = config.get('type', 'default')
+
             image_buffer = io.BytesIO()
 
-            # Determine export and draw dimensions based on plot index
-            if fig_index == _SPECIAL_PLOT_INDEX:
-                export_height = _PLOT_IMAGE_SPECIAL_HEIGHT_EXPORT
-                draw_height = _PLOT_IMAGE_SPECIAL_DRAW_HEIGHT
+            # Determina as dimensões com base no 'type' obtido da configuração.
+            if plot_type == 'treemap':
+                export_height = 800 # _PLOT_IMAGE_SPECIAL_HEIGHT_EXPORT
+                draw_height = 550 # _PLOT_IMAGE_SPECIAL_DRAW_HEIGHT
             else:
-                export_height = _PLOT_IMAGE_DEFAULT_HEIGHT_EXPORT
-                draw_height = _PLOT_IMAGE_DEFAULT_DRAW_HEIGHT
+                export_height = 500 # _PLOT_IMAGE_DEFAULT_HEIGHT_EXPORT
+                draw_height = 350 # _PLOT_IMAGE_DEFAULT_DRAW_HEIGHT
 
             plotly_figure.write_image(
-                image_buffer,
-                format="png",
-                width=_PLOT_IMAGE_COMMON_WIDTH_EXPORT,
-                height=export_height,
-                scale=_PLOT_IMAGE_SCALE
+                image_buffer, format="png", width=800, # _PLOT_IMAGE_COMMON_WIDTH_EXPORT
+                height=export_height, scale=2 # _PLOT_IMAGE_SCALE
             )
             image_buffer.seek(0)
 
             reportlab_image = Image(image_buffer)
             reportlab_image.drawHeight = draw_height
-            reportlab_image.drawWidth = _PLOT_IMAGE_COMMON_DRAW_WIDTH
+            reportlab_image.drawWidth = 550 # _PLOT_IMAGE_COMMON_DRAW_WIDTH
 
             story.append(PageBreak())
-            story.append(Paragraph(f"Generated Plot ({fig_index + 1}):", styles['h2']))
+            story.append(Paragraph(title, styles['h2']))
             story.append(Spacer(1, 1))
             story.append(reportlab_image)
             story.append(Spacer(1, 4))
 
         except Exception as e:
-            error_message = f"Error adding Plotly plot {fig_index + 1}: {e}"
+            error_message = f"Error adding Plotly plot '{title}': {e}"
             story.append(Paragraph(error_message, styles['Normal']))
             story.append(Spacer(1, 2))
 

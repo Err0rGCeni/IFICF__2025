@@ -34,10 +34,6 @@ with gr.Blocks() as interface:
     gr.Markdown(STRINGS["SECTION_REFERENCES"])
     gr.Markdown(STRINGS["SECTION_REFERENCES_LINKS"])
     gr.Markdown(STRINGS["SECTION_REFERENCES_LIST"])
-
-    
-
-
-
+ 
 if __name__ == "__main__":
     interface.launch()
