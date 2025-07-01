@@ -1,7 +1,8 @@
+# utils/report/graph_creation.py
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
-from typing import Optional # Dict e List não são mais necessários para as constantes globais
+from typing import Optional, Tuple # Dict e List não são mais necessários para as constantes globais
 
 # Importa a Enum para centralizar as definições de categoria, rótulos e cores
 from .icf_categories import ICFComponent
@@ -66,7 +67,6 @@ def create_pie_chart(
     )
     return figure
 
-
 def create_bar_chart(
     input_df: pd.DataFrame,
     title: str = "Frequência da Classificação"
@@ -119,7 +119,6 @@ def create_bar_chart(
         hovertemplate="<b>%{x}</b><br>Frequência: %{y}<extra></extra>"
     )
     return figure
-
 
 def create_tree_map_chart(
     tree_map_df: pd.DataFrame,
@@ -177,3 +176,23 @@ def create_tree_map_chart(
         )
     )
     return figure
+
+def create_report_plots(df_group: pd.DataFrame, df_individual_treemap: pd.DataFrame) -> Tuple[go.Figure, go.Figure, go.Figure]:
+    """
+    Cria as figuras Plotly dos gráficos a partir dos DataFrames processados.
+
+    Args:
+        df_group (pd.DataFrame): DataFrame de frequência por grupo CIF.
+        df_individual_treemap (pd.DataFrame): DataFrame para o treemap de códigos individuais.
+                                            (Esperado ter colunas: 'Filho', 'Parent', 'Frequencia')
+
+    Returns:
+        Tuple[go.Figure, go.Figure, go.Figure]: Figuras de pizza, barras e treemap.
+    """
+    print("Gerando gráficos...")
+    
+    fig_pie = create_pie_chart(df_group, title="Distribuição da Classificação por Componentes CIF")
+    fig_bar = create_bar_chart(df_group, title="Frequência da Classificação por Componentes CIF")
+    fig_tree_map = create_tree_map_chart(df_individual_treemap, title="Treemap de Frequência por Código CIF")
+    
+    return fig_pie, fig_bar, fig_tree_map

@@ -1,4 +1,4 @@
-# utils/api_gemini.py
+# utils/apis/gemini.py
 import os
 import pathlib
 
@@ -20,7 +20,7 @@ MODEL_ID = os.getenv('MODEL_ID', 'gemini-2.5-flash')
 # --- CAMINHOS E ARQUIVOS DE CONTEXTO ---
 
 # Define o caminho para o prompt do sistema e o PDF de contexto usando pathlib para compatibilidade de SO
-BASE_DIR = pathlib.Path(__file__).parent.parent
+BASE_DIR = pathlib.Path(__file__).parent.parent.parent
 PDF_CONTEXT_PATH = BASE_DIR / "CIF" / "ListaCIF.pdf"
 SYSTEM_PROMPT_PATH = BASE_DIR / "utils" / "prompts.py"
 
@@ -31,6 +31,46 @@ def _load_sys_instruction(caminho: pathlib.Path) -> str:
     except (ImportError, FileNotFoundError):
         print(f"Aviso: Não foi possível encontrar ou importar o prompt do sistema de '{caminho}'. Usando um prompt padrão.")
         return "Você é um especialista na Classificação Internacional de Funcionalidade (CIF). Classifique o texto fornecido de acordo com a CIF e forneça uma análise detalhada."
+
+def _create_file_part(file_path_str: str) -> types.Part:
+    """
+    Valida, lê e cria um objeto Part a partir de um caminho de arquivo.
+
+    Esta função verifica se o arquivo existe e se sua extensão (.txt ou .pdf) é
+    suportada. Em caso afirmativo, lê os bytes do arquivo e retorna um objeto
+    `types.Part` com o MIME type correto.
+
+    Args:
+        file_path_str: O caminho para o arquivo, recebido como string.
+
+    Returns:
+        Um objeto `types.Part` pronto para ser enviado à API Gemini.
+
+    Raises:
+        FileNotFoundError: Se o arquivo não for encontrado no caminho especificado.
+        ValueError: Se a extensão do arquivo não for suportada.
+    """
+    input_file_path = pathlib.Path(file_path_str)
+
+    if not input_file_path.is_file():
+        raise FileNotFoundError(f"O arquivo de entrada do usuário não foi encontrado: {input_file_path}")
+
+    file_extension = input_file_path.suffix.lower()
+    
+    if file_extension == '.pdf':
+        mime_type = 'application/pdf'
+    elif file_extension == '.txt':
+        mime_type = 'text/plain'
+    else:
+        raise ValueError(
+            f"Tipo de arquivo '{file_extension}' não suportado. "
+            "Por favor, envie um arquivo .txt ou .pdf."
+        )
+    
+    return types.Part.from_bytes(
+        data=input_file_path.read_bytes(),
+        mime_type=mime_type
+    )
 
 def api_generate(
     input_text: Optional[str] = None,
@@ -99,6 +139,9 @@ def api_generate(
     
     # Adiciona o arquivo do usuário como um 'Part' de PDF, enviando seus bytes.
     if input_file:
+        file_part = _create_file_part(input_file)
+        user_contents.append(file_part)
+        '''
         input_file_path = pathlib.Path(input_file)
         user_contents.append(
             types.Part.from_bytes(
@@ -106,6 +149,7 @@ def api_generate(
                 mime_type='application/pdf'
             )
         )
+        '''
     
     response = client.models.generate_content(
         model=MODEL_ID,

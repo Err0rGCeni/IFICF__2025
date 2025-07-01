@@ -1,31 +1,11 @@
+# utils/report/report_creation.py
 import plotly.graph_objects as go
 import pandas as pd # Ainda pode ser necessário para type hints ou manipulações leves
 from typing import Tuple # Remover Dict, Optional, List se não forem mais usados diretamente aqui
 
-from .graph_creation import create_pie_chart, create_bar_chart, create_tree_map_chart
+from .graph_creation import create_report_plots
 from .pdf_creation import generate_pdf_report_temp
 from .dataframe_creation import process_report_data
-
-# --- FUNÇÃO: Gera os gráficos a partir dos DataFrames ---
-def create_report_plots(df_group: pd.DataFrame, df_individual_treemap: pd.DataFrame) -> Tuple[go.Figure, go.Figure, go.Figure]:
-    """
-    Cria as figuras Plotly dos gráficos a partir dos DataFrames processados.
-
-    Args:
-        df_group (pd.DataFrame): DataFrame de frequência por grupo CIF.
-        df_individual_treemap (pd.DataFrame): DataFrame para o treemap de códigos individuais.
-                                            (Esperado ter colunas: 'Filho', 'Parent', 'Frequencia')
-
-    Returns:
-        Tuple[go.Figure, go.Figure, go.Figure]: Figuras de pizza, barras e treemap.
-    """
-    print("Gerando gráficos...")
-    
-    fig_pie = create_pie_chart(df_group, title="Distribuição da Classificação por Componentes CIF")
-    fig_bar = create_bar_chart(df_group, title="Frequência da Classificação por Componentes CIF")
-    fig_tree_map = create_tree_map_chart(df_individual_treemap, title="Treemap de Frequência por Código CIF")
-    
-    return fig_pie, fig_bar, fig_tree_map
 
 # --- FUNÇÃO: Gera o PDF a partir de DataFrames e Figuras ---
 def generate_report_pdf(llm_res: str, df_group: pd.DataFrame, df_group_describe: pd.DataFrame, 

@@ -1,3 +1,4 @@
+# pages/feedback/view.py
 import gradio as gr
 
 from .scripts import submit_feedback_and_handle_errors

@@ -1,3 +1,4 @@
+# pages/theme.py
 import gradio as gr
 
 softCIF = gr.themes.Soft(

@@ -3,8 +3,8 @@ STRINGS = {
     "APP_TITLE": "Sistema para Vinculação CIF de Frases",
     "APP_DESCRIPTION": "Insira frases, obtenha as vinculações dos conceitos significativos à CIF feitas por IA.",
     # tab id = 0
-    "TAB_0_TITLE": "Entrada de Frases via Arquivos",
-    "TAB_0_SUBTITLE": "## 📝 Passo 1: Forneça as Frases",
+    "TAB_0_TITLE": "Entrada de Texto",
+    "TAB_0_SUBTITLE": "## 📝 Passo 1: Forneça o Texto",
     # tab id = 1    
     "TAB_1_TITLE": "Resultados da Vinculação",
     "TAB_1_SUBTITLE": "## 🤖 Passo 2: Visualize os Resultados",
@@ -20,6 +20,8 @@ STRINGS = {
     # button_process_input
     "BTN_PROCESS_INPUT_LABEL_DISABLED": "Aguardando Frases...",
     "BTN_PROCESS_INPUT_LABEL_ENABLED": "Vincular Frases",
+    "BTN_PROCESS_FILE_LABEL": "Vincular por Documento 📙",
+    "BTN_PROCESS_TEXT_LABEL": "Vincular por Texto ✍️",
     # textbox_output_status
     "TXTBOX_STATUS_LABEL": "Status da Geração da Resposta:",
     "TXTBOX_STATUS_IDLE": "Gerando resposta, aguarde...",

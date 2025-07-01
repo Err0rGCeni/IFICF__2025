@@ -1,3 +1,4 @@
+# utils/report/dataframe_creation.py
 import re
 import pandas as pd
 from typing import Dict, Tuple, List
@@ -46,7 +47,6 @@ def _count_group_frequencies(llm_res: str) -> Dict[str, int]:
             
     print(f"Frequências por grupo atualizadas: {group_frequencies}")
     return group_frequencies
-
 
 def _count_individual_frequencies(llm_res: str) -> Dict[str, int]:
     """Conta a frequência de cada código CIF individualmente."""

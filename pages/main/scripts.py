@@ -2,13 +2,13 @@
 import faiss
 import gradio as gr
 from typing import Any, Generator
-from sentence_transformers import SentenceTransformer
-from utils.rag_llm_response import generate_response_with_llm # A função unificada agora trata as estratégias de RAG e LLM
-from utils.phrase_extractor import process_file_content
+#from sentence_transformers import SentenceTransformer
+#from utils.rag_llm_response import generate_response_with_llm # A função unificada agora trata as estratégias de RAG e LLM
+#from utils.phrase_extractor import process_file_content
 #from utils.report_creation import generate_report
-from utils.api_gemini import api_generate
+from utils.apis.gemini import api_generate
 from .strings import STRINGS
-# DEPRECATED: A função volta com a consolidação de um futuro OCR.
+# DEPRECATED: A função era um protótipo para criação de Contexto RAG.
 #def extract_phrases_from_gradio_file(gradio_file: gr.File) -> gr.Textbox:
 #    """
 #    Utilizes the 'process_file' function from 'utils.phrase_extractor' to read the
@@ -27,6 +27,7 @@ from .strings import STRINGS
 #        return gr.Textbox(value=f"Error: {e}", placeholder=STRINGS["TEXT_INPUT_PLACER_EMPTY"])
 
 # DEPRECATED: A função volta com a consolidação de um futuro RAG.
+'''
 def process_phrases_with_rag_llm(input_phrases_text: str, rag_docs:list[str], rag_index:faiss.Index, rag_embedder:SentenceTransformer) -> Generator[tuple[gr.Textbox, gr.Textbox, gr.Tabs, gr.TabItem]]:
     """
     Receives a block of text (phrases separated by newlines) and processes it
@@ -80,7 +81,7 @@ def process_phrases_with_rag_llm(input_phrases_text: str, rag_docs:list[str], ra
         gr.update(),
         gr.update(label=STRINGS["TAB_1_TITLE"]+current_symbol, interactive=True)
     )
-
+'''
 def process_inputs_to_api(
     input_text: str,
     input_file: Any  # Objeto de arquivo do Gradio (ex: tempfile._TemporaryFileWrapper)
@@ -113,7 +114,6 @@ def process_inputs_to_api(
 
     try:
         # --- Ação 2: Lógica de validação XOR para as entradas da UI ---
-        # Verifica se as entradas são válidas (não vazias)
         texto_fornecido = bool(input_text and input_text.strip())
         arquivo_fornecido = input_file is not None
 

@@ -1,72 +1,91 @@
 # pages/main/tab01_input.py
 import gradio as gr
 from typing import Dict, Any
+from .strings import STRINGS
 
-def create_input_tabs() -> Dict[str, Any]:
+def create_input_components() -> Dict[str, Any]:
     """
-    Cria e retorna um bloco de entrada com um seletor de rádio para alternar
-    entre o upload de arquivos e a inserção de texto. Retorna um dicionário
-    de todos os seus componentes interativos.
+    Cria e retorna os componentes de entrada, onde um seletor de rádio
+    controla a visibilidade de grupos distintos para upload de arquivo e
+    entrada de texto, cada um com seu próprio botão.
     """
     
-    # Seletor de rádio para escolher o tipo de entrada
     input_type_radio = gr.Radio(
-        ["Vinculação de documento 📙", "Vinculação de texto ✍️"],
+        ["Vinculação por documento 📙", "Vinculação manual ✍️"],
         label="Selecione o tipo de entrada",
-        value=""  # Valor inicial padrão
+        value="Vinculação por documento 📙"
     )
 
-    # Componente de upload de arquivo, visível por padrão
-    file_input = gr.File(
-        label="Carregue o documento (PDF, TXT)",
-        file_types=['.pdf', '.txt'],
-        visible=False 
+    # --- Grupo de Upload de Arquivo ---
+    # Usando gr.Group para controlar a visibilidade do bloco.
+    # visible=True porque é a opção padrão do Radio.
+    with gr.Group(visible=True) as file_input_group:
+        file_input = gr.File(
+            label="Carregue o documento (PDF, TXT)",
+            file_types=['.pdf', '.txt'],
+        )
+        button_process_file = gr.Button(
+            value=STRINGS["BTN_PROCESS_FILE_LABEL"],
+            interactive=False,
+            variant="primary"
+        )
+
+    # --- Grupo de Entrada de Texto ---
+    # Usando gr.Group com visible=False porque não é a opção padrão.
+    with gr.Group(visible=False) as text_input_group:
+        text_input = gr.Textbox(
+            label="Insira o texto para análise",
+            lines=8,
+            placeholder="relato de dor persistente na articulação do joelho direito...",
+        )
+        button_process_text = gr.Button(
+            value=STRINGS["BTN_PROCESS_TEXT_LABEL"],
+            interactive=False,
+            variant="primary"
+        )
+
+    def _switch_input_visibility(selection: str) -> Dict[gr.Group, Dict[str, bool]]:
+        """Alterna a visibilidade dos grupos de entrada."""
+        is_document_selected = "documento" in selection
+        return {
+            file_input_group: gr.update(visible=is_document_selected),
+            text_input_group: gr.update(visible=not is_document_selected)
+        }
+
+    input_type_radio.change(
+        fn=_switch_input_visibility,
+        inputs=input_type_radio,
+        outputs=[file_input_group, text_input_group]
+    )
+
+    # --- Lógica de habilitação dos botões ---
+    
+    def _update_file_button_state(file_obj: Any) -> gr.Button:
+        """Habilita o botão de arquivo apenas se um arquivo for carregado."""
+        return gr.update(interactive=file_obj is not None)
+
+    def _update_text_button_state(text: str) -> gr.Button:
+        """Habilita o botão de texto apenas se o texto tiver conteúdo."""
+        return gr.update(interactive=bool(text and text.strip()))
+
+    file_input.change(
+        fn=_update_file_button_state,
+        inputs=file_input,
+        outputs=button_process_file
     )
     
-    # Componente de caixa de texto, oculto por padrão
-    text_input = gr.Textbox(
-        label="Insira o texto para análise",
-        lines=8,
-        placeholder="relato de dor persistente na articulação do joelho direito, dores de cabeça...",
-        visible=False
+    text_input.change(
+        fn=_update_text_button_state,
+        inputs=text_input,
+        outputs=button_process_text
     )
 
-    def switch_input_visibility(selection: str) -> Dict[gr.File, Dict[str, bool]]:
-        """
-        Altera a visibilidade dos componentes de entrada com base na seleção do rádio.
-        
-        Args:
-            selection: O valor selecionado no gr.Radio.
-
-        Returns:
-            Um dicionário de atualizações para os componentes gr.File e gr.Textbox.
-        """
-        if "documento" in selection:
-            # Mostra o input de arquivo, esconde o de texto
-            return {
-                file_input: gr.update(visible=True),
-                text_input: gr.update(visible=False)
-            }
-        else:
-            # Esconde o input de arquivo, mostra o de texto
-            return {
-                file_input: gr.update(visible=False),
-                text_input: gr.update(visible=True)
-            }
-
-    # Associa a função de callback ao evento de mudança do seletor de rádio
-    input_type_radio.change(
-        fn=switch_input_visibility,
-        inputs=input_type_radio,
-        outputs=[file_input, text_input]
-    )
-
-    # Dicionário contendo todos os componentes que a view principal precisa para a lógica.
-    # Os componentes de abas e botões de troca foram removidos.
-    components = {
+    # Retornamos os componentes interativos que a view.py precisa manipular.
+    # Os próprios grupos não precisam ser retornados, a menos que se queira manipulá-los.
+    return {
         "input_type_radio": input_type_radio,
         "file_input": file_input,
         "text_input": text_input,
+        "button_process_file": button_process_file,
+        "button_process_text": button_process_text,
     }
-    
-    return components

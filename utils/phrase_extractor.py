@@ -1,3 +1,4 @@
+# DEPRECATED: Este script foi uma tentativa de extrair frases localmente.
 import fitz  # PyMuPDF: Library for working with PDF files
 from docx import Document  # python-docx: Library for working with DOCX files
 import os  # Module for interacting with the operating system (file paths)

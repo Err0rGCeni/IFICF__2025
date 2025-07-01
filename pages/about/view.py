@@ -1,3 +1,4 @@
+# pages/about/view.py
 import gradio as gr
 import os
 

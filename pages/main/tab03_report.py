@@ -1,5 +1,4 @@
 # pages/main/tab03_report.py
-
 import gradio as gr
 import pandas as pd
 import plotly.graph_objects as go
