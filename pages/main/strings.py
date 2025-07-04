@@ -20,8 +20,7 @@ STRINGS = {
     # button_process_input
     "BTN_PROCESS_INPUT_LABEL_DISABLED": "Aguardando Frases...",
     "BTN_PROCESS_INPUT_LABEL_ENABLED": "Vincular Frases",
-    "BTN_PROCESS_FILE_LABEL": "Vincular por Documento 📙",
-    "BTN_PROCESS_TEXT_LABEL": "Vincular por Texto ✍️",
+    "BTN_PROCESS_LABEL": "Iniciar Vinculação",
     # textbox_output_status
     "TXTBOX_STATUS_LABEL": "Status da Geração da Resposta:",
     "TXTBOX_STATUS_IDLE": "Gerando resposta, aguarde...",

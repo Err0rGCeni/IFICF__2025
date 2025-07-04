@@ -1,4 +1,4 @@
-# ICF 2025: Pre-release
+# ICF 2025: Release 01
 
 O CIF Link 2.0 é um projeto que visa amplificar a utilização da Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF) ao receber uma forma de texto, seja por arquivo .pdf ou texto digitado pelo usuário, extrair suas frases e conceitos significativos, e então relacionar cada contexto significativo a uma codificação mais adequada da CIF. 
 
