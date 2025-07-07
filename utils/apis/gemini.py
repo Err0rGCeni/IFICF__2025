@@ -2,7 +2,7 @@
 import os
 import pathlib
 
-from typing import Optional, Union, List
+from typing import Optional, Union, List, Dict, Any
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
@@ -72,10 +72,7 @@ def _create_file_part(file_path_str: str) -> types.Part:
         mime_type=mime_type
     )
 
-def api_generate(
-    input_text: Optional[str] = None,
-    input_file: Optional[Union[str, pathlib.Path]] = None,
-) -> str:
+def api_generate(user_input: Dict[str, Any]) -> str:
     """
     Gera uma análise baseada na CIF a partir de um texto ou arquivo de entrada.
 
@@ -97,15 +94,16 @@ def api_generate(
         FileNotFoundError: Se o arquivo `input_file` ou o PDF de contexto
                            não forem encontrados.
     """
-    
-    # 1. Validação da entrada (garante que ou texto ou arquivo foi fornecido, mas não ambos)
-    if not (input_text is None) ^ (input_file is None):
-        raise ValueError("Forneça exatamente um dos parâmetros: 'input_text' ou 'input_file'.")
+    input_type = user_input.get("type")
+    content = user_input.get("content")
 
-    # 2. Preparação do Conteúdo (Contents)
+    # 1. Validação da Entrada
+    if not input_type or not content:
+        raise ValueError("Dicionário 'user_input' inválido. Faltando 'type' ou 'content'.")
+
+    # 2. Preparação do Contexto
     if not PDF_CONTEXT_PATH.is_file():
         raise FileNotFoundError(f"Arquivo de contexto PDF não encontrado em: {PDF_CONTEXT_PATH}")
-
 
     client = genai.Client(api_key=GEMINI_API_KEY)
 
@@ -129,28 +127,18 @@ def api_generate(
         )
     ]
 
-    # Se a entrada for texto, adiciona um 'Part' de texto.
-    if input_text:        
-        user_contents.append(
-            types.Part.from_text(
-                text=input_text,
-            )
-        )
-    
-    # Adiciona o arquivo do usuário como um 'Part' de PDF, enviando seus bytes.
-    if input_file:
-        file_part = _create_file_part(input_file)
+    # --- Tratamento type & content ---
+    if input_type == "text":
+        print(f"Processando via texto: \"{str(content)[:100]}...\"")
+        user_contents.append(types.Part.from_text(text=str(content)))
+    elif input_type == "file":
+        print(f"Processando via arquivo: {content}")
+        file_part = _create_file_part(str(content))
         user_contents.append(file_part)
-        '''
-        input_file_path = pathlib.Path(input_file)
-        user_contents.append(
-            types.Part.from_bytes(
-                data=input_file_path.read_bytes(),
-                mime_type='application/pdf'
-            )
-        )
-        '''
+    else:
+        raise ValueError(f"Tipo de entrada desconhecido: '{input_type}'")
     
+    # 3. Chamada à API Gemini    
     response = client.models.generate_content(
         model=MODEL_ID,
         contents=user_contents,
