@@ -1,3 +1,4 @@
+# pages/feedback/strings.py
 STRINGS = {
     "TITLE": "# Contate-nos",
     "SUBTITLE": "Ajude-nos a melhorar a aplicação enviando seu feedback. Seu comentário é muito importante para nós!",

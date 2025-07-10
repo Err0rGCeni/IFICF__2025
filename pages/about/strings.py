@@ -1,3 +1,4 @@
+# pages/about/strings.py
 STRINGS = {
     "ABOUT_TITLE": "# CIFLink 2.0",
     # Descrição do aplicativo
