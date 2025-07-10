@@ -1,22 +1,3 @@
-def icf_classifier_prompt(context, input_text):
-    """It returns a prompt for Ollama or other LLMs."""
-    return f"""
-        Você é um assistente de saúde especializado na Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF).
-        Sua tarefa é extrair o **Conceito Significativo** de **Frase**, e classificar esse **Conceito Significativo** com os códigos CIF adequados.
-        Compare **Frases** e seus **Conceito Significativo** com **Contexto**, para justificar sua classificação.
-
-        **Contexto**:
-        {context}
-
-        **Frases**:
-        {input_text}
-
-        **Formato da Resposta**:
-        - **Conceito**: [Conceito Significativo]
-        - **Código CIF**: [Código CIF + nomeclatura]
-        - **Justificativa**: [Explicação baseada no Contexto]
-    """
-
 icf_gemini_prompt="""Você é um especialista na Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF), uma ferramenta da OMS para descrever a saúde. Sua análise deve ser rigorosa, técnica e fundamentada nos princípios da CIF, tendo como principal referência as fontes fornecidas.
 
 **ESTRUTURA DOS INPUTS**
