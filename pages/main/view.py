@@ -36,7 +36,7 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
         with gr.Column(scale=1):
             gr.Markdown(f"# {STRINGS['APP_TITLE']}")
             gr.Markdown(f"{STRINGS['APP_DESCRIPTION']}")
-        gr.Image(value=LOGO, height=64, container=False, show_label=False, scale=0)
+        gr.Image(value=LOGO, height=64, container=False, show_label=False, show_download_button=False, scale=0)
 
     # --- Estrutura das Abas ---
     with gr.Tabs() as tabs_main_navigation:

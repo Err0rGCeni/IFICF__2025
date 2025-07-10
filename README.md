@@ -6,6 +6,8 @@ Este projeto começou propondo-se a utilizar **FAISS** e **Ollama** para uma apl
 
 Por limitações de conhecimento técnico, _hardware_, tempo de entrega, e evolução de IAs no periodo de desenvolvimento, este projeto migrou para a utilização da estratégia CAG ao Gemini 2.5 via API.
 
+![demo](./docs/mainGIF.gif)
+
 ## Requisitos
 
 ## Principais Dependências
