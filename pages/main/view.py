@@ -8,7 +8,6 @@ from .strings import STRINGS
 # --- Constantes ---
 LOGO = os.path.join(os.getcwd(), "static", "images", "logo.jpg")
 
-
 with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
     # --- States (Armazenamento de dados não visíveis) ---
     states = {
@@ -29,6 +28,7 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
             "tree_map": None
         }),
         "report_file_path": gr.State(None),
+        "start_time": gr.State(None),
     }
 
     # --- Header ---
@@ -41,7 +41,7 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
     # --- Estrutura das Abas ---
     with gr.Tabs() as tabs_main_navigation:
         # --- Aba 01: Entrada ---
-        with gr.TabItem(label=STRINGS["TAB_0_TITLE"], id=0) as tab_input:
+        with gr.TabItem(label=f"{STRINGS['TAB_0_TITLE']} {RADIO_OPT['text']['icon']}", id=0) as tab_input:
             
             t0_input_type_radio = gr.Radio(
                 choices=[
@@ -92,7 +92,13 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
         # --- Aba 02: Resultados ---
         with gr.TabItem(STRINGS["TAB_1_TITLE"] + " 🔒", interactive=False, id=1) as tab_results:
             gr.Markdown(STRINGS["TAB_1_SUBTITLE"])
-            
+
+            t1_timer_display = gr.Textbox(
+                label=STRINGS["TXTBOX_TIMER_LABEL"],
+                value="0.000",
+                interactive=False,
+            )
+
             t1_textbox_status = gr.Textbox(
                 label=STRINGS["TXTBOX_STATUS_LABEL"],
                 interactive=False
@@ -152,11 +158,22 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
         inputs=[t0_input_type_radio, t0_text_input, t0_file_input],
         outputs=[states["user_input"], tab_results, tabs_main_navigation]
     ).then(
+        # Inicia o timer e armazena o tempo de início
+        fn=ResultsTabFn.start_timer,
+        inputs=None,
+        outputs=states["start_time"]
+    ).then(
+        # Processa a API
         fn=ResultsTabFn.process_inputs_to_api,
         inputs=states["user_input"],
         outputs=[
             t1_textbox_status, t1_textbox_llm_response, tabs_main_navigation, tab_results
         ]
+    ).then(
+        # Quando a API terminar, calcula e exibe o tempo final
+        fn=ResultsTabFn.stop_timer,
+        inputs=states["start_time"],
+        outputs=t1_timer_display
     )
     # Armazena a resposta do LLM no state quando ela for atualizada
     t1_textbox_llm_response.change(lambda r: r, t1_textbox_llm_response, states["llm_response"])
@@ -213,6 +230,29 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
     # Botões de Navegação "Voltar"
     button_return_to_input_tab_from_results.click(lambda: gr.update(selected=0), outputs=tabs_main_navigation)
     button_return_to_input_tab_from_report.click(lambda: gr.update(selected=0), outputs=tabs_main_navigation)
+
+# --- Rodapé da IA ---
+    gr.HTML("""
+    <style>
+        .rodape-ia {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            text-align: center;
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            font-size: 14px;
+            color: #333;
+            z-index: 1000;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <div class="rodape-ia">
+        Atenção: Esta aplicação utiliza inteligência artificial para a vinculação CIF. Por isso, é fundamental que você revise as informações apresentadas.
+    </div>
+    """)
 
 if __name__ == "__main__":
     print("Executando a aplicação Gradio...")
