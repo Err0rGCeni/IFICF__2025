@@ -28,6 +28,8 @@ STRINGS = {
     "TXTBOX_STATUS_IDLE": "Gerando resposta, aguarde...",
     "TXTBOX_STATUS_OK": "Resposta gerada com sucesso!",
     "TXTBOX_STATUS_ERROR": "Erro ao gerar resposta. Verifique os detalhes.",
+    # textbox_tiimer
+    "TXTBOX_TIMER_LABEL": "Tempo de Resposta (segundos)",
     # textbox_output_llm_response
     "TXTBOX_OUTPUT_LLM_RESPONSE_LABEL": "Vinculação Gerada por IA",
     "TXTBOX_OUTPUT_LLM_RESPONSE_PLACEHOLDER": "A vinculação aparecerá aqui após o processamento.",

@@ -1,4 +1,6 @@
 # pages/main/scripts.py
+import time
+
 import gradio as gr
 import pandas as pd
 import plotly.graph_objects as go
@@ -135,6 +137,18 @@ class InputTabFn:
 
 class ResultsTabFn:
     """Agrupa os callbacks da aba de resultados (Tab 1)."""
+
+    @staticmethod
+    def start_timer() -> float:
+        """Inicia o timer retornando o tempo de início como um float."""
+        return time.time()
+        
+    @staticmethod
+    def stop_timer(start_time: float) -> str:
+        """Calcula o tempo decorrido e formata para exibição em segundos."""
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        return f"{elapsed_time:.3f}"
 
     @staticmethod
     def handle_status_text_change(status_text: str) -> gr.Button:

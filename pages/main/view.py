@@ -28,6 +28,7 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
             "tree_map": None
         }),
         "report_file_path": gr.State(None),
+        "start_time": gr.State(None),
     }
 
     # --- Header ---
@@ -40,7 +41,7 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
     # --- Estrutura das Abas ---
     with gr.Tabs() as tabs_main_navigation:
         # --- Aba 01: Entrada ---
-        with gr.TabItem(label=STRINGS["TAB_0_TITLE"], id=0) as tab_input:
+        with gr.TabItem(label=f"{STRINGS['TAB_0_TITLE']} {RADIO_OPT['text']['icon']}", id=0) as tab_input:
             
             t0_input_type_radio = gr.Radio(
                 choices=[
@@ -91,7 +92,13 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
         # --- Aba 02: Resultados ---
         with gr.TabItem(STRINGS["TAB_1_TITLE"] + " 🔒", interactive=False, id=1) as tab_results:
             gr.Markdown(STRINGS["TAB_1_SUBTITLE"])
-            
+
+            t1_timer_display = gr.Textbox(
+                label=STRINGS["TXTBOX_TIMER_LABEL"],
+                value="0.000",
+                interactive=False,
+            )
+
             t1_textbox_status = gr.Textbox(
                 label=STRINGS["TXTBOX_STATUS_LABEL"],
                 interactive=False
@@ -151,11 +158,22 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
         inputs=[t0_input_type_radio, t0_text_input, t0_file_input],
         outputs=[states["user_input"], tab_results, tabs_main_navigation]
     ).then(
+        # Inicia o timer e armazena o tempo de início
+        fn=ResultsTabFn.start_timer,
+        inputs=None,
+        outputs=states["start_time"]
+    ).then(
+        # Processa a API
         fn=ResultsTabFn.process_inputs_to_api,
         inputs=states["user_input"],
         outputs=[
             t1_textbox_status, t1_textbox_llm_response, tabs_main_navigation, tab_results
         ]
+    ).then(
+        # Quando a API terminar, calcula e exibe o tempo final
+        fn=ResultsTabFn.stop_timer,
+        inputs=states["start_time"],
+        outputs=t1_timer_display
     )
     # Armazena a resposta do LLM no state quando ela for atualizada
     t1_textbox_llm_response.change(lambda r: r, t1_textbox_llm_response, states["llm_response"])
@@ -232,7 +250,7 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
         }
     </style>
     <div class="rodape-ia">
-        Atenção: Este site utiliza inteligência artificial para a vinculação CIF. Por isso, é fundamental que você revise as informações apresentadas.
+        Atenção: Esta aplicação utiliza inteligência artificial para a vinculação CIF. Por isso, é fundamental que você revise as informações apresentadas.
     </div>
     """)
 
