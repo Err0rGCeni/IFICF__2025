@@ -8,7 +8,6 @@ from .strings import STRINGS
 # --- Constantes ---
 LOGO = os.path.join(os.getcwd(), "static", "images", "logo.jpg")
 
-
 with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
     # --- States (Armazenamento de dados não visíveis) ---
     states = {
@@ -213,6 +212,29 @@ with gr.Blocks(title=STRINGS["APP_TITLE"]) as interface:
     # Botões de Navegação "Voltar"
     button_return_to_input_tab_from_results.click(lambda: gr.update(selected=0), outputs=tabs_main_navigation)
     button_return_to_input_tab_from_report.click(lambda: gr.update(selected=0), outputs=tabs_main_navigation)
+
+# --- Rodapé da IA ---
+    gr.HTML("""
+    <style>
+        .rodape-ia {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            text-align: center;
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            font-size: 14px;
+            color: #333;
+            z-index: 1000;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <div class="rodape-ia">
+        Atenção: Este site utiliza inteligência artificial para a vinculação CIF. Por isso, é fundamental que você revise as informações apresentadas.
+    </div>
+    """)
 
 if __name__ == "__main__":
     print("Executando a aplicação Gradio...")
