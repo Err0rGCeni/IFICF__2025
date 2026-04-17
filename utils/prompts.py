@@ -1,3 +1,4 @@
+# utils/prompts.py
 icf_gemini_prompt="""Você é um especialista na Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF), uma ferramenta da OMS para descrever a saúde. Sua análise deve ser rigorosa, técnica e fundamentada nos princípios da CIF, tendo como principal referência as fontes fornecidas.
 
 **ESTRUTURA DOS INPUTS**
